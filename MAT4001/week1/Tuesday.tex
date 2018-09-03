@@ -59,8 +59,64 @@ A 64-bit (binary digit) representation is used for a real number:
 \[
 (-1)^s2^{c-1023}(1+f)
 \]
+where 
+\begin{itemize}
+\item
+The first bit $s$ is said to be a \emph{sign indicator};
+\item
+The 11-bit exponent $c$ is called the \emph{characteristic}
+\item
+The 52-bit binray $f$ is called the \emph{mantissa}.
+\end{itemize}
 \end{definition}
+The \emph{underflow} is given by (??):
+\[
+2^{-1022}\cdot(1+0)\approx 0.22251\times 10^{-307}
+\]
+The \emph{overflow} is given by (??):
+\[
+2^{1023}\cdot(2-2^{-52})\approx 0.17977\times 10^{309}
+\]
+\begin{definition}[Decimal floating-point number]
+Any positive real number within the numerical range of the machine can be converted into the form
+\[
+y = 0.d_1d_2\cdots d_k\cdots\times10^n
+\]
+The \emph{floating-point} form of $y$, denoted by $fl(y)$, is obtained by terminating the mantissa of $y$ at $k$ decimal digits.
+\end{definition}
+There are two common ways to perform such termination.
+\paragraph{Chopping} Simply chops off the digits $d_{k+1}d_{k+2}\dots$, which produces the floating-point of the form
+\[
+fl(y) = 0.d_1d_2\cdots d_k\times 10^k
+\]
+\paragraph{Rounding} Adds $5\times 10^{n-(k+1)}$ to $y$ and then chops the result to obtain a number of the form
+\[
+fl(y) = 0.\delta_1\delta_2\cdots\delta_k\times 10^n.
+\]
+Or equivalently, for rounding, we add $1$ to $d_k$ to obtain $fl(y)$ for $d_{k+1}\ge5$ (round up); otherwise we simply chop off at $k$ digits (round down).
 
+\paragraph{Round-Off Error} The errors that results from replacomg a number with its floating-point form is called \emph{round-off error}.
+
+\begin{example}
+Determine the five-digit chopping and rounding values of $\pi$:
+\begin{itemize}
+\item
+Firstly we write $\pi$ in normalized decimal form:
+\[
+\pi=0.3141592\cdots\times 10^1
+\]
+\item
+The floating-point form of $\pi$ using five-digit chopping is
+\[
+fl(\pi)=0.31415\times10^1=3.1415
+\]
+\item
+The floating-point form of $\pi$ using five-digit rounding is
+\[
+fl(\pi)=(0.31415+0.00001)\times10^1=3.1416
+\]
+\end{itemize}
+\end{example}
 
 
 
@@ -73,6 +129,87 @@ Suppose $p^*$ is an approximation to $p$, then $p^*$ is said to approximate $p$ 
 \frac{|p-p^*|}{|p|}\le5\times 10^{-t}.
 \]
 \end{definition}
+\subsection{Examples in Numerical Calculations}
+\subsubsection{Inaccuracy Issues}
+\paragraph{Inaccuracy of floating-point numbers}
+The relative error for floating-point numbers is
+\[
+\left|\frac{y-fl(y)}{y}\right|.
+\]
+For $k$-digit chopping arithmetic, its relative error is give by:
+\[
+\left|\frac{y-fl(y)}{y}\right|=\left|\frac{0.d_{k+1}d_{k+2}\cdots\times 10^{n-k}}{0.d_1d_2\cdots\times 10^n}\right|
+\le\frac{1}{0.1}\times 10^{-k}=10^{-k+1}
+\]
+Similarly, the bound for the relative error when using $k$-digit rounding arithmetic is $0.5\times 10^{-k+1}$.
+
+\paragraph{Inaccuray of finite-digit arithmetics}
+We assume that the finite-digit arithmetics are given by:
+\[
+\begin{array}{ll}
+x
+\end{array}
+\]
+
+\subsubsection{Reduce the loss of accuracy due to round-off error}
+\paragraph{Reformulate the problem} One common error during calculations is the cancelation of significant digits due to the \emph{subtraction of nearly equal numbers}. Reformulation can avoid such a problem.
+\begin{example}
+The two roots of $ax^2+bx+c=0$ are given by:
+\[
+x_1=\frac{-b+\sqrt{b^2-4ac}}{2a},
+\quad
+x_2=\frac{-b-\sqrt{b^2-4ac}}{2a}.
+\]
+For the equation $x^2+62.10x+1=0$, the two roots are
+\[
+\begin{array}{ll}
+x_1= 0.01610723,
+&
+x_2= 62.08390.
+\end{array}
+\]
+In this equation, the numerator of $x_1$ is a subtraction of two nearly equal numbers. If using 4-digit rounding we derive
+\[
+fl(x_1)=\frac{-62.10+62.06}{2.000}=-0.02000\implies
+\mbox{relative error}=0.24\times 10^0.
+\]
+To improve the accuracy of calculation, we should change the formula by \emph{rationalizing the numerator}:
+\[
+x_1=\frac{-2c}{b+\sqrt{b^2-4ac}}
+\]
+It follows that
+\[
+fl(x_1)=\frac{-2.000}{62.10+62.06}=-0.01610\implies
+\mbox{relative error}=6.2\times 10^{-4}.
+\]
+\end{example}
+\paragraph{Rewrite polynomials into nested form}
+For example, evaluating $f(x)=x^3-6.1x^2+3.2x+1.5$ with $x=4.71$ directly will result in large relative errors. To improve the calculation, we change the polymomial to the following nested form:
+\[
+f(x)=((x-6.1)x+3.2)x+1.5,
+\]
+which results in small relative erros.
+\begin{quotation}
+Polynomials should always be expressed in nested form before evaluation, since this form will minimize the number of arithmetic calculations
+\end{quotation}
+
+\paragraph{Avoid large numbers eat small numbers}
+We should add those numbers with small magnitude first when we do the summation
+\[
+fl\left(\sum_{i=1}^nfl(x_i)\right).
+\]
+\begin{example}
+For $x_1=100.5$ and $x_i=0.01, i=2,\dots,101$, using 4-digit arithmetic, we have $fl(x_1)=100.5$ and $fl(x_i)=0.0100, i=2,\dots,101$.
+\begin{itemize}
+\item
+For doing the summation $s=fl\left(\sum_{i=1}^{101}fl(x_i)\right)$, since $100.5+0.0100=100.5100=100.5$, finally we have $s=100.5$
+\item
+If we define $x_i=0.01, i=1,\dots,100$ and $x_{101}=100.5$, then we have $s=101.5$, which is the true value of the summation.
+\end{itemize}
+\end{example}
+
+
+
 
 
 \subsection{Convergence and Stability}
