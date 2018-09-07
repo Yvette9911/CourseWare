@@ -6,4 +6,8 @@
 \contentsline {chapter}{\numberline {1}Week1}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Monday}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Introduction to Optimizaiton}{1}{subsection.1.1.1}
+\contentsline {section}{\numberline {1.2}Wednesday}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Reviewing for Linear Algebra}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Reviewing for Calculus}{2}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Introduction to Optimization}{3}{subsection.1.2.3}
 \contentsfinish 

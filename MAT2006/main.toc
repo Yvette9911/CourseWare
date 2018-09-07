@@ -7,4 +7,8 @@
 \contentsline {section}{\numberline {1.1}Wednesday}{1}{section.1.1}
 \contentsline {paragraph}{Recommended Reading}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Introduction to Set}{1}{subsection.1.1.1}
+\contentsline {paragraph}{Firstly we have $\PazoBB {R}\sim (0,1)$}{2}{Item.6}
+\contentsline {paragraph}{Secondly, we show that $2^{\PazoBB {N}}\sim (0,1)$}{2}{Item.6}
+\contentsline {paragraph}{Defining Binary Form}{3}{Item.6}
+\contentsline {section}{\numberline {1.2}Quiz}{5}{section.1.2}
 \contentsfinish 

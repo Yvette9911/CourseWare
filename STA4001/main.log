@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  4 SEP 2018 15:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  6 SEP 2018 11:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1980,7 +1980,7 @@ File: pppdftex.def 2017/01/14 v0.5h Pdfpages driver for pdfTeX (AM)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
-(./main.aux (./week1/Tuesday.aux))
+(./main.aux (./week1/Tuesday.aux) (./week1/Thursday.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -2216,7 +2216,7 @@ LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <14.4> not available
 (Font)              Font shape `T1/pplx/b/it' tried instead on input line 24.
 
-<zh-hans_logo.png, id=37, 383.4325pt x 65.24374pt>
+<zh-hans_logo.png, id=41, 383.4325pt x 65.24374pt>
 File: zh-hans_logo.png Graphic file (type png)
  <use zh-hans_logo.png>
 Package pdftex.def Info: zh-hans_logo.png used on input line 24.
@@ -2353,24 +2353,46 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
+\openout2 = `week1/Thursday.aux'.
+
+
+(./week1/Thursday.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4
+
+
+]
 No file main.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
-(./main.aux (./week1/Tuesday.aux))
+(./main.aux (./week1/Tuesday.aux) (./week1/Thursday.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DB68CC404B62864C1CD594907CA2FB07;262.
+(rerunfilecheck)             Checksum: EC0A3E057035135EEF412560B764209D;316.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 47341 strings out of 492995
- 986798 string characters out of 6132703
- 1370623 words of memory out of 5000000
- 49905 multiletter control sequences out of 15000+600000
+ 47353 strings out of 492995
+ 986973 string characters out of 6132703
+ 1371616 words of memory out of 5000000
+ 49907 multiletter control sequences out of 15000+600000
  70426 words of font info for 185 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,9n,98p,10504b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2390,10 +2412,10 @@ fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
 rw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/pala
 tino/uplri8a.pfb>
-Output written on main.pdf (12 pages, 171743 bytes).
+Output written on main.pdf (14 pages, 174991 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 48186 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 174 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 48194 words of extra memory for PDF output out of 51595 (max. 10000000)
 
