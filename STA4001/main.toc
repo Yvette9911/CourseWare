@@ -8,4 +8,9 @@
 \contentsline {subsection}{\numberline {1.1.1}News Vendor Problems}{1}{subsection.1.1.1}
 \contentsline {chapter}{\numberline {2}Week2}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Tuesday}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Optimal order quantity}{3}{subsection.2.1.1}
+\contentsline {paragraph}{Discrete Case Optimization}{3}{subsection.2.1.1}
+\contentsline {paragraph}{Holding Cost for $h=.1$}{4}{subsection.2.1.1}
+\contentsline {paragraph}{Confidence Interval}{4}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Non-perishable Products}{4}{subsection.2.1.2}
 \contentsfinish 
