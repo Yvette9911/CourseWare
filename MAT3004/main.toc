@@ -7,4 +7,8 @@
 \contentsline {section}{\numberline {1.1}Monday}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Introduction to Abstract Algebra}{1}{subsection.1.1.1}
 \contentsline {subsection}{\numberline {1.1.2}Group}{1}{subsection.1.1.2}
+\contentsline {chapter}{\numberline {2}Week2}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Tuesday}{11}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Review}{11}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Cyclic groups}{11}{subsection.2.1.2}
 \contentsfinish 

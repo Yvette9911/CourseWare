@@ -22,7 +22,7 @@ Second topic is number theory
 Third topic is geometry, including \textit{algebraic geometry, differential geometry, topology, finite geometry, affine geometry, algebraic graph theory,, combinatorics}, with applications to coding theory, physics, crystallography chemestry.
 
 \subsection{Group}
-\begin{definition}[Group]
+\begin{definition}[Group]\label{Def:1:1}
 A group $\mathcal{G}$ is a set equipped with a binary operation, i.e.,
 \[
 \begin{array}{ll}
@@ -231,11 +231,11 @@ Inverse?
 \end{enumerate}
 \end{proof}
 In the future we abuse the operator $+$ to denote the $+_n$ for $\mathbb{Z}_n$.
-\begin{theorem}
-Given $g_1,\dots,g_n\in\mathcal{G}$, the product is independent from adding brackets.
+\begin{theorem}\label{Theorem:1:1}
+Given a sequence of elements $g_1,\dots,g_n$ in the group $\mathcal{G}$ associated with $\cdot$, the product is independent from adding brackets.
 \end{theorem}
 \begin{proof}
-We show it by induction. Let $\mathcal{P}(n)$ denotes the product is the same whatever different ways pf putting brackets on $g_1,\dots,g_n$
+We show it by induction. Let $\mathcal{P}(n)$ denotes the product is the same whatever different ways of putting brackets on $g_1,\dots,g_n$
 \begin{enumerate}
 \item
 Easy to verify $\mathcal{P}(1)$ is true.
@@ -251,8 +251,14 @@ Assume $\mathcal{P}(n)$ is true for $n\le k$. Consider $n=k+1$. For $\forall m\l
 \end{align*}
 \end{enumerate}
 \end{proof}
-\begin{theorem}
-Each group $\mathcal{G}$ has the unique identity.
+\begin{remark}
+Theorem (\ref{Theorem:1:1}) shows that given a sequence of elements multiplied together, we do not need to specify the order of operations that performed.
+
+Moreover, for \emph{abelian} groups, the group is unqiue regardless of the ordering of elements.
+\end{remark}
+
+\begin{theorem}\label{Theorem:1:2}
+Each group $(\mathcal{G},*)$ has the unique identity.
 \end{theorem}
 \begin{proof}
 Let $e,e'\in\mathcal{G}$ be two identites. By definition,
@@ -260,6 +266,159 @@ Let $e,e'\in\mathcal{G}$ be two identites. By definition,
 e' = e'* e = e.
 \]
 \end{proof}
+\begin{theorem}\label{Theorem:1:3}
+Let $\mathcal{G}$ be a group, then $g^{-1}$ is unique for any $g\in\mathcal{G}$.
+\end{theorem}
+\begin{proof}
+Let $h_1,h_2$ be two inverses of $g\in\mathcal{G}$, by definition,
+\[
+h_1 = h_1\cdot e = h_1\cdot (gh_2) = (h_1g)h_2 = e\cdot h_2 = h_2.
+\]
+\end{proof}
+\begin{remark}
+Due to Theorem(\ref{Theorem:1:1}) to (\ref{Theorem:1:3}), it makes sense to define
+\[
+\begin{array}{lll}
+\qquad g^n:=\underbrace{g\cdot g\cdots g}_{\text{$n$ times}},
+\qquad
+&
+\qquad g^{-n}:=\underbrace{g^{-1}\cdot g^{-1}\cdots g^{-1}}_{\text{$n$ times}},
+\qquad
+&
+\qquad g^0:=e.
+\end{array}
+\]
+\end{remark}
+
+
+\begin{proposition}
+Let $(\mathcal{G},\cdot)$ be a group, then
+\begin{enumerate}
+\item
+$(g^{-1})^{-1}=g, \forall g\in\mathcal{G}$
+\item
+$(ab)^{-1}=b^{-1}a^{-1}$, $\forall a,b\in\mathcal{G}$
+\item
+$g^m\cdot g^n = g^{m+n}$, $\forall g\in\mathcal{G}, m,n\in\mathbb{Z}$.
+\end{enumerate}
+\end{proposition}
+In fact, we can redefine groups as the semigroups with a weaker condition.
+\begin{definition}[Group]\label{Def:1:3}
+\begin{itemize}
+\item
+A group $\mathcal{G}$ is a \emph{semigroup} with a binary operation $\cdot$ such that
+\begin{itemize}
+\item
+There exists a left identity $e\in\mathcal{G}$ s.t.
+\[
+\begin{array}{ll}
+e\cdot a=a,
+&
+\forall a\in\mathcal{G}
+\end{array}
+\]
+\item
+For each $a\in\mathcal{G}$, there exists a left inverse $a^{-1}\in\mathcal{G}$ s.t.
+\[
+a^{-1}a = e.
+\]
+\end{itemize}
+\item
+A set $\mathcal{G}$ equipped with a binary operation $\cdot$ is said to be a \emph{semigroup} if
+\begin{enumerate}
+\item
+It is closed under the operation $\cdot$
+\item
+It satisfies the associativity.
+\end{enumerate}
+\end{itemize}
+\end{definition}
+
+\begin{proposition}
+The definition(\ref{Def:1:1}) adn definition(\ref{Def:1:3}) are equivalent.
+\end{proposition}
+\begin{proof}
+It suffices to show that the left identity and left inverse are essentially identity and inverse, respectively.
+\begin{enumerate}
+\item
+Suppose $a^{-1}$ is the left inverse of $a$, we have
+\begin{align*}
+(a^{-1})^{-1}a^{-1}a = ((a^{-1})^{-1}a^{-1})a=ea=a
+\end{align*}
+It follows that
+\begin{align*}
+aa^{-1}&=(a^{-1})^{-1}a^{-1}aa^{-1}\\
+&=(a^{-1})^{-1}(a^{-1}a)a^{-1}\\
+&=(a^{-1})^{-1}ea^{-1}\\
+&=e
+\end{align*}
+\item
+Suppose $e$ is the left identity, it follows that
+\[
+ae = a(a^{-1}a) = (aa^{-1})a=ea=a
+\]
+\end{enumerate}
+\end{proof}
+Similarly, we can define a group with help of right identities and right inverses; but we cannot define a group by left identities and right inverses. Here is a counterexample:
+\begin{example}
+Let $(\mathcal{G},*)$ be a group with at least 2 elements such that
+\[
+\begin{array}{ll}
+a*b = b,
+&
+\forall a,b\in\mathcal{G}
+\end{array}
+\]
+Note that $\mathcal{G}$ is closed under $*$ and associative. The group $\mathcal{G}$ has left identities and rihgt inverses. But $\mathcal{G}$ is not a group by definition.
+\end{example}
+
+If a group is \emph{finite}, then its operation can be described by its Cayley table, or multiplication table.
+\begin{example}
+For a group $\mathcal{G}=\{e,a\}$ equipped with $*$, its Cayley table is given by: 
+\[\begin{array}{|c||c|c|}
+\hline
+* & e & a  \\
+\hline
+e& e & a \\
+\hline
+a & a & e \\
+\hline
+\end{array}\]
+
+For a group $(\mathbb{Z}_6,+)$, its Cayley table is given by: 
+\[\begin{array}{|c||c|c|c|c|c|c|}
+\hline
++&0&1&2&3&4&5
+\\\hline
+0&0&1&2&3&4&5
+\\\hline
+1&1&2&3&4&5&0
+\\\hline
+2&2&3&4&5&0&1
+\\\hline
+3&3&4&5&0&1&2
+\\\hline
+4&4&5&0&1&2&3
+\\\hline
+5&5&0&1&2&3&4
+\\\hline
+\end{array}\]
+\end{example}
+\begin{remark}
+Note that a group can be described by a cayley table. But not all cayley tables define a group.
+\end{remark}
+\begin{remark}
+It is usually messy to check whether the cayley table defines a group. There are a few necessary conditions we can examine (to exclude Cayley Tables that don't define groups):
+\begin{itemize}
+\item
+It has a row and column that is identical to the list of the elements
+\item
+The elements in each row and each column must be all distinct.
+\end{itemize}
+\end{remark}
+
+
+
 
 
 

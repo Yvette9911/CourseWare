@@ -10,4 +10,11 @@
 \contentsline {subsection}{\numberline {1.2.1}Reviewing for Linear Algebra}{2}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}Reviewing for Calculus}{2}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}Introduction to Optimization}{3}{subsection.1.2.3}
+\contentsline {chapter}{\numberline {2}Week2}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Tuesday}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Reviewing and Announments}{7}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Quadratic Function Case Study}{8}{subsection.2.1.2}
+\contentsline {paragraph}{Least Squares Problem}{8}{Item.4}
+\contentsline {paragraph}{A Non-trival Quadratic Function}{9}{Item.4}
+\contentsline {paragraph}{A Non-trival Function Study}{9}{Item.4}
 \contentsfinish 
