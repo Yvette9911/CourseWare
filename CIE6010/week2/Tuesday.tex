@@ -92,15 +92,15 @@ The second order derivative is given by:
 The optimal solutions depend on the value of $\alpha$ and $\beta$: (although we haven't introduce the definition for convex formally)
 \begin{itemize}
 \item
-If $\alpha,\beta>0$, then this problem is \emph{strongly convex}. By the necessary and sufficient optimality condition for convex problem, we find that $(\frac{1}{\alpha},0)$ is the unique global minimum.
+If $\alpha,\beta>0$, then this problem is \emph{strongly convex}. By the necessary and sufficient optimality condition for convex problem, we find that $(\frac{1}{\alpha},0)$ is the unique local minimum (It is also the global minimum by plotting the figure).
 \item
 If $\alpha=0$, this problem has no solution. The objective value $f(x,y)\to-\infty$ as $x\to
 \infty$.
 \item
-If $\beta=0,\alpha>0$, this problem is convex.  By the necessary and sufficient optimality condition for convex problem, $\{(\frac{1}{\alpha},\xi)\mid \xi\in\mathbb{R}\}$ is the set of global minimum.
+If $\beta=0,\alpha>0$, this problem is convex.  By the necessary and sufficient optimality condition for convex problem, $\{(\frac{1}{\alpha},\xi)\mid \xi\in\mathbb{R}\}$ is the set of local minimum. (By plotting the graph, we find that such set is the set of global minimum points)
 \item
 For $\alpha>0,\beta<0$ case, this problem is non-convex. Actually, $f(x,y)\to-\infty$ as $y\to
-\infty$. Hence, this problem has non glboal minimum.
+\infty$. Hence, this problem has no global minimum point.
 \end{itemize}
 
 \paragraph{A Non-trival Function Study}
@@ -138,7 +138,7 @@ e^{s-y_1-\cdots-y_{n-1}}&\quad i\ne j
 \]
 where $\bm E$ is a matrix with entries all ones. Thus $\nabla^2 f\succ0$ for any stationary point. By the second order sufficient optimality condition, this stationary point is local minimum. Actually, for this special problem, this unique local minimum point is the global minimum.
 \begin{remark}
-In this problem, we find that this stationary point is the unique local minimum point, but the unique local minimum point is not necessarily the global minimum point. Counter-example: $f(x)=x^2-x^4$. Howerver, if we do the minimization on a compact set region, than this claim holds.
+In this problem, we find that this stationary point is the unique local minimum point, but the unique local minimum point is not necessarily the global minimum point, unless the function is \emph{coercive} or the feasible region is compact. Here is the counter-example: $f(x)=x^2-x^4$. We will discuss the definition for coercive in the future.
 \end{remark}
 
 

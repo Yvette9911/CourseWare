@@ -16,5 +16,5 @@
 \contentsline {subsection}{\numberline {2.1.2}Quadratic Function Case Study}{8}{subsection.2.1.2}
 \contentsline {paragraph}{Least Squares Problem}{8}{Item.4}
 \contentsline {paragraph}{A Non-trival Quadratic Function}{9}{Item.4}
-\contentsline {paragraph}{A Non-trival Function Study}{9}{Item.4}
+\contentsline {paragraph}{A Non-trival Function Study}{10}{Item.4}
 \contentsfinish 
