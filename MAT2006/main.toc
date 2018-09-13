@@ -20,5 +20,7 @@
 \contentsline {chapter}{\numberline {2}Week2}{13}{chapter.2}
 \contentsline {section}{\numberline {2.1}Wednesday}{13}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Review and Announcement}{13}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Different Numbers}{13}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.2}Irrational Number Analysis}{13}{subsection.2.1.2}
+\contentsline {paragraph}{Continued Fraction Expansion}{18}{equation.2.1.3d}
+\contentsline {paragraph}{Observations from continued fraction expansion}{19}{equation.2.1.4}
 \contentsfinish 

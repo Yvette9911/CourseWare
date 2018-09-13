@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  12 SEP 2018 09:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  13 SEP 2018 03:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2582,14 +2582,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Package mdframed Info: mdframed works in twoside mode on input line 48.
+Package mdframed Info: mdframed works in twoside mode on input line 44.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 48.
-Package mdframed Info: mdframed works in twoside mode on input line 56.
+(mdframed)              on input line 44.
+Package mdframed Info: mdframed works in twoside mode on input line 53.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 56.
+(mdframed)              on input line 53.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2597,16 +2597,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-Package mdframed Info: mdframed works in twoside mode on input line 79.
+Package mdframed Info: mdframed works in twoside mode on input line 95.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 79.
-Package mdframed Info: mdframed works in twoside mode on input line 82.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 82.
+(mdframed)              on input line 95.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7888) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2615,10 +2611,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-Package mdframed Info: mdframed works in twoside mode on input line 122.
+Package mdframed Info: mdframed works in twoside mode on input line 100.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 122.
+(mdframed)              on input line 100.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2629,13 +2625,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
-Overfull \hbox (20.72713pt too wide) detected at line 180
-\OMS/zplm/m/n/10.95 j\OML/zplm/m/it/10.95 x \OMS/zplm/m/n/10.95 ^^@ []j \OT1/zp
-lm/m/n/10.95 = \OMS/zplm/m/n/10.95 j[]j \OT1/zplm/m/n/10.95 = \OMS/zplm/m/n/10.
-95 j[]j ^^T [] \OT1/zplm/m/n/10.95 = [] \OMS/zplm/m/n/10.95 ^^T []
- []
+Underfull \vbox (badness 1648) has occurred while \output is active []
 
-)
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2647,10 +2639,36 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18
+ [18]
+Package mdframed Info: mdframed works in twoside mode on input line 233.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 233.
+Package mdframed Info: mdframed works in twoside mode on input line 244.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 244.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Package mdframed Info: mdframed works in twoside mode on input line 273.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 273.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
 No file main.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
@@ -2659,18 +2677,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 198.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C161964045BEF79EE110C571B49D031B;779.
+(rerunfilecheck)             Checksum: 8D33D1B667713A2CA297D8410378533B;788.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 47917 strings out of 492995
- 994882 string characters out of 6132703
- 1382544 words of memory out of 5000000
- 50220 multiletter control sequences out of 15000+600000
- 99596 words of font info for 315 fonts, out of 8000000 for 9000
+ 47963 strings out of 492995
+ 995347 string characters out of 6132703
+ 1382882 words of memory out of 5000000
+ 50227 multiletter control sequences out of 15000+600000
+ 101088 words of font info for 336 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,20n,98p,10504b,802s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -2697,10 +2715,10 @@ rw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/pala
 tino/uplbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8a.
 pfb>
-Output written on main.pdf (28 pages, 425048 bytes).
+Output written on main.pdf (30 pages, 433295 bytes).
 PDF statistics:
- 389 PDF objects out of 1000 (max. 8388607)
- 310 compressed objects within 4 object streams
- 94 named destinations out of 1000 (max. 500000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
+ 105 named destinations out of 1000 (max. 500000)
  64659 words of extra memory for PDF output out of 74296 (max. 10000000)
 
