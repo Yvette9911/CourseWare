@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  11 SEP 2018 20:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  13 SEP 2018 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2216,7 +2216,7 @@ LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <14.4> not available
 (Font)              Font shape `T1/pplx/b/it' tried instead on input line 24.
 
-<zh-hans_logo.png, id=45, 383.4325pt x 65.24374pt>
+<zh-hans_logo.png, id=49, 383.4325pt x 65.24374pt>
 File: zh-hans_logo.png Graphic file (type png)
  <use zh-hans_logo.png>
 Package pdftex.def Info: zh-hans_logo.png used on input line 24.
@@ -2428,13 +2428,23 @@ Package mdframed Info: mdframed works in twoside mode on input line 251.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 251.
+Package mdframed Info: mdframed works in twoside mode on input line 254.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 254.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6])
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2446,7 +2456,39 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+Package mdframed Info: mdframed works in twoside mode on input line 382.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 382.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12
 
 
 ]
@@ -2457,14 +2499,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: ACD6FCDC7D42C736E0154E43677B36D1;443.
+(rerunfilecheck)             Checksum: F5F1139EBDE9D9C1635145BEBE87F753;505.
  ) 
 Here is how much of TeX's memory you used:
- 47505 strings out of 492995
- 989481 string characters out of 6132703
- 1374900 words of memory out of 5000000
- 49997 multiletter control sequences out of 15000+600000
- 88589 words of font info for 233 fonts, out of 8000000 for 9000
+ 47524 strings out of 492995
+ 989671 string characters out of 6132703
+ 1374969 words of memory out of 5000000
+ 50001 multiletter control sequences out of 15000+600000
+ 89874 words of font info for 236 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,10n,98p,10504b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -2490,10 +2532,10 @@ e1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 latino/uplbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8
 a.pfb>
-Output written on main.pdf (18 pages, 275248 bytes).
+Output written on main.pdf (22 pages, 292695 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 61514 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 61522 words of extra memory for PDF output out of 61914 (max. 10000000)
 

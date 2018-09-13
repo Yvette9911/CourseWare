@@ -13,4 +13,8 @@
 \contentsline {paragraph}{Holding Cost for $h=.1$}{4}{subsection.2.1.1}
 \contentsline {paragraph}{Confidence Interval}{4}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Non-perishable Products}{4}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Thursday}{6}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Discrte Time Markov Chains}{6}{subsection.2.2.1}
+\contentsline {paragraph}{Example 1: simple random walk}{6}{subsection.2.2.1}
+\contentsline {paragraph}{Application 1}{7}{theoremeT.2.1}
 \contentsfinish 

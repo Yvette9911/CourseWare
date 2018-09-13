@@ -266,8 +266,183 @@ Particularly, $\pm i = \cos(\pm \frac{\pi}{2}) + i\sin(\pm\frac{\pi}{2})$
 \end{enumerate}
 \end{example}
 
+\paragraph{Product in polar form}
+Given $z_i = r_i(\cos\theta_i+i\sin\theta_i)$ for $i=1,2$, we can compute its product:
+\begin{align*}
+z_1z_2 &=r_1r_2(\cos\theta_1\cos\theta_2-\sin\theta_1\sin\theta_2 + i(\sin\theta_1\cos\theta_2+\cos\theta_1\sin\theta_2))\\
+&=r_1r_2(\cos(\theta_1+\theta_2) + i\sin(\theta_1+\theta_2))
+\end{align*}
+Thus, $\mbox{arg}(z_1z_2) = \mbox{arg}z_1+\mbox{arg}z_2$.
+\begin{remark}
+Note that $\mbox{Arg}(z_1z_2)\ne\mbox{Arg}z_1 +\mbox{Arg}z_2$. ($\mbox{Arg}(z_1z_2)$ should be restricted to be within the interval $(-\pi,\pi]$)
+\end{remark}
+
+\paragraph{Inverse in Polar form}
+Given $z=r(\cos\theta+i\sin\theta)$, we aim to find the inverse such that $zz^{-1}=1$. Hence, $z^{-1}=\frac{1}{r}(\cos(-\theta)+i\sin(-\theta))$.
+
+If we obtain the inverse, we can compute the division $\frac{z_1}{z_2}$:
+\[
+\frac{z_1}{z_2} =r_1(\cos\theta_1+i\sin\theta_1)\frac{1}{r_2}(\cos(-\theta_2)+i\sin(-\theta_2))
+=
+\frac{r_1}{r_2}(\cos(\theta_1-\theta_2) + i\sin(\theta_1-\theta_2))
+\]
+Thus, $\mbox{arg}\frac{z_1}{z_2} =\mbox{arg}z_1 - \mbox{arg}z_2$.
+
+\paragraph{Euler Identity}
+The Euler Identity is given by:
+\[
+e^{ix}  = \cos x+i\sin x
+\]
+The proof requires Taylor's expansion.
+
+\paragraph{Exponential Form}
+The exponential form of $z$ in polar form is given by:
+\[
+z = re^{i\theta}
+\]
+Then it is convenient to define produt, inverse, and division:
+\begin{align*}
+(r_1e^{i\theta_1})\cdot(r_2e^{i\theta_2})&=
+r_1r_2e^{i(\theta_1+\theta_2)}\\
+\frac{1}{re^{i\theta}}&=\frac{1}{r}e^{i(-\theta)}\\
+\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}&=\frac{r_1}{r_2}e^{i(\theta_1-\theta_2)}
+\end{align*}
+
+\paragraph{Nonuniqueness} $z=re^{i\theta} = re^{i(\theta+2n\pi)}$
 
 
+\paragraph{Equality} Two complex numbers are equal means that:
+\[
+r_1e^{i\theta_1}=r_2e^{i\theta_2}
+\Longleftrightarrow
+\left\{
+\begin{aligned}
+r_1&=r_2\\
+\theta_1&=\theta_2+2k\pi,k\in\mathbb{Z}
+\end{aligned}
+\right.
+\]
+
+\paragraph{Circle} The circle centered at the origin with radius $R$ can be describled as:
+\[
+\begin{array}{ll}
+|z| = R\Longleftrightarrow z = Re^{i\theta},
+&
+0\le\theta<2\pi
+\end{array}
+\]
+The circle centered at $z_0$ with radius $R$ can be describled as:
+\[
+\begin{array}{ll}
+|z-z_0| = R\Longleftrightarrow z = z_0+Re^{i\theta},
+&
+0\le\theta<2\pi
+\end{array}
+\]
+
+\paragraph{Neighborhoold} The $\epsilon$-neighborhood of the point $z_0$ is given by:
+\[
+\begin{array}{l}
+|z-z_0| < \epsilon
+\end{array}
+\]
+If delete the center, it is given by:
+\[
+\begin{array}{l}
+0<|z-z_0| < \epsilon
+\end{array}
+\]
+
+
+
+\section{Powers and Roots}
+\paragraph{Powers}
+The powers of $z=re^{i\theta}$ is given by:
+\begin{align*}
+z^n&=r^ne^{in\theta}\\
+z^{-n} = r^{-n}e^{i(-n)\theta}
+\end{align*}
+Thus we derive the \emph{De Moiver's Formula}:
+\[
+(\cos\theta+i\sin\theta)^n=(e^{i\theta})^n
+=\cos n\theta+i\sin n\theta.
+\]
+It is useful for computing powers tha contains complex number. For example,
+\[
+(1+i)^n = (\sqrt{2}e^{i\frac{\pi}{4}})^n
+=2^{n/2}e^{\frac{in\pi}{4}}
+\]
+\begin{proposition}
+\[
+\sin(n\theta) = \sum_{k=0}^{\lfloor{n/2}\rfloor}\binom{n}{2k+1}(-1)^k\cos^{n-2k-1}\theta\sin^{2k+1}\theta,
+\]
+where $\lfloor{x}\rfloor$ denotes the largest integer that not exceeds $x$.
+\end{proposition}
+\paragraph{Solving high order equations}The powers of complex can also be used to solve high order equations.
+\begin{example}
+To sovle the equation $z^n=1$, we express $z = re^{i\theta}$. It follows that
+\[
+(re^{i\theta})^n = 1e^{i0}\implies
+\left\{
+\begin{aligned}
+r^n&=1\\
+n\theta&=2k\pi
+\end{aligned}\right.
+\implies
+\left\{
+\begin{aligned}
+r&=1\\
+\theta&=\frac{2k\pi}{n}
+\end{aligned}\right.
+\]
+Thus, the distinct $n$-th roots( of unity) are given by:
+\[
+\exp(i\frac{2k\pi}{n}) = \cos\frac{2k\pi}{n} + i\sin\frac{2k\pi}{n},\qquad
+k=0,1,2,\dots,n-1.
+\]
+If we denote $w_n=\exp(i\frac{2\pi}{n})$, we derive the roots:
+\[
+1,w_n,w_n^2,\dots,w_n^{n-1}.
+\]
+\end{example}
+\paragraph{Roots of high order equations}
+Suppose $z_0=r_0e^{i\theta_0}$, we aim to sovle $z^n = z_0$:
+\[
+r^ne^{in\theta} = r_0e^{i\theta_0}\implies
+\left\{
+\begin{aligned}
+r&=r_0^{1/n}\\
+\theta&=\frac{\theta_0+2k\pi}{n}
+\end{aligned}
+\right.
+\]
+Thus the distinct $n$th roots are given by:
+\[
+r_0^{1/n}\exp(i\frac{\theta_0+2k\pi}{n}),\qquad
+k=0,1,2,\dots,n-1.
+\]
+If $c$ is any particular $n$-th roots of $z_0$, then
+\[
+(cw)^n=z_0\implies
+c^nw^n=z_0\implies w_n=1.
+\]
+Hence, the distinct $n$-th roots of $z_0$ are
+\[
+c,cw_n,cw_n^2,\dots,cw_n^{n-1}
+\]
+\begin{remark}
+\begin{itemize}
+\item
+There are $n$ of the $n$-th roots of a complex number, all the roots are equally spaced about a circle that is centered at origin with radius $|z_0|^{1/n}$.
+\item
+Let $z_0^{1/n}$ denote the set of all $n$-th roots of $z_0$. If $\theta_0=\mbox{arg}z_0$, then
+\[
+c_0=r_0^{1/n}\exp(i\frac{\theta_0}{n})
+\]
+is called the principal $n$-th root of $z_0$.
+\end{itemize}
+
+\end{remark}
 
 
 Actually, $(\mathbb{C},+)$ forms a group:

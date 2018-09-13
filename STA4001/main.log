@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  11 SEP 2018 15:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  13 SEP 2018 11:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1980,7 +1980,7 @@ File: pppdftex.def 2017/01/14 v0.5h Pdfpages driver for pdfTeX (AM)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
-(./main.aux (./week1/Tuesday.aux) (./week2/Tuesday.aux))
+(./main.aux (./week1/Tuesday.aux) (./week2/Tuesday.aux) (./week2/Friday.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -2216,7 +2216,7 @@ LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <14.4> not available
 (Font)              Font shape `T1/pplx/b/it' tried instead on input line 24.
 
-<zh-hans_logo.png, id=53, 383.4325pt x 65.24374pt>
+<zh-hans_logo.png, id=61, 383.4325pt x 65.24374pt>
 File: zh-hans_logo.png Graphic file (type png)
  <use zh-hans_logo.png>
 Package pdftex.def Info: zh-hans_logo.png used on input line 24.
@@ -2381,6 +2381,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
+\openout2 = `week2/Friday.aux'.
+
+
+(./week2/Friday.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2390,25 +2394,48 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
+Package mdframed Info: mdframed works in twoside mode on input line 49.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 49.
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <10> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 50.
+Package mdframed Info: Not enough space on this page on input line 59.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8
+
+
+]
 No file main.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
-(./main.aux (./week1/Tuesday.aux) (./week2/Tuesday.aux))
+(./main.aux (./week1/Tuesday.aux) (./week2/Tuesday.aux) (./week2/Friday.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C5A2FEC17125046F33EA2CB53C422389;506.
+(rerunfilecheck)             Checksum: DD120B65F2695FEC70B73D68BA4FD2F5;641.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 47388 strings out of 492995
- 987259 string characters out of 6132703
- 1371622 words of memory out of 5000000
- 49910 multiletter control sequences out of 15000+600000
- 73077 words of font info for 207 fonts, out of 8000000 for 9000
+ 47438 strings out of 492995
+ 987926 string characters out of 6132703
+ 1372657 words of memory out of 5000000
+ 49931 multiletter control sequences out of 15000+600000
+ 77915 words of font info for 221 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,9n,98p,10504b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -2420,20 +2447,21 @@ ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
 2017/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2017
 /texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
-rw/palatino/uplbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/pal
-atino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/u
-plri8a.pfb>
-Output written on main.pdf (16 pages, 214404 bytes).
+-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw
+/palatino/uplbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palat
+ino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/upl
+ri8a.pfb>
+Output written on main.pdf (18 pages, 241057 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 48218 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 241 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 51306 words of extra memory for PDF output out of 51595 (max. 10000000)
 
