@@ -23,6 +23,16 @@
 \contentsline {section}{\numberline {3.1}Wednesday}{17}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Convex Analysis}{17}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Iterative Method}{18}{subsection.3.1.2}
-\contentsline {paragraph}{Nonlinear LS}{18}{definitionT.3.2}
-\contentsline {paragraph}{Choice of Step Length $\alpha $}{19}{definitionT.3.2}
+\contentsline {paragraph}{Nonlinear LS}{19}{Item.18}
+\contentsline {paragraph}{Choice of Step Length $\alpha $}{19}{Item.18}
+\contentsline {paragraph}{Convergence Rate Analysis}{21}{definitionT.3.3}
+\contentsline {paragraph}{Choice of Step Length}{21}{definitionT.3.3}
+\contentsline {section}{\numberline {3.2}Thursday}{22}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Announcement}{22}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Sparse Large Scale Optimization}{22}{subsection.3.2.2}
+\contentsline {paragraph}{Linear Programming Approach}{22}{subsection.3.2.2}
+\contentsline {paragraph}{Gredient-Based Approach}{23}{Item.20}
+\contentsline {paragraph}{Descent Direction}{23}{equation.3.2.1}
+\contentsline {paragraph}{Stopping Criteria}{24}{equation.3.2.1}
+\contentsline {paragraph}{Armijo Condition and BB Step}{24}{Item.23}
 \contentsfinish 
