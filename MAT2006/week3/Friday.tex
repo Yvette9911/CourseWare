@@ -1,442 +1,259 @@
-
 \section{Friday}\index{week3_Friday_lecture}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\HRule \\[0.5cm]
+{
+\begin{center}
+ \centering\includegraphics[width=0.4\textwidth]{./logo}~\ 
+ \includegraphics[width=0.4\textwidth]{./logo_1}~\
+ \end{center}
+  \say{\textit{Our first quiz is at 1:30-2:20pm on September 30th. That is next Sunday. There will be around $5$ questions.}} \textit{the Grandpa said breezily,}
+}
+
+\HRule \\[0.5cm]
 \subsection{Review}
-\begin{proposition}\label{solution_for_undetermined_system}
-Undetermined system $\bm{Ax} = \bm b$ with $m<n$, i.e., number of equations < number of unknowns, has \emph{no solution} or \emph{infinitely many solutions}.
-\end{proposition}
-We want to understand the meaning of rank: number of ''real'' equations. 
-
-Then we introduce definition of \textit{linearly independence} and \textit{linearly dependence.}
-
-The linear dependence has relation with the system:
-\begin{proposition}\label{Pro:3:3}
-$\bm{Ax} = \bm 0$ has nonzero solutions if and only if the column vectors of $\bm A$ are dep.
-\end{proposition}
-Combining proposition (\ref{Pro:3:3}) with (\ref{solution_for_undetermined_system}), 
-we derive the corollary:
-\begin{corollary}
-Any $(n+1)$ vectors in $\mathbb{R}^{n}$ are dep.
-\end{corollary}
-\begin{proposition}
-Undetermined system $\bm{Ax} = \bm b$ with $m\ge n$, i.e., number of equations $\ge$ number of unknowns may have \emph{no solution} or \emph{unique solution} or \emph{infinitely many solutions}.
-\end{proposition}
-From this proposition we derive the corollary immediately:
-\begin{corollary}
-Any $(n-1)$ vectors in $\mathbb{R}^{n}$ cannot span the whole space.
-\end{corollary}
-Then we introduce the definition of basis:
-\begin{definition}[Basis]
-A set of ind. vectors that span this space is called the \emph{basis} of this space.
-\end{definition}
-Then we introduce a theorem saying that \emph{All basis of a given vector space have the same size.}
-
-Thus we introduce \emph{dimension} to denote the \textit{number of vectors in a basis.}
-\subsection{More on basis and dimension}
-The basis of a given vector space has to satisfy two conditions:
+This lecture will review the continuty of function. Let's start with some easy examples:
 \[
-\underbrace{\mbox{linear independence}}_{\mbox{not too many}} + 
-\underbrace{\mbox{span the space}}_{\mbox{not too few}}
+f(x)=\left\{
+\begin{aligned}
+x,&\quad x\in\mathbb{Q}\\
+-x,&\quad x\notin\mathbb{Q}
+\end{aligned}
+\right.
 \]
+This function is continuous nowhere expect for $x=0$.
 
-The \emph{ind.} constraint let the size of basis not too many. For example, if given $1000$ vectors of $\mathbb{R}^{3}$, they are very likely to be dep.
-
-\emph{Spanning the space} let the size of basis not too few. For example, given only $3$ vectors of $\mathbb{R}^{100}$, they cannot span the whole space obviously.
-
-We claim that: 
-\begin{align*}
-\text{A basis }&=\text{ maximal ind. set}\\
-&=\text{ minimal spanning set}
-\end{align*}
-\begin{definition}[spanning set]
-$v_1,v_2,\dots,v_n$ is said to be the spanning set of $\bm V$ if 
-\[
-\bm V = \Span\{v_1,v_2,\dots,v_n\}.
-\]
-\end{definition}
-\begin{example}
-$v_1 = \begin{pmatrix}
-1\\2\\1
-\end{pmatrix}$ is not a basis of $\mathbb{R}^{3}$.
-
-We can add $v_2 = \begin{pmatrix}
-1\\0\\0
-\end{pmatrix}$, which is ind. of $v_1$. But $v_1,v_2$ still don't form a basis.
-
-If we add one more vector $v_3 = \begin{pmatrix}
-0\\1\\0
-\end{pmatrix}$, then $v_1,v_2,v_3$ form a basis of $\mathbb{R}^{3}$.
-\end{example}
-
-\begin{theorem}\label{theorem_3.3}
-Let $\bm V$ be a space of dimension $n>0$, then
-\begin{enumerate}
-\item
-Any set of $n$ ind. vectors span $\bm V$.
-\item
-Any $n$ vectors that span $\bm V$ are ind.
-\end{enumerate}
-\end{theorem}
-
-Here is the proof outline, but you should complete the proof in detail.
-\begin{proof}[proofoutline.]
-\begin{enumerate}
-\item
-Suppose $v_1,v_2,\dots,v_n$ are ind. and $v$ is an arbitarary vector in $\bm V$. Firstly, show that $v_1,v_2,\dots,v_n,v$ is dep., thus derive the equation $c_1v_1+c_2v_2+\dots+c_{n}v_n+c_{n+1}v = \bm 0$. Argue that the scalar $c_{n+1}\ne 0$. Then we can express $v$ in form of $v_1,v_2,\dots,v_n$, i.e., $v_1,v_2,\dots,v_n$ span $\bm V$.
-\item
-Suppose $v_1,v_2,\dots,v_n$ span $\bm V$. Assume $v_1,v_2,\dots,v_n$ are dep. Then show that $v_n$ could be written as form of other $(n-1)$ vectors, it follows that $v_1,v_2,\dots,v_{n-1}$ still span $\bm V$. If $v_1,v_2,\dots,v_{n-1}$ are also dep, we can continue eliminating one vector. We continue this way until we get an ind. spanning set with $k<n$ elements, which contradicts dim($\bm V$)$=n$. Therefore, $v_1,v_2,\dots,v_n$ must be ind.
-\end{enumerate}
-\end{proof}
-\begin{example}\label{span_dimension_three}
-$\begin{pmatrix}
-1\\1\\2
-\end{pmatrix},\begin{pmatrix}
-2\\1\\3
-\end{pmatrix},\begin{pmatrix}
-1\\3\\2
-\end{pmatrix}$ are ind. $\implies$ they span $\mathbb{R}^{3}$.
-\end{example}
-\subsubsection{Clarification of dimension}
-Firstly, we need to understand ``set'':
-\begin{enumerate}
-\item
-$P\triangleq\{\text{All polynomials}\} = \text{span}\{1,x,x^2,\dots\}\implies \text{dim}(P)=\infty$.
-\item
-$P_3\triangleq\{\text{All polynomials with degree $\le$ 3}\} = \text{span}\{1,x,x^2,x^3\}\implies \text{dim}(P)=4$.
-\item
-$Q\triangleq\text{span}\{x^2,1+x^3+x^{10},x^{300}\}\implies \text{dim}(Q) = 3.$
-\end{enumerate}
-\begin{remark}
-dim of space $\ne$ dim of the space it lives in.\\
-For example, the line in $\mathbb{R}^{100}$ has dim $1$.
-\end{remark}
-\subsection{What is rank?}
-\begin{definition}[Rank]
-The rank of matrix $\bm A$ is defined as the \emph{number of nonzero pivots of rref of} $\bm A$.
-\end{definition}
-\begin{example}
-\[
-\bm A = \begin{bmatrix}
-1&3&3&4\\2&6&9&7\\-1&-3&3&4
-\end{bmatrix}
-\xLongrightarrow{\text{row transform}}
-\bm U = \begin{bmatrix}
-1&3&0&-1\\0&0&1&1\\0&0&0&0
-\end{bmatrix}
-\]
-$\bm U$ has two pivots, hence rank($\bm A$) = rank($\bm U$) = 2.
-\end{example}
-However, the definition for rank is too complicated, can we define rank of $\bm A$ directly?
-
-\emph{Key question: What quantity is not changed under row transformation?}
-
-\textit{Answer: }Dimension of row space.
-\begin{definition}[column space]
-The \emph{column space} of a matrix is the subspace of $\mathbb{R}^{n}$ spanned by the columns.
-
-In other words, suppose $\bm A = \left[\begin{array}{c|c|c}
-a_1&\dots&a_n
-\end{array}\right]$, the column space of $\bm A$ is given by
-\[
-\mathcal{C}(\bm A) =\Span\{a_1,a_2,\dots,a_n\}.
-\]
-\end{definition}
-\begin{definition}[row space]
-The \emph{row space} of a matrix is the subspace of $\mathbb{R}^{n}$ spanned by the rows.
-
-Suppose $\bm A = \left[\begin{array}{c}
-a_1\\
-\hline
-\dots\\
-\hline
-a_n
-\end{array}\right]$, the row space of $\bm A$ is given by
-\[
-\mathcal{R}(\bm A) = \Span\{a_1,a_2,\dots,a_n\}.
-\]
-
-The \emph{row space} of $\bm A$ is essentially $\mathcal{R}(\bm A):=\mathcal{C}(\bm A\trans)$, i.e., the column space of $\bm A\trans$.
-\end{definition}
-\begin{proposition}\label{row_transformation}
-Row transforamtion doesn't change the row space
-\end{proposition}
-\begin{proof}
-After row transformation, \emph{new rows are linear combinations of old rows.}
-
-Hence we have $\mathcal{R}(\mbox{new rows}) \subset\mathcal{R}(\mbox{old rows})$.
-
-More specifically, assuming $\bm A\xLongrightarrow{\text{Row Transfom}}\bm B$, then we have $\mathcal{R}(\bm B)\subset\mathcal{R}(\bm A)$.
-
-Since row transformations are invertible, we also have $\bm B\xLongrightarrow{\text{Row Transfom}}\bm A$, thus we have $\mathcal{R}(\bm A)\subset\mathcal{R}(\bm B)$.
-
-In conclusion, we obtain $\mathcal{R}(\bm B)=\mathcal{R}(\bm A)$.
-\end{proof}
-
-Hence $\rank(\bm A) = \text{pivots of $\bm U$} = \dim(\row(\bm U)) = \dim(\row(\bm A))$.
-
-Hence we have a much simpler definition for rank:
-\begin{definition}[rank]
-The \emph{dimension of the row space} is the \emph{rank of a matrix}, i.e.,
-\[
-\rank(\bm A) = \dim(\mathcal{R}(\bm A)).
-\]
-\end{definition}
-
-In the example (\ref{span_dimension_three}), we find $\dim(\row(\bm A)) = \dim(\col(\bm A)) = 2$, is this a coincidence? \textit{The fundamental theorem of linear algebra} gives this answer:
-\begin{theorem}\label{column_rank_row_rank}
-The row space and column space both have the \emph{same} dimension $\bm r$. 
-
-We call $\dim(\mathcal{C}(\bm A))$ as \textit{column rank}; $\dim(\mathcal{R}(\bm A))$ as \textit{row rank}. 
-
-In brevity, \emph{column rank=row rank= rank}, i.e.,
-\[
-\begin{array}{ll}
-\dim(\mathcal{C}(\bm A)) = \dim(\mathcal{R}(\bm A))=\rank(\bm A),
-&
-\mbox{for matrix $\bm A$}
-\end{array}
-\]
-\end{theorem}
-Let's discuss an example to have an idea of proving it.
-\begin{example}
-\qquad\\
-\[
-\bm A = \begin{bmatrix}
-1&3&3&4\\2&6&9&7\\-1&-3&3&4
-\end{bmatrix}
-\xLongrightarrow{\text{row transform}}
-\bm U = \begin{bmatrix}
-1&3&0&-1\\0&0&1&1\\0&0&0&0
-\end{bmatrix}
-\]
-We notice that \emph{column rank of $\bm A =\bm 2$} and \emph{column rank of $\bm U =\bm 2$}.
-
-Why do they have the same \emph{column space dimension}?
-
-\paragraph{Wrong reason: $\bm A$ and $\bm U$ has the same column space}
-This is false. For example, the first column of $\bm A$ is $\begin{pmatrix}
-1\\2\\-1
-\end{pmatrix}\notin\col(\bm U)$. The column spaces of $\bm A$ and $\bm U$ are \emph{different}, but the dimension of them are \emph{equal}.
-\paragraph{Right reason: $\bm{Ax} = \bm 0$ iff. $\bm{Ux} = \bm 0$}
-The same combinations of the columns are zero (or nonzero) for $\bm A$ and $\bm U$. 
-
-In other words, the $r$ pivot columns (for both $\bm A$ and $\bm U$) are independent; the $(n-r)$ free columns (for both $\bm A$ and $\bm U$) are dependent. 
-
-For example, for $\bm U$, column $1$ and $3$ are ind.(pivot columns); column $2$ and $4$ are dep.(free columns).
-
-For $\bm A$, column $1$ and $3$ are also ind.(pivot columns); column $2$ and $4$ are also dep.(free columns).
-\end{example}
-This example shows that \emph{Row transformation doesn't change independence relations of columns}. We give a formal proof below:
-\begin{proposition}
-Suppose matrix $\bm A$ is converted into $\bm B$ by row transformation. If a set of columns of $\bm A$ are ind. then so are the corresponding columns of $\bm B$.
-\end{proposition}
-\begin{proof}
-Assume $\bm A = \left[\begin{array}{c|c|c}
-a_1&\dots&a_n
-\end{array}\right], \bm B = \left[\begin{array}{c|c|c}
-b_1&\dots&b_n
-\end{array}\right]$.
-
-Without loss of generality (We often denote it as ``WLOG''), we assume $a_1,a_2,\dots,a_k$ are ind.(We can achieve it by switching columns.)
-
-We define the sub-matrices $\bm{\hat{A}} = \left[\begin{array}{c|c|c}
-a_1&\dots&a_k
-\end{array}\right]$ and $\bm{\hat{B}} = \left[\begin{array}{c|c|c}
-b_1&\dots&b_k
-\end{array}\right]$.
-
-\begin{enumerate}
-\item
-Notice that $\bm{\hat{A}}$ could be converted into $\bm{\hat{B}}$ by row transformation.
-
-Hence $\bm{\hat{A}x}=\bm 0$ and $\bm{\hat{B}x}=\bm 0$ has the same solutions.
-\item
-On the other hand, $a_1,a_2,\dots,a_k$ are ind. columns.
-
-Hence $\bm{\hat{A}x}=\bm 0$ has the only zero solution.
-\end{enumerate}
-Combining (1) and (2), $\bm{\hat{B}x}=\bm 0$ has the only zero solution. Hence $b_1,b_2,\dots,b_k$ are ind.
-\end{proof}
-
-We can answer why the coincidence shown in the example, i.e., $\bm A$ and $\bm U$ has the same column space dimension:
-\begin{proposition}\label{column_rank}
-Row transformation doesn't change the column rank.
-\end{proposition}
-\begin{proof}
-Assume $\bm A\xLongrightarrow{\text{row transform}}\bm B$.
-
-Suppose $\dim(\mathcal{C}(\bm A)) = r$, then we pick $r$ ind. columns of $\bm A$. After row transformation, they are still ind. Hence $\dim(\mathcal{C}(\bm B))\ge r = \dim(\col(\bm A))$.
-
-Since row transformations are invertible, we get $\bm B\xLongrightarrow{\text{row transform}}\bm A$. Similarly, $\dim(\mathcal{C}(\bm A))\ge \dim(\mathcal{C}(\bm B))$.
-
-Hence $\dim(\mathcal{C}(\bm A))= \dim(\mathcal{C}(\bm B))$.
-\end{proof}
-Combining proposition (\ref{row_transformation}) and (\ref{column_rank}), we can proof theorem (\ref{column_rank_row_rank}):
-\begin{proof}[Proof for theorem \ref{column_rank_row_rank}]
-Assume $\bm A\xLongrightarrow{\text{row transform}}\bm U$(rref).
+\begin{definition}[Continuous]
+Given a function $f:D\mapsto\mathbb{R}$
+, 
 \begin{itemize}
 \item
-Proposition $(\text{\ref{row_transformation}})\implies \dim(\mathcal{R}(\bm A)) = \dim(\mathcal{R}(\bm U))$.
+we say $f$ is \emph{continuous} at $x_0\in D$ if for $\forall\varepsilon>0$, $\exists \delta:=\delta(\varepsilon,x_0) >0$ s.t. $|f(y) - f(x_0)|<\varepsilon$ for $\forall |y-x_0|<\delta$
 \item
-Proposition $(\text{\ref{column_rank}})\implies \dim(\mathcal{C}(\bm A) = \dim(\mathcal{C}(\bm U))$.
+$f$ is continuous on $D$ if it is continuous at every point in $D$.
 \item
-Notice that $\dim(\mathcal{R}(\bm U))$ denotes the number of pivots, $\dim(\mathcal{C}(\bm U))$ denotes the number of pivot columns. Obviously, $\dim(\mathcal{R}(\bm U))=\dim(\mathcal{C}(\bm U))$.
+If $\delta:=\delta(\varepsilon)$, i.e., $\delta$
+ is independent of $x_0\in D$, then $f$ is said to be \emph{uniformly continuous} on $D$.
 \end{itemize}
-Hence $\dim(\mathcal{R}(\bm A))=\dim(\mathcal{C}(\bm A))$.
-\end{proof}
+\end{definition}
 \begin{remark}
-$\dim(\mathcal{R}(\bm U))$ essentially denotes the number of ``real'' equations. $\dim(\mathcal{C}(\bm U))$ denotes the number of ``real'' variables.
-
-So Theorem \ref{column_rank_row_rank} implies that the number of ``real'' equations should equal to the number of ``real'' variables.
+The following statements are equivalent, you should show by yourself.
+\begin{enumerate}
+\item
+$f$ is continuous
+\item
+If $\{x_n\}\to x_0$ as $n\to\infty$, then $\{f(x_n)\}\to f(x_0)$ as $n\to\infty$.
+\item
+$f^{-1}(\bm A)$ is open/closed if the set $\bm A$ is open/closed.
+\end{enumerate}
 \end{remark}
 
-\subsubsection{What is the null space dimension?}
-Assume the system $\bm{Ax}=\bm b$ has $n$ variables.
-\begin{proposition}For matrix $\bm A$, 
-\[
-\rank(\bm A) + \rank(N(\bm A)) = n.
-\]
-\end{proposition}
-\begin{proof}
-\emph{Number of pivot varibales + Number of free variables = $\bm n$}.
-\end{proof}
-Note that $\bm b\in\col(\bm A)$ iff. $\bm{Ax} = \bm b$ for some $\bm x$.
-
-Hence $\mathcal{C}(\bm A)$ denotes all possible vectors in the form $\bm{Ax}$. Hence we call $\mathcal{C}(\bm A)$ as ``\emph{range space}'' of $\bm A$, which is denoted as range($\bm A$).
-
-Equivalently, we have $\dim(\text{range($\bm A$)}) + \dim(N(\bm A)) = n$.
-\begin{proposition}
-If $\bm{Ax} = \bm b$ has at least one solution, then $\rank(\bm A) = \rank(\begin{bmatrix}
-\bm A&\bm b
-\end{bmatrix})$.
-\end{proposition}
-\begin{example}
-Suppose $\bm A = \begin{bmatrix}
-a_1&a_2&a_3
-\end{bmatrix}$. If $\bm{Ax} = \bm b$ has at least one solution, then $\rank(\begin{bmatrix}
-a_1&a_2&a_3
-\end{bmatrix}) = \rank(\begin{bmatrix}
-a_1&a_2&a_3&b
-\end{bmatrix})$.
-\end{example}
-\begin{proof}[Proofoutline.]
-\[
-\bm{Ax} = \bm b\Longleftrightarrow \bm b\in\mathcal{C}(\bm A)
-\]
-Hence $\bm b$ is the linear combination of columns of $\bm A$. Adding one more column $\bm b$ into $\bm A$ doesn't change the dimension of $\mathcal{C}(\bm A)$. Hence $\rank(\bm A) = \rank(\begin{bmatrix}
-\bm A&\bm b
-\end{bmatrix})$.
-\end{proof}
-\begin{proposition}
-If $\rank(\bm A)\le n-1$ for $m\x n$ matrix $\bm A$, then $\bm{Ax} = \bm b$ has \emph{no solution} or \emph{infinitely many solutions}.
-\end{proposition}
-\begin{proof}[Proofoutline.]
-\[
-\dim(\mathcal{C}(\bm A))+\dim(N(\bm A)) = n
-\implies \dim(N(\bm A))\ge 1
-\]
-So we have special solutions for $\bm{Ax} = \bm b$. For the particular solution, if doesn't exist, then we have no solution, otherwise we have infinitely many solutions.
-\end{proof}
-\begin{definition}[Full Rank]
-For $m\x n$ matrix $\bm A$, if $\rank(\bm A) = \min(m,n)$, then we say $\bm A$ is \emph{full rank}.
+\begin{definition}[Compact]
+A set $K$ is \emph{compact} (cpt) if for evey open cover of $K$, there exists a \emph{finite} sub-cover.
 \end{definition}
-\begin{theorem}
-For $n\x n$ matrix $\bm A$, it is invertible iff. $\rank(\bm A) = n$.
-\end{theorem}
-\begin{proof}
-\textit{Sufficiency.}
-Assume $\rank(\bm A)=r<n$, then by row transformation, we can convert $\bm A$ into $\bm U := \begin{bmatrix}
-\bm I_{r}&\bm B\\\bm 0&\bm 0
-\end{bmatrix}$(rref), where $\bm B\in\mathbb{R}^{r\x(n-r)}$. We can represent this process in matrix notation:
-\[
-\bm P\bm A = \bm U:= \begin{bmatrix}
-\bm I_{r}&\bm B\\\bm 0&\bm 0
-\end{bmatrix},
-\]
-where $\bm P$ is the product of row transformation matrices, which is obviously invertible.
-
-Since $\bm A$ is invertible, we let $\bm A^{-1} = \begin{bmatrix}
-\bm C_{1}\\\bm C_{2}
-\end{bmatrix}_{(r+(n-r))\times n}$. It follows that 
-\[
-\bm P = \bm P\bm I_{n}=\bm P(\bm A\bm A^{-1}) = (\bm{PA})\bm A^{-1} = \bm U\bm A^{-1} = \begin{bmatrix}
-\bm I_{r}&\bm B\\\bm 0&\bm 0
-\end{bmatrix}\begin{bmatrix}
-\bm C_{1}\\\bm C_{2}
-\end{bmatrix} = \begin{bmatrix}
-\bm C_{1}+\bm B\bm C_{2}\\\bm 0
-\end{bmatrix}.
-\]
-Since $\bm P$ has $(n-r)$ zero rows as shown above, it is not invertible, which is a contradiction.
-
-\textit{Necessity.   }If $\bm A$ is full rank, then it has $n$ pivots, then by row transformation we can convert it into $\bm I$(rref). We can represent this process in matrix notation:
-\[
-\bm P\bm A = \bm I
-\]
-where $\bm P$ is the product of row transformation matrix. Hence $\bm P$ is the left inverse of $\bm A$, $\bm A$ is invertible.
-\end{proof}
-\subsubsection{Matrices of rank 1}
+\begin{remark}
+The compactness has an important connection with continuity, e.g., the continuous function $f$ maps compact sets to compact sets.
+\end{remark}
+There is a useful way to determine whether a point is continuous at $f$, which will be discussed in this lecture.
+\subsection{Continuity Analysis}
+Let's raise some examples first. From these examples we can see that the proof of continuousness is non-trival.
 \begin{example}
+\begin{enumerate}
+\item
+Given a funciton
 \[
-\bm A = \begin{bmatrix}
-2&1&1\\4&2&2\\8&4&4\\-2&-1&-1
-\end{bmatrix}\xlongequal{\bm v\trans = \begin{bmatrix}
-2&1&1
-\end{bmatrix}}\begin{bmatrix}
-\bm v\trans\\2\bm v\trans\\4\bm v\trans\\-\bm v\trans
-\end{bmatrix} = \begin{bmatrix}
-1\\2\\4\\-1
-\end{bmatrix}\bm v\trans\xlongequal{\bm u=\begin{bmatrix}
-1&2&4&-1
-\end{bmatrix}\trans}\bm u\bm v\trans
+f(x) = \left\{
+\begin{aligned}
+\sin\frac{1}{x},&\quad x\ne0\\
+0,&\quad x=0
+\end{aligned}
+\right.
 \]
-Here $\rank(\bm A) = 1$.
-\end{example}
-\begin{proposition}
-Every rank 1 matrix $\bm A$ has the form $\bm A = \bm u\bm v\trans = \text{column vector}\x\text{row vector}$.
-\end{proposition}
-You may prove it directly by SVD decomposition (we will learn it later, but note that most theorems or propositions could be proved by SVD). Alternatively, we have another proof:
-\begin{proof}
-We set 
-\[
-\bm A = \begin{bmatrix}
-\bm c_1\\\bm c_2\\\vdots\\\bm c_n
-\end{bmatrix},
-\] 
-where $\bm c_i$ is row vector. WLOG, we set $\bm c_1\ne\bm 0$ and $\bm c_1 = \begin{pmatrix}
-a_1b_1&a_1b_2&\dots&a_1b_n
-\end{pmatrix}$, where $a_1\ne0,$ and $b_i(i=1,\dots,n)$ are not all zero.
+From the graph we can see that $f$ oscillates heavily near zero point.
+\begin{figure}[H]
+\centering
+\includegraphics[width = 10cm]{3_F}
+\caption{Graph for $f$}
+\end{figure}
 
-Since $\rank(\bm A) = 1$, we have $\dim(\mathcal{R}(\bm A)) = 1$. Hence other $\bm c_i$ are dep. with $\bm c_1$. So we set 
+It is easy to show that $\sup_{x,y\in N_{\delta}(0)}|f(x) - f(y)|=2$ however small $\delta$ is.
+\item
+For another function
 \[
-b_i = \frac{a_i}{a_1}\mbox{ for }i=1,2,\dots,n.
+g(x) = \left\{
+\begin{aligned}
+x\sin\frac{1}{x},&\quad x\ne0\\
+0,&\quad x=0
+\end{aligned}
+\right.
 \]
-Thus we construct the form of $\bm A$:
+Conversely, it oscillates weakly near the zero point.
+\begin{figure}[H]
+\centering
+\includegraphics[width = 10cm]{3_G}
+\caption{Graph for $g$}
+\end{figure}
+It is easy to show that $\sup_{x,y\in N_{\delta}(0)}|g(x) - g(y)|=0$ as $\delta\to0$.
+\end{enumerate}
+\end{example}
+\begin{definition}[oscillation]
+\begin{itemize}
+\item
+The oscillation of a function $f$ on $E$ is defined as
 \[
-\bm A = \begin{bmatrix}
-a_1b_1&a_1b_2&\dots&a_1b_n\\
-a_2b_1&a_2b_2&\dots&a_2b_n\\
-\vdots&\vdots&&\vdots\\
-a_nb_1&a_nb_2&\dots&a_nb_n\\
-\end{bmatrix} = \begin{bmatrix}
-a_1\\a_2\\\vdots\\a_n
-\end{bmatrix}\begin{bmatrix}
-b_1&b_2&\dots&b_n
-\end{bmatrix}
+\omega(f;E) := \sup_{x,y\in E}|f(x) - f(y)|
+\]
+\item
+The oscillation of $f$ at a single point $x_0$ is defined as
+\[
+\lim_{\delta\to0}\omega(f,N_\delta(x_0)) := w(f;x_0)
+\]
+\end{itemize}
+\end{definition}
+\begin{remark}
+\begin{itemize}
+\item
+Here we abuse the notation to denote the oscillation at $x_0$ with $\omega(f;x_0)$, but note that $\omega(f;x_0)\ne \omega(f;\{x_0\})$.
+\item
+The well-definedness of $w(f;x_0)$ is because $\omega(f,N_\delta(x_0))$ is non-incresing as $\delta$ decreases and has a lower bound $0$.
+\item
+A function $f$ is continuous at $x_0$ iff $w(f,x_0) = 0$. (verify by yourself)
+\end{itemize}
+\end{remark}
+An classical example that illustrates a function can have continuous points in $\mathbb{R}\setminus\mathbb{Q}$ is shown below. We have faced this example in the diagnostic quiz:
+\begin{example}
+The Dirichlet function is defined for $\mathbb{R}\setminus\{0\}$:
+\[
+f(x) = \left\{
+\begin{aligned}
+0,&\quad x\notin\mathbb{Q}\\
+\frac{1}{q},&\quad x=\frac{p}{q},q>0,(p,q)=1
+\end{aligned}
+\right.
+\]
+The function $f$ is continuous at $x$ iff $x\notin\mathbb{Q}$. 
+The set of all discontinuous points of $f$ is $\mathbb{Q}$. 
+\end{example}
+Now the question turns out:
+\begin{quotation}
+\textit{
+Does there exists a function $g$ of which the set of all discontinuous points of $g$ is $\mathbb{R}\setminus\mathbb{Q}$?
+}
+\end{quotation}
+
+Applying Baire-Category Theorem, we will show the answer to this question is no.
+
+\begin{proposition}\label{pro:3:2}
+Suppose $f$ is continuous on a dense set in $\mathbb{R}$. Then the set of all discontinous points of $f$, denoted as $T$, must form a set of first category, i.e., (a countably union of nowhere dense sets)
+\end{proposition}
+\begin{remark}
+$\mathbb{R}\setminus\mathbb{Q}$ is of second category, otherwise assume
+\[
+\mathbb{R}\setminus\mathbb{Q}=\bigcup_{i=1}^\infty I_i
+\]
+for nowhere dense sets $I_i$, which implies $\mathbb{R}=\bigcup_{i=1}^\infty I_i\bigcup_{q\in\mathbb{Q}}\{q\}$ is a countably union of dense sets. Thus by applying proposition(\ref{pro:3:2}), the irrational number space cannot be the set of discontinuities.
+\end{remark}
+
+The idea of the proof is to express $T$ as countably union of sets, and argue that at least one of which must be nowhere dense.
+\begin{proof}
+
+We construct $D_n=\{x\in\mathbb{R}\mid w(f;x)\ge\frac{1}{n}\}$, which follows that
+\[
+T=\bigcup_{n=1}^\infty D_n.
+\]
+It suffices to show that $D_n$ is nowhere dense for every $n$ by contradiction.
+
+Assume for some fixed $n$, $D_n$ is not nowhere dense, i.e., $\overline{D_n}$ contains an \emph{open} interval $\bm I$. Note that the set of continuous points is dense, we conclude that there exists a point $a$ inside the interval $\bm I$ such that $f$ is continuous at $a$. (why?) Also, there exists a sequence $\{b_k\}\subseteq D_n$ with limit $a$. (since you can verify $D_n$ is closed)
+
+\begin{subequations}
+Since $f$ is continuous at $a$, there exists $\delta>0$ such that 
+\begin{equation}\label{Eq:3:3:a}
+|f(x) - f(a)|<\frac{1}{4n} \mbox{for $|x-a|<\delta.$}
+\end{equation}
+At the same time $\{b_k\}\subseteq(a-\delta,a+\delta)$ for all large $k$, i.e., $\omega(f;b_k)\ge\frac{1}{n}$. Hence, there exists a sequence $\{c_{kl}\}$with limit $b_k$, such that the difference $|f(c_{kl}) - f(b_k)|$ is at least greater than $\frac{1}{2n}$ (why not $\frac{1}{n}$?), i.e., 
+\begin{equation}\label{Eq:3:3:b}
+|f(c_{kl} - f(b_k)|\ge\frac{1}{2n}
+\end{equation}
+Meanwhile, for large $l$, note that $c_{kl}$ is close to $a$, i.e., from (\ref{Eq:3:3:a}) we have
+\begin{equation}\label{Eq:3:3:c}
+|f(c_{kl}) - f(a)|<\frac{1}{4n}
+\end{equation}
+Also, note that $b_k$ is close to $a$ for large $k$, i.e.,from (\ref{Eq:3:3:a}) we have
+\begin{equation}\label{Eq:3:3:d}
+|f(b_k) - f(a)|<\frac{1}{4n}
+\end{equation}
+\end{subequations}
+Three inequalities (\ref{Eq:3:3:b}) to (\ref{Eq:3:3:d}) show a contradiction: 
+\[
+|f(c_{kl}) - f(b_k)|\le |f(c_{kl}) - f(a)|+|f(b_k) - f(a)|<\frac{1	}{4n}+\frac{1}{4n}=\frac{1}{2n}
 \]
 \end{proof}
-Question: What about the form of rank 2?
 
-\textit{Answer: }By SVD, it has the form $\bm u_1\bm v_1\trans+\bm u_2\bm v_2\trans$.
+\begin{theorem}
+Let $f$ be the \emph{pointwise} limit of a sequence of continuous functions $\{f_n\}$, i.e., $f(x) = \lim_{n\to\infty}f_n(x)$. Then the set if all discontinuous points of $f$ must be a set of first category.
+\end{theorem}
+\begin{remark}
+Review the uniform limit version of this theorem; 
+\end{remark}
+\begin{proof}
+We claim $D_{\varepsilon} = \{x\in\mathbb{R}\mid \omega(f,x)\ge\varepsilon\}$ is nowhere dense for any $\varepsilon>0$. (fixed $\varepsilon$).
 
-\textit{Enjoy Your Midterm!}
+Assume $\overline{D_{\varepsilon}}$ contains an open set, or equivalently, $D_{\varepsilon}$ contains an open set $\mathcal{U}$(since $D_{\varepsilon}$ is closed, i.e., $\overline{D_{\varepsilon}}=D_{\varepsilon}$). Define 
+\[
+A_{mn} = \left\{x\in U\mid |f_m(x) - f_n(x)|\le\frac{\varepsilon}{4}\right\}.
+\]
+\begin{proposition}
+The set $A_{mn}$ is closed.
+\end{proposition}
+The proof of proposition is moved in the end.
 
-\includegraphics[width =10cm]{do_it}
+Set $A_m = \bigcap_{n\ge m}A_{mn}$, which is also closed, and 
+\[
+A_m\subseteq\left\{x\in U\mid |f_m(x) - f(x)|\le\frac{\varepsilon}{4}\right\}
+\]
 
+For every $x\in U$, as $\lim_{n\to\infty}f_n(x)=f(x)$, we have $x\in\bigcup_{m=1}^\infty A_m$, which implies $U\subseteq \bigcup_{m=11}^\infty A_m$. Applying the Baire Category Theorem, there exists one $A_m$ containing an open set $W$.
 
-
-
-
-
+\begin{subequations}
+For $x_0\in W\subseteq\mathcal{U}\subseteq D_{\varepsilon}$, pick $\{x_n\}\subseteq W$ with limit $x_0$ such that 
+\begin{equation}
+|f(x_n) - f(x_0)|\ge\frac{3}{4}\varepsilon\label{Eq:3:4:a}
+\end{equation}
+At the same time, since $x_n,x_0\in W$, it follows that
+\begin{align}
+|f_m(x_n) - f(x_n)|\le\frac{\varepsilon}{4}\\
+|f_m(x_0) - f(x_0)|\le\frac{\varepsilon}{4}\label{Eq:3:4:c}
+\end{align}
+From (\ref{Eq:3:4:a}) to (\ref{Eq:3:4:c}), we conclude that
+\begin{align*}
+\frac{3}{4}\varepsilon&\le
+|f(x_n) - f(x_0)|\\&\le
+|f_m(x_n) - f(x_n)|
++
+|f_m(x_n) -f_m(x_0)|
++
+|f_m(x_0) - f(x_0)|\\
+&\le
+\frac{1}{2}\varepsilon+|f_m(x_n) -f_m(x_0)|
+\end{align*}
+Or equivalently,
+\begin{equation}
+|f_m(x_n) -f_m(x_0)|\ge\frac{\varepsilon}{4},\forall n
+\end{equation}
+which implies $\omega(f_m;x_0)\ge\frac{\varepsilon}{4}$, which implies $f_m$ is discontinuous at $x_0$, which is a contradiction.
+\end{subequations} 
+\end{proof}
+\begin{remark}
+\begin{itemize}
+\item
+The proof for $A_{mn}$ is closed is easy: pick any sequence $\{x_k\}\subseteq A_{mn}$ with limit $x$, it suffices to show $x\in A_{mn}$, i.e., 
+\[
+\lim_{k\to\infty}|f_m(x_k) - f_m(x_k)|\le\frac{\varepsilon}{4}
+\]
+\item
+The applications of Baire Category Theorem give us an estimation of how large and how small a set is. In next lecture we will see how large is the set of continuous but nowhere differential functions.
+\end{itemize}
+\end{remark}
 
 
 
