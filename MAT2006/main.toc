@@ -40,4 +40,11 @@
 \contentsline {section}{\numberline {3.2}Friday}{33}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Review}{33}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Continuity Analysis}{34}{subsection.3.2.2}
+\contentsline {chapter}{\numberline {4}Week4}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Wednesday}{41}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Function Analysis}{41}{subsection.4.1.1}
+\contentsline {paragraph}{Verification}{43}{Item.42}
+\contentsline {paragraph}{Notations}{44}{Item.48}
+\contentsline {subsection}{\numberline {4.1.2}Continuity Analysis}{46}{subsection.4.1.2}
+\contentsline {paragraph}{Verification of Exercise}{49}{equation.4.1.1}
 \contentsfinish 

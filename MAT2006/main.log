@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  22 SEP 2018 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  27 SEP 2018 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2013,7 +2013,7 @@ Package csquotes Info: ... found 'babel' package.
  (./main.aux
 (./week1/Tuesday.aux) (./week1/Quiz.aux) (./week1/Friday.aux)
 (./week2/Tuesday.aux) (./week2/Friday.aux) (./week3/Tuesday.aux)
-(./week3/Friday.aux))
+(./week3/Friday.aux) (./week4/Wednesday.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -2249,7 +2249,7 @@ LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <14.4> not available
 (Font)              Font shape `T1/pplx/b/it' tried instead on input line 30.
 
-<zh-hans_logo.png, id=117, 383.4325pt x 65.24374pt>
+<zh-hans_logo.png, id=133, 383.4325pt x 65.24374pt>
 File: zh-hans_logo.png Graphic file (type png)
  <use zh-hans_logo.png>
 Package pdftex.def Info: zh-hans_logo.png used on input line 30.
@@ -2462,31 +2462,31 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbullet' on input line 9.
 
-<week1/f_1.png, id=266, 361.35pt x 361.35pt>
+<week1/f_1.png, id=290, 361.35pt x 361.35pt>
 File: week1/f_1.png Graphic file (type png)
  <use week1/f_1.png>
 Package pdftex.def Info: week1/f_1.png used on input line 23.
 (pdftex.def)             Requested size: 186.93343pt x 186.93266pt.
 
-<week1/f_2.png, id=267, 361.35pt x 361.35pt>
+<week1/f_2.png, id=291, 361.35pt x 361.35pt>
 File: week1/f_2.png Graphic file (type png)
  <use week1/f_2.png>
 Package pdftex.def Info: week1/f_2.png used on input line 24.
 (pdftex.def)             Requested size: 186.93343pt x 186.93266pt.
 
-<week1/f_3.png, id=268, 361.35pt x 361.35pt>
+<week1/f_3.png, id=292, 361.35pt x 361.35pt>
 File: week1/f_3.png Graphic file (type png)
  <use week1/f_3.png>
 Package pdftex.def Info: week1/f_3.png used on input line 25.
 (pdftex.def)             Requested size: 186.93343pt x 186.93266pt.
 
-<week1/f_4.png, id=269, 361.35pt x 361.35pt>
+<week1/f_4.png, id=293, 361.35pt x 361.35pt>
 File: week1/f_4.png Graphic file (type png)
  <use week1/f_4.png>
 Package pdftex.def Info: week1/f_4.png used on input line 26.
 (pdftex.def)             Requested size: 186.93343pt x 186.93266pt.
 
-<week1/f_5.png, id=272, 439.6425pt x 279.0425pt>
+<week1/f_5.png, id=296, 439.6425pt x 279.0425pt>
 File: week1/f_5.png Graphic file (type png)
  <use week1/f_5.png>
 Package pdftex.def Info: week1/f_5.png used on input line 35.
@@ -2881,13 +2881,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-<./logo.jpeg, id=474, 457.71pt x 457.71pt>
+<./logo.jpeg, id=498, 457.71pt x 457.71pt>
 File: ./logo.jpeg Graphic file (type jpg)
  <use ./logo.jpeg>
 Package pdftex.def Info: ./logo.jpeg used on input line 7.
 (pdftex.def)             Requested size: 166.16164pt x 166.15833pt.
 
-<./logo_1.jpeg, id=475, 1027.84pt x 1027.84pt>
+<./logo_1.jpeg, id=499, 1027.84pt x 1027.84pt>
 File: ./logo_1.jpeg Graphic file (type jpg)
  <use ./logo_1.jpeg>
 Package pdftex.def Info: ./logo_1.jpeg used on input line 8.
@@ -2924,13 +2924,13 @@ Package mdframed Info: mdframed works in twoside mode on input line 60.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 60.
- <3_F.jpg, id=482, 1620.0525pt x 1190.4475pt>
+ <3_F.jpg, id=506, 1620.0525pt x 1190.4475pt>
 File: 3_F.jpg Graphic file (type jpg)
 
 <use 3_F.jpg>
 Package pdftex.def Info: 3_F.jpg used on input line 75.
 (pdftex.def)             Requested size: 284.52756pt x 209.07619pt.
- <3_G.jpg, id=483, 1628.0825pt x 1282.7925pt>
+ <3_G.jpg, id=507, 1628.0825pt x 1282.7925pt>
 File: 3_G.jpg Graphic file (type jpg)
  <use 3_G.jpg>
 Package pdftex.def Info: 3_G.jpg used on input line 93.
@@ -2992,27 +2992,146 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [40]
+\openout2 = `week4/Wednesday.aux'.
+
+
+(./week4/Wednesday.tex
+Chapter 4.
+
+Underfull \vbox (badness 2564) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+Package mdframed Info: mdframed works in twoside mode on input line 103.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 103.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+Overfull \hbox (8.72766pt too wide) in paragraph at lines 146--146
+[] 
+ []
+
+<week4/4_3.png, id=606, 357.335pt x 252.945pt>
+File: week4/4_3.png Graphic file (type png)
+ <use week4/4_3.png>
+Package pdftex.def Info: week4/4_3.png used on input line 167.
+(pdftex.def)             Requested size: 170.71652pt x 120.84485pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46 <./week4/4_3.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 210.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 210.
+Package mdframed Info: mdframed works in twoside mode on input line 219.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 219.
+ <week4/4_2.jpeg, id=618, 1220.56pt x 811.03pt>
+File: week4/4_2.jpeg Graphic file (type jpg)
+
+<use week4/4_2.jpeg>
+Package pdftex.def Info: week4/4_2.jpeg used on input line 250.
+(pdftex.def)             Requested size: 227.62204pt x 151.2386pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+Package mdframed Info: mdframed works in twoside mode on input line 253.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 253.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48 <./week4/4_2.jpeg>]
+Package mdframed Info: mdframed works in twoside mode on input line 301.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 301.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50
+
+
+]
 No file main.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
 (./main.aux (./week1/Tuesday.aux) (./week1/Quiz.aux) (./week1/Friday.aux)
 (./week2/Tuesday.aux) (./week2/Friday.aux) (./week3/Tuesday.aux)
-(./week3/Friday.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
+(./week3/Friday.aux) (./week4/Wednesday.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3EC2A7A59B2F24D0781C310F9EC22120;1578.
+(rerunfilecheck)             Checksum: 1EAC4A3F75DFD64893A9EF817DF344E1;1819.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 48252 strings out of 492995
- 999391 string characters out of 6132703
- 1387970 words of memory out of 5000000
- 50328 multiletter control sequences out of 15000+600000
- 104573 words of font info for 383 fonts, out of 8000000 for 9000
+ 48362 strings out of 492995
+ 1000600 string characters out of 6132703
+ 1389451 words of memory out of 5000000
+ 50353 multiletter control sequences out of 15000+600000
+ 106499 words of font info for 408 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,20n,98p,10504b,802s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -3039,10 +3158,10 @@ rw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/pala
 tino/uplbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/u
 plr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8a.
 pfb>
-Output written on main.pdf (50 pages, 749165 bytes).
+Output written on main.pdf (60 pages, 915407 bytes).
 PDF statistics:
- 659 PDF objects out of 1000 (max. 8388607)
- 540 compressed objects within 6 object streams
- 191 named destinations out of 1000 (max. 500000)
- 64775 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 773 PDF objects out of 1000 (max. 8388607)
+ 636 compressed objects within 7 object streams
+ 233 named destinations out of 1000 (max. 500000)
+ 64817 words of extra memory for PDF output out of 74296 (max. 10000000)
 

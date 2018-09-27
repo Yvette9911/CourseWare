@@ -1,22 +1,6 @@
 \BOOKMARK [0][-]{chapter*.2}{Acknowledgments}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{Notations}{}% 2
-\BOOKMARK [0][-]{chapter.1}{Week1}{}% 3
-\BOOKMARK [1][-]{section.1.1}{Monday}{chapter.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.1}{Introduction to Optimizaiton}{section.1.1}% 5
-\BOOKMARK [1][-]{section.1.2}{Wednesday}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.1.2.1}{Reviewing for Linear Algebra}{section.1.2}% 7
-\BOOKMARK [2][-]{subsection.1.2.2}{Reviewing for Calculus}{section.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.2.3}{Introduction to Optimization}{section.1.2}% 9
-\BOOKMARK [0][-]{chapter.2}{Week2}{}% 10
-\BOOKMARK [1][-]{section.2.1}{Monday}{chapter.2}% 11
-\BOOKMARK [2][-]{subsection.2.1.1}{Reviewing and Announments}{section.2.1}% 12
-\BOOKMARK [2][-]{subsection.2.1.2}{Quadratic Function Case Study}{section.2.1}% 13
-\BOOKMARK [1][-]{section.2.2}{Wednesday}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.2.1}{Convex Analysis}{section.2.2}% 15
-\BOOKMARK [0][-]{chapter.3}{Week3}{}% 16
-\BOOKMARK [1][-]{section.3.1}{Wednesday}{chapter.3}% 17
-\BOOKMARK [2][-]{subsection.3.1.1}{Convex Analysis}{section.3.1}% 18
-\BOOKMARK [2][-]{subsection.3.1.2}{Iterative Method}{section.3.1}% 19
-\BOOKMARK [1][-]{section.3.2}{Thursday}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.2.1}{Announcement}{section.3.2}% 21
-\BOOKMARK [2][-]{subsection.3.2.2}{Sparse Large Scale Optimization}{section.3.2}% 22
+\BOOKMARK [0][-]{chapter.4}{Week4}{}% 23
+\BOOKMARK [1][-]{section.4.1}{Wednesday}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.1.1}{Local Convergence Rate}{section.4.1}% 25
+\BOOKMARK [2][-]{subsection.4.1.2}{Newton's Method}{section.4.1}% 26

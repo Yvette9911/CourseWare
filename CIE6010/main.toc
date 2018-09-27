@@ -35,4 +35,12 @@
 \contentsline {paragraph}{Descent Direction}{23}{equation.3.2.1}
 \contentsline {paragraph}{Stopping Criteria}{24}{equation.3.2.1}
 \contentsline {paragraph}{Armijo Condition and BB Step}{24}{Item.23}
+\contentsline {chapter}{\numberline {4}Week4}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}Wednesday}{27}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Local Convergence Rate}{27}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Newton's Method}{29}{subsection.4.1.2}
+\contentsline {paragraph}{Algorithm}{29}{subsection.4.1.2}
+\contentsline {paragraph}{Interpretation}{29}{subsection.4.1.2}
+\contentsline {paragraph}{Convergence of Rate}{30}{subsection.4.1.2}
+\contentsline {paragraph}{Algorithm}{31}{subsection.4.1.2}
 \contentsfinish 
