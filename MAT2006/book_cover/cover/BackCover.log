@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  29 AUG 2018 10:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  4 OCT 2018 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -598,33 +598,33 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 51.
 
-<../images/PressLogo.png, id=6, 150.5625pt x 137.51375pt>
-File: ../images/PressLogo.png Graphic file (type png)
+<../images/PressLogo_1.png, id=6, 150.5625pt x 137.51375pt>
+File: ../images/PressLogo_1.png Graphic file (type png)
 
-<use ../images/PressLogo.png>
-Package pdftex.def Info: ../images/PressLogo.png used on input line 88.
+<use ../images/PressLogo_1.png>
+Package pdftex.def Info: ../images/PressLogo_1.png used on input line 88.
 (pdftex.def)             Requested size: 42.67912pt x 38.97989pt.
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../imag
-es/AuthorIcon.jpg> <../images/BackCoverArt.jpg> <../images/PressLogo.png>] (./B
-ackCover.aux) ) 
+es/AuthorIcon.jpg> <../images/BackCoverArt.jpg> <../images/PressLogo_1.png>] (.
+/BackCover.aux) ) 
 Here is how much of TeX's memory you used:
  14184 strings out of 492995
- 286331 string characters out of 6132703
- 413296 words of memory out of 5000000
+ 286341 string characters out of 6132703
+ 413262 words of memory out of 5000000
  17477 multiletter control sequences out of 15000+600000
  8550 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,5n,60p,8849b,239s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbxti10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmss10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmss12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmss8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ssbx10.pfb>
-Output written on BackCover.pdf (1 page, 284260 bytes).
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbxti10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmss10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmss12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmss8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmssbx10.pfb>
+Output written on BackCover.pdf (1 page, 284095 bytes).
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream

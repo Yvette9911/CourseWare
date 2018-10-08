@@ -47,4 +47,13 @@
 \contentsline {paragraph}{Notations}{44}{Item.48}
 \contentsline {subsection}{\numberline {4.1.2}Continuity Analysis}{46}{subsection.4.1.2}
 \contentsline {paragraph}{Verification of Exercise}{49}{equation.4.1.1}
+\contentsline {section}{\numberline {4.2}Friday}{50}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Continuity Analysis}{50}{subsection.4.2.1}
+\contentsline {paragraph}{Holder Continuity for Differentiable Equation}{51}{definitionT.4.4}
+\contentsline {subsection}{\numberline {4.2.2}Monotone Analysis}{53}{subsection.4.2.2}
+\contentsline {paragraph}{Exercise}{54}{proposition.4.7}
+\contentsline {subsection}{\numberline {4.2.3}Cantor Set}{55}{subsection.4.2.3}
+\contentsline {paragraph}{Geometric description}{55}{subsection.4.2.3}
+\contentsline {paragraph}{Arithmetic description}{55}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Sunday}{58}{section.4.3}
 \contentsfinish 

@@ -2,61 +2,59 @@
 \chapter{Week4}
 
 \section{Wednesday}\index{week4_Wednesday_lecture}
+\subsection{Comments for MATLAB Project}
 You need to take care of several things during your assignment:
-\begin{enumerate}
-\item
-Do Not Repeat Computation! e.g., if you enter
+\paragraph{Do Not Repeat Computation} For example, 
+enter
 \[
 |f(x^{k+1}) - f(x^k)|\le 10^{-\varepsilon}|f(x^k)|,
 \]
-this is very bad, since you evaluated this function three times.
-\item
-Arrange Computation Properly. e.g., compute
+is very bad, since you evaluated this function three times.
+\paragraph{Arrange Computation Properly} For example, compute
 \[
 \bm x\bm x\trans\bm A
 \]
-is very expensive, but $\bm x(\bm x\trans\bm A)$ is not. Be aware of the size of matrices / vectors.
-\item
-Appreciate sparsity, e.g., to compute $\bm A\bm D\bm A\trans$ is bad if using $\mathrm{D = diag(d)}$, while using $\mathrm{D = sparse(1:n,1:n,d)}$ is better.
-\end{enumerate}
-Your code should be at least faster than the testing script.
+is very expensive, but $\bm x(\bm x\trans\bm A)$ is not. Be aware of the size of matrices or vectors.
+\paragraph{Appreciate sparsity} For example, when faced with high-dimensional matrices, compute $\bm A\bm D\bm A\trans$ is bad for using $\mathrm{D = diag(d)}$, while using $\mathrm{D = sparse(1:n,1:n,d)}$ is better.
+\paragraph{Grading Criteria}
+Your code should be at least faster than the testing script, while the error should be smaller than the testing script.
 
 \subsection{Local Convergence Rate}
+The study of the rate of convergence is often the dominant criteria for selecting appropirate algorithms. In this lecture we only focus on the local behaviour of the method in a neighborhood of an optimal solution.
 \begin{definition}[$Q_1$ Factor]
-Let $x^k\to x^*$ and $e_k := \|x^k - x^*\|\to0$. The $Q_1$ factor of $\{x^k\}$ is given as:
+Restrict the attention to a convergent sequence $\{\bm x^k\}$ with limit $\bm x^*$. Define an error function $e_k=\|\bm x^k-\bm x^*\|\to0$. The $Q_1$ factor of $\{\bm x^k\}$ is given as:
 \[
-Q_1 = \lim_{k\to\infty}\sup\frac{\|\bm e^{k+1}\|}{\|\bm e^k\|}
+Q_1 = \lim_{k\to\infty}\sup\frac{e_{k+1}}{e_k}
 \]
 \end{definition}
+Here we want to study the performance of $e_k$. In our case, we compare $\{e_k\}$ with the geometric prograssion
+\[
+\begin{array}{ll}
+\beta^k,
+&
+k=0,1,\dots
+\end{array}
+\]
 \begin{itemize}
 \item
-The sequence $\{x^k\}$ is convergent if $Q_1\in[0,1]$.
+If there exists $\beta\in(0,1)$ such that
+\[
+Q_1\le \beta,
+\]
+then we can show $e_k\le q\beta^k$ for some $q>0$. In this case $\{e_k\}$ is said to be \emph{Q-linear convergent}.
 \item
-\[
-Q_1=\left\{
-\begin{aligned}
-0,&\quad\mbox{Q-super linear convergence}\\
-\rho\in(0,1),&\quad\mbox{Q-linear convergence}\\
-1,&\quad\mbox{Q-sublinear}
-\end{aligned}
-\right.
-\]
+If $Q_1=0$, then we say $\{e_k\}$ is \emph{Q-super-linear convergent}
+\item
+If $Q_1=1$, then we say $\{e_k\}$ is \emph{Q-sub-linear convergent}
 \end{itemize}
-\begin{remark}
-Q-linear convergence is not always so good, e.g., $\rho=.999$ may require 20000 iterations, while $\rho=.1$ may only require 20.
 
-Linear is always better than sublinear; super linear is always btetter than linear. e.g.,
-\[
-\{e_1^k\}=\{\beta^k\},\qquad
-\{e_2^k\} = \{\frac{1}{k^p}\}\mbox{ for $p=1/2,1,2$}
-\]
-Then $Q_1(e_1^k)=\beta\in(0,1)$; and $Q_1(e_2^k)=\lim_{k\to\infty}\frac{(k+1)^p}{k^p}=1$. When will $e^k\le\varepsilon$?
-\begin{align*}
-\beta^k&\le\varepsilon\implies k\ge(\frac{-1}{\ln\beta})\ln\frac{1}{\varepsilon} = O(\ln\frac{1}{\varepsilon})\\
-\frac{1}{k^p}&\le\varepsilon\implies
-k\ge(\frac{1}{\varepsilon})^{1/p}
-\end{align*}
-If $\varepsilon=10^{-8}$, $O(\ln\frac{1}{\varepsilon})$ is not growing very fast. For $p=1$ case, $k\ge O(\frac{1}{\varepsilon})$
+\begin{remark}
+\begin{enumerate}
+\item
+Q-linear convergence is not always so good, e.g., $\beta=.999$ may require 20000 iterations to meet satisfaction, while $\beta=.1$ may only require 20.
+\item
+Linear is always better than sublinear; super linear is always btetter than linear.
+\end{enumerate}
 \end{remark}
 
 We have a faster type of convergence:
@@ -67,31 +65,22 @@ Q_2 = \lim\sup_{k\to\infty}\frac{e^{k+1}}{(e^k)^2}
 If $Q_2=M<+\infty$,i.e., $e^{k+1}=O((e^k)^2)$, then $\{x^k\}\to x^*$ $Q$-quadratically.
 \end{definition}
 Newton's method generally gives us the quadratic convergence.
-
 \subsection{Newton's Method}
-The newton's method requires to solve a non-linear system of equations: ($\nabla f(x)=0$)
-\[
-F:\mathbb{R}^n\to\mathbb{R}^n, F(x)=0.
-\]
-We don't know how to solve non-linear system in general. But Newton gives us the remediation: do the linearization. 
-\[
-F(x+d)\approx F(x)+\inp{F(x)}{\bm d}=0
-\]
-To get the solution, it suffices to solve
-\[
-\bm d=-(F'(\bm x))^{-1}F(\bm x),
-\]
-and hence $\bm x\leftarrow \bm x+\alpha\bm d$.
-\paragraph{Algorithm} Choose $\bm x^0$.
 
-For $k=0,1,2,\dots$, solve the system w.r.t. $\bm d$:
+The newton's method requires to solve a non-linear system of equations $\nabla f(x)=0$.
+
+We don't know how to solve non-linear system in general. Fortunately, Newton gives us the remediation: 
+in order to search for $\bm d$ to make $\nabla f(\bm x+\bm d)=0$, do the linearization first.
+\begin{equation}\label{Eq:4:1}
+\nabla f(\bm x+\bm d)\approx \nabla f(\bm x)+\inp{\nabla^2 f(\bm x)}{\bm d}=0
+\end{equation}
+
+To get the optimal solution, it suffices to solve (\ref{Eq:4:1}) for $\bm d$:
 \[
-\nabla^2 f(\bm x^k)\bm d = -\nabla f(\bm x^k)
+\bm d=-(\nabla^2 f(\bm x))^{-1}\nabla f(\bm x),
 \]
+and hence update the solution to be $\bm x\leftarrow \bm x+\alpha\bm d$.
 
-Set $\bm x^{k+1} = \bm x^k + \alpha^k\bm d^k$.
-
-End.
 \paragraph{Interpretation}
 In order to minimize a strictly convex function $f(x)$, we find
 \[
@@ -102,70 +91,101 @@ It suffices to minimize $q(\bm d)$:
 \nabla q(\bm d)=0\Longleftrightarrow
 \nabla f(\bm x)+\nabla^2f(\bm x)\bm d=0
 \]
-How to guarntee $\bm d$ is the descent direction? It becomes an art.
+How to guarntee $\bm d$ is the descent direction? Not necessarily we are able to do that. It becomes an art.
 
 \paragraph{Convergence of Rate}
-For $F(x)=0$, suppose$\{\bm x^k\}$ is generated by Newton. As $x^k\to x^*$, $F(x^*)=0$. From
-\[
-x^{k+1} = x^k - [F'(x^k)]^{-1}F(x^k),
-\]
-we find
-\begin{align*}
-x^{k+1} - x^* &=  x^k - x^* -  [F'(x^k)]^{-1}\left(F(x^k) - F(x^*)\right)\\
-&=[F'(x^k)]^{-1}\left(F(x^*) - F(x^k) - F'(x^k)(x^* - x^k)\right)
-\end{align*}
-It follows that
+\begin{proposition}
+Newton's method gurantees the $Q$-quadratic convergence.
+\end{proposition}
+\begin{proof}
+Given a nonlinear system $F(x)=0$, suppose the sequence $\{\bm x^k\}$ is generated by Newton with limit $\bm x^*$ and $F(\bm x^*)=0$. By Newton's iteration,
+\begin{equation}
+\bm x^{k+1} =\bm x^k - [F'(\bm x^k)]^{-1}F(\bm x^k),
+\end{equation}
+which follows that
+\begin{equation}
+\begin{aligned}
+\bm x^{k+1} - \bm x^* &=  \bm x^k - \bm x^* -  [F'(\bm x^k)]^{-1}\left(F(\bm x^k) - F(\bm x^*)\right)\\
+&=[F'(\bm x^k)]^{-1}\left(F(\bm x^*) - F(\bm x^k) - F'(\bm x^k)(\bm x^* - \bm x^k)\right)
+\end{aligned}
+\end{equation}
+
+Note that $F(\bm x^*) =F(\bm x^k) +F'(\bm x^k)(\bm x^* - \bm x^k)+O(\|\bm x^k-\bm x^*\|^2)$, which implies
 \[
 \|\bm x^{k+1} - \bm x^*\|\le \|[F'(x^k)]^{-1}\|O(\|\bm x^k - \bm x^*\|^2)
 =
-O(\|\bm x^k - \bm x^*\|^2)
+O(\|\bm x^k - \bm x^*\|^2).
 \]
-During this deviation we assume two things:
-\begin{itemize}
+
+\end{proof}
+\begin{remark}
+During the proof we assume two things:
+\begin{enumerate}
 \item
 Step-size is $1$!
 \item
 The limit exists.
-\end{itemize}
-Hence, in practice, to implement Newton's method, $1$ is the first choice; but gredient descent method is not.
-
+\end{enumerate}
+\begin{itemize}
+\item
+Hence, in practice, to implement Newton's method, $\bm 1$ is the first choice; but gredient descent method is not.
+\item
 Newton's method is good for nice problems, i.e., the funciton is convex, and the inverse of gredient is easy to solve.
+\item
+In machine learning most time we implement the gredient descent method, since Newton's method is expensive for computing the inverse.
+\end{itemize}
+\end{remark}
+\subsection{Tutorial: Introduction to Convexity}
+First we discuss some exercises:
+\begin{enumerate}
+\item
+Given a sequence of convex functions $f_i$, the maximum over all functions
+\[
+\max\{f_1(x),f_2(x),\dots,f_n(x)\}:=f(x)
+\]
+is also convex. (Proof using Epi-Graph)
+\item
+Given a sequence of convex functions $f_i$, the combination $\sum_i\lambda_if_i$ is also convex
+\item
+Composition function may not be convex, .e.g., if $h=x^2$ and $g = -x$, we find $g\circ h$ is concave.
+\item
+However, if $g$ is convex and $h$ is affine, then $g\circ h$ is convex; if $g,h$ is convex, and $g$ is non-decreasing, then $g\circ h$ is convex.
+\end{enumerate}
+\paragraph{Convexity Examples}
+Given the problem
+\[
+\begin{array}{ll}
+\min&\quad \|\bm x\|_0\\
+\mbox{s.t.}&\quad\bm{Ax}=\bm b,
+\end{array}
+\]
+which is difficult to solve. Alternatively, we relax it and solve
+\[
+\begin{array}{ll}
+\min&\quad \|\bm x\|_1\\
+\mbox{s.t.}&\quad\bm{Ax}=\bm b
+\end{array}
+\]
 
-In machine learning most time we implement the gredient descent method. 
-
+Also, solving the problem
+\[
+\begin{array}{ll}
+\min&\quad f(X)\\
+\mbox{s.t.}&\quad\rank(X)=k
+\end{array}
+\]
+is hard, we relax it and solve
+\[
+\begin{array}{ll}
+\min&\quad f(X)\\
+\mbox{s.t.}&\quad\|X\|_*\le k
+\end{array}
+\]
+\paragraph{Announcement}
 Learn and implement these things by yourself:
 \begin{itemize}
 \item
-Luo's note: Lecture $\#4$, P7, Nestorov Accelerated Method
+Luo's note: Lecture $\#4$, P7,Nesterov’s optimal 1st-order (also called acceleration) method
+\item
+Textbook P67-P72.
 \end{itemize}
-$\{a_r\}, r=0,1,2,\dots$ we have
-\[
-a_r = \frac{1}{2}(1+\sqrt{1+4a_{r-1}^2})\mbox{ with }a_0=0
-\]
-From $a_r$ we generate $t^r = (a_{r}-1) / a_{r+1}$
-\paragraph{Algorithm}
-Set $x^0 = x^1=0$.
-
-for $r=1,2,\dots$
-
-compute $a^{r+1},t^r$
-
-$\bm y^{r+1} = (1+t^r)\bm x^r - t^r\bm x^{r-1}$
-
-$\bm x^{r+1} = y^{r+1} - \frac{1}{L}\nabla f(\bm y^{r+1})$
-
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-

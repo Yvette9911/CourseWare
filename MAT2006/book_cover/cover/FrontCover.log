@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  29 AUG 2018 09:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  5 OCT 2018 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -639,11 +639,11 @@ e
 LaTeX Font Warning: Font shape `OT1/cmr/bx/it' in size <21.88> not available
 (Font)              size <20.74> substituted on input line 75.
 
-<logo.png, id=4, 383.4325pt x 65.24374pt>
+<logo.png, id=4, 282.05376pt x 45.16875pt>
 File: logo.png Graphic file (type png)
  <use logo.png>
 Package pdftex.def Info: logo.png used on input line 106.
-(pdftex.def)             Requested size: 213.39566pt x 36.31125pt.
+(pdftex.def)             Requested size: 213.39566pt x 34.17421pt.
 
 <../images/CoverArt.jpg, id=6, 2702.095pt x 3526.17375pt>
 File: ../images/CoverArt.jpg Graphic file (type jpg)
@@ -667,16 +667,16 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 15163 strings out of 492995
- 318304 string characters out of 6132703
- 410555 words of memory out of 5000000
- 18419 multiletter control sequences out of 15000+600000
+ 15164 strings out of 492995
+ 318317 string characters out of 6132703
+ 410625 words of memory out of 5000000
+ 18420 multiletter control sequences out of 15000+600000
  6290 words of font info for 22 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,13n,67p,449b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.p
 fb>
-Output written on FrontCover.pdf (1 page, 1483375 bytes).
+Output written on FrontCover.pdf (1 page, 1502492 bytes).
 PDF statistics:
  19 PDF objects out of 1000 (max. 8388607)
  11 compressed objects within 1 object stream

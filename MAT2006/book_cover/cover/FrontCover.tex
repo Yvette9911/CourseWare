@@ -33,7 +33,7 @@
 
 \definecolor{orangeX}{RGB}{255,127,0}%
 \colorlet{BannerColor}{blue!22!black}%
-
+\definecolor{CUHKSZ}{RGB}{92,20,89}%
 %% ----------------------------------------------------------------------------
 %% ----------------------------------------------------------------------------
 \begin{document}
@@ -55,7 +55,7 @@
 %\tikz[remember picture,overlay]%
 
 \begin{tikzpicture}[remember picture,overlay]
-  \node[fill=BannerColor,
+  \node[fill=CUHKSZ,
     minimum width=\paperwidth,
     minimum height=6em,
     anchor=north, 
@@ -98,7 +98,7 @@
     anchor={south},
     font=\LARGE\bfseries,
     text=Cornsilk,
-    xshift=0mm, yshift=1.5mm
+    xshift=0mm, yshift=5mm
   ] at (current page.south) {\ThePublisherName};
 \end{tikzpicture}
 
