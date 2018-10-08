@@ -11,4 +11,6 @@
 \contentsline {section}{\numberline {2.1}Tuesday}{11}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Review}{11}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Cyclic groups}{11}{subsection.2.1.2}
+\contentsline {chapter}{\numberline {3}Week3}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Tuesday}{17}{section.3.1}
 \contentsfinish 
