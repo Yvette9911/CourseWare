@@ -66,6 +66,12 @@
 \contentsline {subsection}{\numberline {5.1.3}Analysis on Differential Calculus}{62}{subsection.5.1.3}
 \contentsline {paragraph}{Differentiablity implies continuity}{62}{subsection.5.1.3}
 \contentsline {paragraph}{Estimation on finite increments}{63}{theoremeT.5.1}
-\contentsline {paragraph}{Exercise Verification}{64}{theoremeT.5.2}
-\contentsline {paragraph}{Motivation of Continuosly differentiable}{64}{theoremeT.5.3}
+\contentsline {paragraph}{Exercise Verification}{64}{corollaryT.5.1}
+\contentsline {paragraph}{Motivation of Continuosly differentiable}{65}{theoremeT.5.3}
+\contentsline {section}{\numberline {5.2}Friday}{67}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Analysis on Derivative}{67}{subsection.5.2.1}
+\contentsline {paragraph}{Criteria 1: The image of the derivative of any function should be continuous}{67}{subsection.5.2.1}
+\contentsline {paragraph}{Criteria 2: The derivative of any function should be continuous on a dense set}{68}{theoremeT.5.4}
+\contentsline {subsection}{\numberline {5.2.2}Analysis on Mean-Value Theorem}{68}{subsection.5.2.2}
+\contentsline {paragraph}{Plan for next week}{72}{exampleT.5.2}
 \contentsfinish 

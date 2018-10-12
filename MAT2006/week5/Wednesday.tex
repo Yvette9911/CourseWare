@@ -147,6 +147,10 @@ f'(x_0)=\lim_{x\to x_0}\frac{f(x) - f(x_0)}{x-x_0}=
 \lim_{x\to x-}\frac{f(x) - f(x_0)}{x-x_0}=0.
 \]
 \end{proof}
+\begin{remark}
+Geometrically this theorem is obvious. It asserts that at an extreme point of a differentiable function, the tangent line to its graph is horizontal.
+\end{remark}
+
 \paragraph{Estimation on finite increments}
 The following two proposition are the most frequently used and important methods of studying numerical-valued functions.
 \begin{theorem}[Mean-Value Theorem]
@@ -154,6 +158,7 @@ Suppose $f$ is differentiable on $[a,b]$, then there exists a point $c\in (a,b)$
 \[
 \frac{f(b) - f(a)}{b-a}=f'(c)
 \]
+\label{The:5:2}
 \end{theorem}
 The proof relies on Rolle's theorem, i.e., we need to construct a function $h$ on $[a,b]$ that has a interior local maximum or local minimum. This is one useful trick.
 \begin{proof}
@@ -168,6 +173,18 @@ g'(x)=\frac{f(b) - f(a)}{b-a}=f'(x), \qquad\forall x\in(a,b)
 Otherwise, $h$ is positive or negative somewhere in $(a,b)$. w.l.o.g., $h$ is positive somewhere in $(a,b)$. Thus $h$ assumes its maximum in $(a,b)$, say $c$ (Exercise $\#$ 1). By rolle's theorem $h'(c)=0$, which impleis $f'(c) = g'(c)=(f(b) - f(a))/(b-a).$
 \end{itemize}
 \end{proof}
+Applying Mean-Value Theorem, we give a more useful verison of Rolle's Theorem:
+\begin{corollary}[Rolle's Theorem verison $2$]
+Suppose $f$ is differentiable on $[a,b]$ with $f(a)=f(b)$, then there exists a point $c\in(a,b)$ such that $f'(c)=0$.
+\label{Cor:5:1}
+\end{corollary}
+\begin{proof}
+By Mean-Value Theorem,
+\[
+f(b)-f(a)=0=f'(c)(b-a)\implies f'(c)=0.
+\]
+\end{proof}
+
 \paragraph{Exercise Verification}
 Recall the proposition we have learnt:
 \begin{proposition}
