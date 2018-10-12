@@ -42,7 +42,7 @@ The intersection of \emph{finitely} many open sets is open.
 \end{theorem}
 The proof is omitted, check Rudin's book for reference.
 \begin{remark}
-Note that the intersection of \emph{countably} many open sets may be open.
+Note that the intersection of \emph{countably} many open sets may not be nessarily open.
  \[
  \bigcup_{n=1}^\infty\left(-\frac{1}{n},1+\frac{1}{n}\right)
  =[0,1]
@@ -50,7 +50,7 @@ Note that the intersection of \emph{countably} many open sets may be open.
 \end{remark}
 
 \begin{definition}[Neighborhood]
-A \emph{neighborhood} $N$ of a point $a\in\mathbb{R}$ is an open set containing $a$.
+A \emph{neighborhood} $N$ of a point $a\in\mathbb{R}$ is an open interval containing $a$.
 \end{definition}
 
 \begin{definition}[Limit Point]
@@ -118,7 +118,7 @@ In this case, $\{a_{n_1},a_{n_2},\dots\}$ is Cauchy (by showing $|a_{n_k}-a_{n_l
 \item
 Pick $a_k\in I_k$ for $k=1,2,\dots$, thus the sequence $\{a_1,\dots,a_k,\dots\}$ is bounded. By Theorem (\ref{The:2:3}), there exists a convergent sub-sequence $\{a_{k_l}\}$ (with limit $a$). It suffices to show $a\in\bigcup_{m=1}^\infty I_k$. 
 \item
-For fiexed $m$, there exists index $j$ such that $a_{k_l}\in I_m$ for all $l\ge m$. Since $I_m$ is closed, it must contain $a_{k_l}$'s limit point, i.e., $a\in I_m$.
+For fiexed $m$, there exists index $j$ such that $a_{k_l}\in I_m$ for all $l\ge j$. Since $I_m$ is closed, it must contain $a_{k_l}$'s limit point, i.e., $a\in I_m$.
 \item
 Our choice is arbitrary $m$ and hence $a$ belongs to the intersection of all nested closed intervals. The proof is complete.
 \end{enumerate}
@@ -141,7 +141,7 @@ Suppose $\bm E:=[0,M]$ is a bounded closed interval with an open cover $\{\mathc
 \item\textbf{Base case }
 We choose $I_1 =\bm E=[0,M]$
 \item\textbf{Inductive step}
-For example, Assume that $\bm E$ cannot be covered by finitely many open sets from $\{\mathcal{U}\}$, then at least one sub-interval $[0,\frac{M}{2}]$ or $[\frac{M}{2}]$ cannot be covered. Let $I_2$ be one of these sub-intervals that cannot be covered by finitely many elements of $\{\mathcal{U}\}$.
+For example, Assume that $\bm E$ cannot be covered by finitely many open sets from $\{\mathcal{U}\}$, then at least one sub-interval $[0,\frac{M}{2}]$ or $[\frac{M}{2},M]$ cannot be covered. Let $I_2$ be one of these sub-intervals that cannot be covered by finitely many elements of $\{\mathcal{U}\}$.
 \end{itemize}
 
 Repeating this process, we attain a nested bouned closed intervals $I_1\supseteq I_2\supseteq\cdots\supseteq$, which implies $\bigcap_{k=1}^\infty I_k \ne\emptyset$ (suppose $a\in \bigcap_{k=1}^\infty$), and $|I_k|=\frac{M}{2^k}\to0$.

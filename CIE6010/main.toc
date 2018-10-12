@@ -58,4 +58,15 @@
 \contentsline {paragraph}{Step-size}{34}{subsection.5.1.1}
 \contentsline {paragraph}{Local convergence rate}{35}{subsection.5.1.1}
 \contentsline {paragraph}{Finite difference Method}{35}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Existence of solution to Quadratic Programming}{36}{subsection.5.1.2}
+\contentsline {paragraph}{Asymptotic Directions are essentially Boundary Directions}{37}{equation.5.1.1}
+\contentsline {paragraph}{Finiteness of optimal value}{38}{equation.5.1.4}
+\contentsline {paragraph}{Feasibleness of $\bm {x}^k-\alpha \bm {d}$}{38}{equation.5.1.4}
+\contentsline {section}{\numberline {5.2}Wednesday}{39}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Constant Step-Size}{39}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Optimal First Order Method}{40}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Thursday}{41}{section.5.3}
+\contentsline {paragraph}{Newton's method has quadratic convergence rate}{41}{section.5.3}
+\contentsline {paragraph}{Nesterov's accelerated method}{41}{section.5.3}
+\contentsline {paragraph}{Convergence Rate}{41}{section.5.3}
 \contentsfinish 

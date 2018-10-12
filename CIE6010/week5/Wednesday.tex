@@ -1,0 +1,127 @@
+
+\section{Wednesday}\index{week5_Thursday_lecture}
+You need to study the textbook by yourself. Those materials will be tested in the mid-term.
+
+Note that \emph{Newton's Method may not necessarily have quadratic rate of convergence}. For example, to optimize the function $x^2$, we have the iteration
+\[
+x^{k+1}=x^k-\frac{1}{2x^k}(x^k)^2=\frac{x^k}{2},
+\]
+which has linear rate of convergence.
+\begin{proposition}
+For the Newton's method iteration
+\[
+x^{k+1}=x^k-\left[F'(x^k)\right]^{-1}F(x^k),
+\]
+the quadratic (local) rate of convergence is guaranteed if the following conditions hold:
+\begin{enumerate}
+\item
+there exists $x^*$ such that $F(x^*)=0$
+\item
+$\left[F'(x^k)\right]^{-1}$ exists
+\item
+$F$ is \emph{Lipschitz continuous} near $x^*$.
+\end{enumerate}
+\end{proposition}
+For example, to minimize the function $x^2-1$, the iteration gives the quadratic convergence:
+\[
+x^{k+1} - 1=\frac{1}{2}(x^k-1)(1-\frac{1}{x^k})=
+O((x^k-1)^2)
+\]
+
+
+\subsection{Constant Step-Size}
+For the unconstraint minimization
+\[
+\min_{x\in\mathbb{R}^n}f(x),
+\]
+with convex function $f\in\mathcal{C}^1$, our iteration for constant step-size is given by
+\[
+x^{k+1} = x^k-\frac{1}{L}\nabla f(x^k).
+\]
+It follows that for global minimum $x^*$, by Lipschitz continuity,
+\[
+f(x^k) - f(x^*)\le\frac{L\|x^0-x^*\|}{k}\to0\qquad\mbox{as }k\to\infty
+\]
+The convergence rate for this method is \emph{super-linear}. This result is \emph{tight}, e.g., we can find one example satisfying the equality.
+
+\begin{proposition}
+The Lipschitz continutiy of $f$ implies the inequality below, if $f\in\mathcal{C}^2$:
+\[
+f(x) - f(x^*)\le L\|x-x^*\|^2
+\]
+\end{proposition}
+
+For $f\in\mathcal{C}^2$, if it is strongly convex, we have
+\[
+\min_i\lambda_i(\nabla^2 f(x))\ge\sigma>0,\forall x
+\]
+
+
+Then $f$ is bounded by two terms:
+\[
+\sigma\|x-x^*\|^2\le f(x) - f(x^*)\le L\|x-x^*\|^2
+\]
+Thus linear rate can be obtained and
+\[
+f(x^k)-f(x^*)\le\varepsilon
+\]
+for $k=O(\sqrt{\kappa}\ln\frac{1}{\varepsilon})$, where $\kappa=\frac{L}{\sigma}$ (condition number)
+
+\subsection{Optimal First Order Method}
+\[
+0\le f(x^k) - f(x^*)\le\frac{\mbox{constant}}{K^2}
+\]
+\emph{Optimal} in the class of algorithns
+\[
+x^{k+1}=x^0+\Span\{\underbrace{g^0,g^1,\dots,g^k}_{\mbox{gradients}}\}
+\]
+where $g^j=\nabla f(x^j)$. The gradients descent is the special case of this algorithms, in which $\alpha^0,\alpha^1,\dots$ are chosen sequentially.
+
+Nestorov constructed a function $f$ so that
+\[
+f(x^k) - f(x^*)\ge\frac{\mbox{constant}}{K^2} (\mbox{for $k\le n$})
+\]
+for optimal algorithm.
+
+Nesterov's acceleration algorithm is optimal.
+
+
+
+
+
+\section{Thursday}
+\paragraph{Newton's method has quadratic convergence rate}
+Rewrite the iteration formula $\bm x^{k+1}=\bm x^k-[f'(\bm x^k)]^{-1}f(\bm x^k)$:
+\begin{align*}
+\bm x^{k+1}-\bm x^*&=\bm x^k-\bm x^*-[f'(\bm x^k)]^{-1}f(\bm x^k)\\
+&=[f'(\bm x^k)]^{-1}[f'(\bm x^k)(\bm x^k-\bm x^*) - f(\bm x^k)]\\
+&=[f'(\bm x^k)]^{-1}\frac{1}{2}f''(\bm x^k)(\bm x^k-\bm x^*)^2\\
+&=C(\bm x^k-\bm x^*)^2
+\end{align*}
+
+\paragraph{Nesterov's accelerated method}
+Steepest Gradient method just go to direction $\nabla f(x^k)$;
+
+The moment method goes the combination of $\nabla f(x^k)$ and $v(x^k)$;
+
+The Nesterov's method consider $v(x^k)$ as $\nabla f(x^{k-1})$
+
+\paragraph{Convergence Rate}
+Given a convex function $f\in\mathcal{C}^1$, where $f'$ is Lipschitz continuous. The iteration complexity is $O(\frac{L}{\sqrt{\varepsilon}})$. The best (optimal) convergence rate is $f(x^k) - f(x^*)\le O(\frac{1}{k^2})$, while the general way of onvergence rate is $f(x^k) - f(x^*)\le O(\frac{1}{k})$.
+
+Check Prof. Luo's note $\#$4.
+
+Also, if adding condition $f$ is strongly convex, the iteration complexity is $O(\sqrt{K}\log\frac{1}{\varepsilon})$
+
+
+
+
+
+
+
+
+
+
+
+
+

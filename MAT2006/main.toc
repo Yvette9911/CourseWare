@@ -12,7 +12,7 @@
 \contentsline {paragraph}{Defining Binary Form}{3}{Item.7}
 \contentsline {section}{\numberline {1.2}Quiz}{5}{section.1.2}
 \contentsline {section}{\numberline {1.3}Friday}{6}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Proof of Schroder-Berstein Theorem}{6}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.1}Proof of Schroder-Bernstein Theorem}{6}{subsection.1.3.1}
 \contentsline {paragraph}{Intuition from Fig.(\ref {Fig:1:2})}{6}{subsection.1.3.1}
 \contentsline {paragraph}{$F$ is onto mapping}{8}{figure.1.2}
 \contentsline {paragraph}{$F$ is one-to-one mapping}{8}{Item.17}
@@ -55,5 +55,17 @@
 \contentsline {subsection}{\numberline {4.2.3}Cantor Set}{55}{subsection.4.2.3}
 \contentsline {paragraph}{Geometric description}{55}{subsection.4.2.3}
 \contentsline {paragraph}{Arithmetic description}{55}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Sunday}{58}{section.4.3}
+\contentsline {chapter}{\numberline {5}Week5}{59}{chapter.5}
+\contentsline {section}{\numberline {5.1}Wednesdays}{59}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Differentiation}{59}{subsection.5.1.1}
+\contentsline {paragraph}{Notations and Conventions}{59}{subsection.5.1.1}
+\contentsline {paragraph}{Geometric Interpretation}{60}{definitionT.5.1}
+\contentsline {paragraph}{Arithmetic Insights of derivative}{60}{figure.5.1}
+\contentsline {subsection}{\numberline {5.1.2}Basic Rules of Differentiation}{61}{subsection.5.1.2}
+\contentsline {paragraph}{Comments}{62}{proposition.5.1}
+\contentsline {subsection}{\numberline {5.1.3}Analysis on Differential Calculus}{62}{subsection.5.1.3}
+\contentsline {paragraph}{Differentiablity implies continuity}{62}{subsection.5.1.3}
+\contentsline {paragraph}{Estimation on finite increments}{63}{theoremeT.5.1}
+\contentsline {paragraph}{Exercise Verification}{64}{theoremeT.5.2}
+\contentsline {paragraph}{Motivation of Continuosly differentiable}{64}{theoremeT.5.3}
 \contentsfinish 

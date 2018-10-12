@@ -136,6 +136,119 @@ h=\varepsilon\max\{1,|x_j|\}\mbox{sign}(x_j),
 \]
 more-multiplying the term $\mbox{sign}(x_j)$ means we avoid subtract between $\bm x$ and $h\bm e_j$.
 
+\subsection{Existence of solution to Quadratic Programming}
+\begin{theorem}
+Let $\{S^k\}$ be a sequence of non-empty closed nested sets. Suppose that all \emph{asymptotic} sequences corresponding to asymptotic directions of $\{S^k\}$ are \emph{retractive}, then $\bigcap_{k=0}^\infty S^k$ is \emph{non-emtpy}.
+\end{theorem}
+\begin{definition}
+Let $\{S^k\}$ be a sequence of non-empty closed nested sets. We say that a vector $\bm d\ne\bm0$ is an \emph{asymptotic direction} of $\{S^k\}$ if there exists a sequence $\{\bm x^k\}$ such that
+\[
+\begin{array}{lll}
+\bm x^k\in S^k,
+&
+\bm x^k\ne\bm 0,
+&
+k=0,1,2,\dots
+\end{array}
+\]
+and
+\[
+\begin{array}{ll}
+\|\bm x^k\|\to\infty,
+&
+\frac{\bm x^k}{\|\bm x^k\|}\to\frac{\bm d}{\|\bm d\|}
+\end{array}
+\]
+\begin{itemize}
+\item
+$(\{\bm x^k\},\bm d)$ is said to be the asymptptoc pair of $\{S^k\}$
+\item
+$\{\bm x^k\}$ is said to be \emph{retractive} if there exists a bounded sequence of positive numbers $\{\alpha^k\}$ and $\bar k$ such that
+\[
+\bm x^k-\alpha^k\bm d\in S^k,\qquad
+\forall k\ge\bar k
+\]
+\end{itemize}
+\end{definition}
+
+\begin{theorem}
+Let $\bm Q$ be a positive semi-definite symmetric $n\times n$ matrix, let $\bm c$ and $\bm a_1,\dots,\bm a_r$ be vectors in $\mathbb{R}^n$, and let $b_1,\dots,b_r$ be scalars. Assume that the optimal value of the problem
+\begin{equation}
+\begin{array}{ll}
+\min&\bm x\trans\bm Q\bm x+\bm c\trans\bm x\\
+\mbox{such that}&\bm a_j\trans\bm x+b_j\le0,\qquad j=1,2,\dots,r,
+\end{array}
+\end{equation}
+is finite. Then the problem has \emph{at least one optimal} solution.
+\end{theorem}
+\begin{proof}
+Suppose $f^*$ is the optimal solution. The feasible region is denoted by:
+\[
+F=\{\bm x \mid a_j\trans\bm x+b_j\le0,j=1,\dots,r\}.
+\] 
+
+Set a decreasing sequence $\{\gamma^k\}$ with limit $f^*$, and set
+\[
+S^k:=\{\bm x\in F\mid \bm x\trans\bm Q\bm x+\bm c\trans\bm x\le\gamma^k\}
+\]
+Thus the set of optimal solutions is $\bigcap_{k=0}^\infty S^k$. It suffices to show that all asymptotic seqeuences corresponding to asymptotic directions are \emph{retractive}.
+
+\paragraph{Asymptotic Directions are essentially Boundary Directions} For fiexed asymptotic pair $(\{\bm x^k\},\bm d)$, we claim that 
+\begin{align}
+\bm Q\bm d&=0,\inp{\bm c}{\bm d}\le0\\
+\inp{\bm a_j}{\bm d}&\le0, j=1,2,\dots,r
+\end{align}
+
+For first equaility, define $\bm d^k=\frac{\bm x^k}{\|\bm x^k\|}$. Since $\bm x^k\in S^k$, we have
+\begin{equation}
+(\bm d^k)\trans\bm Q\bm d^k+\frac{\inp{\bm c}{\bm d^k}}{\|\bm x^k\|}\le\frac{\gamma^k}{\|\bm x^k\|^2}\label{Eq:5:4}
+\end{equation}
+Taking $k\to\infty$, we imply $(\bm d)\trans\bm Q\bm d\le0$, and therefore $\bm{Qd}=0$ as $\bm Q\succeq0$.
+
+Due to (\ref{Eq:5:4}) and the semi-definiteness of $\bm Q$, we have
+\[
+\inp{\bm c}{\bm d^k}\le 
+\|\bm x^k\|(\bm d^k)\trans\bm Q\bm d^k+\inp{\bm c}{\bm d^k}\le\frac{\gamma^k}{\|\bm x^k\|}
+\]
+Taking $k\to\infty$, we imply $\inp{\bm c}{\bm d^k}\le0$. Similarly, $\inp{\bm a_j}{\bm d}\le0$ since $\inp{\bm a_j}{\bm d^k}\le-\frac{b_j}{\|\bm x^k\|}$.
+\paragraph{Finiteness of optimal value}Next we show $\inp{\bm c}{\bm d}=0$. For a feasible vector $\bar{\bm x}$, consider $\tilde{\bm x}:=\bar{\bm x}+m\bm d$ for any positive $m$, which is also feasible as $\inp{\bm a_j}{\bm d}\le0$. Then checking the function evaluated at $\tilde{\bm x}$:
+\[
+f^*\le (\tilde{\bm x})\trans\bm Q(\tilde{\bm x})+\inp{\bm c}{\tilde{\bm x}}
+=
+(\bar{\bm x})\trans\bm Q\bar{\bm x}+\inp{\bm c}{\bar{\bm x}}+m\inp{\bm c}{\bm d}
+\]
+As $f^*$ is finite, $\inp{\bm c}{\bm d}\ge0$, i.e., $\inp{\bm c}{\bm d}=0$.
+
+As a result, for fixed $\bm x^k$, the function evaluated at $\bm x^k-\alpha\bm d$ satisfies
+\[
+(\bm x^k-\alpha\bm d)\trans\bm Q(\bm x^k-\alpha\bm d)
++
+\inp{\bm c}{\bm x^k-\alpha\bm d}=(\bm x^k)\trans\bm Q\bm x^k+\inp{\bm c}{\bm x^k}\le\gamma^k,\forall\alpha,k,
+\]
+\paragraph{Feasibleness of $\bm x^k-\alpha\bm d$}It suffices to choose $\alpha>0$ to let $\bm x^k-\alpha\bm d\in F$ for sufficiently large $k$, i.e., 
+\[
+\begin{array}{ll}
+\inp{\bm a_j}{\bm x^k-\alpha\bm d}+b_j\le0,
+&
+j=1,\dots,r
+\end{array}
+\]
+\begin{itemize}
+\item
+This is true for $\forall\alpha>0$ if $\inp{\bm a_j}{\bm d}=0$
+\item
+Otherwise, suppose $\inp{\bm a_j}{\bm d}<-\varepsilon$. Thus $\inp{\bm a_j}{\bm d^k}<-\varepsilon$ for sufficiently large $k$, i.e., $\inp{\bm a_j}{\bm x^k}\le-\varepsilon\|\bm x^k\|$. Combining the unboundness of $\{\bm x^k\}$, we imply
+\[
+\inp{\bm a_j}{\bm x^k-\alpha\bm d}+b_j\le-\varepsilon\|\bm x^k\|-\alpha\inp{\bm a_j}{\bm d}+b_j<0
+\]
+
+
+\end{itemize}
+
+
+
+\end{proof}
+
 
 
 
