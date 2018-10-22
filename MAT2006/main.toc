@@ -1,8 +1,8 @@
 \select@language {english}
 \vskip -8pt
-\contentsline {schapter}{Acknowledgments}{vii}{chapter*.2}
+\contentsline {schapter}{Acknowledgments}{ix}{chapter*.2}
 \vskip -8pt
-\contentsline {schapter}{Notations}{ix}{chapter*.3}
+\contentsline {schapter}{Notations}{xi}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Week1}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Wednesday}{1}{section.1.1}
 \contentsline {paragraph}{Recommended Reading}{1}{section.1.1}
@@ -74,4 +74,20 @@
 \contentsline {paragraph}{Criteria 2: The derivative of any function should be continuous on a dense set}{68}{theoremeT.5.4}
 \contentsline {subsection}{\numberline {5.2.2}Analysis on Mean-Value Theorem}{68}{subsection.5.2.2}
 \contentsline {paragraph}{Plan for next week}{72}{exampleT.5.2}
+\contentsline {section}{\numberline {5.3}Saturday: Comments on Quiz 1}{73}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}First Question}{73}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Second Question}{73}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Third Question}{74}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Fourth Question}{75}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Fifth Question}{75}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}Grading policy}{76}{subsection.5.3.6}
+\contentsline {chapter}{\numberline {6}Week6}{77}{chapter.6}
+\contentsline {section}{\numberline {6.1}Wednesday}{77}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Reviewing}{77}{subsection.6.1.1}
+\contentsline {paragraph}{Taylor's Formula}{77}{subsection.6.1.1}
+\contentsline {paragraph}{Power Series}{78}{theoremeT.6.1}
+\contentsline {section}{\numberline {6.2}Friday}{83}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Announcement}{83}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Riemann Integration}{83}{subsection.6.2.2}
+\contentsline {paragraph}{Set Up}{83}{subsection.6.2.2}
 \contentsfinish 

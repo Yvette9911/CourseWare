@@ -63,10 +63,38 @@
 \contentsline {paragraph}{Finiteness of optimal value}{38}{equation.5.1.4}
 \contentsline {paragraph}{Feasibleness of $\bm {x}^k-\alpha \bm {d}$}{38}{equation.5.1.4}
 \contentsline {section}{\numberline {5.2}Wednesday}{39}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Constant Step-Size}{39}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Optimal First Order Method}{40}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Thursday}{41}{section.5.3}
-\contentsline {paragraph}{Newton's method has quadratic convergence rate}{41}{section.5.3}
-\contentsline {paragraph}{Nesterov's accelerated method}{41}{section.5.3}
-\contentsline {paragraph}{Convergence Rate}{41}{section.5.3}
+\contentsline {paragraph}{Announcement}{39}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Comments about Newton's Method}{39}{subsection.5.2.1}
+\contentsline {paragraph}{Newton's Method may not necessarily have quadratic rate of convergence}{39}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Constant Step-Size Analysis}{40}{subsection.5.2.2}
+\contentsline {paragraph}{Step 1: Apply Lipschitz condition}{41}{proposition.5.1}
+\contentsline {paragraph}{Step 2: Applying Convexity of $f$}{41}{equation.5.2.5}
+\contentsline {paragraph}{Step 3: applying monotonicity of $f(x^k) - f(x^*)$}{42}{equation.5.2.5}
+\contentsline {paragraph}{Step 1: Lipschitz gradient gives upper bound on $f(x^{k+1}) - f(x^k)$}{42}{proposition.5.2}
+\contentsline {paragraph}{Step 2: Stronly convex gives upper bound on $f(x^*) - f(x)$}{43}{proposition.5.2}
+\contentsline {paragraph}{Step 3: Re-arrange bounds on $f(x^{k+1}) - f(x^*)$}{43}{proposition.5.2}
+\contentsline {paragraph}{Reading Assignment: }{43}{proposition.5.2}
+\contentsline {chapter}{\numberline {6}Week6}{45}{chapter.6}
+\contentsline {section}{\numberline {6.1}Monday}{45}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Announcement}{45}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Introduction to Quasi-Newton Method}{45}{subsection.6.1.2}
+\contentsline {paragraph}{QN-Equation}{45}{equation.6.1.1}
+\contentsline {paragraph}{Least-Change}{46}{equation.6.1.1}
+\contentsline {subsection}{\numberline {6.1.3}Constrainted Optimization Problem}{46}{subsection.6.1.3}
+\contentsline {paragraph}{Optimality Condition for (\ref {Eq:6:1})}{46}{equation.6.1.2}
+\contentsline {paragraph}{Optimality condition for general function}{47}{equation.6.1.2}
+\contentsline {subsection}{\numberline {6.1.4}Announcement on Assignment}{47}{subsection.6.1.4}
+\contentsline {paragraph}{Optimal Algorithm for optimization}{48}{equation.6.1.4}
+\contentsline {subsection}{\numberline {6.1.5}Introduction to Stochastic optimization}{49}{subsection.6.1.5}
+\contentsline {section}{\numberline {6.2}Tutorial: Monday}{49}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}LP Problem}{49}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Gauss-Newton Method}{50}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Introduction to KKT and CQ}{51}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.3}Wednesday}{52}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Review}{52}{subsection.6.3.1}
+\contentsline {paragraph}{Stochastic Gradient Method}{52}{Item.43}
+\contentsline {subsection}{\numberline {6.3.2}Dual-Primal of LP}{53}{subsection.6.3.2}
+\contentsline {paragraph}{Recap}{53}{subsection.6.3.2}
+\contentsline {paragraph}{Barrier Term}{53}{subsection.6.3.2}
+\contentsline {paragraph}{Dual Problem of LP}{53}{Item.45}
 \contentsfinish 

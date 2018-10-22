@@ -31,6 +31,19 @@
 \BOOKMARK [2][-]{subsection.5.1.1}{Review}{section.5.1}% 31
 \BOOKMARK [2][-]{subsection.5.1.2}{Existence of solution to Quadratic Programming}{section.5.1}% 32
 \BOOKMARK [1][-]{section.5.2}{Wednesday}{chapter.5}% 33
-\BOOKMARK [2][-]{subsection.5.2.1}{Constant Step-Size}{section.5.2}% 34
-\BOOKMARK [2][-]{subsection.5.2.2}{Optimal First Order Method}{section.5.2}% 35
-\BOOKMARK [1][-]{section.5.3}{Thursday}{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.2.1}{Comments about Newton's Method}{section.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.2.2}{Constant Step-Size Analysis}{section.5.2}% 35
+\BOOKMARK [0][-]{chapter.6}{Week6}{}% 36
+\BOOKMARK [1][-]{section.6.1}{Monday}{chapter.6}% 37
+\BOOKMARK [2][-]{subsection.6.1.1}{Announcement}{section.6.1}% 38
+\BOOKMARK [2][-]{subsection.6.1.2}{Introduction to Quasi-Newton Method}{section.6.1}% 39
+\BOOKMARK [2][-]{subsection.6.1.3}{Constrainted Optimization Problem}{section.6.1}% 40
+\BOOKMARK [2][-]{subsection.6.1.4}{Announcement on Assignment}{section.6.1}% 41
+\BOOKMARK [2][-]{subsection.6.1.5}{Introduction to Stochastic optimization}{section.6.1}% 42
+\BOOKMARK [1][-]{section.6.2}{Tutorial: Monday}{chapter.6}% 43
+\BOOKMARK [2][-]{subsection.6.2.1}{LP Problem}{section.6.2}% 44
+\BOOKMARK [2][-]{subsection.6.2.2}{Gauss-Newton Method}{section.6.2}% 45
+\BOOKMARK [2][-]{subsection.6.2.3}{Introduction to KKT and CQ}{section.6.2}% 46
+\BOOKMARK [1][-]{section.6.3}{Wednesday}{chapter.6}% 47
+\BOOKMARK [2][-]{subsection.6.3.1}{Review}{section.6.3}% 48
+\BOOKMARK [2][-]{subsection.6.3.2}{Dual-Primal of LP}{section.6.3}% 49

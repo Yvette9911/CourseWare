@@ -1,7 +1,13 @@
 %% Run LaTeX on this file several times to get Table of Contents,\
 \input{book_command}
 \usepackage{pdfpages}
-%\includeonly{week5/Friday}
+\newcommand{\upRiemannint}[2]{
+  \overline{\int_{#1}^{#2}}
+}
+\newcommand{\loRiemannint}[2]{
+  \underline{\int_{#1}^{#2}}
+}
+\includeonly{week6/Friday}
 \usepackage[T1]{fontenc}
 %\includeonly{week3/Friday}
 \begin{document}
@@ -163,14 +169,14 @@ zeros, or a matrix of all zeros}
 \include{week5/Wednesday}
 %%\include{week5/Lecture_2}
 %\include{week5/Tuesday}
-%\include{week5/Thursday}
 \include{week5/Friday}
+\include{week5/Saturday}
 %\include{week5/Assignment_Six}
 %%\include{week6/Lecture_1}
 %%\include{week6/Lecture_2}
-%\include{week6/Tuesday}
+\include{week6/Wednesday}
 %\include{week6/Thursday}
-%\include{week6/Friday}
+\include{week6/Friday}
 %\include{week6/Assignment_Seven}
 %%\include{week7/Lecture_1}
 %\include{week7/Tuesday}
