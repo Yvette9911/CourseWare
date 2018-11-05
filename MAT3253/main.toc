@@ -22,4 +22,18 @@
 \contentsline {paragraph}{Powers}{9}{section.1.2}
 \contentsline {paragraph}{Solving high order equations}{9}{proposition.1.5}
 \contentsline {paragraph}{Roots of high order equations}{10}{exampleT.1.4}
+\contentsline {chapter}{\numberline {2}Week2}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Error}{13}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Bisection}{14}{subsection.2.1.1}
+\contentsline {paragraph}{Equally spaced integral}{19}{definitionT.2.8}
+\contentsline {chapter}{\numberline {3}Week3}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Tuesday}{23}{section.3.1}
+\contentsline {paragraph}{Dual Simplex method}{23}{Item.18}
+\contentsline {paragraph}{Interior Point Method}{24}{Item.18}
+\contentsline {subsection}{\numberline {3.1.1}Reviewing}{24}{subsection.3.1.1}
+\contentsline {paragraph}{Linear optimization formulation}{24}{subsection.3.1.1}
+\contentsline {paragraph}{Simplex method}{25}{theoremeT.3.3}
+\contentsline {paragraph}{Duality Theory}{25}{Item.22}
+\contentsline {paragraph}{Sensitivity Analysis}{25}{Item.25}
+\contentsline {paragraph}{Complexity Theory and interior method}{25}{Item.25}
 \contentsfinish 

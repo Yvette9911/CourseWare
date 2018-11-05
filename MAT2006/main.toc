@@ -85,9 +85,31 @@
 \contentsline {section}{\numberline {6.1}Wednesday}{77}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Reviewing}{77}{subsection.6.1.1}
 \contentsline {paragraph}{Taylor's Formula}{77}{subsection.6.1.1}
-\contentsline {paragraph}{Power Series}{78}{theoremeT.6.1}
+\contentsline {subsection}{\numberline {6.1.2}Convergence Analysis}{78}{subsection.6.1.2}
+\contentsline {paragraph}{Power Series}{78}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}Friday}{83}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Announcement}{83}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Riemann Integration}{83}{subsection.6.2.2}
-\contentsline {paragraph}{Set Up}{83}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.1}Recap}{83}{subsection.6.2.1}
+\contentsline {paragraph}{Announcement}{83}{subsection.6.2.1}
+\contentsline {paragraph}{Summary about Taylor series}{83}{subsection.6.2.1}
+\contentsline {paragraph}{Exercise}{83}{proposition.6.4}
+\contentsline {subsection}{\numberline {6.2.2}Riemann Integration}{84}{subsection.6.2.2}
+\contentsline {paragraph}{Set Up}{84}{subsection.6.2.2}
+\contentsline {chapter}{\numberline {7}Week7}{89}{chapter.7}
+\contentsline {section}{\numberline {7.1}Wednesday}{89}{section.7.1}
+\contentsline {paragraph}{Announcement}{89}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Integrable Analysis}{89}{subsection.7.1.1}
+\contentsline {paragraph}{Recap}{89}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Elementary Calculus Analysis}{92}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Friday}{97}{section.7.2}
+\contentsline {paragraph}{Announcement}{97}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Improper Intergrals}{97}{subsection.7.2.1}
+\contentsline {paragraph}{Motivation}{97}{subsection.7.2.1}
+\contentsline {paragraph}{Notations}{98}{Item.101}
+\contentsline {paragraph}{Graphic Interpretation of Proposition(\ref {Pro:7:4})}{99}{figure.7.1}
+\contentsline {chapter}{\numberline {8}Week8}{105}{chapter.8}
+\contentsline {section}{\numberline {8.1}Friday}{105}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Introduction to metric space}{105}{subsection.8.1.1}
+\contentsline {paragraph}{Generalization from $\PazoBB {R}$ to $\PazoBB {R}^2$}{105}{subsection.8.1.1}
+\contentsline {paragraph}{Local Properties}{108}{Item.117}
+\contentsline {paragraph}{Question}{110}{Item.129}
 \contentsfinish 

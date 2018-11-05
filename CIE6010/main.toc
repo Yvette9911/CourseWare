@@ -107,4 +107,28 @@
 \contentsline {paragraph}{Example}{60}{equation.7.1.1}
 \contentsline {paragraph}{Project}{60}{equation.7.1.1}
 \contentsline {paragraph}{Projection-based optimality condition}{60}{proposition.7.1}
+\contentsline {section}{\numberline {7.2}Wednesday}{62}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Motivation}{62}{subsection.7.2.1}
+\contentsline {paragraph}{Motivation of Feasible direction method}{62}{equation.7.2.2}
+\contentsline {subsection}{\numberline {7.2.2}Convex Projections}{63}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Feasible diection method}{65}{subsection.7.2.3}
+\contentsline {paragraph}{Projection Gradient Method}{67}{equation.7.2.7b}
+\contentsline {paragraph}{Conditional Gradient}{67}{equation.7.2.7b}
+\contentsline {chapter}{\numberline {8}Week8}{69}{chapter.8}
+\contentsline {section}{\numberline {8.1}Monday}{69}{section.8.1}
+\contentsline {paragraph}{Comments for P-C method in A5}{69}{section.8.1}
+\contentsline {paragraph}{Comments for Incremental Gradient Method}{70}{equation.8.1.1}
+\contentsline {subsection}{\numberline {8.1.1}Constraint optimization}{70}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Inequality Constraint Problem}{71}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}Monday Tutorial: Review for CIE6010}{71}{section.8.2}
+\contentsline {paragraph}{Matrix Calculus}{71}{section.8.2}
+\contentsline {paragraph}{Necessary and Sufficient Optimality condition}{73}{equation.8.2.4}
+\contentsline {paragraph}{Convex functions and convex sets}{75}{Item.56}
+\contentsline {paragraph}{Algorithms}{76}{proposition.8.7}
+\contentsline {paragraph}{Primal and Dual}{76}{proposition.8.7}
+\contentsline {paragraph}{Convergence Analysis}{77}{Item.63}
+\contentsline {chapter}{\numberline {9}Week9}{79}{chapter.9}
+\contentsline {section}{\numberline {9.1}Monday}{79}{section.9.1}
+\contentsline {paragraph}{Annonuncement}{79}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Reviewing for KKT}{79}{subsection.9.1.1}
 \contentsfinish 

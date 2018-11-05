@@ -271,8 +271,117 @@ Let $G,\hat G$ be cyclic groups of the same order, then $G\cong \hat G$.
 The first and seond theorem is required in exam. (can we apply the corresponding theorem in the exam?)
 
 \begin{theorem}[The First Isomorphism Theorem]
-Let $G\mapsto H$ be a \emph{surjective} group homomorphism, then $\mbox{ker }\phi\triangleleft G$ and $G/\mbox{ker }\phi\cong\mbox{im }\phi$
+Let $G\mapsto H$ be a group homomorphism, then $\mbox{ker }\phi\trianglelefteq G$ and $G/\mbox{ker }\phi\cong\mbox{im }\phi$
 \end{theorem}
+\begin{proof}
+Let $K=\mbox{ker }\phi\trianglelefteq G$. Define 
+\[
+\psi:G/K\mapsto\mbox{im }\phi,\qquad
+aK\mapsto\phi(a)
+\]
+First show that $\psi$ is well-defined, i.e., different expression of input leads to the same output. Note that
+\[
+b\in aK\implies b=ak,
+\]
+therefore $\psi(bK)=\psi((ak)K)=\phi(ak)=\phi(ak)=\phi(a)e_H$.
+
+Then check that $\psi$ is homomorphism:
+\[
+\psi(aK)\psi(bK)=\phi(a)\phi(b)=\phi(ab)=\psi((ab)K)
+=\psi((aK)(bK))
+\]
+
+Then check that $\psi$ is a bijection: Take $a\notin K$,
+\[
+\psi(aK)=\phi(a)=e_H\implies
+\mbox{ker }\psi\subseteq K
+\]
+Take $a\in K$, then
+\[
+\psi(aK)=\psi(e_G\cdot K)=\phi(e_G)=e_H\implies
+\mbox{ker }\psi\supseteq K
+\]
+Thus $\psi$ is one-to-one, and furthermore bijection.
+\end{proof}
+
+\begin{theorem}
+Let $G$ be a group with $N\trianglelefteq G$, then 
+\[
+\rho: G\to G/N,\qquad g\mapsto gN
+\]
+has $\mbox{ker }\rho=N$
+\end{theorem}
+\begin{proof}
+\begin{enumerate}
+\item
+$\rho$ is well-defined
+\item
+$\rho$ is homomorphism:
+\[
+\rho(g)\rho(h)=\rho(gh)
+\]
+\item
+$\rho$ is bijection:
+\[
+\rho(g)=gN=N\implies g\in N,
+\]
+i.e., $\mbox{ker }\rho\subseteq N$.
+
+On the other hand, take $g\in N$, then
+\[
+\rho(g)=gN=N\implies\mbox{ker }\rho\supset N.
+\]
+\end{enumerate}
+\end{proof}
+
+\begin{example}
+\begin{enumerate}
+\item
+$\phi:\mathbb{Z}\to\mathbb{Z}_n$ with $x\mapsto\bar{x}$ is surjective. Then we have $\phi(x)+\phi(y)=\bar{x}+_n\bar{y}=x+_ny=\overline{x+y}=\phi(x+y)$
+\[
+\phi(x)=\bar{x}=0\implies x\in n\mathbb{Z}\implies\mbox{ker }\phi=n\mathbb{Z}
+\]
+Therefore $\mathbb{Z}/n\mathbb{Z}=\mathbb{Z}_n$. Construct the canonical homomorphism $x\mapsto x+nZ$.
+\item
+$\phi:\mathbb{Z}_4\times\mathbb{Z}_4\to\mathbb{Z}_4$ with $(x,y)\mapsto y$.
+
+Note that $\phi$ is surjective
+
+Note that $\phi$ is homomorphism:
+\[
+\phi((x_1,y_1))*\phi((x_2,y_2))=y_1+y_2=\phi((x_1+x_2,y_1+y_2))
+=
+\phi((x_1,y_1)+(x_2,y_2))
+\]
+
+$\mathbb{Z}_4^2/\mbox{ker }\phi\cong\mathbb{Z}_4$
+
+The canonical homomorphism is $\rho:\mathbb{Z}_4^2\to\mathbb{Z}_4^2/\mbox{ker }\phi$ with $(x,y)\mapsto (x,y)+\mbox{ker }\phi$.
+
+
+\item
+Let $G=D_3$ and $\phi:D_3\to\mathbb{Z}_6$ with $r^i\mapsto0$ and $r^is\mapsto 3$. Then $\phi$ is a homomorphism but not surjective:
+\[
+\phi(r^i)\phi(r^j)=0=\phi(r^ir^j)
+\]
+\[
+\phi(r^i)\phi(r^j)=3=\phi(r^i\cdot r^is)
+\]
+\[
+\phi(r^is)\phi(r^is)=0=\phi(r^is\cdot r^js)
+\]
+
+Note that $D_3/\mbox{ker }\phi=D_3/\gen{r}\cong\{0,3\}\cong\mathbb{Z}_2$
+\end{enumerate}
+\end{example}
+\begin{theorem}
+Let $G$ be a group, and $H\le G$, $N\trianglelefteq G$, then
+\[
+H/(N\bigcap H)\cong NH/N
+\]
+\end{theorem}
+
+
 
 
 
