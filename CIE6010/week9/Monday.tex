@@ -103,8 +103,36 @@ In this case, the regularity condition is not satisfied. Let's try to solve for 
 1+\mu_1-\mu_2=0\implies
 \mu_2\ge1,x_2=0
 \]
+\[
+\nabla_{xx}^2L=\mu_1\begin{bmatrix}
+-2&0\\0&0
+\end{bmatrix}\left\{
+\begin{aligned}
+=0,&\quad x_2<x_1^2\\
+\mbox{negative semi-definite},&\quad x_2=x_1^2
+\end{aligned}
+\right.
+\]
+However, the condition for NSD case, $y\trans\nabla_{xx}^2L y\ge0$ for $y\in V(x^*)$ must be true.
 \end{example}
+\paragraph{Constraint Qualifications}
+\begin{enumerate}
+\item
+Regularity (LICQ)
+\item
+Slater Condition: If equality constraint $h(x)$ is affine, $g_i$'s are convex, there exists $x$ such that $h(x)=0,g(x)<0$.
+\item
+Linear Constraints: All $h$ and $g$ are linear
+\item
+MFCQ: Proposition 4.3.8. in the book
+\end{enumerate}
 
+\begin{remark}
+If $f$ is convex, then all KKT conditions are sufficient.
+\end{remark}
+\section{Monday Tutorial: Reviewing for Mid-term}
+\paragraph{How to answer sufficient or necessary conditions during the exam? }First derive some inituitive and weak conditons; and then strengthen it by some properties.
+\paragraph{Something highlight during the exam}How to compute the dual for specific problems? How to derive the KKT condition? How to compute the gradient? How to dervie iterative formula for some specific problems? What's the convergence rate of iterative algorithms based on which pre-assumptions? e.g., Newton's method has quadratic convergence once the lagrange function is Lipschitz continuous and Hessian matrix is non-singular. What's the proof for the convergence rate?
 
 
 

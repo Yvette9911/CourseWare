@@ -166,8 +166,8 @@ h'(t)\diff t\\
 \paragraph{Choice of Step Length}
 To get the optimal step length $\alpha$, differentiating the RHS w.r.t. $\alpha$ leads to
 \[
-\inp{\nabla f(\bm x)}{\alpha\bm d}+L\alpha\|\bm d\|^2=0\implies
-\alpha=-\frac{\inp{\nabla f(\bm x)}{\alpha\bm d}}{L\|\bm d\|^2}>0,
+\inp{\nabla f(\bm x)}{\bm d}+L\alpha\|\bm d\|^2=0\implies
+\alpha=-\frac{\inp{\nabla f(\bm x)}{\bm d}}{L\|\bm d\|^2}>0,
 \]
 which seems a reasonable choice. If $\bm d$ is the steepest descent direction, the step-length becomes a constant:
 \[

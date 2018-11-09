@@ -131,4 +131,8 @@
 \contentsline {section}{\numberline {9.1}Monday}{79}{section.9.1}
 \contentsline {paragraph}{Annonuncement}{79}{section.9.1}
 \contentsline {subsection}{\numberline {9.1.1}Reviewing for KKT}{79}{subsection.9.1.1}
+\contentsline {paragraph}{Constraint Qualifications}{81}{exampleT.9.2}
+\contentsline {section}{\numberline {9.2}Monday Tutorial: Reviewing for Mid-term}{82}{section.9.2}
+\contentsline {paragraph}{How to answer sufficient or necessary conditions during the exam? }{82}{section.9.2}
+\contentsline {paragraph}{Something highlight during the exam}{82}{section.9.2}
 \contentsfinish 
