@@ -1,0 +1,229 @@
+\chapter{Week9}
+\section{Friday}\index{week8_Thursday_lecture}
+We are now in the multi-variate differentiate part. 
+\paragraph{Comments on question in last lecture}
+The question left in the last lecture is that
+\begin{quotation}
+In dimension $\mathbb{R}^k$ with $k$ to be determined, is it possible to find the smallest $k$ such that a sphere $S^2$ and a circle $S^1$ have a way of putting to make each point from $S^2$ to $S^1$ have the same distance?
+\end{quotation}
+The answer is $k=5$, Let's give a proof. We define the sphere to be 
+\[
+S^2=\{(x,y,z,0,0)\mid x^2+y^2+z^2=1\},
+\]
+and the circle is 
+\[
+S^1=\{(0,0,0,u,v)\mid u^2+v^2=1\}
+\]
+The distance between any two points on the sphere and the circile, respectively, is
+\[
+d=\sqrt{x^2+y^2+z^2+u^+v^2}=\sqrt{2}
+\]
+Why $k\le 4$ is not ok?
+\subsection{Preliminaries}
+Define $\bm x:=(x_1,\dots,x_m)$ and $\bm y:=(y_1,\dots,y_m)$, we define the $L_2$ norm
+\begin{align*}
+d(\bm x,\bm y):&=\|\bm x-\bm y\|\\
+&=\left[(x_1-y_1)^2+\cdots+(x_m-y_m)^2\right]^{1/2}
+\end{align*}
+and $L_1$, $L_{\infty}$ (sup) norm:
+\begin{align*}
+d_1(\bm x,\bm y):&=\|\bm x-\bm y\|:=|x_1-y_1|+\cdots+|x_m-y_m|\\
+d_S(\bm x,\bm y):&=\|\bm x-\bm y\|_S:=\max_{1\le i\le m}(x_i-y_i)
+\end{align*}
+\begin{definition}[Norm]
+A norm $\|\cdot\|$ is a function from a vector space $X$ to $\mathbb{R}$ such that
+\begin{enumerate}
+\item
+$\|\bm x\|\ge0$, $\forall x\in X$; and $\|\bm x\|=0$ iff $\bm x=\bm0$;
+\item
+$\|\lambda\bm x\| = |\lambda|\|\bm x\|$, for $\forall x\in X,\lambda\in\mathbb{R}$;
+\item
+$\|\bm x_1+\bm x_2\|\le \|\bm x_1\| + \|\bm x_2\|$
+\end{enumerate}
+\end{definition}
+\begin{remark}
+Any norm defines a metric: $d(\bm x,\bm y)=\|\bm x-\bm y\|$. We (by defalut) pre-assume the norm to be $L_2$ norm and the metric to be $L_2$ metric.
+\end{remark}
+
+However, the norm does not define the angle between two angles. So we introduce the concept for inner product:
+\begin{definition}[Inner Product]
+An \emph{inner product} is a bi-operation function $\inp{\cdot}{\cdot}: X\times X\mapsto\mathbb{R}$ such that
+\begin{enumerate}
+\item
+$\inp{x}{x}\ge0$ for $\forall x\in X$ and $\inp{x}{x}=0$ iff $\bm x=0$
+\item
+$\in{\bm x}{\bm y}=\inp{\bm y}{\bm x}$, for $\forall \bm x,\bm y\in X$
+\item
+$\inp{\lambda\bm x}{\bm y}=\lambda\inp{\bm x}{\bm y}$ for $\forall x,y\in X$ and $\forall \lambda\in\mathbb{R}$
+\item
+$\inp{x+y}{z}=\inp{x}{z}+\inp{y}{z}$
+\end{enumerate}
+\end{definition}
+ \begin{remark}
+ \begin{enumerate}
+\item
+ Any inner product always defines a norm, i.e., $\|\bm x\|=\sqrt{\inp{\bm x}{\bm x}}$.
+ \item
+The angle $\theta$ between vector $\bm x,\bm y$ is defined as:
+\[
+\inp{\bm x}{\bm y}=\|\bm x\|\|\bm y\|\cos\theta
+\]
+In particular, $\theta=0$ implies $\inp{\bm x}{\bm y}=0$.
+\end{enumerate}
+ \end{remark}
+\subsection{Differentiation}
+\paragraph{Review for One-dimension}
+Given a function $f:\mathbb{R}\mapsto\mathbb{R}$, the derivative is defined as
+\[
+f'(x_0)=\lim_{x\to x_0}\frac{f(x) - f(x_0)}{x-x_0}
+\]
+or equivalently,
+\begin{align*}
+0&=
+\lim_{x\to x_0}\left[\frac{f(x) - f(x_0)}{x-x_0} - f'(x_0)\right]\\
+&=
+\lim_{x\to x_0}\frac{f(x) - f(x_0) - f'(x_0)(x-x_0)}{x-x_0}\\
+&=
+\lim_{x\to x_0}
+\left|
+\frac{
+f(x) - [f(x_0) + f'(x_0)(x-x_0)]
+}{x-x_0}
+\right|
+\end{align*}
+The interpretation is that this affine (linear function) $f(x_0)+f'(x_0)(x-x_0)$ approximate $f$ near $x_0$ in at least first order. This is similar to the way we define the high-dimension derivative.
+\paragraph{High-Dimension Derivative}
+\begin{definition}[Differentiable]
+A map $f:U\mapsto\mathbb{R}^m$, where $U$ is open in $\mathbb{R}^m$, is \emph{differentiable} at $\bm x_0\in U$ if
+\begin{equation}
+\lim_{\bm x\to\bm x_0}
+\frac{
+\left\|
+f(\bm x) - f(\bm x_0) - \bm L(\bm x_0)(\bm x-\bm x_0)
+\right\|
+}{
+\left\|
+\bm x-\bm x_0
+\right\|
+}=0
+\end{equation}
+\end{definition}
+\begin{remark}
+Note that $f(\bm x),f(\bm x_0)\in\mathbb{R}^n$, but $(\bm x-\bm x_0)\in\mathbb{R}^m$; thus $L(\bm x_0)$ is a \emph{linear transformation} from $\mathbb{R}^m$ to $\mathbb{R}^n$, i.e., a $n\times m$ matrix. In this course, $\bm L(\bm x_0)$ is denoted as $Df(\bm x_0)$, or sometimes denoted as $f'(\bm x_0)$.
+\end{remark}
+\paragraph{Interpretation}
+We re-write $f(\bm x)$ as:
+\[
+\begin{array}{l}
+f(\bm x)=\begin{pmatrix}
+f_1(\bm x)&\cdots&f_n(\bm x)
+\end{pmatrix}\\
+f_i:\mathbb{R}^m\mapsto\mathbb{R}
+\end{array}
+\]
+Let's study only one component first, i.e., $n=1$. To make life simpler, let's set $m=2$:
+
+cut curve $y-x_1$; $y-x_2$. study the multi-variate differentiate. For fixed $x_2$.
+\[
+\frac{\|f(x_1+h,x_2) - f(x_1,x_2)-\mbox{Number} * h\|}{\|(h,0)\|}
+\]
+such a number is defined as $\frac{\partial f}{\partial x_1}(\bm x_0)$, with $\bm x_0=(x_1,x_2)$.
+
+Similarly, we define
+\[
+\frac{\partial f}{\partial x_2}(\bm x_0),
+\]
+i.e., the partial derivatives of $f$ at $(x_1,x_2)$.
+\begin{corollary}
+$f$ is differentiable at $\bm x_0$ implies all partial derivatives of $f$ at $\bm x_0$ exist.
+\end{corollary}
+The converse is not true. Let's raise a counter-example to explain that.
+\begin{example}
+\[
+f(x_1,x_2)=\left\{
+\begin{aligned}
+\frac{x_1x_2}{x_1^2+x_2^2},&\quad (x_1,x_2)\ne(0,0)\\
+0,&\quad (x_1,x_2)=(0,0)
+\end{aligned}
+\right.
+\]
+When $x_2=mx_1$, we have
+\[
+f(x_1,mx_1) = \frac{mx_1^2}{x_1^2+mx_1^2}=\frac{m}{1+m^2},
+\]
+i.e., $f$ is not differentiable at the origin.
+
+However, $\frac{\partial f}{\partial x_1}(0,0)=0=\frac{\partial f}{\partial x_2}(0,0)$.
+
+\end{example}
+Geometric meaning for $n=1$: tangent plane.
+
+What guarntees $f$ to be differntiable if all partial derivatives exist?
+\[
+\frac{\|f(\bm x) - f(\bm x_0) - Df(\bm x_0)(\bm x-\bm x_0)\|}{\|\bm x-\bm x_0\|}\to0,
+\]
+where $f:\mathbb{R}^m\mapsto\mathbb{R}^n$ and $Df(\bm x_0)$ be a $n\times m$ matrix. Note that we wrtie $f(\bm x_0)$ in row vector form (which is convenient as will be seen in future):
+\[
+\begin{pmatrix}
+f_1(\bm x)\\
+f_2(\bm x)\\
+\vdots\\
+f_n(\bm x)
+\end{pmatrix}=
+\begin{pmatrix}
+f_1(\bm x_0)\\
+f_2(\bm x_0)\\
+\vdots\\
+f_n(\bm x_0)
+\end{pmatrix}
++[{Df(\bm x_0)}]_{n\times m}(\bm x-\bm x_0)_{m\times 1}
++o(\|\bm x-\bm x_0\|),
+\]
+where $o(\|\bm x-\bm x_0\|)$ is a $m\times 1$ vector that has order less than $\|\bm x-\bm x_0\|$.
+
+Or we write in this form:
+\[
+f_1(\bm x)=f_1(\bm x_0)+\nabla f_1(\bm x_0)\cdot (\bm x-\bm x_0)+o(\|\bm x-\bm x_0\|),
+\]
+with $\nabla f_1(\bm x_0) = \begin{pmatrix}
+\frac{\partial f_1}{\partial x_1}(\bm x_0)
+&
+\cdots
+&
+\frac{\partial f_1}{\partial x_m}(\bm x_0)
+\end{pmatrix}$ to be a row vector, and $(\bm x-\bm x_0)$ to be a column vector.
+
+Inverse function theorem; implicit function theorem.
+
+\paragraph{Sufficient Condition for differentiability}
+Recall that continus have nowhere differentble point. The gap is continuous differentiable.
+\begin{theorem}
+Let $f:U\mapsto\mathbb{R}^n$, where $U\subseteq\mathbb{R}^m$ is open. If all partial derivatives of $f$ are \emph{continuous} in $U$, then $f$ is differentiable in $U$.
+\end{theorem}
+\begin{proof}
+\begin{align*}
+f(\bm x+\bm h) - f(\bm x) &=f(x_1+h_1,\dots,x_m+h_m) - f(x_1,\dots,x_m) \\
+&=[f(x_1+h_1,\dots,x_m+h_m) - f(x_1,x_2+h_2,\dots,x_m+h_m)]\\
+&\qquad +[f(x_1,x_2+h_2,\dots,x_m+h_m)-f(x_1,x_2,x_3+h_3,\dots,x_m+h_m)]\\
+&\qquad+\cdots+
+[f(x_1,x_2,\dots,x_m+h_m) - f(x_1,x_2,\dots,x_m)]\\
+&=\frac{\partial f}{\partial x_1}(x_1,x_2+h_2,\dots,x_m+h_m)+o(h_1)\\
+&\quad +\frac{\partial f}{\partial x_2}(x_1,x_2,\dots,x_m+h_m)h_2+o(h_2)\\
+&\quad+\cdots+\\
+&=\frac{\partial f}{\partial x_1}(x_1,\dots,x_m)h_1 +o(1)h_1+o(h_1)\\
+&\quad +\frac{\partial f}{\partial x_2}(x_1,\dots,x_m)h_2 +o(1)h_2+o(h_2)+\cdots
+\end{align*}
+
+
+
+\end{proof}
+
+
+The next lecture will talk about the chain rule, the inverse, the derivative of inverse, the directional derivative, the gradient, the lattice curve. Next Friday will talk about implicit function theorem. 
+
+
+
+
+
+
+

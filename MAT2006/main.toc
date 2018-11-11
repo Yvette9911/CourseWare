@@ -112,4 +112,13 @@
 \contentsline {paragraph}{Generalization from $\PazoBB {R}$ to $\PazoBB {R}^2$}{105}{subsection.8.1.1}
 \contentsline {paragraph}{Local Properties}{108}{Item.117}
 \contentsline {paragraph}{Question}{110}{Item.129}
+\contentsline {chapter}{\numberline {9}Week9}{111}{chapter.9}
+\contentsline {section}{\numberline {9.1}Friday}{111}{section.9.1}
+\contentsline {paragraph}{Comments on question in last lecture}{111}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Preliminaries}{112}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Differentiation}{113}{subsection.9.1.2}
+\contentsline {paragraph}{Review for One-dimension}{113}{subsection.9.1.2}
+\contentsline {paragraph}{High-Dimension Derivative}{113}{subsection.9.1.2}
+\contentsline {paragraph}{Interpretation}{114}{equation.9.1.1}
+\contentsline {paragraph}{Sufficient Condition for differentiability}{115}{exampleT.9.1}
 \contentsfinish 
