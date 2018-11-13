@@ -135,4 +135,11 @@
 \contentsline {section}{\numberline {9.2}Monday Tutorial: Reviewing for Mid-term}{82}{section.9.2}
 \contentsline {paragraph}{How to answer sufficient or necessary conditions during the exam? }{82}{section.9.2}
 \contentsline {paragraph}{Something highlight during the exam}{82}{section.9.2}
+\contentsline {chapter}{\numberline {10}Week10}{83}{chapter.10}
+\contentsline {section}{\numberline {10.1}Monday}{83}{section.10.1}
+\contentsline {paragraph}{Announcement}{83}{section.10.1}
+\contentsline {paragraph}{Convex Program}{84}{equation.10.1.1b}
+\contentsline {subsection}{\numberline {10.1.1}Penalty Algorithms}{86}{subsection.10.1.1}
+\contentsline {paragraph}{Logarithm Penalty}{86}{subsection.10.1.1}
+\contentsline {paragraph}{Quadratic Penalty}{86}{subsection.10.1.1}
 \contentsfinish 

@@ -1,0 +1,218 @@
+
+\chapter{Week10}
+\section{Monday}\index{week2_Tuesday_lecture}
+\paragraph{Announcement}
+No assignment in this week, so you may take a break. However, in next week new assignments and projects will be updated, which requires you to apply penalty algorithms.
+
+\begin{theorem}[Farka's Lemma]
+Let $\bm a_1,\dots,\bm a_r\in\mathbb{R}^n$, and 
+\[
+\bm A=\begin{pmatrix}
+\bm a_1\trans\\
+\bm a_2\trans\\
+\vdots\\
+\bm a_r\trans
+\end{pmatrix},
+\]
+then for any $\bm c\in\mathbb{R}^n$,
+\begin{subequations}
+\begin{equation}
+\bm c\trans\bm y\le0,\quad\forall\bm y\mbox{ such that }\bm A\trans\bm y\le0,
+\end{equation}
+if and only if
+\begin{equation}
+\bm c=\bm{Au},\forall \bm u\ge0,\bm u\in\mathbb{R}^r
+\end{equation}
+\end{subequations}
+\end{theorem}
+\begin{remark}
+The interpretation is that the vector $\bm c$ has more than 90 degrees angle with all vectors $\bm a_i$ in the polar cone, if and only if $\bm c$ is in the polar cone.
+\end{remark}
+\begin{proof}
+To show the converse, we have
+\[
+\bm c\trans\bm y=\bm u\trans\bm A\trans\bm y,
+\]
+with $\bm u\ge0,\bm A\trans\bm y\le0$, and thereofre $\bm c\trans\bm y\le0$.
+\end{proof}
+\begin{proof}
+
+
+\end{proof}
+\paragraph{Convex Program}
+\[
+\begin{array}{ll}
+\min&f(x)\\
+\mbox{such that}&\bm{Ax}=\bm b\\
+&g(\bm x)\le0
+\end{array}
+\]
+with $f,g$ to be convex. The Lagrangian function is given by:
+\[
+L(\bm x,\bm\lambda,\bm\mu)=f(\bm x)+\bm\lambda(\bm{Ax}-\bm b)+\bm\mu\trans g(\bm x),
+\]
+with $\bm\mu\ge0$. This function is convex in $\bm x$. Therefore the dual function is given by:
+\[
+Q(\bm\lambda,\bm\mu)=\inf_{\bm x,\bm\mu\ge0}L(\bm x,\bm\lambda,\bm\mu)
+\]
+\begin{proposition}[Weak Deality]
+\[
+Q(\bm\lambda,\bm\mu)\le f(\bm x)
+\]
+for dual feasible $\bm\lambda,\bm\mu$ and primal feasible $\bm x$.
+\end{proposition}
+We are curious on the tightest lower bound on LHS, thus maximizing the dual function to obtain the dual program:
+\[
+\begin{array}{ll}
+\max&Q(\bm\lambda,\bm\mu)\\
+\mbox{such that}&\bm\mu\ge0
+\end{array}
+\]
+\begin{proposition}[Strong Duality]
+For convex programming, we have
+\[
+d^*=p^*,
+\]
+with $d^*,p^*$ to be the optimal value from dual and primal problems, respectively.
+\end{proposition}
+QC: one of the followings is satisfied
+\begin{itemize}
+\item
+$g_i(\bm x)$ are linear
+\item
+$\bm{Ax}=\bm b, g(\bm x)\le0$
+\item
+Regularity
+\end{itemize}
+Under QC, the primal and dual could attain optimality togethoer iff
+\begin{itemize}
+\item
+$\bm{Ax}=\bm b,g(\bm x)\le0$
+\item
+$\bm\mu\ge0$
+\item
+$\bm\mu\circ g(\bm x)=\bm0$
+\end{itemize}
+We have derive the dual formula for linear programming, but how about the quadratic programming?
+\begin{example}
+\begin{equation}
+\begin{array}{ll}
+p^*=\min&\frac{1}{2}\bm x\trans\bm Q\bm x+\bm c\trans\bm x,\quad\bm Q\succ0\\
+\mbox{such that}&\bm{Ax}\le\bm b
+\end{array}
+\end{equation}
+The Lagrangian function $L(\bm x,\bm\mu)=\frac{1}{2}\bm x\trans\bm Q\bm x+\bm c\trans\bm x+\bm\mu\trans(\bm{Ax}-\bm b)$, and therefore
+\begin{equation}\label{Eq:10:3}
+Q(\bm\mu)=\min_{\bm x,\bm\mu\ge0}L(\bm x,\bm\mu)
+\end{equation}
+The optimality condition implies that
+\[
+\nabla_{\bm x}L(\bm x,\bm\mu)=\bm{Qx}+\bm c+\bm A\trans\bm\mu=0\implies
+\bm x=-\bm Q^{-1}(\bm c+\bm A\trans\bm\mu)
+\]
+Thus substituting optimal $\bm x$ into (\ref{Eq:10:3}), we derive
+\begin{align*}
+Q(\bm\mu)&=-\frac{1}{2}\bm\mu\trans\bm A\bm Q^{-1}\bm A\trans\bm\mu-\bm t\trans\bm\mu+\mbox{constant}
+\end{align*}
+Thus we derive the dual program:
+\begin{equation}
+\begin{array}{ll}
+d^*=\min&\frac{1}{2}\bm\mu\trans\bm P\bm\mu+\bm t\trans\bm\mu,\\
+\mbox{such that}&\bm\mu\ge0
+\end{array}
+\end{equation}
+where $\bm P:=\bm A\bm Q^{-1}\bm A\trans$.
+\end{example}
+\subsection{Penalty Algorithms}
+\paragraph{Logarithm Penalty}
+Consider the inequality constraint problem
+\[
+\begin{array}{ll}
+\min&f(\bm x)\\
+&g_i(\bm x)\le0
+\end{array}
+\]
+The Barrier problem is given by:
+\[
+\min f(x)-\mu\sum_{i}\log(-g_i(\bm x)),\quad\mu>0
+\]
+As $\mu\to0$, $x(\mu)$ converges to the optimal solution. We pick big $\mu$ at first and obtain a good initial guess, and then we continue to decrease $\mu$.
+\paragraph{Quadratic Penalty}
+For the constraint problem
+\[
+\begin{array}{ll}
+\min&f(\bm x)\\
+&h(\bm x)=0\\
+&\bm x\in X
+\end{array}
+\]
+The quadratic penalty algorithm aims to solve
+\[
+\begin{array}{ll}
+\min&f(\bm x)+\lambda\trans h(\bm x)+\frac{c}{2}\|h(\bm x)\|_2^2\\
+&\bm x\in X,
+\end{array}
+\]
+where $\lambda$ is \emph{bounded}. Conversely, as $c\to\infty$, $\bm x(c)$ converges to the optimal solution. We pick small $c$ at first and obtain a good initial guess, and then we continus to increase $c$.
+\begin{example}
+\[
+\begin{array}{ll}
+\min&\frac{1}{2}(x_1^2+x_2^2)\\
+&x_1=1
+\end{array}
+\]
+The quadratic penalty function is 
+\[
+L_c(x)=\frac{1}{2}(x_1^2+x_2^2) + \lambda(x_1-1)+\frac{c}{2}(x_1-1)^2
+\]
+and therefore
+\[
+\nabla_{\bm x}L_c(\bm x)=\begin{pmatrix}
+x_1\\x_2
+\end{pmatrix}+\lambda\begin{pmatrix}
+1\\0
+\end{pmatrix}+c\begin{pmatrix}
+x_1-1\\0
+\end{pmatrix}=\begin{pmatrix}
+0\\0
+\end{pmatrix},
+\]
+which follows that
+\[
+\begin{array}{ll}
+x_1(\lambda,c)=\frac{c-\lambda}{c+1},
+&
+x_2(\lambda,c)=0
+\end{array}
+\]
+We can apply two algorithm to converge to optimal solution:
+\begin{enumerate}
+\item
+1. 
+Quadratic Pendlty Method:
+As $c\to\infty$ with $\lambda$ bounded, we derive $x_1(\lambda,c)\to1$.
+\item[2.]
+Lagrangian Multiplier Method: 
+We set $\nabla L(\bm x,\lambda)=0$ to obtain an appropriate $\lambda^*=-1$. As $\lambda\to\lambda^*$, we obtain $x_1(\lambda,c)\to1$ for $c>1$ (the key for this kind of algorithm is to choose big $c$).
+\end{enumerate}
+\end{example}
+Such an algorithm can also be applied for the non-convex problem, e.g.,
+\[
+\begin{array}{ll}
+\min&\frac{1}{2}(-x_1^2+x_2^2)\\
+&x_1=1
+\end{array}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+

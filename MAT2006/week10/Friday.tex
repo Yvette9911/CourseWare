@@ -41,8 +41,6 @@ i.e., $k\le 5$ is the sufficient condition of the problem.
 
 
 \subsection{Preliminaries}
-\paragraph{Notations}Here we use lower-case and bolded alphabet to denote a vector, e.g., $\bm x$; upper-case and bolded alphabet to denote a matrix, e.g., $\bm A$; unbolded alphabet to denote a scalar, e.g., $x_1$ or $A_1$
-
 Define $\bm x:=(x_1,\dots,x_m)$ and $\bm y:=(y_1,\dots,y_m)$, we define the $L_2$ norm
 \begin{align*}
 d(\bm x,\bm y):&=\|\bm x-\bm y\|\\
@@ -150,11 +148,17 @@ with each $f_i:\mathbb{R}^m\mapsto\mathbb{R}$ being a scalar-valued function of 
 \includegraphics[width=10cm]{week9/f_9_1}
 \caption{Diagram for partial derivatives}
 \end{figure}
-Given a surface $S:z=f(x_1,x_2)$, we study a point on the surface $S$, say $M_0(x_1,x_2,f(x_1,x_2))$. If the surface $S$ intersects the plane $y=x_2$  with the point $M_0$, then the \emph{partial derivative} $\frac{\partial f}{\partial{x_1}}(x_1,x_2)$ denotes the slope of the tangent line at $M_0$; the tangent line $T_{x_1}$ can be denoted as a vector $T_{x_1}:=(1,0,\frac{\partial f}{\partial{x_1}}(x_1,x_2))$. 
+cut curve $y-x_1$; $y-x_2$. study the multi-variate differentiate. For fixed $x_2$.
+\[
+\frac{\|f(x_1+h,x_2) - f(x_1,x_2)-\mbox{Number} * h\|}{\|(h,0)\|}
+\]
+such a number is defined as $\frac{\partial f}{\partial x_1}(\bm x_0)$, with $\bm x_0=(x_1,x_2)$.
 
-Similarly, if the surface $S$ intersects the plane $x=x_1$  with the point $M_0$, then $\frac{\partial f}{\partial{x_2}}(x_1,x_2)$ denotes the slope of the tangent line at $M_0$; the tangent line $T_{x_2}$ can be denoted as a vector $T_{x_2}:=(0,1,\frac{\partial f}{\partial{x_2}}(x_1,x_2))$. 
-
-Furthermore, the plane $\Span\{T_{x_1},T_{x_2}\}$ denotes the tangent plane at point $M_0$.
+Similarly, we define
+\[
+\frac{\partial f}{\partial x_2}(\bm x_0),
+\]
+i.e., the partial derivatives of $f$ at $(x_1,x_2)$.
 \begin{corollary}\label{Cor:9:1}
 $f$ is differentiable at $\bm x_0$ implies all partial derivatives of $f$ at $\bm x_0$ exist.
 \end{corollary}
@@ -177,12 +181,14 @@ i.e., $f$ is not differentiable at the origin as it is not continuos at the orig
 However, we can verify that $\frac{\partial f}{\partial x_1}(0,0)=0=\frac{\partial f}{\partial x_2}(0,0)$.
 
 \end{example}
+Geometric meaning for $n=1$: tangent plane.
+
 What guarntees $f$ to be differntiable if all partial derivatives exist?
 \[
 \frac{\|f(\bm x) - f(\bm x_0) - Df(\bm x_0)(\bm x-\bm x_0)\|}{\|\bm x-\bm x_0\|}\to0,
 \]
-where $f:\mathbb{R}^m\mapsto\mathbb{R}^n$ and $Df(\bm x_0)$ be a $n\times m$ matrix. We re-write the formula for the derivative of $f$ at $\bm x=\bm x_0$ first. Here we write $f(\bm x_0)$ in column vector form:
-\begin{equation}\label{Eq:9:2}
+where $f:\mathbb{R}^m\mapsto\mathbb{R}^n$ and $Df(\bm x_0)$ be a $n\times m$ matrix. Note that we wrtie $f(\bm x_0)$ in row vector form (which is convenient as will be seen in future):
+\[
 \begin{pmatrix}
 f_1(\bm x)\\
 f_2(\bm x)\\
@@ -195,28 +201,16 @@ f_2(\bm x_0)\\
 \vdots\\
 f_n(\bm x_0)
 \end{pmatrix}
-+
-\begin{pmatrix}
-\frac{\partial f_1}{\partial x_1}(x_0)&\frac{\partial f_1}{\partial x_2}(x_0)&\cdots&\frac{\partial f_1}{\partial x_m}(x_0)\\
-\frac{\partial f_2}{\partial x_1}(x_0)&\frac{\partial f_2}{\partial x_2}(x_0)&\cdots&\frac{\partial f_2}{\partial x_m}(x_0)\\
-\vdots&\vdots&\ddots&\vdots\\
-\frac{\partial f_n}{\partial x_1}(x_0)&\frac{\partial f_n}{\partial x_2}(x_0)&\cdots&\frac{\partial f_n}{\partial x_m}(x_0)\\
-\end{pmatrix}
-\begin{pmatrix}
-x_1- x_{0,1}\\
-x_2- x_0\\
-\vdots\\
-x_m- x_0\\
-\end{pmatrix}
++[{Df(\bm x_0)}]_{n\times m}(\bm x-\bm x_0)_{m\times 1}
 +o(\|\bm x-\bm x_0\|),
-\end{equation}
+\]
 where $o(\|\bm x-\bm x_0\|)$ is a $m\times 1$ vector that has order less than $\|\bm x-\bm x_0\|$.
 
-Each entry in LHS of (\ref{Eq:9:2}) can be expressed as:
+Or we write in this form:
 \[
-f_i(\bm x)=f_i(\bm x_0)+\nabla\trans f_i(\bm x_0)\cdot (\bm x-\bm x_0)+o(\|\bm x-\bm x_0\|),
+f_1(\bm x)=f_1(\bm x_0)+\nabla f_1(\bm x_0)\cdot (\bm x-\bm x_0)+o(\|\bm x-\bm x_0\|),
 \]
-with $\nabla\trans f_1(\bm x_0) = \begin{pmatrix}
+with $\nabla f_1(\bm x_0) = \begin{pmatrix}
 \frac{\partial f_1}{\partial x_1}(\bm x_0)
 &
 \cdots
@@ -224,72 +218,37 @@ with $\nabla\trans f_1(\bm x_0) = \begin{pmatrix}
 \frac{\partial f_1}{\partial x_m}(\bm x_0)
 \end{pmatrix}$ to be a row vector, and $(\bm x-\bm x_0)$ to be a column vector.
 
+Inverse function theorem; implicit function theorem.
+
 \paragraph{Sufficient Condition for differentiability}
 Recall that we have faced a function that is everywhere differentiable but nowhere monotone, which is very counter-inuitive. If adding the condition that such function is continuously differentiable, then such function is monotone. Similarly, the gap for corollary(\ref{Cor:9:1}) is continuous differentiability.
 \begin{theorem}
 Let $f:U\mapsto\mathbb{R}^n$, where $U\subseteq\mathbb{R}^m$ is open. If all partial derivatives of $f$ are \emph{continuous} in $U$, then $f$ is differentiable in $U$.
 \end{theorem}
-\begin{proof}[Proof for $n=2,m=1$ case]
-Consider $f:\mathbb{R}^2\mapsto\mathbb{R}$, for $x_0\in U$ with small $h,k$, we have:
-\begin{subequations}
-\begin{align}
-f(x_0+h,y_0+k) - f(x_0,y_0)&=[f(x_0+h,y_0+k) - f(x_0+h,y_0)] + [f(x_0+h,y_0) - f(x_0,y_0)]\\
-&\mbox{(by Mean Value Theorem, $\exists (c,d)\in[0,h]\times[0,k]$ such that)}\\
-&=k\frac{\partial f}{\partial y}(x_0+h,y_0+c) + h\frac{\partial f}{\partial x}(x_0+d,y_0)\\
-&=k\frac{\partial f}{\partial y}(x_0,y_0+c)+o(h)+h\frac{\partial f}{\partial x}(x_0,y_0)+o(h)\\
-&=k\frac{\partial f}{\partial y}(x_0,y_0)+h\frac{\partial f}{\partial x}(x_0,y_0)+o(h)+o(k)
-\end{align}
-\end{subequations}
-Or we write it in compact matrix form:
-\[
-f(x_0+h,y_0+k)=f(x_0,y_0)+\begin{pmatrix}
-\frac{\partial f}{\partial x}(x_0,y_0)&
-\frac{\partial f}{\partial y}(x_0,y_0)
-\end{pmatrix}\begin{pmatrix}
-h\\k
-\end{pmatrix}+o(\|(h,k)\|),
-\]
-i.e., the derivative of $f$ at $x=x_0$ exists, say $(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})$. Thus $f$ is differentiable.
-\end{proof}
-The same proof can easily extend to $f:\mathbb{R}^n\mapsto\mathbb{R}$ by adding and subtracting $n-1$ terms and then apply mean value theorem for $n$ times; the extension to $f:\mathbb{R}^n\mapsto\mathbb{R}^m$ is clear by the same proof for each component.
-
-
-
-
-
-
 \begin{proof}
-Consider in general $f:\mathbb{R}^n\mapsto\mathbb{R}^m$, and it suffices to show (\ref{Eq:9:2}), and moreover, it suffices to show each entry $f_i(\bm x)$ in (\ref{Eq:9:2}) can be expressed as
-\[
-f_i(\bm x)=f_i(\bm x_0)+\nabla\trans f_i(\bm x_0)\cdot (\bm x-\bm x_0)+o(\|\bm x-\bm x_0\|).
-\]
-Let's abuse notation to refer $g$ as the $i$-th entry of $f_i$, i.e., $g:\mathbb{R}^n\mapsto\mathbb{R}$.
+\begin{align*}
+f(\bm x+\bm h) - f(\bm x) &=f(x_1+h_1,\dots,x_m+h_m) - f(x_1,\dots,x_m) \\
+&=[f(x_1+h_1,\dots,x_m+h_m) - f(x_1,x_2+h_2,\dots,x_m+h_m)]\\
+&\qquad +[f(x_1,x_2+h_2,\dots,x_m+h_m)-f(x_1,x_2,x_3+h_3,\dots,x_m+h_m)]\\
+&\qquad+\cdots+
+[f(x_1,x_2,\dots,x_m+h_m) - f(x_1,x_2,\dots,x_m)]\\
+&=\frac{\partial f}{\partial x_1}(x_1,x_2+h_2,\dots,x_m+h_m)+o(h_1)\\
+&\quad +\frac{\partial f}{\partial x_2}(x_1,x_2,\dots,x_m+h_m)h_2+o(h_2)\\
+&\quad+\cdots+\\
+&=\frac{\partial f}{\partial x_1}(x_1,\dots,x_m)h_1 +o(1)h_1+o(h_1)\\
+&\quad +\frac{\partial f}{\partial x_2}(x_1,\dots,x_m)h_2 +o(1)h_2+o(h_2)+\cdots
+\end{align*}
 
-Let $\varepsilon>0$, by continuity of partial derivatives, we can pick $\delta>0$ such that for any $\|\bm h\|<\delta$, we have
-\begin{equation}
-\left\|\frac{\partial g}{\partial x_k}(\bm x+h) - \frac{\partial g}{\partial x_k}(\bm x) \right\|<\varepsilon,\qquad k=1,2,\dots,n
-\end{equation}
-Let $\bm L=(\frac{\partial g}{\partial x_1}(\bm x),\dots,\frac{\partial g}{\partial x_n}(\bm x))$; $\phi_k(\bm h)=(h_1,h_2,\dots,h_k,0,\dots,0)$, $\phi_0(\bm h)=\bm0$, and suppose $\|\bm h\|<\delta$,
-, then we have:
-\begin{align}
-|g(\bm x+\bm h) - g(\bm x) - \bm L\bm h| &=\left|\sum_{k=1}^n[g(\bm x+\phi_k(\bm h)) - g(\bm x+\phi_{k-1}(\bm h)) - \frac{\partial g}{\partial x_k}(\bm x)h_k]\right|\\
-&\le\sum_{k=1}^n\left|g(\bm x+\phi_k(\bm h)) - g(\bm x+\phi_{k-1}(\bm h)) - \frac{\partial g}{\partial x_k}(\bm x)h_k\right|
-\end{align}
-By the Mean Value Theorem, there exists $\bm c_k\in[\bm x+\phi_{k-1}(\bm h),\bm x+\phi_k(\bm h)]$ such that $g(\bm x+\phi_k(\bm h)) - g(\bm x+\phi_{k-1}(\bm h))=\frac{\partial g}{\partial x_k}(\bm c_k)h_k$, and therefore
-\begin{align}
-|g(\bm x+\bm h) - g(\bm x) - \bm L\bm h|&\le
-\sum_{k=1}^n\left|\frac{\partial g}{\partial x_k}(\bm c_k)h_k - \frac{\partial g}{\partial x_k}(\bm x)h_k\right|\\
-&=\sum_{k=1}^n\left|\frac{\partial g}{\partial x_k}(\bm c_k) - \frac{\partial g}{\partial x_k}(\bm x)\right||h_k|\\
-&<\varepsilon\sum_{k=1}^n|h_k|\label{Eq:9:9}
-\end{align}
-where (\ref{Eq:9:9}) is due to the continuty of partial derivatives. To make life easier, we specify the norm to be $L_1$ norm, which follows that
-\[
-|g(\bm x+\bm h) - g(\bm x) - \bm L\bm h|\le\varepsilon\|\bm h\|_1,
-\]
-which implies $g$ is differentiable at $\bm x$. In paricular, if every component $f_i$ is differentiable, then $f$ is differentiable.
+
 
 \end{proof}
 
-\paragraph{Planning for following weeks}
 
-The next lecture will talk about the chain rule, the inverse, the derivative of inverse, the directional derivative, the gradient. Next Friday will talk about Inverse function theorem and Implicit function theorem, which may last for two weeks.
+The next lecture will talk about the chain rule, the inverse, the derivative of inverse, the directional derivative, the gradient, the lattice curve. Next Friday will talk about implicit function theorem. 
+
+
+
+
+
+
+
