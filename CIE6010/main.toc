@@ -142,4 +142,8 @@
 \contentsline {subsection}{\numberline {10.1.1}Penalty Algorithms}{86}{subsection.10.1.1}
 \contentsline {paragraph}{Logarithm Penalty}{86}{subsection.10.1.1}
 \contentsline {paragraph}{Quadratic Penalty}{86}{subsection.10.1.1}
+\contentsline {section}{\numberline {10.2}Wednesday}{88}{section.10.2}
+\contentsline {paragraph}{Quadratic Penalty (Courant, 1943)}{88}{section.10.2}
+\contentsline {paragraph}{Augmented Lagrangian Multiplier Method}{88}{section.10.2}
+\contentsline {paragraph}{Optimality condtion for orign problem}{89}{exampleT.10.3}
 \contentsfinish 

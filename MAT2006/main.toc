@@ -123,4 +123,17 @@
 \contentsline {paragraph}{Interpretation}{114}{equation.9.1.1}
 \contentsline {paragraph}{Sufficient Condition for differentiability}{117}{equation.9.1.2}
 \contentsline {paragraph}{Planning for following weeks}{119}{equation.9.1.9}
+\contentsline {chapter}{\numberline {10}Week10}{121}{chapter.10}
+\contentsline {section}{\numberline {10.1}Wednesday}{121}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Preliminaries on Notations}{121}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Analysis on multi-variate differentiation}{122}{subsection.10.1.2}
+\contentsline {paragraph}{Interpretation in one-dimension}{125}{proposition.10.2}
+\contentsline {section}{\numberline {10.2}Friday}{128}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Multi-variate Taylor's Theorem}{128}{subsection.10.2.1}
+\contentsline {paragraph}{Recap for one-dimension}{128}{subsection.10.2.1}
+\contentsline {paragraph}{Generalization into $m$-argument case}{128}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Application: Optimality Condition}{130}{subsection.10.2.2}
+\contentsline {paragraph}{Necessary optimal condition}{130}{subsection.10.2.2}
+\contentsline {paragraph}{Recap about Diagonalization}{131}{theoremeT.10.4}
+\contentsline {paragraph}{Sufficient Optimality Condition}{132}{theoremeT.10.5}
 \contentsfinish 
