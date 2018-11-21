@@ -138,12 +138,24 @@
 \contentsline {chapter}{\numberline {10}Week10}{83}{chapter.10}
 \contentsline {section}{\numberline {10.1}Monday}{83}{section.10.1}
 \contentsline {paragraph}{Announcement}{83}{section.10.1}
-\contentsline {paragraph}{Convex Program}{84}{equation.10.1.1b}
-\contentsline {subsection}{\numberline {10.1.1}Penalty Algorithms}{86}{subsection.10.1.1}
-\contentsline {paragraph}{Logarithm Penalty}{86}{subsection.10.1.1}
-\contentsline {paragraph}{Quadratic Penalty}{86}{subsection.10.1.1}
-\contentsline {section}{\numberline {10.2}Wednesday}{88}{section.10.2}
-\contentsline {paragraph}{Quadratic Penalty (Courant, 1943)}{88}{section.10.2}
-\contentsline {paragraph}{Augmented Lagrangian Multiplier Method}{88}{section.10.2}
-\contentsline {paragraph}{Optimality condtion for orign problem}{89}{exampleT.10.3}
+\contentsline {subsection}{\numberline {10.1.1}Duality Theory}{83}{subsection.10.1.1}
+\contentsline {paragraph}{Convex Program}{84}{Item.73}
+\contentsline {subsection}{\numberline {10.1.2}Penalty Algorithms}{86}{subsection.10.1.2}
+\contentsline {paragraph}{Logarithm Penalty}{86}{subsection.10.1.2}
+\contentsline {paragraph}{Quadratic Penalty}{86}{equation.10.1.7}
+\contentsline {section}{\numberline {10.2}Wednesday}{89}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Introduction to penalty algorithms}{89}{subsection.10.2.1}
+\contentsline {paragraph}{Quadratic Penalty (Courant, 1943)}{89}{equation.10.2.11}
+\contentsline {paragraph}{Augmented Lagrangian Multiplier Method}{89}{equation.10.2.11}
+\contentsline {subsection}{\numberline {10.2.2}Convergence Analysis}{90}{subsection.10.2.2}
+\contentsline {chapter}{\numberline {11}Week11}{91}{chapter.11}
+\contentsline {section}{\numberline {11.1}Monday}{91}{section.11.1}
+\contentsline {paragraph}{Announcement}{91}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Augmented Lagrangian}{91}{subsection.11.1.1}
+\contentsline {paragraph}{Viewpoint from Duality}{92}{equation.11.1.2}
+\contentsline {paragraph}{Sensitivity analysis}{92}{equation.11.1.4}
+\contentsline {subsection}{\numberline {11.1.2}ADMM}{94}{subsection.11.1.2}
+\contentsline {section}{\numberline {11.2}Monday Tutorial}{94}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Implicit Function Theorem}{96}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}Trust Region}{96}{subsection.11.2.2}
 \contentsfinish 

@@ -1,0 +1,251 @@
+
+\chapter{Week11}
+
+\section{Monday}\index{week6_Tuesday_lecture}
+\paragraph{Announcement}
+The grading have finished. The grades will be available after lunch. The new assignment has been posted. The final project is to apply the best problem designed to solve the problem
+\[
+\begin{array}{ll}
+\min&f(x)\\
+\mbox{such that}&h(x)=0\\
+&x\in X
+\end{array}
+\]
+
+\subsection{Augmented Lagrangian}
+The augmented Lagrangian function is given by:
+\[
+L_c(\bm x,\lambda)=f(\bm x)+\lambda\trans h(\bm x)+\frac{c}{2}\|h(\bm x)\|_2^2
+\]
+The ALMM aims to solve
+\begin{align}
+\bm x^r&=\arg\min_{\bm x}L_{\bm c^r}(\bm x,\lambda^r)\\
+\lambda^{r+1}&=\lambda^r+ch(\bm x^r)\label{Eq:11:2}
+\end{align}
+Why do we need to care about the update for multiplier? 
+
+\paragraph{Viewpoint from Duality}
+We obtain the dual problem over $\mbox{Dom}(Q)$:
+\begin{align}
+Q(\lambda)&=\inf_{\bm x}L_{\bm c}(\bm x,\lambda)\le L_{\bm c}(\bm x,\lambda)\le f(\bm x),\qquad\forall\mbox{ feasible }\bm x\\
+&=L_{\bm c}(\bm x(\lambda),\lambda),
+\end{align}
+where $\bm x(\lambda):=\arg\min_{\bm x}L_{\bm c}(\bm x,\lambda)$. Let's apply gradient ascent to solve such a problem:
+\[
+\nabla Q(\lambda)=
+\frac{\diff \bm x(\lambda)}{\diff\lambda}\underbrace{
+\nabla_{\bm x}L_{\bm c}(\bm x(\lambda),\lambda)
+}_{0}
++\frac{\partial L_{\bm c}}{\partial\lambda}=h(\bm x(\lambda))
+\]
+Therefore (\ref{Eq:11:2}) is nothing but gradient ascent for maximizing the dual function.
+
+\paragraph{Sensitivity analysis}
+The change of the constraint is related to the multiplier. Consider the problem
+\[
+\begin{array}{ll}
+p(u)=\min&f(x)\\
+\mbox{such that}&h(x)=u\\
+&x\in X
+\end{array}
+\]
+Suppose we have the solution $x(u)=\arg\min_{h(x)=u}f(x)$ and in particular, $x^*=x(0)$. With regularity, $(x^*,\lambda^*)$ is the unique pair of (min, multiplier) for this problem. Suppose $(x(u),\lambda(u))$ exists uniquely near $u=0$, then
+\[
+\nabla p(u) = -\lambda(u),\qquad
+\nabla p(0) = -\lambda^*
+\]
+\begin{example}
+For the optimization problem
+\[
+\begin{array}{ll}
+p(u)=\min&\frac{1}{2}(x_1^2-x_2^2) - x_2\\
+&x_2=0
+\end{array}
+\]
+We have $x^*=(0,0),\lambda^*=1$. Also, 
+\[
+p(u)=-\frac{1}{2}u^2-u,\implies
+p'(0)=-1=-\lambda^*
+\]
+
+
+\end{example}
+\begin{proof}
+The KKT condition gives
+\[
+\left\{
+\begin{aligned}
+\nabla f(x) + \nabla h(x)\lambda&=0\\
+h(x)- u&=0
+\end{aligned}
+\right.\Longleftrightarrow
+F(x,\lambda,u)=0
+\]
+The Jacobian for such a system gives:
+\[
+\bm J=\begin{bmatrix}
+\nabla^2f(x)+\sum\lambda_i\nabla^2h_i(x)&\nabla h(x)\\
+\nabla\trans h(x)&0
+\end{bmatrix}
+\]
+With regularity conditon, the Jacobian matrix is non-singular at $(x^*,\lambda^*)$. By applying implicit function theorem, $(x(u),\lambda(u))$ exists near $u=0$ such that
+\[
+F(x(u),\lambda(u),u)=0
+\]
+Furthermore,
+\[
+\nabla p(u)=\nabla x(u)\nabla f(x(u)) = \nabla x(u)\left(
+-\nabla h(x(u))\lambda(u)
+\right)
+\]
+Differentiating $h(x(u)) - u=0$ both sides, we obtain:
+\[
+\nabla x(u)\nabla h(x(u)) = \bm I,
+\]
+which follows that
+\[
+\nabla p(u)= -\lambda(u)
+\]
+
+\end{proof}
+
+\subsection{ADMM}
+Given two variables
+\[
+\begin{array}{ll}
+\min&f(x,y)\\
+&h(x,y)
+\end{array}
+\]
+When $f(x,y)$ and $h(x,y)$ is separable, i.e., $f(x,y)=f(x)+g(y), Ax+By=C$, the Lagrangian function is given by:
+\begin{align*}
+L_{\bm c}(x,y) &= f(x,y)+\lambda\trans h(x,y)+\frac{\bm c}{2}\|h(x,y)\|^2\\
+&=f(x)+g(y)+\lambda\trans (Ax+By-C)+\frac{C}{2}\|Ax+By-C\|^2
+\end{align*}
+Let's just minimize one variable for one computation:
+\begin{align*}
+x^{r+1}&=\arg\min_xL_c(x,y^r,\lambda^r)\\
+y^{r+1}&=\arg\min_yL_c(x^{r+1},y,\lambda^r)\\
+\lambda^{r+1}&=\lambda^r+ch(x^{r+1},y^{r+1})
+\end{align*}
+The ADMM for separable variable case absolutely converges, but the case for non-separable works in most case.
+\[
+\|A - XY\trans\|_F^2
+\]
+The strcuture of the problem plays a significant role in optimization.
+\section{Monday Tutorial}
+The QCQP problem aims to solve
+\[
+\begin{array}{ll}
+\min f(x,y)&=\frac{1}{2}(\bm x\trans\bm A\bm x+\bm y\trans\bm A\bm y) - \bm b\trans\bm x-\bm c\trans\bm y\\
+&h_i(x,y)=0,i=1,2,3
+\end{array}
+\]
+\begin{enumerate}
+\item
+The gradient is given by:
+\begin{align*}
+\nabla h_1&=(x,0)\\
+\nabla h_2&=(0,y)\\
+\nabla h_3&=(y,x)
+\end{align*}
+which are linearly independent
+\item
+The KKT condition is given by:
+
+\item
+The question 3 requires
+\begin{align*}
+\nabla_xL(x,y,\lambda_1,\lambda_2,\lambda_3)&=0\\
+\nabla_yL(x,y,\lambda_1,\lambda_2,\lambda_3)&=0\\
+h_1(x,y)&=0\\
+h_2(x,y)&=0\\
+h_3(x,y)&=0
+\end{align*}
+Cancell many terms by left or right multiplying matrices to derive the answer.
+\item
+The question4 requires to show
+\[
+\begin{pmatrix}
+x\\y
+\end{pmatrix}\perp\begin{pmatrix}
+u\\v
+\end{pmatrix}\perp\begin{pmatrix}
+y\\x
+\end{pmatrix}
+\]
+Firstly, from sub-problem 1, we obtain
+\[
+\nabla\trans h(x,y)(u,v)=
+\]
+\item
+The question5 has some mistakes.
+\end{enumerate}
+\subsection{Implicit Function Theorem}
+Given a function $F(x,y)$, we want to know the relationship between $y$ and $x$, i.e., $y=y(x)$. Suppose $x\in\mathbb{R}^m,y\in\mathbb{R}^m,F(x,y)\in\mathbb{R}^n$. If we have $F(a,b)=0$ and $F\in\mathcal{C}^1$, and the Jacobian of $F$ over $y$ is non-singular, then there exists a neighborhood near $(a,b)$ such that $y(a)=0$,
+\[
+\frac{\partial g}{\partial x}=(-J_yF)^{-1}[J_xF]
+\]
+
+\begin{example}
+Given the function $F(x,y)=x^2+y^2-1$ near point $(a,b)=(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})$, then $J_yF=2y$, then there exists a relation $g$:
+\[
+y=g(x),\qquad
+\frac{\diff}{\diff x}g(a,b)=\frac{-J_xF}{J_yF}=\frac{-x}{y}=-\frac{x}{\sqrt{1-x^2}}
+\]
+Also,
+\[
+\frac{\partial}{\partial x}F(x,g(x))=J_xF+J_yF\frac{\partial g}{\partial x}
+\]
+
+
+
+
+\end{example}
+\subsection{Trust Region}
+Line search:
+\begin{enumerate}
+\item
+Determine direction
+\item
+Determine step-size
+\item
+Update point location
+\end{enumerate}
+Trust region
+\begin{enumerate}
+\item
+Choose the sub-problem
+\item
+Solution is good or not? If yes, $x_{k+1}=x_k+S_k$; otherwise $x_{k+1}=x_k$.
+\end{enumerate}
+Line / Quadratic Approximation. The key is to add the trust region $\|\bm S\|\le\Delta$.
+
+Steps:
+\begin{enumerate}
+\item
+If $\rho_k\ge\mbox{Threshold}$, then
+\begin{itemize}
+\item
+Good: $\Delta_{k+1} = \gamma_1\Delta_k$; $x_{k+1}=x_k+S_k$
+\item
+Normal: $\Delta_{k+1} = \Delta_k$; $x_{k+1} = x_k+S_k$
+\item
+Bad: $\Delta_{k+1} = r_d\Delta_k$; $x_{k+1}=x_k$
+\end{itemize}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
