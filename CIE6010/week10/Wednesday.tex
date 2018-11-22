@@ -104,7 +104,20 @@ h(\bm{\bar x})=0
 Combining (\ref{Eq:10:15}) and (\ref{Eq:10:16}), we conclude that $f^*\ge f(\bm{\bar x})$ and $\bm{\bar x}$ is feasible, i.e., $\bm{\bar x}$ is global minimum.
 \end{proof}
 
-
+\begin{theorem}
+Given the sequence of optimization problem
+\begin{equation}\label{Eq:10:17}
+\begin{array}{ll}
+\min&L_{\bm c^k}(\bm x,\bm\lambda^k),\bm x\in X
+\end{array}
+\end{equation}
+with associated local minimum $\bm x^k$. Suppose $\{\bm c^k\}$ is chosen to be sufficiently large, and $\{\bm\lambda^k\}$ is picked by the formula
+\begin{equation}
+\bm\lambda^{k+1}=\bm\lambda^k+\bm c^kh(\bm x^k),
+\end{equation}
+under the constraint qualification, we have $\{\bm x^k,\bm\lambda^k\}\to\{\bm x^*,\bm\lambda^*\}$, with the limit to be the optimal solution and the Lagrangian multiplier pair.
+\end{theorem}
+Check the proof in the textbook Numerical Optimization, page 518.
 
 
 

@@ -1,165 +1,134 @@
 
 \section{Wednesday}\index{week7_Thursday_lecture}
-\subsection{Review}
-\begin{enumerate}
-\item
-To minimize the term $\|A - XX\trans\|_F^2$, just implement the algorithm in the paper. 
-\item
-The next question is to solve the linear system by Newton's method
-\[
-F(x+dx,y+dy,z+dz)=\begin{bmatrix}
-A\trans y+z - c\\
-Ax-b\\
-x\circ z - \mu
-\end{bmatrix}=\begin{bmatrix}
-0\\0\\0
-\end{bmatrix}\implies
-F_\mu(x,y,z)+F'_{\mu}(x,y,z)(dx,dy,dz)\trans=0
-\]
-\end{enumerate}
-\paragraph{Stochastic Gradient Method}
-The objective function is
-\[
-f(x)=\frac{1}{2}(x-c_1)^2+\frac{1}{2}(x-c_2)^2,
-\]
-where $x^*=\frac{c_1+c_2}{2}$.
-\[
-\left\{
-\begin{aligned}
-%x^r(1) &= x^{r-1}(2) - \alpha (x^{r-1}(2)-c_2)\\
-x^r(2) &= x^r(1) - \alpha (x^r(1)-c_1)=(1-\alpha)x^r(1) + \alpha c_1\\
-x^{r+1}(1)&=x^r(2) - \alpha(x^r(2) - c_2)=(1-\alpha)x^r(2) + \alpha c_2
-\end{aligned}
-\right.
-\]
-After computation, we derive $x^{r+1}(1) = (1-\alpha)^2x^r(1) + (1-\alpha)\alpha c_1+\alpha c_2$.
-
-How to guarantee convergence? We have generated two sequences
-\[
-\{
-x^{r-1}(1).x^r(1),x^{r+1}(1),\dots
-\}\to x_\alpha(1),\qquad
-\{
-x^{r-1}(2).x^r(2),x^{r+1}(2),\dots
-\}\to x_\alpha(2),
-\]
-We can solve for $x_\alpha(1)$ and $x_\alpha(2)$:
-\begin{align*}
-x_\alpha(1)&=(1-\alpha)^2x_\alpha(1) + (1-\alpha)\alpha c_1+\alpha c_2\implies
-x_\alpha(1)=\frac{(1-\alpha)c_1+c_2}{2-\alpha}\\
-x_\alpha(2)&=\frac{(1-\alpha)c_2+c_1}{2-\alpha}
-\end{align*}
-For fixed $\alpha$ we can see that those two limits are not the same. From the formula above we can see that as $\alpha\to0$, $x_\alpha(1)\to\frac{c_1+c_2}{2}$ and $x_\alpha(2)\to\frac{c_1+c_2}{2}$.
-\begin{remark}
-Note that $\alpha^r$ cannot converge too slow or too fast, the right setting is $\alpha^r=\frac{1}{r}$.
-\end{remark}
-\subsection{Dual-Primal of LP}
-Given the primal linear programming problem
-\[
+\subsection{Comments on Assignment 6}
+We will have one more assignment this week. Then we are faced with the final project! Let's discuss the detail of the assignment 6.
+\begin{equation}\label{Eq:11:8}
 \begin{array}{ll}
-\min&c\trans x\\
-\mbox{such that}&Ax=b\\
-&x\ge0
+\min&f(\bm x,\bm y)=\frac{1}{2}(\bm x\trans\bm A\bm x+\bm y\trans\bm A\bm y) - \bm b\trans\bm x-\bm c\trans\bm y\\
+&\bm x\trans\bm x=1\\
+&\bm y\trans\bm y=1\\
+&\bm x\trans\bm y=0
 \end{array}
-\]
-\paragraph{Recap}
-Recall how to solve the general optimization problem
-\[
+\end{equation}
+You can try quadratic penalty method, or Newton's method. The more general problem setting is
+\begin{equation}
 \begin{array}{ll}
-\min&f(x)\\
-\mbox{such that}&Ax=b\\
+\min&f(\bm Z)=\frac{1}{2}\trace(\bm Z\trans\bm A\bm Z) - \trace(\bm B\trans\bm Z)\\
+&\bm Z\trans\bm Z=\bm I
 \end{array}
-\]
-The 1st order necessary condition is 
-\[
-\left\{
-\begin{aligned}
-\nabla f(x)&=A\trans\lambda\\
-Ax&=b
-\end{aligned}
-\right.
-\]
-Or rewrite it into a system $F(x,\lambda)=0$, which can be solved by Newton's method.
-\paragraph{Barrier Term}
-But the LP problem has the inequality $x\ge0$, we add a log barrier $B_\mu(x)=-\mu\sum\log x_i$ with $\mu>0$ to sovle this problem:
-\[
-\begin{array}{ll}
-\min&c\trans+B_\mu(x)\\
-\mbox{such that}&Ax=b
-\end{array}
-\]
-Solving this problem is equivalent to solving the system $F_\mu(x,y,z)=0$ in assignment 4. As $\mu\to0$, it suffices to solve the original problem, i.e., $(x(\mu),y(\mu),z(\mu))\to(x^*,y^*,z^*)$.
-\begin{remark}
-There is a faster method. Every iteration just approximate $\mu$, and after new iteration, $\mu$ is updated.
-\end{remark}
-
-\begin{enumerate}
-\item
-Change step-size to make convergence rate faster
-\item
-Appreciate the use of dense matrix $A$.
-\end{enumerate}
-
-\paragraph{Dual Problem of LP}
-\begin{enumerate}
-\item
-We form the \emph{Lagrange function} of origin LP:
-\[
-L(x,y)=c\trans x-y\trans(Ax-b)
-\]
-(We take care of the constraint $x\ge0$ in next step).
-\item
-The \emph{dual function} is a function of $y$:
-\begin{align*}
-Q(y) &= \inf_{x\ge0}L(x,y)\\
-&=\inf_{x\ge0}(c-A\trans y)\trans x+b\trans y\\
-&=\left\{
-\begin{aligned}
-b\trans y,&\quad c-A\trans y\ge0\\
--\infty&\quad \mbox{otherwise}
-\end{aligned}
-\right.
-\end{align*}
-\item
-The \emph{dual problem} is given by:
-\[
-\begin{array}{ll}
-\max_{y\in\mathbb{R}^m}&Q(y)=\max_{y}b\trans y\\
-\mbox{such that}&A\trans y\le c
-\end{array}
-\]
-The constraint is because that violeting the constraint makes the objective goes to minus infinite.
-
-Then we introduce a new variable $z\ge0$:
- \[
-\begin{array}{ll}
-\max&b\trans y\\
-\mbox{such that}&A\trans y+z= c\\
-&z\ge0
-\end{array}\qquad\mbox{Dual}
-\]
-\end{enumerate}
+\end{equation}
+The (\ref{Eq:11:8}) is a special case for this problem with $\bm Z:=[\bm x, \bm y]$. 
 \begin{itemize}
 \item
-The primal and dual problem of LP is that they share the same $(A,b,c)$
+For $\bm A=\bm0$, this problem becomes easy to solve, with the solution 
+\[
+\bm Z=\bm U\bm V\trans,
+\]
+where the matrices $\bm U$ and $\bm V$ are from the SVD: $\bm B=\bm U\bm\Sigma\bm V\trans$.
 \item
-Let $x$ be P-feasible, $(y,z)$ be D-feasible, then $c\trans x-b\trans y\ge0$ (\emph{weak duality}):
-\begin{align*}
-c\trans x-b\trans y&=x\trans c-x\trans A\trans y\\
-&=x\trans(c-A\trans y)=x\trans z\ge0
-\end{align*}
+For $\bm B=\bm0$, this problem is easy to solve as well. This problem is so called the \emph{eigenvalue problem}. It suffices to find the eigen-space for the minimum several eigen-values.
 \item
-For linear programming, the optimal solution satisfies $c\trans x^* = b\trans y^*$, i.e., $x\circ z=0$.
-(\emph{strong duality})
-\item
-The optimality condition for the primial-dual problem is:
-\begin{align*}
-A\trans y+z-c&=0,\quad z\ge0\\
-Ax-b&=0,\quad x\ge0\\
-x\circ z&=0
-\end{align*}
-which means that the optimal solution of LP must satisfy both constraints from primal and dual. (The assignment 4 makes $x\circ z-\mu=0$ and let $\mu\to0$.)
+For $\bm A,\bm B\ne\bm0$, one approach is to solve
+\[
+\begin{array}{ll}
+\min&\frac{1}{2}(\bm x\trans\bm A\bm x+\bm y\trans\bm A\bm y) - \bm b\trans\bm x-\bm c\trans\bm y+\frac{c}{2}(\bm x\trans\bm y)^2\\
+&\bm x\trans\bm x=1\\
+&\bm y\trans\bm y=1
+\end{array}
+\]
+We apply the \emph{Block Coordinate Descent Method}, i.e., to minimize $f(x_1,\dots,x_s)$, then in each iteration just minimize one-variable and fix others:
+\[
+x_i^{r+1}=\arg\min_{x_i}f(x_1^{r+1},\dots,x^{r+1}_{i-1},x_i,x_{i+1}^r,x_{i+2}^r,\dots)
+\]
+An alternative approach is by solving the trust region problem
+\[
+\begin{array}{ll}
+\min&q(\bm x)\\
+&\bm x\trans\bm x=1
+\end{array}
+\]
+Suppose $q(\bm x)=\frac{1}{2}\bm x\trans\bm A\bm x-\bm b\trans\bm x$, then the necessary and sufficient optimality condition is
+\[
+\left\{
+\begin{aligned}
+(\bm A\bm x+\lambda\bm I)\bm x&=\bm b\qquad (\mbox{Complementarity})\\
+\bm x\trans\bm x&=1\qquad(\mbox{Primal Feasible})\\
+\lambda\ge0,\bm A+\lambda\bm I\succeq&0\qquad(\mbox{Dual Feasible})
+\end{aligned}
+\right.
+\]
 \end{itemize}
+Btw, the final project in this semester will be interesting, as promised. It might be open-ending.
+
+\subsection{Inequality Constraint Problem}
+For the optimization problem
+\begin{equation}\label{Eq:11:10}
+\begin{array}{ll}
+\min&f(x)\\
+&h(x)=0\\
+&g(x)\le0
+\end{array}
+\end{equation}
+\begin{itemize}
+\item
+One approach is to apply \emph{penalty-barrier method}, i.e., solve the unconstraint problem
+\begin{equation}
+x(c)=\arg\min_{x} f(x)+\frac{c}{2}\|h(x)\|^2-\frac{1}{c}\sum\log(-g(x))
+\end{equation}
+Taking $c\to\infty$, we obtain $x(c)\to x^*$. However, as $c$ goes large, such a problem is difficult to solve.
+\item
+Another approach is to transform (\ref{Eq:11:7}) into equality constraint problem by setting $\phi(x):=\max(0,g(x))=0$, and then solve by penalty method. The function $\|\phi(x)\|^2$ is continuosly differentiable, but not second-order differentiable at $x$ such that $g_i(x)=0$.
+\item
+Alternative approach is to introduce the slack variable, i.e., $g(x)\le 0$ is equivalent to $g(x)+z=0$ and $z\ge0$. The inequality for such case is trivial.
+\item
+Heuristically, we add the squared slack variable, i.e., $g(x)\le0$ is equivalent to $g(x)+z^2=0$. In this case, no inequality is intriduced. The disadvantage is that the problem will become non-convex in most case.
+\begin{quotation}
+Even $\{x\mid g(x)\le0\}$ is convex, the set $\{(x,z)\mid g(x)+z^2=0\}$ is not convex.
+\end{quotation}
+\end{itemize}
+Even we have so many methods to transform (\ref{Eq:11:10}) into equality constraint, in most case we still aim to solve the origin problem directly.
+\begin{remark}
+Nonlinear primal-dual interior-point method also work in some cases.
+\end{remark}
+
+\subsection{Non-smooth unconstraint problem}
+For the unconstraint optimization problem $\min f(x)$ with non-smooth but convex function $f$, we don't obtain the usual optimality condition. Let's extend the definition of gradient. For convex case we have
+\[
+f(\bm y)\ge f(\bm x)+\nabla\trans f(\bm x)(\bm y-\bm x)
+\]
+\begin{definition}[Subgradient]
+The subgradient of non-smooth function $f$, \emph{are} the vector $\bm g\in\mathbb{R}^n$, such that
+\begin{equation}
+f(\bm y)\ge f(\bm x)+\bm g\trans(\bm y-\bm x),\forall\bm y
+\end{equation}
+\end{definition}
+Note that the subgradient may not be unique.
+\begin{definition}[Sub-differential]
+The Sub-differential of $f$ is the set
+\begin{equation}
+\partial f(\bm x)=\{g\mid \mbox{$g$ is a subgradient of $f$ at $\bm x$}\}
+\end{equation}
+\end{definition}
+The sub-differential is always a closed and convex set.
+
+For example, the sub-differential of $f(x)=|x|$ is given by:
+\[
+\partial f(\bm x)=\left\{
+\begin{aligned}
+\{-1\},&x<0\\
+[-1,1],&x=0\\
+\{1\},&x>0
+\end{aligned}
+\right.\]
+\begin{proposition}
+$\bm x$ is a global minimum of $f$ iff $0\in\partial f(\bm x)$.
+\end{proposition}
+\begin{remark}
+The sub-differential gives a necessary and sufficient condition on global optimality, but it is hard to compute in general.
+\end{remark}
+
+
+
 
 
 
