@@ -147,4 +147,12 @@
 \contentsline {paragraph}{Step3: Show the differentiability of $f$}{141}{equation.11.1.8}
 \contentsline {paragraph}{Alternative approach for evaluating the derivative of $f$}{141}{equation.11.1.12}
 \contentsline {paragraph}{Step4: Show that $f\in \mathcal {C}^p$}{141}{equation.11.1.12}
+\contentsline {section}{\numberline {11.2}Friday}{143}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Analysis on IFT}{143}{subsection.11.2.1}
+\contentsline {paragraph}{Elementrary Version}{143}{subsection.11.2.1}
+\contentsline {paragraph}{Generalized version}{143}{subsection.11.2.1}
+\contentsline {paragraph}{Full Version}{144}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}Applications on IFT}{144}{subsection.11.2.2}
+\contentsline {paragraph}{Inverse Function Theorem}{144}{subsection.11.2.2}
+\contentsline {paragraph}{Rank Theorem}{145}{Item.160}
 \contentsfinish 
