@@ -1,0 +1,126 @@
+
+\chapter{Week12}
+
+\section{Monday}\index{week6_Tuesday_lecture}
+\subsection{Comments on Final Project}
+\begin{equation}\label{Eq:12:1}
+\begin{array}{ll}
+\min&f(x,y)=\frac{1}{2}(\bm x\trans\bm A\bm x+\bm y\trans\bm A\bm y) - \bm b\trans\bm x-\bm c\trans\bm y:=q_b(\bm x)+q_c(\bm y)\\
+\mbox{such that}&\frac{1}{2}(\bm x\trans\bm x-1)=0\\
+&\frac{1}{2}(\bm y\trans\bm y-1)=0\\
+&\bm x\trans\bm y=0
+\end{array}
+\end{equation}
+
+The Lagrangian function is given by:
+\begin{equation}
+L(\bm x,\bm y,\lambda)=q_b(\bm x)+q_c(\bm y)+\frac{\lambda_1}{2}(\bm x\trans\bm x-1)
++
+\frac{\lambda_2}{2}(\bm y\trans\bm y-1)
++
+\lambda_3\bm x\trans\bm y
+\end{equation}
+Stationarity:
+\begin{align*}
+\bm{Ax}-\bm b+\lambda_1\bm x+\lambda_3\bm y&=0\\
+\bm{Ay}-\bm c+\lambda_2\bm y+\lambda_3\bm x&=0\\
+\|h(\bm x)\|^2&=0
+\end{align*}
+The stopping criteria is given by:
+\[
+\max\left\{
+\frac{\|\nabla_{\bm x}L\|}{\|\bm b\|+1},
+\frac{\|\nabla_{\bm y}L\|}{\|\bm c\|+1},
+\|h(\bm x)\|
+\right\}\le\mbox{tol}
+\]
+
+The problem(\ref{Eq:12:1}) admits its global minimum since the constraint set is compact. Three methods are suggests: ADMM (yz used this); ALMM; quadratic penalty method.
+
+Sometimes we have the second-kind Lagrangian function
+\[
+\hat L(\bm x,\bm y,\lambda) = q_b(\bm x)+q_c(\bm y)+\lambda_3\bm x\trans\bm y+\frac{h}{2}(\bm x\trans\bm y)^2
+\]
+We do the minimization
+\begin{equation}
+\begin{array}{ll}
+\min&\hat L(\bm x,\bm y,\lambda)\\
+&\bm x\in X=\{\bm x\mid \bm x\trans\bm x=1\}\\
+&\bm y\in Y=\{\bm y\mid \bm y\trans\bm y=1\}\\
+\end{array}
+\end{equation}
+
+The update rule is therefore given by ($\tau=1.618$)
+\[
+\lambda_3=\lambda_3+\tau\rho(\bm x\trans\bm y)
+\]
+
+Develop a solver for the \emph{trust region} sub-problem
+\begin{equation}\label{Eq:12:4}
+\begin{array}{ll}
+\min&\frac{1}{2}\bm p\trans\bm B\bm p+\bm g\trans\bm p\\
+&
+\bm p\trans\bm p=\Delta^*
+\end{array}
+\end{equation}
+How to get the \emph{global minimum} for the non-convex problem (\ref{Eq:12:4})?
+
+
+\subsection{Trust Region Method}
+Our $\bm B$ has the form
+\[
+\bm A+\lambda_1\bm I+\rho\bm y\bm y\trans
+\]
+with sparse $\bm A$ and dense rank 1 matrix $\bm y$. Apply the Sherman-Morrison Formula; apply congugate gradient (command: pcg)
+
+\paragraph{Unconstraint method}
+Our goal is to minimize $\min_{\bm x\in\mathbb{R}^n}f(\bm x)$. To choose the step-size, we apply the trust region method. First approximate $f(x)$ with quadratic problem:
+\begin{align*}
+f(x^*+p)&\approx
+f(x^*)+\nabla\trans f(x^*)p+\frac{1}{2}p\trans\nabla^2f(x^*)p\\
+&\approx
+f(x^*)+\nabla\trans f(x^*)p+\frac{1}{2}p\trans\underbrace{\bm B}_{\text{Approximate Hessian}}p:=m(p)
+\end{align*}
+It suffices to choose the step size $p$ to minimize the quadratic function above. The constraint is that the $\|p\|$ should be small enough. Thus it suffices to solve
+\begin{equation}
+\begin{array}{ll}
+\min&\frac{1}{2}\bm p\trans\bm B\bm p+\bm g\trans\bm p\\
+&\|\bm p\|\le\Delta
+\end{array}
+\end{equation}
+
+
+Given $\Delta$,
+\begin{enumerate}
+\item
+Solve the TR subproblem to get $p$
+\item
+$\rho:=\frac{f(x) - f(x+p)}{m(0) - m(p)}$. 
+\begin{enumerate}
+\item
+If $\rho<\frac{1}{4}$, decrease the trust region $\Delta$ to $\frac{1}{4}\Delta$.
+\item
+If $\rho>\frac{3}{4}$, increase $\Delta$ into $2\Delta$
+\item
+Else, keep $\Delta$.
+\end{enumerate}
+\item
+\begin{enumerate}
+\item
+If $\rho\ge\frac{1}{4}$ and $\rho>\eta$, then $x\leftarrow x+p$
+\item
+Else, $x$ keeps unchanged.
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -160,4 +160,9 @@
 \contentsline {subsection}{\numberline {11.2.1}Comments on Assignment 6}{97}{subsection.11.2.1}
 \contentsline {subsection}{\numberline {11.2.2}Inequality Constraint Problem}{98}{subsection.11.2.2}
 \contentsline {subsection}{\numberline {11.2.3}Non-smooth unconstraint problem}{99}{subsection.11.2.3}
+\contentsline {chapter}{\numberline {12}Week12}{101}{chapter.12}
+\contentsline {section}{\numberline {12.1}Monday}{101}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Comments on Final Project}{101}{subsection.12.1.1}
+\contentsline {subsection}{\numberline {12.1.2}Trust Region Method}{102}{subsection.12.1.2}
+\contentsline {paragraph}{Unconstraint method}{103}{subsection.12.1.2}
 \contentsfinish 
