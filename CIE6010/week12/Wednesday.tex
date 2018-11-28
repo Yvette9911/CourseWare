@@ -1,5 +1,6 @@
 
 \section{Wednesday}\index{week7_Thursday_lecture}
+\subsection{Trust Region problem}
 Given the unconstraint problem $\min f(\bm x)$, at $\bm x^k$,
 \[
 \begin{array}{ll}
@@ -21,31 +22,23 @@ Necessary condition: $\bm p^*$ is a local minimum implies that (KKT condition)
 (\bm B+\lambda\bm I)\bm p^*&=-\bm g\label{Eq:12:8:a}\\
 \lambda&\ge0\\
 \lambda(\Delta - \|\bm p\|)&=0\\
-\|\bm p\|\le\Delta
+\|\bm p\|&\le\Delta
 \end{align}
 \end{subequations}
 The second order necessary condition is
 \[
 \bm v\trans(\bm B+\lambda\bm I)\bm v\ge0,\forall \bm v\perp\bm p^*
 \]
-In addition, we replace the 2nd order conditon with a little bit stronger condition. 
+In addition, we may replace the 2nd order conditon with a little bit stronger condition. 
 \begin{proposition}
-$\bm B+\lambda\bm I\succeq0$ together with KKT condition are iff for $p^*$ to be a global minimum.
+$\bm B+\lambda\bm I\succeq0$ together with KKT condition are sufficient condition for global minimum point.
 \end{proposition}
 \begin{proof}
-Assume all the condition holds. Then (\ref{Eq:12:8:a}) implies that $p^*$ is a global minimum of
+For the forward direction, (\ref{Eq:12:8:a}) implies that $p^*$ is a global minimum for the function
 \[
-\hat m(\bm p)=m(\bm p)+\frac{\lambda}{2}\bm p\trans\bm p
+\hat m(\bm p)=m(\bm p)+\frac{\lambda}{2}\bm p\trans\bm p,
 \]
-since
-\[
-\nabla^2\hat m(\bm p)=\bm B+\lambda\bm I\succeq0
-\]
-and
-\[
-\nabla \hat m(\bm p)=(\bm B+\lambda\bm I)p^*+\bm g=0
-\]
-which implies that $\hat m(\bm p^*)\le \hat m(\bm p)$, i.e.,
+by checking the first and second derivative of $p^*$, which implies that $\hat m(\bm p^*)\le \hat m(\bm p)$. Moreover, this relation can be written as:
 \begin{align*}
 m(\bm p^*)&\le m(\bm p)+\frac{\lambda}{2}(\bm p\trans\bm p-(\bm p^*)\trans(\bm p^*))\\
 &=m(\bm p)+\frac{\lambda}{2}(\bm p\trans\bm p-\Delta^2+\Delta^2-(\bm p^*)\trans(\bm p^*))\\
@@ -59,7 +52,7 @@ If $\|\bm p^*\|=\Delta$, it suffices to show
 \[
 \frac{1}{2}(\bm p-\bm p^*)\trans(\bm B+\lambda\bm I)(\bm p-\bm p^*)\ge0,
 \]
-for $\bm p,\bm p^*$ on the ball. Check that
+for $\bm p,\bm p^*$ on the ball $\{\bm p\mid\|\bm p\|=\Delta\}$. Check that
 \begin{align*}
 \frac{1}{2}(\bm p-\bm p^*)\trans(\bm B+\lambda\bm I)(\bm p-\bm p^*)&=\frac{1}{2}\bm p\trans(\bm B+\lambda\bm I)\bm p+\frac{1}{2}(\bm p^*)\trans(\bm B+\lambda\bm I)\bm p-\bm p\trans(\bm B+\lambda\bm I)\bm p^*\\
 &=\frac{1}{2}\bm p\trans(\bm B+\lambda\bm I)\bm p+\frac{1}{2}(\bm p^*)\trans(\bm B+\lambda\bm I)\bm p
@@ -78,37 +71,5 @@ for $\bm p,\bm p^*$ on the ball. Check that
 \end{align*}
 which implies that $\bm B+\lambda\bm I\succeq0$.
 \end{proof}
-Read chapter 4 for numerical optimization.
-
+\paragraph{Barely Pass Suggestion}
 You may use the command $fmincon$ to implement, but you can barely pass.
-
-\subsection{Gradient Projection}
-\[
-\begin{array}{ll}
-\min&f(x)\\
-\mbox{such that}&x\in X
-\end{array}
-\]
-We have
-\[
-\bm x^*=\mbox{Proj}_X(\bm x^*-\alpha\nabla f(\bm x^*)),\qquad\forall\alpha>0
-\]
-Thus we have the iteration
-\[
-x^{r+1} = \mbox{Proj}_X(x^r - \alpha_r\nabla f(x^r))
-\]
-
-
-At $x^r$, do the proximal problem:
-\[
-x^{r+1} = \arg\min_{x\in X}f(x)+\frac{1}{2c^k}\|x-x^k\|^2
-\]
-
-
-
-
-
-
-
-
-

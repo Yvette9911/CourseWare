@@ -3,30 +3,32 @@
 
 \section{Monday}\index{week6_Tuesday_lecture}
 \subsection{Comments on Final Project}
+
+The final project aims to solve the optimization problem given below:
 \begin{equation}\label{Eq:12:1}
 \begin{array}{ll}
 \min&f(x,y)=\frac{1}{2}(\bm x\trans\bm A\bm x+\bm y\trans\bm A\bm y) - \bm b\trans\bm x-\bm c\trans\bm y:=q_b(\bm x)+q_c(\bm y)\\
-\mbox{such that}&\frac{1}{2}(\bm x\trans\bm x-1)=0\\
-&\frac{1}{2}(\bm y\trans\bm y-1)=0\\
-&\bm x\trans\bm y=0
+\mbox{such that}&h_1(\bm x,\bm y):=\frac{1}{2}(\bm x\trans\bm x-1)=0\\
+&h_2(\bm x,\bm y):=\frac{1}{2}(\bm y\trans\bm y-1)=0\\
+&h_3(\bm x,\bm y):=\bm x\trans\bm y=0
 \end{array}
 \end{equation}
 
 The Lagrangian function is given by:
 \begin{equation}
-L(\bm x,\bm y,\lambda)=q_b(\bm x)+q_c(\bm y)+\frac{\lambda_1}{2}(\bm x\trans\bm x-1)
-+
-\frac{\lambda_2}{2}(\bm y\trans\bm y-1)
-+
-\lambda_3\bm x\trans\bm y
+L(\bm x,\bm y,\lambda)=q_b(\bm x)+q_c(\bm y)+\sum_{i=1}^3h_i(\bm x,\bm y)\lambda_i
 \end{equation}
-Stationarity:
+
+The stationary point should satisfy:
 \begin{align*}
+\nabla_{\bm x}L=
 \bm{Ax}-\bm b+\lambda_1\bm x+\lambda_3\bm y&=0\\
+\nabla_{\bm y}L=
 \bm{Ay}-\bm c+\lambda_2\bm y+\lambda_3\bm x&=0\\
-\|h(\bm x)\|^2&=0
+\|h(\bm x,\bm y)\|^2&=0
 \end{align*}
-The stopping criteria is given by:
+
+Based on the stationarity condition, the stopping criteria is given by:
 \[
 \max\left\{
 \frac{\|\nabla_{\bm x}L\|}{\|\bm b\|+1},
@@ -35,13 +37,15 @@ The stopping criteria is given by:
 \right\}\le\mbox{tol}
 \]
 
-The problem(\ref{Eq:12:1}) admits its global minimum since the constraint set is compact. Three methods are suggests: ADMM (yz used this); ALMM; quadratic penalty method.
+The problem(\ref{Eq:12:1}) admits its global minimum since the constraint set is compact. Three methods are suggests: ADMM (the lecturer used this one); ALMM; quadratic penalty method.
 
-Sometimes we have the second-kind Lagrangian function
+\paragraph{Suggested ADMM method}
+The key of ADMM is to separate variables in constraint. Thus to eliminate $h_3(\bm x,\bm y)=0$, define the second-kind Lagrangian function
 \[
 \hat L(\bm x,\bm y,\lambda) = q_b(\bm x)+q_c(\bm y)+\lambda_3\bm x\trans\bm y+\frac{h}{2}(\bm x\trans\bm y)^2
 \]
-We do the minimization
+
+It suffices to do the minimization
 \begin{equation}
 \begin{array}{ll}
 \min&\hat L(\bm x,\bm y,\lambda)\\
@@ -50,12 +54,12 @@ We do the minimization
 \end{array}
 \end{equation}
 
-The update rule is therefore given by ($\tau=1.618$)
+The update rule for $\lambda_3$ is therefore given by ($\tau=1.618$)
 \[
 \lambda_3=\lambda_3+\tau\rho(\bm x\trans\bm y)
 \]
 
-Develop a solver for the \emph{trust region} sub-problem
+To implement such a problem, you need to develop a solver for the \emph{trust region} sub-problem
 \begin{equation}\label{Eq:12:4}
 \begin{array}{ll}
 \min&\frac{1}{2}\bm p\trans\bm B\bm p+\bm g\trans\bm p\\
@@ -63,18 +67,20 @@ Develop a solver for the \emph{trust region} sub-problem
 \bm p\trans\bm p=\Delta^*
 \end{array}
 \end{equation}
-How to get the \emph{global minimum} for the non-convex problem (\ref{Eq:12:4})?
+
+How to get the \emph{global minimum} for the non-convex problem (\ref{Eq:12:4})? Unfortunately, solving this problem is at least in polynomial time in general, which is not acceptable.
 
 
 \subsection{Trust Region Method}
-Our $\bm B$ has the form
+However, our $\bm B$ for (\ref{Eq:12:4}) has the special form
 \[
 \bm A+\lambda_1\bm I+\rho\bm y\bm y\trans
 \]
-with sparse $\bm A$ and dense rank 1 matrix $\bm y$. Apply the Sherman-Morrison Formula; apply congugate gradient (command: pcg)
+with sparse $\bm A$ and dense rank 1 matrix $\bm y$. The key to solve (\ref{Eq:12:4}) is to get the inverse of $\bm B$. It suffices to apply the Sherman-Morrison Formula, or apply congugate gradient (command: pcg)
 
-\paragraph{Unconstraint method}
-Our goal is to minimize $\min_{\bm x\in\mathbb{R}^n}f(\bm x)$. To choose the step-size, we apply the trust region method. First approximate $f(x)$ with quadratic problem:
+\paragraph{Another application of Trust Region Problem}
+
+Our goal is to minimize $\min_{\bm x\in\mathbb{R}^n}f(\bm x)$. To choose the step-size and the direction, we apply the trust region method. First approximate $f(x)$ with quadratic problem:
 \begin{align*}
 f(x^*+p)&\approx
 f(x^*)+\nabla\trans f(x^*)p+\frac{1}{2}p\trans\nabla^2f(x^*)p\\
@@ -82,18 +88,17 @@ f(x^*)+\nabla\trans f(x^*)p+\frac{1}{2}p\trans\nabla^2f(x^*)p\\
 f(x^*)+\nabla\trans f(x^*)p+\frac{1}{2}p\trans\underbrace{\bm B}_{\text{Approximate Hessian}}p:=m(p)
 \end{align*}
 It suffices to choose the step size $p$ to minimize the quadratic function above. The constraint is that the $\|p\|$ should be small enough. Thus it suffices to solve
-\begin{equation}
+\begin{equation}\label{Eq:12:5}
 \begin{array}{ll}
 \min&\frac{1}{2}\bm p\trans\bm B\bm p+\bm g\trans\bm p\\
 &\|\bm p\|\le\Delta
 \end{array}
 \end{equation}
 
-
-Given $\Delta$,
+The general trust region descent method is proposed below:
 \begin{enumerate}
 \item
-Solve the TR subproblem to get $p$
+Solve the TR subproblem (\ref{Eq:12:5}) to get $p$
 \item
 $\rho:=\frac{f(x) - f(x+p)}{m(0) - m(p)}$. 
 \begin{enumerate}
@@ -117,56 +122,6 @@ Else, $x$ keeps unchanged.
 
 
 \section{Monday Tutorial}
-For the optimization problem
-\begin{equation}
-\begin{array}{ll}
-\min&-0.1(x_1-4)^2+x_2^2\\
-&1-x_1^2-x_2^2\le0
-\end{array}
-\end{equation}
-For the MATLAB plot, you may use the command contour or surf or surfc to plot the contour; you may also use the meshgrid. 
-
-For deviation part, first write down the KKT conditions:
-\[
-L(x_1,x_2,\mu)=-0.1(x_1-4)^2+x_2^2+\mu(1-x_1^2-x_2^2)
-\]
-Compute the gradient 
-\[
-\begin{array}{lll}
-\nabla_{x_1}L=\nabla_{x_2}L=0,
-&
-\mu(1-x_1^2-x_2^2)=0,
-&
-\mu\ge0
-\end{array}
-\]
-
-Apply the second-order sufficiency for the constraint optimization. 
-\[
-V(x^*)=\{z: \nabla\trans g_i(x^*)z=0, i\in A(x^*)\}
-\]
-
-For the maximization problem
-\begin{equation}
-\begin{array}{ll}
-\max&y\trans x\\
-&x\trans Qx\le1
-\end{array}
-\end{equation}
-Compute
-\begin{align*}
-L(x,y,\mu)&=y\trans x+\mu(1-x\trans Qx)\\
-\nabla_xL&=y-\mu Qx=0\\
-\mu(1-x\trans Qx)&=0
-\end{align*}
-Discuss for the $\mu=0$ and $\mu\ne0$ case.
-
-For the second part, method 1 is to apply Cauchy-Schwarz inequality; method 2 is to define
-\[
-p^*
-\]
-
-
 \subsection{Sub-gradient}
 It's defined for convex functions:
 \begin{definition}[Sub-gradient]
@@ -208,8 +163,8 @@ J_i=\left\{
 \right.
 \]
 \end{example}
-
-Usually we apply the proximal operator.
+\paragraph{Proximal operator}
+During the ADMM implementation, you may apply the proximal operator, which aims to solve the optimization problem
 \[
 \mbox{prox}_f(x)=\arg\min_{u}f(u)+\frac{1}{2}\|u-x\|^2_2
 \]
@@ -218,7 +173,8 @@ When $f=\|\cdot\|_1$, it suffices to solve
 \arg\min_{u}\|u\|_1+\frac{1}{2}\|u-x\|_2^2
 \]
 
-Usually the proximal solution has its closed form. When $f=\|\cdot\|_1$, the solution is soft threshold.
+When $f=\|\cdot\|_1$, the solution is soft threshold.
+\paragraph{One-Norm Proximal operator}
 
 Given the problem
 \[
@@ -234,21 +190,24 @@ Split the problem into
 \end{array}
 \]
 \item
-The second step is to write down the augmented Lagrangian.
+The second step is to write down the augmented Lagrangian:
+\[
+L_{\rho}=\frac{1}{2}\|Ax-b\|_2^2+\lambda\|z\|_1+y\trans(x-z)+\frac{\rho}{2}\|x-z\|_2^2
+\]
 \item
-Solve
+Do the minimization
 \begin{align*}
 x^{k+1}&=\arg\min_{x}L_\rho(x,y^k,z^k)\\
 &=(A\trans A+\rho I)^{-1}(A\trans b + \rho z^k - y^k)\\
-z^{k+1}&=\arg\min\lambda\|z\|_1+\frac{\rho}{2}\|x^{k+1}+\frac{y^k}{\rho} - z\|_2^2\\
+z^{k+1}&=\arg\min\lambda\|z\|_1+\frac{\rho}{2}\left\|x^{k+1}+\frac{y^k}{\rho} - z\right\|_2^2\\
 &=\mbox{prox}_{\lambda/\rho \|\cdot\|}(x^{k+1} + y^k/\rho)\\
-&=S_{\lambda/\rho}(\underbrace{x^{k+1} + y^k/\rho}_{u})=\mbox{sgn}(u)\cdot(|u| - \lambda/\rho)_+\\
+&=S_{\lambda/\rho}(\underbrace{x^{k+1} + y^k/\rho}_{u})=\mbox{sign}(u)\cdot(|u| - \lambda/\rho)_+\\
 y^{k+1} &= y^k+\rho(x^{k+1} - z^{k+1})
 \end{align*}
 
 
 
-\end{enumerate}•
+\end{enumerate}
 
 
 

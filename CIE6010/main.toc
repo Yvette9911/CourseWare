@@ -163,11 +163,15 @@
 \contentsline {chapter}{\numberline {12}Week12}{101}{chapter.12}
 \contentsline {section}{\numberline {12.1}Monday}{101}{section.12.1}
 \contentsline {subsection}{\numberline {12.1.1}Comments on Final Project}{101}{subsection.12.1.1}
+\contentsline {paragraph}{Suggested ADMM method}{102}{equation.12.1.2}
 \contentsline {subsection}{\numberline {12.1.2}Trust Region Method}{102}{subsection.12.1.2}
-\contentsline {paragraph}{Unconstraint method}{103}{subsection.12.1.2}
-\contentsline {section}{\numberline {12.2}Monday Tutorial}{103}{section.12.2}
+\contentsline {paragraph}{Another application of Trust Region Problem}{103}{subsection.12.1.2}
+\contentsline {section}{\numberline {12.2}Monday Tutorial}{104}{section.12.2}
 \contentsline {subsection}{\numberline {12.2.1}Sub-gradient}{104}{subsection.12.2.1}
+\contentsline {paragraph}{Proximal operator}{105}{exampleT.12.1}
+\contentsline {paragraph}{One-Norm Proximal operator}{105}{exampleT.12.1}
 \contentsline {section}{\numberline {12.3}Wednesday}{107}{section.12.3}
-\contentsline {paragraph}{Trust Region sub-problem}{107}{section.12.3}
-\contentsline {subsection}{\numberline {12.3.1}Gradient Projection}{109}{subsection.12.3.1}
+\contentsline {subsection}{\numberline {12.3.1}Trust Region problem}{107}{subsection.12.3.1}
+\contentsline {paragraph}{Trust Region sub-problem}{107}{subsection.12.3.1}
+\contentsline {paragraph}{Barely Pass Suggestion}{109}{proposition.12.2}
 \contentsfinish 
