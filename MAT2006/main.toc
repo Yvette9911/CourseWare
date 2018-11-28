@@ -163,4 +163,11 @@
 \contentsline {paragraph}{Step 5: Study the mapping $\psi \circ f\circ \phi ^{-1}$}{150}{equation.11.2.21}
 \contentsline {paragraph}{Application: What is the dimension of a sphere $\PazoBB {S}^2\subseteq \PazoBB {R}^3$?}{151}{equation.11.2.21}
 \contentsline {paragraph}{Comments on Quiz and Final}{151}{equation.11.2.21}
+\contentsline {chapter}{\numberline {12}Week12}{153}{chapter.12}
+\contentsline {section}{\numberline {12.1}Wednesday}{153}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Recap for Rank Theorem}{153}{subsection.12.1.1}
+\contentsline {paragraph}{Inverse Function Theorem}{153}{subsection.12.1.1}
+\contentsline {paragraph}{Rank Theorem}{153}{subsection.12.1.1}
+\contentsline {paragraph}{Outline of proof}{154}{subsection.12.1.1}
+\contentsline {subsection}{\numberline {12.1.2}Functional Dependence}{157}{subsection.12.1.2}
 \contentsfinish 

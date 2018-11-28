@@ -165,4 +165,9 @@
 \contentsline {subsection}{\numberline {12.1.1}Comments on Final Project}{101}{subsection.12.1.1}
 \contentsline {subsection}{\numberline {12.1.2}Trust Region Method}{102}{subsection.12.1.2}
 \contentsline {paragraph}{Unconstraint method}{103}{subsection.12.1.2}
+\contentsline {section}{\numberline {12.2}Monday Tutorial}{103}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Sub-gradient}{104}{subsection.12.2.1}
+\contentsline {section}{\numberline {12.3}Wednesday}{107}{section.12.3}
+\contentsline {paragraph}{Trust Region sub-problem}{107}{section.12.3}
+\contentsline {subsection}{\numberline {12.3.1}Gradient Projection}{109}{subsection.12.3.1}
 \contentsfinish 

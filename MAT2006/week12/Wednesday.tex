@@ -1,0 +1,227 @@
+
+\chapter{Week12}
+\section{Wednesday}
+\subsection{Recap for Rank Theorem}
+\paragraph{Inverse Function Theorem}
+Given a $\mathcal{C}^p$ function $f:E(\subseteq\mathbb{R}^m)\subseteq\mathbb{R}^m$ and $Df(\bm x_0)$ is invertible. Then we imply that there is a neighborhood $U(\bm x_0)\times V(\bm y_0)$ of $(\bm x_0,f(\bm x_0))$ such that $f$ is a $\mathcal{C}^p$-diffeomorphism between $U(\bm x_0)$ and $V(\bm y_0)$; moreover,
+\[
+D(f^{-1})(\bm y_0)=(Df(\bm x_0))^{-1}
+\]
+
+\paragraph{Rank Theorem}
+Given a $\mathcal{C}^p$ function $f:U(\bm x_0)\to\mathbb{R}^n$ of constant rank $k$ throughout $U(\bm x_0)$. Then there exists a neighborhood $N(\bm x_0)\times N(f(\bm x_0))$ and two $\mathcal{C}^p$-diffeomorphisms
+\[
+\begin{array}{ll}
+\bm u=\phi(\bm x), \bm x\in N(\bm x_0)
+&
+\bm v=\psi(\bm y), \bm y\in N(\bm y_0), \bm y_0:=f(\bm x_0),
+\end{array}
+\]
+such that the composition $\psi\circ f\circ\phi^{-1}$ takes the form
+\[
+(u_1,\dots,u_k,u_{k+1},\dots,u_m)\to
+(u_1,\dots,u_k,0,0,\dots,0)
+\]
+\paragraph{Outline of proof}
+Step 1:
+\[
+f=\begin{pmatrix}
+f_1\\\vdots\\f_k\\\vdots\\f_n
+\end{pmatrix},\qquad
+Df=\frac{\partial(f_1,\dots,f_n)}{\partial(x_1,\dots,x_m)}
+\]
+w.l.o.g., assume the first $k\times k$ principal minors to be non-singular.
+
+Step 2: Then construct the map $\phi(\bm x)$
+\[
+\phi(\bm x)=\begin{pmatrix}
+f_1(\bm x)\\\vdots\\f_k(\bm x)\\x_{k+1}\\\vdots\\x_m
+\end{pmatrix}\implies
+D\phi=\begin{pmatrix}
+\frac{\partial(f_1,\dots,f_k)}{\partial(x_1,\dots,x_k)}&
+\frac{\partial(f_1,\dots,f_k)}{\partial(x_{k+1},\dots,x_m)}
+\\
+\bm0&\bm I
+\end{pmatrix}
+\]
+which is invertible.
+
+Step 3: define $g:=f\circ \phi^{-1}: \phi(N(\bm x_0))\to\mathbb{R}^n$, then rewrite $g$ as
+\[
+\begin{pmatrix}
+y_1\\\vdots\\y_k\\y_{k+1}\\\vdots\\y_n
+\end{pmatrix}
+=
+\begin{pmatrix}
+u_1\\\vdots\\u_k\\g_{k+1}(\bm u)\\\vdots\\g_n(\bm u)
+\end{pmatrix}
+\implies
+Dg=\begin{pmatrix}
+\bm I&\bm0\\
+&\frac{\partial (g_{k+1},\dots,g_n)}{\partial(u_{k+1},\dots,u_n)}
+\end{pmatrix},
+\]
+which implies the lower right corner should be zero matrix, i.e., $(g_{k+1},\dots,g_n)(\bm u)$ depends only on the first $k$ variables. Thus rewrite $g$ as:
+\[
+\begin{pmatrix}
+y_1\\\vdots\\y_k\\y_{k+1}\\\vdots\\y_n
+\end{pmatrix}
+=
+\begin{pmatrix}
+u_1\\\vdots\\u_k\\g_{k+1}(u_1,\dots,u_k)\\\vdots\\g_n(u_1,\dots,u_k)
+\end{pmatrix}
+\]
+
+Step 4: Define the map $\bm v=\psi(\bm y)$:
+\[
+\begin{pmatrix}
+v_1\\\vdots\\v_k\\v_{k+1}\\\vdots\\v_n
+\end{pmatrix}
+=
+\begin{pmatrix}
+y_1\\\vdots\\y_k\\y_{k+1}-g_{k+1}(y_1,\dots,y_k)\\\vdots\\
+y_{k+1} - g_n(y_1,\dots,y_k)
+\end{pmatrix}
+\]
+flatten out
+\begin{example}
+\begin{enumerate}
+\item
+Define $f(t)=(\cos t,\sin t), t\in\mathbb{R}$. Define $t_0=\frac{\pi}{4}$. Can we flatten out the curve near $(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2})$? Note that
+\[
+Df(\frac{\pi}{4})=(-\sqrt{2}/2,\sqrt{2}/2)\ne0,
+\]
+with rank $1$. The answer is yes.
+
+Choose $\phi(t)=\cos t$ and $\phi^{-1}(u)=t=\cos^{-1}u$, which follows that
+\[
+g(u)=f(\phi^{-1}(u))=\begin{pmatrix}
+\cos(\phi^{-1}u)\\\sin(\phi^{-1}(u))
+\end{pmatrix}
+=\begin{pmatrix}
+u\\
+\sin(\cos^{-1}u)
+\end{pmatrix}
+\]
+Choose $\psi(y)=\begin{pmatrix}
+y_1\\y_2-\sin(\cos^{-1}y_1)
+\end{pmatrix}$, which follows that
+\begin{align*}
+\psi\circ f\circ\phi^{-1}(u)
+&=
+\psi\circ f(\cos^{-1}u)\\
+&=\psi\begin{pmatrix}
+\cos\cos^{-1}u
+\\
+\sin\cos^{-1}u
+\end{pmatrix}=
+\psi\begin{pmatrix}
+u
+\\
+\sin\cos^{-1}u
+\end{pmatrix}
+=\begin{pmatrix}
+u\\0
+\end{pmatrix}
+\end{align*}
+\item
+$f(x_1,x_2)=(x_1+x_2,x_1-x_2,x_1x_2)$. Can we flatten out the curve of $f$ near $(0,0)$?
+\[
+Df(x_1,x_2)=\begin{pmatrix}
+1&1\\
+1&-1\\
+x_2&x_1
+\end{pmatrix},
+\]
+which is of rank $2$ throughout $\mathbb{R}^2$.
+
+Note that
+\[
+\phi(x_1,x_2)=\begin{pmatrix}
+f_1\\f_2
+\end{pmatrix}=\begin{pmatrix}
+x_1+x_2\\x_1-x_2
+\end{pmatrix}
+\]
+and
+\[
+g=f\circ\phi^{-1}(u_1,u_2)=f\begin{pmatrix}
+\frac{u_1+u_2}{2}\\\frac{u_1-u_2}{2}
+\end{pmatrix}
+=
+\begin{pmatrix}
+u_1\\u_2\\\frac{u_1^2-u_2^2}{4}
+\end{pmatrix}
+\]
+and define
+\[
+\psi(y)=\begin{pmatrix}
+y_1\\y_2\\y_3-\frac{y_1^2-y_2^2}{4}
+\end{pmatrix}.
+\]
+Thus in summary, we have
+\[
+\psi\circ f\circ \phi^{-1}\begin{pmatrix}
+u_1\\u_2
+\end{pmatrix}=
+\psi\begin{pmatrix}
+u_1\\u_2\\\frac{u_1^2-u_2^2}{4}
+\end{pmatrix}
+=
+\begin{pmatrix}
+u_1\\u_2\\0
+\end{pmatrix}
+\]
+
+\end{enumerate}
+\end{example}
+\subsection{Functional Dependence}
+In linear algebra we have talked about the linear independence. Given $n$ vectors $v_1,\dots,v_n$, they are linear dependent if $\exists$ $a_1,\dots,a_n$ not all zero such that
+\[
+a_1v_1+\cdots+a_nv_n=0
+\]
+Then we talk about the dependence between functions.
+\begin{definition}[Dependence]
+A set of \emph{continuous} functions $f_1,\dots,f_n: U\to\mathbb{R}$, where $U\subseteq\mathbb{R}^m$ is a neighborhood of $\bm x_0\in\mathbb{R}^m$, is said to be \emph{functionally independent} if for any continuous function
+\[
+F(y)=F(y_1,\dots,y_n)
+\]
+in a neighborhood $V$ of $\bm y_0=f(\bm x_0)=(f_1(\bm x_0),\dots,f_n(\bm x_0))$, the relation $F(f_1(\bm x),\dots,f_n(\bm x))\equiv0$ for $\forall \bm x\in U$ is the only possible when $F\equiv0$ in $V$.
+\end{definition}
+\begin{proposition}
+Let $\{f_1,\dots,f_n\}$ be $\mathcal{C}^1$ and the rank of
+\[
+\frac{\partial (f_1,\dots,f_n)}{\partial(x_1,\dots,x_m)}
+\]
+is $k$ at every $\bm x\in U$, then 
+\begin{enumerate}
+\item
+$k=n$ implies $\{f_1,\dots,f_n\}$ is functionally independent
+\item
+$k<n$ implies there exists a neighborhood of $\bm x_0$ and $k$ functions $f_1,\dots,f_k$ such that the rest of $(n-k)$ functions can be written as
+\[
+f_j(\bm x)=g_i(f_1(\bm x),\dots,f_k(\bm x))
+\]
+for $\forall i=k+1,\dots,n$, where $g_i$ are $\mathcal{C}^1$ funcitions of $k$ variables.
+\end{enumerate}
+\end{proposition}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

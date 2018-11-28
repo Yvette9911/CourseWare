@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  26 NOV 2018 11:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  28 NOV 2018 11:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1992,7 +1992,8 @@ LaTeX Warning: Label `Eq:6:1' multiply defined.
 LaTeX Warning: Label `Eq:8:1' multiply defined.
 
 ) (./week9/Monday.aux) (./week10/Monday.aux) (./week10/Wednesday.aux)
-(./week11/Monday.aux) (./week11/Wednesday.aux) (./week12/Monday.aux))
+(./week11/Monday.aux) (./week11/Wednesday.aux) (./week12/Monday.aux)
+(./week12/Wednesday.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -2228,7 +2229,7 @@ LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <14.4> not available
 (Font)              Font shape `T1/pplx/b/it' tried instead on input line 24.
 
-<zh-hans_logo.png, id=41, 383.4325pt x 65.24374pt>
+<zh-hans_logo.png, id=33, 383.4325pt x 65.24374pt>
 File: zh-hans_logo.png Graphic file (type png)
  <use zh-hans_logo.png>
 Package pdftex.def Info: zh-hans_logo.png used on input line 24.
@@ -2347,13 +2348,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [12
 
 ]
-\openout2 = `week12/Monday.aux'.
+\openout2 = `week12/Wednesday.aux'.
 
 
-(./week12/Monday.tex
-Chapter 12.
+(./week12/Wednesday.tex
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <10> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 33.
 
-Underfull \vbox (badness 1881) has occurred while \output is active []
+Underfull \vbox (badness 1521) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2361,7 +2363,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [101
+ [107
 
 
 
@@ -2383,9 +2385,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/pplx/b/n' tried instead on input line 58.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2394,51 +2393,69 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [102])
+ [108])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [103]
+ [109]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [104
+ [110
 
 
 ]
 No file main.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
 (./main.aux (./week1/Tuesday.aux) (./week2/Tuesday.aux) (./week2/Wednesday.aux)
 (./week3/Tuesday.aux) (./week3/Thursday.aux) (./week4/Wednesday.aux)
 (./week5/Monday.aux) (./week5/Wednesday.aux) (./week6/Monday.aux)
 (./week6/Wednesday.aux) (./week7/Monday.aux) (./week7/Wednesday.aux)
 (./week8/Monday.aux) (./week9/Monday.aux) (./week10/Monday.aux)
 (./week10/Wednesday.aux) (./week11/Monday.aux) (./week11/Wednesday.aux)
-(./week12/Monday.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
+(./week12/Monday.aux) (./week12/Wednesday.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 201.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2D661028AD5948CAAE4459156E59C8B3;350.
+(rerunfilecheck)             Checksum: 0E80A38BBB532EA53D40931904A1C5B0;229.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 47658 strings out of 492995
- 991399 string characters out of 6132703
- 1394652 words of memory out of 5000000
- 50023 multiletter control sequences out of 15000+600000
- 79896 words of font info for 205 fonts, out of 8000000 for 9000
+ 47679 strings out of 492995
+ 991736 string characters out of 6132703
+ 1402785 words of memory out of 5000000
+ 50025 multiletter control sequences out of 15000+600000
+ 75842 words of font info for 211 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,18n,98p,10504b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.11.2.3} has been referenced but does n
+ 71i,11n,98p,10504b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsection.12.2.1} has been referenced but does n
 ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.12.2} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.12.1.2} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.12.1.1} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.12.1} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.12} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.11.2.3} has been referenced but does not
+ exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{subsection.11.2.2} has been referenced but does not
  exist, replaced by a fixed one
@@ -2679,28 +2696,29 @@ replaced by a fixed one
 
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
 usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
-/public/cm-super/sfsx2488.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
-rw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/pala
-tino/uplbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/u
-plr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8a.
-pfb>
-Output written on main.pdf (16 pages, 247100 bytes).
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
+pe1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/p
+alatino/uplbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatin
+o/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri
+8a.pfb>
+Output written on main.pdf (16 pages, 255131 bytes).
 PDF statistics:
- 474 PDF objects out of 1000 (max. 8388607)
- 348 compressed objects within 4 object streams
- 117 named destinations out of 1000 (max. 500000)
- 49730 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 475 PDF objects out of 1000 (max. 8388607)
+ 344 compressed objects within 4 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 56882 words of extra memory for PDF output out of 61914 (max. 10000000)
 

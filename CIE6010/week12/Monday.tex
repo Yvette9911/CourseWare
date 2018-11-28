@@ -116,6 +116,141 @@ Else, $x$ keeps unchanged.
 
 
 
+\section{Monday Tutorial}
+For the optimization problem
+\begin{equation}
+\begin{array}{ll}
+\min&-0.1(x_1-4)^2+x_2^2\\
+&1-x_1^2-x_2^2\le0
+\end{array}
+\end{equation}
+For the MATLAB plot, you may use the command contour or surf or surfc to plot the contour; you may also use the meshgrid. 
+
+For deviation part, first write down the KKT conditions:
+\[
+L(x_1,x_2,\mu)=-0.1(x_1-4)^2+x_2^2+\mu(1-x_1^2-x_2^2)
+\]
+Compute the gradient 
+\[
+\begin{array}{lll}
+\nabla_{x_1}L=\nabla_{x_2}L=0,
+&
+\mu(1-x_1^2-x_2^2)=0,
+&
+\mu\ge0
+\end{array}
+\]
+
+Apply the second-order sufficiency for the constraint optimization. 
+\[
+V(x^*)=\{z: \nabla\trans g_i(x^*)z=0, i\in A(x^*)\}
+\]
+
+For the maximization problem
+\begin{equation}
+\begin{array}{ll}
+\max&y\trans x\\
+&x\trans Qx\le1
+\end{array}
+\end{equation}
+Compute
+\begin{align*}
+L(x,y,\mu)&=y\trans x+\mu(1-x\trans Qx)\\
+\nabla_xL&=y-\mu Qx=0\\
+\mu(1-x\trans Qx)&=0
+\end{align*}
+Discuss for the $\mu=0$ and $\mu\ne0$ case.
+
+For the second part, method 1 is to apply Cauchy-Schwarz inequality; method 2 is to define
+\[
+p^*
+\]
+
+
+\subsection{Sub-gradient}
+It's defined for convex functions:
+\begin{definition}[Sub-gradient]
+The sub-gradient for a function $f$ is given by:
+\[
+\partial f(x)=\{g\mid g\trans (y-x)\le f(y) - f(x),\forall y\}
+\]
+\end{definition}
+\begin{proposition}
+$x^*$ minimizes $f(x)$ globally iff $0\in\partial f(x)$
+\end{proposition}
+\begin{proof}
+$
+f(y)\ge f(x^*)+0\trans(y-x^*)
+$
+\end{proof}
+\begin{remark}
+$-\partial f(x)$ is not necessarily a descent direction; while $-\nabla f(x)$ is a descent direction. For example, $f(x,y)=|x|+2|y|$, and $g=(1,2)\in\partial f(1,0)$, but $(-1,-2)$ is not descent direction.
+\end{remark}
+
+\begin{example}
+For $f(x) = \|x\|_2^2$, its subgradient is
+\[
+\partial f(x)=\left\{
+\begin{aligned}
+\frac{x}{\|x\|_2},&\quad x\ne0\\
+\{v:\|v\|_2\le 1\},&\quad x=0
+\end{aligned}
+\right.
+\]
+For $f(x)=\|x\|_1$, its subgradient is $\partial f(x)=J_1\times\cdots\times J_n$, with
+\[
+J_i=\left\{
+\begin{aligned}
+1,&x_i>0\\
+-1,&x_i<0\\
+[-1,1],&x_i=0
+\end{aligned}
+\right.
+\]
+\end{example}
+
+Usually we apply the proximal operator.
+\[
+\mbox{prox}_f(x)=\arg\min_{u}f(u)+\frac{1}{2}\|u-x\|^2_2
+\]
+When $f=\|\cdot\|_1$, it suffices to solve
+\[
+\arg\min_{u}\|u\|_1+\frac{1}{2}\|u-x\|_2^2
+\]
+
+Usually the proximal solution has its closed form. When $f=\|\cdot\|_1$, the solution is soft threshold.
+
+Given the problem
+\[
+\min\frac{1}{2}\|Ax-b\|_2^2+\lambda\|x\|_1
+\]
+\begin{enumerate}
+\item
+Split the problem into
+\[
+\begin{array}{ll}
+\min&\frac{1}{2}\|Ax-b\|_2^2+\lambda\|z\|_1\\
+&x=z
+\end{array}
+\]
+\item
+The second step is to write down the augmented Lagrangian.
+\item
+Solve
+\begin{align*}
+x^{k+1}&=\arg\min_{x}L_\rho(x,y^k,z^k)\\
+&=(A\trans A+\rho I)^{-1}(A\trans b + \rho z^k - y^k)\\
+z^{k+1}&=\arg\min\lambda\|z\|_1+\frac{\rho}{2}\|x^{k+1}+\frac{y^k}{\rho} - z\|_2^2\\
+&=\mbox{prox}_{\lambda/\rho \|\cdot\|}(x^{k+1} + y^k/\rho)\\
+&=S_{\lambda/\rho}(\underbrace{x^{k+1} + y^k/\rho}_{u})=\mbox{sgn}(u)\cdot(|u| - \lambda/\rho)_+\\
+y^{k+1} &= y^k+\rho(x^{k+1} - z^{k+1})
+\end{align*}
+
+
+
+\end{enumerate}•
+
+
 
 
 
