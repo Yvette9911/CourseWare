@@ -204,7 +204,66 @@ Next, we need to show the existence of multiplicative inverse of any nonzero ele
 
 \end{enumerate}
 \end{proof}
-
+\subsection{Polynomials over $\mathbb{Z}$ and $\mathbb{Q}$}
+\begin{theorem}
+Let $f=a_0+a_1x+\cdots+a_nx^n$ be a polynomial in $\mathbb{Q}[x]$, with $a_i\in\mathbb{Z}$. Every rational root $r$ of $f$ in $\mathbb{Q}$ has the form $r=b/c$ $(b,c\in\mathbb{Z})$, where $b|a_0$ and $c|a_n$
+\end{theorem}
+\begin{proof}
+Let $r=b/c$ be a rational root of $f$, where $b,c$ are relatively prime integers. We have
+\[
+0=\sum_{i=1}^na_i(b/c)^i
+\]
+Multiplying both sides above equation by $c^n$, we have
+\[
+0=a_0c^n+a_1c^{n-1}b+\cdots+a_nb^n
+\]
+or equivalently,
+\[
+a_0c^n=-(a_1c^{n-1}+\cdots+a_nb^n)
+\]
+Since $b$ divides the RHS, and $b,c$ are relatively prime, $b$ must divide $a_0$. Similarly,
+\[
+a_nb^n=-(a_0c^n+\cdots+a_{n-1}cb^{n-1})
+\]
+It is clear that $c$ divides $a_n$.
+\end{proof}
+\begin{definition}
+A polynomial $f\in\mathbb{Z}[x]$ is said to be \emph{primitive} if the gcd of its coefficients is 1.
+\end{definition}
+\begin{remark}
+Note that if $f$ is monic, i.e., its leading coefficient is 1, then it is primitive. If $d$ is the gcd of the coefficients of $f$, then $\frac{1}{d}f$ is a primitive polynomial in $\mathbb{Z}[x]$.
+\end{remark}
+\begin{theorem}[Gauss's Lemma]
+If $f,g$ are both primitive, then $fg$ is primitive.
+\end{theorem}
+\begin{proof}
+Write $f=\sum_{k=0}^ma_kx^k$ and $g=\sum_{k=0}^nb_kx^k$, then $fg=\sum_{k=0}^{m+n}c_kx^k$, where
+\[
+c_{k}=\sum_{i+j=k}a_ib_j.
+\]
+Assume that $fg$ is not primitive, then there exists a prime $p$ such that $p$ divides $c_k$ for $k=0,1,\dots,m+n$. Since $f$ is primitive, there exists smallest $u$ s.t. $a_u$ is not dividible by $p$; similarly, a smallest $v$ s.t. $b_v$ is not divisible by $p$. We have
+\[
+c_{u+v}=\left(\sum_{i+j=u+v,(i,j)\ne(u,v)}a_ib_j\right)+a_ub_v,
+\]
+which implies that
+\[
+a_ub_v=c_{u+v}-
+\left(\sum_{i+j=u+v,i<u}a_ib_j\right)
+-
+\left(\sum_{i+j=u+v,i>u}a_ib_j\right)
+\]
+By the minimum conditons on $u$ and $v$, each term on the RHS of the above equation is divisible by $p$. Thus $p$ divides $a_u$ and $b_v$, which implies that $p$ divides either $a_u$ or $b_v$, which is a contradiction.
+\end{proof}
+\begin{proposition}
+Every nonzero $f\in\mathbb{Q}[x]$ has a unique factorization:
+\[
+f=c(f)f_0,
+\]
+where $c(f)$ is a positive rational number, and $f_0$ is a primitive polynomial in $\mathbb{Z}[x]$.
+\end{proposition}
+\begin{definition}
+The rational number $c(f)$ is called the \emph{content} of $f$.
+\end{definition}
 
 
 

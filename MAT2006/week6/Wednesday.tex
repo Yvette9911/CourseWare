@@ -126,13 +126,13 @@ the proof is complete.
 \begin{definition}[Analytic]
 We say that $f$ is \emph{analytic} at $c$ if $f$ can be represented by a power series in a neighborhood of $a$, i.e.,
 \[
-R_n(x)=\frac{1}{(n-1)!}\int_0^xf^{(n)}(t)(x-t)^{n-1}\diff t\to0,\quad
+R_n(x)=\frac{1}{(n-1)!}\int_a^xf^{(n)}(t)(x-t)^{n-1}\diff t\to0,\quad
 \mbox{as }n\to\infty
 \]
 \end{definition}
 Note that $f$ is analytic implies the existence of all its derivatives, but the converse is not true in general (why)? Adding one more condition can the converse become true.
 \begin{theorem}[Bernstein's Theorem]
-If $f$ and all of its derivatives are non-negative in an interval $I=[a,b]$, then $f$ is analytic on $(a,b)$/
+If $f$ and all of its derivatives are non-negative in an interval $I=[a,b]$, then $f$ is analytic on $(a,b)$.
 \end{theorem}
 \begin{proof}
 It suffices to show $R_n(x)\to0$. Note that
