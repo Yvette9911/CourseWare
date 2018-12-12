@@ -1,0 +1,98 @@
+\chapter{Week13}
+\section{Wednesday}\index{week7_Thursday_lecture}
+The trust region problem aims to sovle
+\begin{equation}
+\begin{array}{ll}
+\min&\frac{1}{2}\bm x\trans\bm A\bm x-\bm b\trans\bm x\\
+&\bm x\trans\bm x=1
+\end{array}
+\end{equation}
+Consider the scale of $\bm b$. Consider the power method. Step-length w.r.t. the scale of $\|\bm A\|/\|\bm b\|$.
+
+\subsection{Approximate Gradient Projection}
+The constraint optimization problem aims to solve
+\begin{equation}
+\begin{array}{ll}
+\min&f(x)\\
+&x\in X
+\end{array}
+\end{equation}
+The stationarity satisfies
+\[
+x^*=\Proj_X\left[x^*-\alpha\nabla f(x^*)\right]
+\]
+Thus we obtain an algorithm
+\[
+x^{r+1}=
+\Proj_X\left[x^r-\alpha^r\nabla f(x^r)+e^r\right]
+\]
+where $e^r=\kappa_1\|x^{r+1} - x^r\|$.
+
+\subsection{Conic Programming}
+\begin{equation}
+\begin{array}{ll}
+\min&\inp{\bm c}{\bm X}\\
+&\bm A\bm X=\bm b\\
+&\bm X\in\mathcal{K}
+\end{array}
+\end{equation}
+where $\mathcal{K}$ is a closed, convex cone.
+\begin{remark}
+Note that the final project can be solved by conic programming.
+\end{remark}
+\begin{definition}[Cone]
+In $\mathbb{R}^n$, $\mathcal{K}$ is a \emph{cone} if $\forall x\in\mathcal{K}$, we have $\alpha x\in\mathcal{K}$, for $\forall\alpha\ge0$
+\end{definition}
+For example, $\mathbb{R}_+^n=\{\bm x\in\mathbb{R}^n\mid\bm x\ge0\}$. In this case, CP = LP.
+
+SC = 2nd-order cone, or ice-cream cone.
+\[
+S_2^{1+n}=\{\bm x\in\mathbb{R}^{n_1}\mid\|x(1:n)\|\le x_{n+1}\}
+\]
+In $\mathbb{R}^2$, it looks like an ice-cream.
+
+SDP cone:
+\[
+S_+^n=\{X\in\mathbb{R}^{n\times n}\mid X=X\trans\succeq0\}
+\]
+
+The dual cone of $\mathcal{K}$ is
+\[
+\mathcal{K}^*=\{\bm x\mid \inp{\bm x}{\bm y}\ge0,\forall y\in\mathcal{K}\}
+\]
+
+The Lagranian function is
+\[
+L(x,y)=\inp{C}{X}-\inp{y}{Ax-b}
+\]
+The dual problem aims to solve
+\[
+Q(\bm y)=\inf_{\bm x\in\mathcal{K}}L(x,y)
+=
+\inf_{\bm x\in\mathcal{K}}\inp{C-A^*y}{x}+\inp{b}{y}
+\]
+where $A^*$ is the adjoint of $\bm A$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

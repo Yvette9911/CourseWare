@@ -8,7 +8,7 @@
   \underline{\int_{#1}^{#2}}
 }
 \usepackage[T1]{fontenc}
-\includeonly{week12/Wednesday}
+%\includeonly{week13/Friday}
 \begin{document}
 %Hello
 %\includepdf[pages={1}]{book_cover/cover/FrontCover}
@@ -106,29 +106,8 @@ This book is taken notes from the MAT2006 in fall semester, 2018. These lecture 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Optional notations:
-\begin{notations}
-\acro{$\mathbb{R}^n$}{$n$-dimensional real space}
-\acro{$\mathbb{C}^n$}{$n$-dimensional complex space}
-\acro{$\mathbb{R}^{m\times n}$}{set of all $m\times n$ real-valued matrices}
-\acro{$\mathbb{C}^{m\times n}$}{set of all $m\times n$ complex-valued matrices}
-\acro{$x_i$}{$i$th entry of column vector $\bm x$}
-\acro{$a_{ij}$}{$(i,j)$th entry of matrix $\bm A$}
-\acro{$\bm a_i$}{$i$th column of matrix $\bm A$}
-\acro{$\bm a_i\trans$}{$i$th row of matrix $\bm A$}
-\acro{$\mathbb{S}^n$}{set of all $n\times n$ real symmetric matrices, i.e., $\bm A\in\mathbb{R}^{n\times n}$ and $a_{ij}=a_{ji}$ for all $i,j$}
-\acro{$\mathbb{H}^n$}{set of all $n\times n$ complex Hermitian matrices, i.e., $\bm A\in\mathbb{C}^{n\times n}$ and $\bar{a}_{ij}=a_{ji}$ for all $i,j$}
-\acro{$\bm A\trans$}{transpose of $\bm A$, i.e, $\bm B=\bm A\trans$ means $b_{ji}=a_{ij}$ for all $i,j$}
-\acro{$\bm A\Her$}{Hermitian transpose of $\bm A$, i.e, $\bm B=\bm A\Her$ means $b_{ji}=\bar{a}_{ij}$ for all $i,j$}
-\acro{$\trace(\bm A)$}{sum of diagonal entries of square matrix $\bm A$}
-\acro{$\bm 1$}{A vector with all $1$ entries}
-\acro{$\bm 0$}{either a vector of all
-zeros, or a matrix of all zeros}
-\acro{$\bm e_i$}{a unit vector with the nonzero element at the $i$th entry}
-\acro{$\mathcal{C}(\bm A)$}{the column space of $\bm A$}
-\acro{$\mathcal{R}(\bm A)$}{the row space of $\bm A$}
-\acro{$\mathcal{N}(\bm A)$}{the null space of $\bm A$}
-\acro{$\Proj_{\mathcal{M}}(\bm A)$}{the projection of $\bm A$ onto the set $\mathcal{M}$}
-\end{notations}
+\input{Notations}
+
 \mainmatter
 \setcounter{page}{1}
 
@@ -187,6 +166,8 @@ zeros, or a matrix of all zeros}
 \include{week11/Wednesday}
 \include{week11/Friday}
 \include{week12/Wednesday}
+\include{week13/Wednesday}
+\include{week13/Friday}
 %\include{week7/Assignment_Eight}
 %\include{exam/final/MAT2040_Sample_Exam}
 %\include{exam/final/MAT2040_Final_Exam}

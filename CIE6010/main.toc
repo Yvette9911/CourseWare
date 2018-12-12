@@ -174,4 +174,15 @@
 \contentsline {subsection}{\numberline {12.3.1}Trust Region problem}{107}{subsection.12.3.1}
 \contentsline {paragraph}{Trust Region sub-problem}{107}{subsection.12.3.1}
 \contentsline {paragraph}{Barely Pass Suggestion}{109}{proposition.12.2}
+\contentsline {section}{\numberline {12.4}Monday Tutorial: Trust Region Sub-problem}{109}{section.12.4}
+\contentsline {subsection}{\numberline {12.4.1}ADMM}{109}{subsection.12.4.1}
+\contentsline {subsection}{\numberline {12.4.2}Trust Region Subproblem}{110}{subsection.12.4.2}
+\contentsline {chapter}{\numberline {13}Week13}{111}{chapter.13}
+\contentsline {section}{\numberline {13.1}Wednesday}{111}{section.13.1}
+\contentsline {subsection}{\numberline {13.1.1}Approximate Gradient Projection}{111}{subsection.13.1.1}
+\contentsline {subsection}{\numberline {13.1.2}Conic Programming}{112}{subsection.13.1.2}
+\contentsline {chapter}{\numberline {14}Week14}{113}{chapter.14}
+\contentsline {section}{\numberline {14.1}Monday}{113}{section.14.1}
+\contentsline {paragraph}{Notation}{113}{section.14.1}
+\contentsline {paragraph}{Dual programming}{114}{Item.97}
 \contentsfinish 

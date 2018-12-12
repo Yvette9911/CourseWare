@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  12 OCT 2018 01:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  12 DEC 2018 05:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -612,7 +612,7 @@ es/AuthorIcon.jpg> <../images/BackCoverArt.jpg> <../images/PressLogo_1.png>] (.
 Here is how much of TeX's memory you used:
  14184 strings out of 492995
  286341 string characters out of 6132703
- 413261 words of memory out of 5000000
+ 413263 words of memory out of 5000000
  17477 multiletter control sequences out of 15000+600000
  8550 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -624,7 +624,7 @@ ts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
 cm/cmss12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmss8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmssbx10.pfb>
-Output written on BackCover.pdf (1 page, 260460 bytes).
+Output written on BackCover.pdf (1 page, 281892 bytes).
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream

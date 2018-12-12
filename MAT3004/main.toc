@@ -51,4 +51,6 @@
 \contentsline {section}{\numberline {8.2}Thursday}{90}{section.8.2}
 \contentsline {subsection}{\numberline {8.2.1}Principal Ideal Domainas}{90}{subsection.8.2.1}
 \contentsline {subsection}{\numberline {8.2.2}Qotient Ring}{92}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3}Friday}{96}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Polynomials}{96}{subsection.8.3.1}
 \contentsfinish 
