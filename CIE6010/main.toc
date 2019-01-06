@@ -1,8 +1,8 @@
 \select@language {english}
 \vskip -8pt
-\contentsline {schapter}{Acknowledgments}{xi}{chapter*.2}
+\contentsline {schapter}{Acknowledgments}{ix}{chapter*.2}
 \vskip -8pt
-\contentsline {schapter}{Notations}{xiii}{chapter*.3}
+\contentsline {schapter}{Notations}{xi}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Week1}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Monday}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Introduction to Optimizaiton}{1}{subsection.1.1.1}
@@ -166,27 +166,17 @@
 \contentsline {paragraph}{Suggested ADMM method}{102}{equation.12.1.2}
 \contentsline {subsection}{\numberline {12.1.2}Trust Region Method}{102}{subsection.12.1.2}
 \contentsline {paragraph}{Another application of Trust Region Problem}{103}{subsection.12.1.2}
-\contentsline {section}{\numberline {12.2}Monday Tutorial}{104}{section.12.2}
-\contentsline {subsection}{\numberline {12.2.1}Sub-gradient}{104}{subsection.12.2.1}
-\contentsline {paragraph}{Proximal operator}{105}{exampleT.12.1}
-\contentsline {paragraph}{One-Norm Proximal operator}{105}{exampleT.12.1}
-\contentsline {section}{\numberline {12.3}Wednesday}{107}{section.12.3}
-\contentsline {subsection}{\numberline {12.3.1}Trust Region problem}{107}{subsection.12.3.1}
-\contentsline {paragraph}{Trust Region sub-problem}{107}{subsection.12.3.1}
-\contentsline {paragraph}{Barely Pass Suggestion}{109}{proposition.12.2}
-\contentsline {section}{\numberline {12.4}Monday Tutorial: Trust Region Sub-problem}{109}{section.12.4}
-\contentsline {subsection}{\numberline {12.4.1}ADMM}{109}{subsection.12.4.1}
-\contentsline {subsection}{\numberline {12.4.2}Trust Region Subproblem}{110}{subsection.12.4.2}
-\contentsline {chapter}{\numberline {13}Week13}{111}{chapter.13}
-\contentsline {section}{\numberline {13.1}Wednesday}{111}{section.13.1}
-\contentsline {subsection}{\numberline {13.1.1}Approximate Gradient Projection}{111}{subsection.13.1.1}
-\contentsline {subsection}{\numberline {13.1.2}Conic Programming}{112}{subsection.13.1.2}
-\contentsline {chapter}{\numberline {14}Week14}{113}{chapter.14}
-\contentsline {section}{\numberline {14.1}Monday}{113}{section.14.1}
-\contentsline {paragraph}{Notation}{113}{section.14.1}
-\contentsline {paragraph}{Dual programming}{114}{Item.97}
-\contentsline {chapter}{\numberline {15}Week14}{117}{chapter.15}
-\contentsline {section}{\numberline {15.1}Wednesday}{117}{section.15.1}
-\contentsline {subsection}{\numberline {15.1.1}Conic Programming}{117}{subsection.15.1.1}
-\contentsline {subsection}{\numberline {15.1.2}Algorithm to solve conic programming}{119}{subsection.15.1.2}
+\contentsline {section}{\numberline {12.2}Wednesday}{104}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Trust Region problem}{104}{subsection.12.2.1}
+\contentsline {paragraph}{Trust Region sub-problem}{104}{subsection.12.2.1}
+\contentsline {paragraph}{Barely Pass Suggestion}{106}{proposition.12.1}
+\contentsline {chapter}{\numberline {13}Conic Programming}{107}{chapter.13}
+\contentsline {paragraph}{Announcement}{107}{chapter.13}
+\contentsline {section}{\numberline {13.1}Introduction to Formulations}{107}{section.13.1}
+\contentsline {paragraph}{General Conic Programming Problem}{107}{section.13.1}
+\contentsline {paragraph}{Conic problem in dual form}{109}{equation.13.1.8}
+\contentsline {section}{\numberline {13.2}Weak Duality}{110}{section.13.2}
+\contentsline {paragraph}{Weak Duality for LP}{110}{section.13.2}
+\contentsline {paragraph}{Weak Duality for SDP}{110}{section.13.2}
+\contentsline {paragraph}{Weak Duality for SOCP}{110}{section.13.2}
 \contentsfinish 

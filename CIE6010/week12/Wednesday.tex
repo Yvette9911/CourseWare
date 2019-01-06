@@ -74,69 +74,6 @@ which implies that $\bm B+\lambda\bm I\succeq0$.
 \paragraph{Barely Pass Suggestion}
 You may use the command $fmincon$ to implement, but you can barely pass.
 
-\section{Monday Tutorial: Trust Region Sub-problem}
-\subsection{ADMM}
-This project aims to minimize the function
-\begin{equation}
-\begin{array}{ll}
-\min&\frac{1}{2}\bm x\trans\bm A\bm x-\bm b\trans\bm x+\frac{1}{2}\bm y\trans\bm A\bm y-\bm c\trans\bm y\\
-&\frac{1}{2}(\bm x\trans\bm x-1)=0\\
-&\frac{1}{2}(\bm y\trans\bm y-1)=0\\
-&\bm x\trans\bm y=0
-\end{array}
-\end{equation}
-We only penalize the third constraint, and therefore our augmented Lagrangian function is given by:
-\[
-L(\bm x,\bm y,\bm\lambda)=q_b(\bm x)+q_c(\bm y)+\lambda_1(\frac{\bm x\trans\bm x-1}{2})+\lambda_2(\frac{\bm y\trans\bm y-1}{2})+\lambda_3(\bm x\trans\bm y)+\frac{\rho}{2}(\bm x\trans\bm y)^2
-\]
-with $\bm x\trans\bm x=1$ and $\bm y\trans\bm y=1$.
-
-Thus it suffices to solve the subproblem
-\begin{align*}
-\bm x^{k+1}&=\arg\min_{\bm x}\frac{1}{2}\bm x\trans\left(
-\bm A+\lambda_1\bm I+\rho(\bm y^k)\trans(\bm y^k)
-\right)\bm x+(\lambda_3\bm y^k-\bm b)\trans\bm y\\
-\bm y^{k+1}&=\arg\min_{\bm y}\frac{1}{2}\bm y\trans\left(
-\bm A+\lambda_2\bm I+\rho(\bm x^k)\trans(\bm x^k)
-\right)\bm y+(\lambda_3\bm x^k-\bm c)\trans\bm y\\
-\lambda_3&=\lambda_3+\rho(\bm x^{k+1})\trans\bm y^{k+1}
-\end{align*}
-\subsection{Trust Region Subproblem}
-The TRS essentially aims to solve
-\[
-\begin{array}{ll}
-\min&\frac{1}{2}\bm p\trans\bm B\bm p+\bm y\trans\bm p\\
-&\|\bm p\|\le1
-\end{array}
-\]
-\begin{itemize}
-\item
-Call the command $fmincon$, which applies the primal-dual or sequential quadratic programming method.
-\item
-Consider the optimality condition. This kind of method is super-difficult.
-\end{itemize}
-
-There are many other methods to solve the TRS:
-\paragraph{Dog-leg}
-
-
-
-\paragraph{Truncated Conjugate Gradient}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

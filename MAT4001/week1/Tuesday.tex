@@ -1,232 +1,347 @@
 
 \chapter{Week1}
-
-\section{Monday}\index{Monday_lecture}
-\subsection{Introduction to Numerical Analysis}
-\paragraph{Solving Nonlinear Equations}
-For example, we want to solve a nonlinear equation $w(1)$ with $w$ to be the LambertW function:
+\section{Differentiation}
+\begin{definition}[Forward and Backforward Difference Formula]
 \[
-we^w = 1.
+f'(x_0)=\frac{f(x_0+h)-f(x_0)}{h}-\frac{h}{2}f''(\xi)
 \]
-This topic will be taught in chapter 2.
-
-\paragraph{Interpolation}
-Given a list of data points, our aim is to recover/approximate the origin function over a function class, i.e., piecewise linear functions or polynomials. This topic will be taught in chapter 3.
-
-\paragraph{Numerical Integration}
-The cdf of the standard normal distribution is given by:
+Consider the Taylor expansion, we have
 \[
-N(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^x\exp\left(-\frac{t^2}{2}\right)\diff t
+f''(x_0)=\frac{1}{h^2}[f(x_0-h)-2f(x_0)+f(x_0+h)]-\frac{h^2}{12}f^{(4)}(\xi)
 \]
-To approximate the values for $N(x)$, we need to apply a numerical method (quadrature rules) to evaluate. This topic will be taught in chapter 4.
-
-\paragraph{Solving Linear Systems}
-To find the solutions of a linear system of equations 
-\[
-\bm{Ax}=\bm b,
-\]
-e.g., when we use \textit{finite difference} method to solve a differential equation, it is necessary to apply some numerical method to solve it in computer. This topic will be taught in chapter 5.
-
-\paragraph{Least Squares}
-If we have more time, we will teach how to fit a set of data points by a function from a function class.
-
-\subsection{Basic Concepts}
-\begin{definition}[Truncation Error]
-The error made by numerical algorithms that arises from taking finite number of steps in computation
 \end{definition}
-For example, consider the taylor's theorem
+\begin{definition}[General Derivative Approximation]
+The interpolation formula gives
 \[
-f(x)=P_n(x)+R_n(x)
+f(x)=\sum_{k=0}^nf(x_k)L_k(x)+\frac{(x-x_0)\cdots(x-x_n)}{(n+1)!}f^{(n+1)}(\xi_x)
+\]
+Differentiating both sides gives ($x_j$ is one of the node points)
+\[
+f'(x_j)=\sum_{k=0}^nf(x_k)L_k'(x_j)+\frac{1}{(n+1)!}f^{(n+1)}(\xi_{x_j})\prod_{k=0,k\ne j}^n(x_j-x_k)
+\]
+\end{definition}
+\begin{remark}
+Three-point formula:
+\begin{align*}
+f'(x_j)&=f(x_0)\left[\frac{2x_j-x_1-x_2}{(x_0-x_1)(x_0-x_2)}\right]+f(x_1)\left[\frac{2x_j-x_0-x_2}{(x_1-x_0)(x_1-x_2)}\right]\\
+&+f(x_2)\left[\frac{2x_j-x_0-x_1}{(x_2-x_0)(x_2-x_1)}\right]+\frac{1}{6}f^{(3)}(\xi_j)\prod_{k=0,k\ne j}^2(x_j-x_k)
+\end{align*}
+Substituting $x_j=x_0,x_1,x_2$, we obtain:
+\begin{align*}
+f'(x_0)&=\frac{1}{2h}[-3f(x_0)+4f(x_0+h)-f(x_0+2h)]+\frac{h^2}{3}f^{(3)}(\xi_0)\\
+f'(x_0)&=\frac{1}{2h}[-f(x_0-h)+f(x_0+h)]-\frac{h^2}{6}f^{(3)}(\xi_1)
+\end{align*}
+\end{remark}
+\begin{definition}[Richardson Extrapolation]
+For the approximation with the form
+\[
+M=N_1(h)+K_1h^2+K_2h^4+\cdots
+\]
+we have the approximation
+\[
+N_j(h)=N_{j-1}(\frac{h}{2})+\frac{N_{j-1}(h/2) - N_{j-1}(h)}{4^{j-1}-1}
+\]
+where $N_j(h)$ has order $O(h^{2j})$
+\end{definition}
+round-off error in $N_1(h/2^k)$; we recommend comparing the final diagonal entries to ensure accuracy.
+
+\begin{definition}[Quadrature formula]
+\[
+\int_a^bf(x)\diff x\approx\sum_{i=0}^na_if(x_i)
 \]
 where
 \begin{align*}
-P_n(x)&=f(x_0)+f'(x_0)(x-x_0)+\cdots+\frac{f^{(n))}(x_0)}{n!}(x-x_0)^n\\
-R_n(x)&=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}
+a_i&=\int_a^bL_i(x)\diff x\\
+E(f)&=\frac{1}{(n+1)!}\int_a^b\prod_{i=0}^n(x-x_i)f^{(n+1)}(\xi_x)\diff x
 \end{align*}
-If we use $P_n(x)$ to approximate $f(x)$, the error $R_n(x)$ is called the \emph{truncation error}.
-
-\begin{definition}[Round-off Error]
-The error produced when a computer is used to
-perform real number calculations, i.e., the computer only gives approximate value for some real numebers.
 \end{definition}
-
-For example, for numbers $\frac{1}{3},\pi,\sqrt{2}$, they cannot be represented exactly in the computation by a computer.
-
-Such errors are invertible, but  we can try to minimize the negative impact of these errors by rewriting the formula that are wish to compute.
-
-\begin{definition}[Binary Floating Point Number]
-A 64-bit (binary digit) representation is used for a real number:
+\begin{enumerate}
+\item
+Trapezoidal Rule:
 \[
-(-1)^s2^{c-1023}(1+f)
+\int_a^bf(x)\diff x=\frac{h}{2}[f(x_0)+f(x_1)]-\frac{h^3}{12}f'(\xi)
 \]
-where 
+Seperating into subintervals $[x_{k-1},x_k]$, we have, with $h=(b-a)/n$,
+\[
+\int_a^bf(x)\diff x=\frac{h}{2}\left[f(a)+2\sum_{j=1}^{n-1}f(x_j)+f(b)\right]-\frac{b-a}{12}h^2f''(\mu)
+\]
+\item
+Simpson's rule: for $h=(x_2-x_0)/2$,
+\[
+\int_{x_0}^{x_2}f(x)\diff x=\frac{h}{3}[f(x_0)+4f(x_1)+f(x_2)]-\frac{h^5}{90}f^{(4)}(\xi)
+\]
+Error Bound: Taylor expansion of $f(x)$, and bound the integrand
+\[
+\frac{1}{24}\int_{x_0}^{x_2}f^{(4)}(\xi_x)(x-x_1)^4=\left.\frac{f^{(4)}(\xi_1)}{120}(x-x_1)^5\right|_{x_0}^{x_2}=\frac{f^{(4)}(\xi_1)}{60}h^5
+\]
+Seperating into subintervals $[x_0,x_2],[x_2,x_4],\dots,[x_{n-2},x_n]$, we have, with $h=(b-a)/n$,
+\begin{align*}
+\int_a^bf(x)\diff x&=\sum_{j=1}^{n/2}\left\{\frac{h}{3}[f(x_{2j-2}+4f(x_{2j-1})+f(x_{2j}))]\right\}\\
+\mbox{Error}&=-\frac{h^5}{90}\sum_{j=1}^{n/2}f^{(4)}(\xi_j)
+=
+-\frac{h^5}{90}\frac{n}{2}f^{(4)}\mu=-\frac{b-a}{180}h^4f^{(4)}(\mu)
+\end{align*}
+\item
+Composite Mid-point rule: for subintervals $[x_{-1},x_1],\dots,[x_{n-1},x_{n+1}]$ with centers $x_0,x_2,\dots,x_n$, and $h=(b-a)/(n+2)$
+\[
+\int_a^bf(x)\diff x=2h\sum_{j=0}^{n/2}f(x_{2j})+\frac{b-a}{6}h^2f''(\mu)
+\]
+\end{enumerate}
+
+
+\begin{definition}[Degree of Precision]
+The degree of precision of a quadrature formula is $n$ if and only if the error is zero for all polynomials of degree $k = 0,1,\cdots,n$, but is not zero for some polynomial of degree $n + 1.$
+\end{definition}
+\begin{definition}[Romberg Method]
+First column: for $k=2,\dots,n$, $h_k=(b-a)/(2^{k-1})$
+\[
+R_{k,1}=\frac{1}{2}\left[
+R_{k-1,1}+h_{k-1}\sum_{i=1}^{2^{k-2}}f(a+(2i-1)h_k)
+\right]
+\]
+For $k=j,j+1,\dots$,
+\[
+R_{k,j}=R_{k,j-1}+\frac{1}{4^{j-1}-1}(R_{k,j-1}-R_{k-1,j-1})
+\]
+\end{definition}
+Stopping Criteria: $|R_{n-1,n-1}-R_{n,n}|<\mbox{tol}$ and $|R_{n-2,n-2}-R_{n-1,n-1}|<\mbox{tol}$. Ensure two differently generated sets of approximations agree within the specified tolerance.
+\begin{definition}[Gauss-Quadrature Rule]
+Generate Legendre poylnomial $P_0(x)=1,P_1(x)=x$,
+\[
+(n+1)P_{n+1}(x)=(2n+1)xP_n(x)-nP_{n-1}(x)
+\]
+Let $\{x_0,\dots,x_n\}$ be rooots of $P_{n+1}(x)$, and
+\[
+w_i=\int_{-1}^1l_i(x)\diff x=\int_{-1}^1\prod_{j=0,j\ne i}^n\frac{x-x_j}{x_i-x_j}\diff x,\quad i=0,1,\dots,n
+\]
+which implies
+\[
+\int_{-1}^1f(x)\diff x=\sum_{j=0}^nw_if(x_i)+\frac{f^{(2n+2)}(\xi)}{(2n+2)!}\int_{-1}^1\prod_{i=0}^n(x-x_i)^2\diff x
+\]
+\end{definition}
+\begin{definition}[Pivoting]
+Why: small $a_{kk}^{(k)}$ leads big error. 
 \begin{itemize}
 \item
-The first bit $s$ is said to be a \emph{sign indicator};
+Partial: select an element in the same column that is below the diagonal and has the largest absolute value.
 \item
-The 11-bit exponent $c$ is called the \emph{characteristic}
-\item
-The 52-bit binray $f$ is called the \emph{mantissa}.
+Scaled partial: first compute scale $s_i$ for each row; then do the same as partial
 \end{itemize}
 \end{definition}
-The \emph{underflow} is given by (??):
-\[
-2^{-1022}\cdot(1+0)\approx 0.22251\times 10^{-307}
-\]
-The \emph{overflow} is given by (??):
-\[
-2^{1023}\cdot(2-2^{-52})\approx 0.17977\times 10^{309}
-\]
-\begin{definition}[Decimal floating-point number]
-Any positive real number within the numerical range of the machine can be converted into the form
-\[
-y = 0.d_1d_2\cdots d_k\cdots\times10^n
-\]
-The \emph{floating-point} form of $y$, denoted by $fl(y)$, is obtained by terminating the mantissa of $y$ at $k$ decimal digits.
-\end{definition}
-There are two common ways to perform such termination.
-\paragraph{Chopping} Simply chops off the digits $d_{k+1}d_{k+2}\dots$, which produces the floating-point of the form
-\[
-fl(y) = 0.d_1d_2\cdots d_k\times 10^k
-\]
-\paragraph{Rounding} Adds $5\times 10^{n-(k+1)}$ to $y$ and then chops the result to obtain a number of the form
-\[
-fl(y) = 0.\delta_1\delta_2\cdots\delta_k\times 10^n.
-\]
-Or equivalently, for rounding, we add $1$ to $d_k$ to obtain $fl(y)$ for $d_{k+1}\ge5$ (round up); otherwise we simply chop off at $k$ digits (round down).
-
-\paragraph{Round-Off Error} The errors that results from replacomg a number with its floating-point form is called \emph{round-off error}.
-
-\begin{example}
-Determine the five-digit chopping and rounding values of $\pi$:
+\begin{proposition}
 \begin{itemize}
 \item
-Firstly we write $\pi$ in normalized decimal form:
-\[
-\pi=0.3141592\cdots\times 10^1
-\]
+$\|\bm A\|_1=\max_{1\le j\le n}\sum_{i=1}^m|a_{ij}|$
 \item
-The floating-point form of $\pi$ using five-digit chopping is
-\[
-fl(\pi)=0.31415\times10^1=3.1415
-\]
+$\|\bm A\|_2=\sqrt{\lambda_{\max}(\bm A\trans\bm A)}$. If $\bm A$ symmetric, then $\|\bm A\|_2=\rho(\bm A)=\max|\lambda(\bm A)|$
 \item
-The floating-point form of $\pi$ using five-digit rounding is
-\[
-fl(\pi)=(0.31415+0.00001)\times10^1=3.1416
-\]
+$\|\bm A\|_\infty=\max_{1\le i\le m}\sum_{j=1}^n|a_{ij}|$
+\item
+$\rho(\bm A)\le\|\bm A\|$ for any natural norm.
+\item
+$\bm A$ is convergent iff $\rho(\bm A)<1$.
 \end{itemize}
-\end{example}
+\end{proposition}
+\begin{proof}
+For eigen-pair ($\lambda,\bm x$) with $\|\bm x\|=1$,
+\[
+|\lambda|=\|\lambda\bm x\|\le\|\bm A\|\|\bm x\|=\|\bm A\|
+\]
+\end{proof}
+\begin{definition}[Jacobi's Method]
+\[
+x_i^{(k)} = \frac{1}{a_{ii}}\left[\sum_{j=1,j\ne i}^n(-a_{ij}x_j^{(k-1)})
++b_i
+\right]
+\]
+Or for the matrix form $\bm x^{(k)}=\bm T_j\bm x^{(k-1)}+\bm c$:
+\[
+\bm x^{(k)}=\bm D^{-1}(\bm L+\bm U)\bm x^{(k-1)}+\bm D^{-1}\bm b,
+\]
+where $\bm D$ are the diagonal of $\bm A$; $-\bm L,-\bm U$ are the strictly lower and upper part of $\bm A$.
+\end{definition}
 
+\begin{definition}[Gauss-Seidel Method]
+\[
+x_i^{(k)}=\frac{1}{a_{ii}}
+\left[
+-\sum_{j=1}^{i-1}(a_{ij}x_j^{(k)})-\sum_{j=i+1}^n(a_{ij}x_j^{k-1})+b_i
+\right]
+\]
+Or for the matrix form $\bm x^{(k)}=\bm T_g\bm x^{(k-1)}+\bm c_g$:
+\[
+(\bm D-\bm L)\bm x^{(k)}=\bm U\bm x^{(k-1)}+\bm b\implies
+\bm x^{(k)}=(\bm D-\bm L)^{-1}\bm U\bm x^{(k-1)}+(\bm D-\bm L)^{-1}\bm b
+\]
+\end{definition}
+\begin{proposition}
+If $\rho(\bm T)<1$, then $(\bm I-\bm T)^{-1}$ exists, and
+\[
+(\bm I-\bm T)^{-1}=\bm I+\bm T+\bm T^2+\cdots
+\]
+\end{proposition}
+\begin{proposition}
+The iteration
+$
+\bm x^{(k)}=\bm T\bm x^{(k-1)}+\bm c
+$
+converges to the unique solution to 
+\[
+\bm x=\bm T\bm x+\bm c
+\]
+iff $\rho(\bm T)<1$. The error bound holds:
+\begin{itemize}
+\item
+$\|\bm x-\bm x^{(k)}\|\le\|\bm T\|^k\|\bm x^{(0)}-\bm x\|$
+\item
+$\|\bm x-\bm x^{(k)}\|\le\frac{\|\bm T\|^k}{1-\|\bm T\|}\|\bm x^{(1)}-\bm x^{(0)}\|$
+\item
+$\|\bm x-\bm x^{(k)}\|\approx[\rho(\bm T)]^k\|\bm x^{(0)}-\bm x\|$
+\end{itemize}
+\end{proposition}
+\begin{proof}
+Converse: Express $\bm x^{(k)}$ as
+\[
+\bm x^{(k)}=\bm T^k\bm x^{(0)}+(\bm T^{k-1}+\cdots+\bm T+\bm I)\bm c
+\]
+Forward: Assume converge to $\bm x$, and therefore
+\[
+\bm x-\bm x^{(k)}=\bm T(\bm x-\bm x^{(k-1)})=\cdots=\bm T^k(\bm x-\bm x^{(0)})
+\]
+for arbitrary $\bm x^{(0)}.$ Taking limit implies $\lim_{k\to\infty}\bm T^k\bm z=\bm0$ for any $\bm z$.
+\end{proof}
 
+\begin{proposition}
+Sufficient condition for convergence of Jacobi and Gauss-Seidel method: $\bm A$ is strictly diagonally dominant, i.e., $|a_{ii}|>\sum_{j=1,j\ne i}^n|a_{ij}|$
+\end{proposition}
+\begin{proposition}
+For $a_{ij}\le0, i\ne j$ and $a_{ii}>0$, one and only one conditon holds:
+\begin{itemize}
+\item
+$0\le\rho(\bm T_g)<\rho(\bm T_j)<1$
+\item
+$1<\rho(\bm T_j)<\rho(\bm T_g)$
+\item
+$\rho(\bm T_j)=\rho(\bm T_g)=0$
+\item
+$\rho(\bm T_j)=\rho(\bm T_g)=1$
+\end{itemize}
+\end{proposition}
+\begin{definition}[Gauss-Seidel Method and Relaxation]
+\[
+ x_i^{(k)}= x_i^{(k-1)}+\frac{r_{ii}^{(k)}}{a_{ii}}
+\]
+Relaxation:
+\[
+x_i^{(k)}= x_i^{(k-1)}+\omega\frac{r_{ii}^{(k)}}{a_{ii}}
+\]
+Or equivalently, ($\omega<1$ is under-relaxation methods, $\omega>1$ is over-relaxation methods.)
+\[
+x_i^{(k)}=
+(1-\omega)x_i^{(k-1)}+
+\frac{\omega}{a_{ii}}
+\left[
+-\sum_{j=1}^{i-1}(a_{ij}x_j^{(k)})-\sum_{j=i+1}^n(a_{ij}x_j^{k-1})+b_i
+\right]
+\]
+\[
+\bm x^{(k)}=(\bm D-\omega\bm L)^{-1}[(1-\omega)\bm D+\omega\bm U]\bm x^{(k-1)}
++
+\omega(\bm D-\omega\bm L)^{-1}\bm b
+\]
+\end{definition}
+\begin{proposition}
+If $a_{ii}\ne0$, then $\rho(T_\omega)\ge|\omega-1|$, o.e., the SOR method converges only when $0<\omega<2$; sufficient condition for convergence: $\bm A$ is PD and $0<\omega<2$.
+\end{proposition}
+\begin{proposition}
+If $\bm A$ is PD and tridiagonal, then $\rho(\bm T_g)=[\rho(T_j)]^2<1$, the optimal choice is
+\[
+\omega=\frac{2}{1+\sqrt{1-[\rho(T_j)]^2}}
+\]
+under this choice, we have $\rho(\bm T_\omega)=\omega-1$
+\end{proposition}
+\begin{enumerate}
+\item
+Direct method: Gaussian Eliminiation;
 
+Advantage: Exact method, no truncation error;
+
+Disadvantage: Computationally expansive, large round off error
+
+Suitable: linear systems of small dimension 
+\item
+Iterative method:
+
+Advantage: efficient in terms of both computer storage and computation
+
+Disadvantage: not so efficient for small dimension
+
+Suitable for: large linear sparse systems
+\end{enumerate}
 \begin{definition}
-Suppose $p^*$ is an approximation to $p$. The acutal error is $p-p^*$, the absolute error is $|p-p^*|$, and the relative error is $\frac{|p-p^*|}{|p|}$ provided that $p\ne0$.
+The condition number of nonsingular matrix $\bm A$ is $K(\bm A)=\|\bm A\|\|\bm A^{-1}\|$.
+
+If close to $1$, then $\bm A$ is well-conditioned, otherwise ill-conditioned.
 \end{definition}
-\begin{definition}
-Suppose $p^*$ is an approximation to $p$, then $p^*$ is said to approximate $p$ to $t$ \emph{significant digits} if $t$ is the largest nonnegative integer for which
-\[
-\frac{|p-p^*|}{|p|}\le5\times 10^{-t}.
-\]
-\end{definition}
-\subsection{Examples in Numerical Calculations}
-\subsubsection{Inaccuracy Issues}
-\paragraph{Inaccuracy of floating-point numbers}
-The relative error for floating-point numbers is
-\[
-\left|\frac{y-fl(y)}{y}\right|.
-\]
-For $k$-digit chopping arithmetic, its relative error is give by:
-\[
-\left|\frac{y-fl(y)}{y}\right|=\left|\frac{0.d_{k+1}d_{k+2}\cdots\times 10^{n-k}}{0.d_1d_2\cdots\times 10^n}\right|
-\le\frac{1}{0.1}\times 10^{-k}=10^{-k+1}
-\]
-Similarly, the bound for the relative error when using $k$-digit rounding arithmetic is $0.5\times 10^{-k+1}$.
 
-\paragraph{Inaccuray of finite-digit arithmetics}
-We assume that the finite-digit arithmetics are given by:
+\begin{theorem}
+For natural norm,
 \[
-\begin{array}{ll}
-x
-\end{array}
+\|\tilde{\bm x}-\bm x\|\le\|\bm A^{-1}\|\|\bm r\|=K(\bm A)\frac{\|\bm r\|}{\|\bm A\|}
 \]
+\[
+\frac{\|\tilde{\bm x}-\bm x\|}{\|\bm x\|}\le\|\bm A\|\|\bm A^{-1}\|\frac{\|\bm r\|}{\|\bm b\|}=K(\bm A)\frac{\|\bm r\|}{\|\bm b\|},\quad
+\bm x\ne0,\bm b\ne0
+\]
+\end{theorem}
+\begin{proof}
+Consider the first equality and $\|\bm b\|\le\|\bm A\|\|\bm x\|$
+\end{proof}
 
-\subsubsection{Reduce the loss of accuracy due to round-off error}
-\paragraph{Reformulate the problem} One common error during calculations is the cancelation of significant digits due to the \emph{subtraction of nearly equal numbers}. Reformulation can avoid such a problem.
-\begin{example}
-The two roots of $ax^2+bx+c=0$ are given by:
+\begin{theorem}
+Suppose $\bm A$ is nonsingular and $\|\delta\bm A\|\le\frac{1}{\|\bm A\|}$, the solution $\tilde{\bm x}$ to $(\bm A+\delta\bm A)\bm x=\bm b+\delta\bm b$ has the bound
 \[
-x_1=\frac{-b+\sqrt{b^2-4ac}}{2a},
-\quad
-x_2=\frac{-b-\sqrt{b^2-4ac}}{2a}.
+\frac{\|\tilde{\bm x}-\bm x\|}{\|\bm x\|}\le\frac{K(\bm A)\|\bm A\|}{\|\bm A\|-K(\bm A)\|\delta\bm A\|}\left(
+\frac{\|\delta\bm b\|}{\|\bm b\|}+\frac{\delta\bm A}{\|\bm A\|}
+\right)
 \]
-For the equation $x^2+62.10x+1=0$, the two roots are
-\[
-\begin{array}{ll}
-x_1= 0.01610723,
-&
-x_2= 62.08390.
-\end{array}
-\]
-In this equation, the numerator of $x_1$ is a subtraction of two nearly equal numbers. If using 4-digit rounding we derive
-\[
-fl(x_1)=\frac{-62.10+62.06}{2.000}=-0.02000\implies
-\mbox{relative error}=0.24\times 10^0.
-\]
-To improve the accuracy of calculation, we should change the formula by \emph{rationalizing the numerator}:
-\[
-x_1=\frac{-2c}{b+\sqrt{b^2-4ac}}
-\]
-It follows that
-\[
-fl(x_1)=\frac{-2.000}{62.10+62.06}=-0.01610\implies
-\mbox{relative error}=6.2\times 10^{-4}.
-\]
-\end{example}
-\paragraph{Rewrite polynomials into nested form}
-For example, evaluating $f(x)=x^3-6.1x^2+3.2x+1.5$ with $x=4.71$ directly will result in large relative errors. To improve the calculation, we change the polymomial to the following nested form:
-\[
-f(x)=((x-6.1)x+3.2)x+1.5,
-\]
-which results in small relative erros.
-\begin{quotation}
-Polynomials should always be expressed in nested form before evaluation, since this form will minimize the number of arithmetic calculations
-\end{quotation}
+\end{theorem}
+\begin{proposition}
+For $\bm A\in\mathbb{R}^{n\times n}$, $\mbox{cond}(\bm A\trans\bm A)=[\mbox{cond}(\bm A)]^2$
+\end{proposition}
+\begin{theorem}
+For column full rank $\bm A\in\mathbb{R}^{m\times n}$, we have $\bm A=\bm Q\bm R$, for $\bm Q\in\mathbb{R}^{m\times n}$ with orthogonal columns, $\bm R\in\mathbb{R}^{n\times n}$ is an upper triangular matrix.
 
-\paragraph{Avoid large numbers eat small numbers}
-We should add those numbers with small magnitude first when we do the summation
+As a result, the least square solution becomes
 \[
-fl\left(\sum_{i=1}^nfl(x_i)\right).
+\bm x^*=\bm R^{-1}\bm Q\trans\bm b
 \]
-\begin{example}
-For $x_1=100.5$ and $x_i=0.01, i=2,\dots,101$, using 4-digit arithmetic, we have $fl(x_1)=100.5$ and $fl(x_i)=0.0100, i=2,\dots,101$.
-\begin{itemize}
-\item
-For doing the summation $s=fl\left(\sum_{i=1}^{101}fl(x_i)\right)$, since $100.5+0.0100=100.5100=100.5$, finally we have $s=100.5$
-\item
-If we define $x_i=0.01, i=1,\dots,100$ and $x_{101}=100.5$, then we have $s=101.5$, which is the true value of the summation.
-\end{itemize}
-\end{example}
+\end{theorem}
+Gram-Schmidt Process: numerically unstable; ease of implementation
+\begin{theorem}[Householder matrix]
+For given vector $\bm x$ and unit vector $\bm g$, define $\b, H:=\bm I-2\bm u\bm u\trans$,
+\[
+\bm{Hx}=\|\bm x\|\bm g,\quad
+\bm u=\frac{\bm x-\|\bm x\|g}{\|\bm x-\|\bm x\|g\|}
+\]
+\[
+\bm H_2=\begin{pmatrix}
+1&0\\0&\tilde{\bm H}_2
+\end{pmatrix}
+\]
+Define $\bm Q=\bm H_n\cdots\bm H_1$, and $\bm Q\bm A=\bm R=[\bm R_1;\bm0]$, which implies
+\[
+\bm A=[\bm Q_1,\bm Q_2]\begin{pmatrix}
+\bm R_1\\\bm0
+\end{pmatrix}=\bm Q_1\bm R_1
+\]
+\end{theorem}
 
 
 
 
 
-\subsection{Convergence and Stability}
-\begin{definition}[Convergence]
-Suppose a sequence $\{\beta_n\}_{n=1}^\infty$ is known to converge to zero, and $\{\alpha_n\}_{n=1}^\infty$ converges to a number $\alpha$. If there exists $K>0$ such that
-\[
-\begin{array}{ll}
-|\alpha_n - \alpha|\le K|\beta_n|
-&
-\mbox{for large $n$,}
-\end{array}
-\]
-then $\{\alpha_n\}_{n=1}^\infty$ is said to converge to $\alpha$ with rate of convergence $\mathcal{O}(\beta_n)$, which is denoted as
-\[
-\alpha_n = \alpha + \mathcal{O}(\beta_n).
-\]
-\end{definition}
+
 
 
 
