@@ -2,6 +2,96 @@
 \chapter{Week1}
 
 \section{Tuesday}\index{Tuesday_lecture}
+\subsection{Analogs of deterministic differential equations}
+\paragraph{Problem 1}
+Consider the first order homogeneous ODE
+\[
+\left\{
+\begin{aligned}
+\frac{\diff N(t)}{\diff t} &= a(t)N(t)\\
+N(0)&=N_0
+\end{aligned}
+\right.
+\]
+
+$N(t)$ is described as the \emph{size} of population at time $t$;
+$a(t)$ is the given (deterministic) function describing the \emph{rate} of growth of population at time $t$;
+$N_0$ is a given constant.
+
+The question raises: What if $a(t)$ is no longer deterministic, instead $a(t)$ is subject to some random effect, e.g.,
+\[
+a(t) = r(t)\cdot\mbox{noise},
+\mbox{ or }
+r(t)+\mbox{noise},
+\]
+where $r(t)$ is deterministic, and the ``noise'' term is something random. Then how to solve the corresponding differential equation?
+
+\paragraph{Problem 2}
+Suppose $Q(t)$ describes the charge at time $t$ in an electricity circuit.
+\[
+\left\{
+\begin{aligned}
+LQ''(t)+RQ'(t)+\frac{1}{C}Q(t)&=F(t),\\
+Q(0)=Q_0,\quad Q'(0)&=Q_0'
+\end{aligned}
+\right.
+\]
+
+$L$ is described as the \emph{inductance}, $R$ is the \emph{resistance}, $C$ is the \emph{capacity}, and $F(t)$ is the \emph{potential source}.
+
+The Question raises: what if $F(t)$ involves some randomness? e.g.,
+\[
+F(t)=G(t)+\mbox{noise}
+\]
+where $G(t)$ is deterministic. How to solve the problem?
+\begin{remark}
+The differential equations with some coefficients involved randomness are called the stochastic differential equations. Clearly, solutions to SDEs should also involved ``randomness''.
+\end{remark}
+\subsection{Optimal Stopping}
+\paragraph{Problem 3} Suppose someone holds an asset (e.g., stock, house, etc.) He plans to sell it at some future time. Denote $X(t)$ to be the price of the asset at time $t$, satisfying
+\[
+\frac{\diff X(t)}{\diff t}=rX(t)+\alpha X(t)\cdot\mbox{noise}
+\]
+where $r,\alpha$ are given constants. Our goal is to choose time $\tau$ to solve
+\[
+\max_{\tau\ge0}\mathbb{E}X(\tau)
+\]
+where the optimal solution $\tau^*$ is the optimal stopping time.
+
+\subsection{Stochastic Control}
+\paragraph{Problem 4 (Portfolio Selection)}
+Suppose a person wants to invest into i) a riskless/safe asset (e.g., bond); or ii) a risky asset (e.g, stock).
+
+The price of the saft asset $X_0(t)$ satisfies 
+\[
+\frac{\diff X_0(t)}{\diff t}=\rho X_0(t),
+\]
+where $\rho>0$ is a given constant. Therefore, $X(t)$ is exponentially growing function.
+
+The price of risky assrt $X_1(t)$ satisfies
+\[
+\frac{\diff X_1(t)}{\diff t}=\mu X_1(t)+\sigma X_1(t)\cdot\mbox{noise}
+\]
+where $\mu,\sigma>0$ are the given constants.
+
+Suppose $u(t)$ is the fraction of his wealth to be invested into the risky asset; the remaining $1-u(t)$ part to be invested into the saft asset. 
+The wealth at time $t$ is denoted to be $v(t)$. 
+Suppose the person has the utility function $U(\cdot)$.
+The terminal time is $T$.
+The objective function is
+\[
+\max_{u(t),0\le t\le T}\mathbb{E}[U(v^u(T))]
+\]
+
+If we impose no-shot selling constant, we further require
+\[
+0\le u(t)\le 1,\forall t\in[0,T]
+\]
+
+\paragraph{Problem 5 (Option Pricing)}
+Suppose at time $0$, a person in the long position in an European call option has the right to buy the asset at a specified price $K$ at some future time $t$. How much the person should pay to the short position for the option? We can model this problem by Black-Sholes Formula.
+
+
 
 
 
