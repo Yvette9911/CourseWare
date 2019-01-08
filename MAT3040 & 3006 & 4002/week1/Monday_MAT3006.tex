@@ -15,42 +15,48 @@ It is clear that
 the function $f_n(x)=\frac{n}{1+nx}$ converges pointwise into $f(x)=\frac{1}{x}$ on $[0,\infty)$, and it is uniformly convergent on $[1,\infty)$.
 \end{example}
 \begin{proposition}
-If $f_n(x)$ is continuous on $I$, $\forall n$, and $f_n(x)\rightrightarrows f(x)$. Then
+If $\{f_n\}$ is a sequence of continuous functions on $I$, and $f_n(x)\rightrightarrows f(x)$, then the following results hold:
 \begin{enumerate}
 \item
 $f(x)$ is continuous on $I$.
 \item
-$\int_a^bf_n(x)\diff x\to\int_a^bf(x)\diff x$.
+$f$ is (Riemann) integrable with $\int_a^bf_n(x)\diff x\to\int_a^bf(x)\diff x$.
 \item
-Suppose furthermore that $f_n(x)$ is \emph{continuously differentiable}, and $f'_n(x)\rightrightarrows g(x)$, then $f(x)$ is differentiable, and $f_n'(x)\to f'(x)$.
+Suppose furthermore that $f_n(x)$ is \emph{continuously differentiable}, and $f'_n(x)\rightrightarrows g(x)$, then $f(x)$ is differentiable, with $f_n'(x)\to f'(x)$.
 \end{enumerate}
 \end{proposition}
+We can put the discussions above into the content of series, i.e., $f_n(x)=\sum_{k=1}^nS_k(x)$.
 \begin{proposition}
-Putting the discussions above into the content of series, i.e., $f_n(x)=\sum_{k=1}^nS_k(x)$. If $S_k(x)$ is continuous for $\forall k$, and $f_n(x)\rightrightarrows f(x):=\sum_{k=1}^\infty S_k(x)$, then
+If $S_k(x)$ is continuous for $\forall k$, and $\sum_{k=1}^nS_k\rightrightarrows \sum_{k=1}^\infty S_k$, then
 \begin{enumerate}
 \item
-$f(x)=\sum_{k=1}^\infty S_k(x)$ is continuous,
+$\sum_{k=1}^\infty S_k(x)$ is continuous,
 \item
+The series $\sum_{k=1}^\infty S_k$ is (Riemann) integrable, with
 $\sum_{k=1}^\infty\int_a^bS_k(x)\diff x=\int_a^b\sum_{k=1}^\infty S_k(x)\diff x$
 \item
-blabla, then
+If $\sum_{k=1}^nS_k$ is continuously differentiable, and the derivative of which is uniform convergent, then the series $\sum_{k=1}^\infty S_k$ is differentiable, with
 \[
 \left(\sum_{k=1}^\infty S_k(x)\right)'=\sum_{k=1}^\infty S_k'(x)
 \]
 \end{enumerate}
 \end{proposition}
+Then we can discuss the properties for a special kind of series, say power series.
 \begin{proposition}
-For power series, i.e., $S_k(x)=a_kx^k$. Suppose $f(x)=\sum_{k=1}^\infty a_kx^k$ has radius of convergence $R$, then 
-\[
+Suppose the power series $f(x)=\sum_{k=1}^\infty a_kx^k$ has radius of convergence $R$, then 
+\begin{enumerate}
+\item
+$
 \sum_{k=1}^na_kx^k\rightrightarrows f(x)
-\]
-for any $[-L,L]$ with $L<R$. Then $f(x)$ is continuous, and
-\[
-\int_0^xf(t)\diff t=\sum_{k=1}^\infty\frac{a_k}{k+1}x^{k+1}
-\]
-\[
-f'(x)=\sum_{k=1}^\infty ka_kx^{k-1}
-\]
+$
+for any $[-L,L]$ with $L<R$.
+\item
+The function $f(x)$ is continuous on $(-R,R)$, and moreover, is differentiable and (Riemann) integrable on $[-L,L]$ with $L<R$:
+\begin{align*}
+\int_0^xf(t)\diff t&=\sum_{k=1}^\infty\frac{a_k}{k+1}x^{k+1}\\
+f'(x)&=\sum_{k=1}^\infty ka_kx^{k-1}
+\end{align*}
+\end{enumerate}
 \end{proposition}
 \subsection{Introduction to MAT3006}
 \paragraph{What are we going to do}
@@ -80,7 +86,7 @@ the set $\mbox{poly}[a,b]$ (the set of polynomials on $[a,b]$) is dense in $\mat
 \item
 Introduction to the Lebesgue Integration. 
 
-For convergence of integration $\int_a^bf_n(x)\diff x\to\int_a^bf(x)$, we need the pre-conditions (a)$f_n(x)$ is continuous, and (b) $f_n(x) \rightrightarrows f(x)$. The natural question is that Can we relax the condition to 
+For convergence of integration $\int_a^bf_n(x)\diff x\to\int_a^bf(x)$, we need the pre-conditions (a) $f_n(x)$ is continuous, and (b) $f_n(x) \rightrightarrows f(x)$. The natural question is that can we relax these conditions to 
 \begin{enumerate}
 \item
 $f_n(x)$ is integrable?
@@ -90,8 +96,7 @@ $f_n(x)\to f(x)$ pointwisely?
 The answer is yes, by using the tool of Lebesgue integration. If $f_n(x)\to f(x)$ and $f_n(x)$ is Lebesgue integrable, then $\int_a^bf_n(x)\diff x\to \int_a^bf(x)\diff x$, which is so called the \emph{dominated convergence}.
 \end{enumerate}
 \subsection{Metric Spaces}
-\paragraph{Normed Space}
-We will study the distance and length of elements in an arbitrary set $X$.
+We will study the \emph{length} of an element, or the \emph{distance} between two elements in an arbitrary set $X$. First let's discuss the length defined on a well-structured set, say vector space.
 \begin{definition}[Normed Space]
 Let $X$ be a vector space. A \emph{norm} on $X$ is a function $\|\cdot\|:X\to\mathbb{R}$ such that
 \begin{enumerate}
@@ -104,8 +109,7 @@ $\|\bm x+\bm y\|\le\|\bm x\|+\|\bm y\|$ (triangular inequality)
 \end{enumerate}
 Any vector space equipped with $\|\cdot\|$ is called a \emph{normed space}.
 \end{definition}
-
-\begin{example}
+\begin{example}\label{Exp:1:7}
 \begin{enumerate}
 \item
 For $X=\mathbb{R}^n$, define 
@@ -134,8 +138,7 @@ For $X=\mathcal{C}[a,b]$, define
 \end{enumerate}
 Exercise: check the norm defined above are well-defined.
 \end{example}
-Here raise a question: can we define the distance in an arbitrary set? 
-
+Here we can define the distance in an arbitrary set:
 \begin{definition}
 A set $X$ is a \emph{metric space} with metric $(X,d)$ if there exists a (distance) function $d:X\times X\to\mathbb{R}$ such that 
 \begin{enumerate}
@@ -164,13 +167,16 @@ d(\bm x,\bm y)=\left\{
 \end{enumerate}
 Exercise: check the metric space defined above are well-defined.
 \end{example}
-So we have defined a metric on $\mathcal{C}[a,b]$ by
+\begin{remark}
+Adopting the infinite norm discussed in Example~(\ref{Exp:1:7}), we can define a metric on $\mathcal{C}[a,b]$ by
 \[
 d_\infty(f,g)=\|f-g\|_\infty:=\max_{x\in[a,b]}|f(x)-g(x)|
 \]
-This is the correct metric to study the uniform convergence for $\{f_n\}\subseteq\mathcal{C}[a,b]$.
+which is the correct metric to study the uniform convergence for $\{f_n\}\subseteq\mathcal{C}[a,b]$.
+\end{remark}
+
 \begin{definition}
-Let $(X,d)$ be a metric space. An \emph{open ball} centered at $\bm x\in X$ of radius $r$ is 
+Let $(X,d)$ be a metric space. An \emph{open ball} centered at $\bm x\in X$ of radius $r$ is the set
 \[
 B_r(\bm x)=\{\bm y\in X\mid d(\bm x,\bm y)<r\}.
 \]
@@ -178,9 +184,15 @@ B_r(\bm x)=\{\bm y\in X\mid d(\bm x,\bm y)<r\}.
 \begin{example}
 \begin{enumerate}
 \item
-$X=\mathbb{R}^2$, and $d_2(\bm x,\bm y)=\|\bm x-\bm y\|_2$. Graph:
-
-$d_1(\bm x,\bm y)=\|\bm x-\bm y\|_1$. Graph:
+For $X=\mathbb{R}^2$, we can draw the $B_1(\bm0)$ with respect to the metrics $d_1$, $d_2$:
+\begin{figure}[H]
+\centering\includegraphics[width=6cm]{week1/f_1_1}
+\caption{$B_1(\bm0)$ w.r.t. the metric $d_1$}
+\end{figure}
+\begin{figure}[H]
+\centering\includegraphics[width=6cm]{week1/f_1_2}
+\caption{$B_1(\bm0)$ w.r.t. the metric $d_2$}
+\end{figure}
 \end{enumerate}
 \end{example}
 

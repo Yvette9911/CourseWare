@@ -14,8 +14,8 @@
 \contentsline {subsection}{\numberline {1.2.2}Introduction to MAT3006}{6}{subsection.1.2.2}
 \contentsline {paragraph}{What are we going to do}{6}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}Metric Spaces}{7}{subsection.1.2.3}
-\contentsline {paragraph}{Normed Space}{7}{subsection.1.2.3}
 \contentsline {section}{\numberline {1.3}Monday for MAT4002}{10}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Introduction to Topology}{10}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Metric Spaces}{10}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.2}Metric Spaces}{11}{subsection.1.3.2}
+\contentsline {paragraph}{Exercise}{13}{Item.59}
 \contentsfinish 

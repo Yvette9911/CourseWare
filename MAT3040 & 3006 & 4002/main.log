@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  7 JAN 2019 19:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  8 JAN 2019 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2385,10 +2385,10 @@ Package mdframed Info: mdframed works in twoside mode on input line 53.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 53.
-Package mdframed Info: mdframed works in twoside mode on input line 82.
+Package mdframed Info: mdframed works in twoside mode on input line 85.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 82.
+(mdframed)              on input line 85.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2399,15 +2399,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Package mdframed Info: Not enough space on this page on input line 118.
-Package mdframed Info: mdframed works in twoside mode on input line 119.
+Package mdframed Info: Not enough space on this page on input line 121.
+Package mdframed Info: mdframed works in twoside mode on input line 122.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 119.
-Package mdframed Info: mdframed works in twoside mode on input line 142.
+(mdframed)              on input line 122.
+Package mdframed Info: mdframed works in twoside mode on input line 145.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 142.
+(mdframed)              on input line 145.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2418,15 +2418,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-Package mdframed Info: Not enough space on this page on input line 144.
-Package mdframed Info: mdframed works in twoside mode on input line 145.
+Package mdframed Info: Not enough space on this page on input line 147.
+Package mdframed Info: mdframed works in twoside mode on input line 148.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 145.
-Package mdframed Info: mdframed works in twoside mode on input line 156.
+(mdframed)              on input line 148.
+Package mdframed Info: mdframed works in twoside mode on input line 159.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 156.
+(mdframed)              on input line 159.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2447,6 +2447,16 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 13.
 
+Overfull \hbox (7.97588pt too wide) in paragraph at lines 35--38
+[]\T1/pplx/m/n/10.95 (-20) The se-ries $[][] \OML/zplm/m/it/10.95 S[]$ \T1/pplx
+/m/n/10.95 (-20) is (Rie-mann) in-te-grable, with $[][] [][] \OML/zplm/m/it/10.
+95 S[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 x\OT1/zplm/m/n/10.95 ) \OT1/ppl
+x/m/n/10.95 (-20) d\OML/zplm/m/it/10.95 x \OT1/zplm/m/n/10.95 = [][] [][] \OML/
+zplm/m/it/10.95 S[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 x\OT1/zplm/m/n/10.
+95 ) \OT1/pplx/m/n/10.95 (-20) d\OML/zplm/m/it/10.95 x$ 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2465,14 +2475,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
-Package mdframed Info: mdframed works in twoside mode on input line 95.
+Package mdframed Info: mdframed works in twoside mode on input line 100.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 95.
-Package mdframed Info: mdframed works in twoside mode on input line 108.
+(mdframed)              on input line 100.
+Package mdframed Info: mdframed works in twoside mode on input line 112.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 108.
+(mdframed)              on input line 112.
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 140.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2480,47 +2493,86 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-Package mdframed Info: mdframed works in twoside mode on input line 139.
+Package mdframed Info: mdframed works in twoside mode on input line 142.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 139.
-Package mdframed Info: mdframed works in twoside mode on input line 150.
+(mdframed)              on input line 142.
+Package mdframed Info: mdframed works in twoside mode on input line 153.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 150.
-Package mdframed Info: mdframed works in twoside mode on input line 172.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 172.
+(mdframed)              on input line 153.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
 Package mdframed Info: mdframed works in twoside mode on input line 178.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 178.
+Package mdframed Info: mdframed works in twoside mode on input line 184.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 184.
 
+<week1/f_1_1.png, id=244, 596.2275pt x 481.8pt>
+File: week1/f_1_1.png Graphic file (type png)
+ <use week1/f_1_1.png>
+Package pdftex.def Info: week1/f_1_1.png used on input line 189.
+(pdftex.def)             Requested size: 170.71652pt x 137.95401pt.
+
+<week1/f_1_2.png, id=245, 595.22375pt x 491.8375pt>
+File: week1/f_1_2.png Graphic file (type png)
+ <use week1/f_1_2.png>
+Package pdftex.def Info: week1/f_1_2.png used on input line 193.
+(pdftex.def)             Requested size: 170.71652pt x 141.0607pt.
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
+ [9 <./week1/f_1_1.png> <./week1/f_1_2.png>]
 \openout2 = `week1/Monday_MAT4002.aux'.
 
+ (./week1/Monday_MAT4002.tex
+<week1/f_2_1.png, id=257, 175.65625pt x 178.6675pt>
+File: week1/f_2_1.png Graphic file (type png)
+ <use week1/f_2_1.png>
+Package pdftex.def Info: week1/f_2_1.png used on input line 7.
+(pdftex.def)             Requested size: 142.26378pt x 144.71442pt.
 
-(./week1/Monday_MAT4002.tex
-Package mdframed Info: mdframed works in twoside mode on input line 14.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 14.
-Package mdframed Info: mdframed works in twoside mode on input line 28.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 28.
+<week1/f_2_2.png, id=258, 175.65625pt x 177.66376pt>
+File: week1/f_2_2.png Graphic file (type png)
+ <use week1/f_2_2.png>
+Package pdftex.def Info: week1/f_2_2.png used on input line 8.
+(pdftex.def)             Requested size: 142.26378pt x 143.90143pt.
+
+<week1/f_2_3.png, id=259, 158.5925pt x 90.3375pt>
+File: week1/f_2_3.png Graphic file (type png)
+ <use week1/f_2_3.png>
+Package pdftex.def Info: week1/f_2_3.png used on input line 13.
+(pdftex.def)             Requested size: 142.26378pt x 81.04245pt.
+
+<week1/f_2_4.png, id=260, 175.65625pt x 139.52126pt>
+File: week1/f_2_4.png Graphic file (type png)
+ <use week1/f_2_4.png>
+Package pdftex.def Info: week1/f_2_4.png used on input line 14.
+(pdftex.def)             Requested size: 142.26378pt x 113.00732pt.
+
+<week1/f_2_5.png, id=261, 203.76125pt x 181.67876pt>
+File: week1/f_2_5.png Graphic file (type png)
+ <use week1/f_2_5.png>
+Package pdftex.def Info: week1/f_2_5.png used on input line 19.
+(pdftex.def)             Requested size: 142.26378pt x 126.85268pt.
+
+<week1/f_2_6.png, id=262, 304.13625pt x 130.4875pt>
+File: week1/f_2_6.png Graphic file (type png)
+ <use week1/f_2_6.png>
+Package pdftex.def Info: week1/f_2_6.png used on input line 20.
+(pdftex.def)             Requested size: 142.26378pt x 61.03842pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2530,23 +2582,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [10
 
 
-]
-Package mdframed Info: mdframed works in twoside mode on input line 51.
+ <./week1/f_2_1.png> <./week1/f_2_2.png> <./week1/f_2_3.png> <./week1/f_2_4.png
+> <./week1/f_2_5.png> <./week1/f_2_6.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 26.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 51.
-Package mdframed Info: mdframed works in twoside mode on input line 57.
+(mdframed)              on input line 26.
+Package mdframed Info: mdframed works in twoside mode on input line 40.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 57.
-Package mdframed Info: mdframed works in twoside mode on input line 71.
+(mdframed)              on input line 40.
+Package mdframed Info: mdframed works in twoside mode on input line 63.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 71.
-Package mdframed Info: mdframed works in twoside mode on input line 75.
+(mdframed)              on input line 63.
+Package mdframed Info: mdframed works in twoside mode on input line 69.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 75.
+(mdframed)              on input line 69.
+File: week1/f_1_2.png Graphic file (type png)
+ <use week1/f_1_2.png>
+Package pdftex.def Info: week1/f_1_2.png used on input line 75.
+(pdftex.def)             Requested size: 142.26378pt x 117.54808pt.
+
+<week1/f_1_3.png, id=273, 575.14874pt x 490.83376pt>
+File: week1/f_1_3.png Graphic file (type png)
+ <use week1/f_1_3.png>
+Package pdftex.def Info: week1/f_1_3.png used on input line 76.
+(pdftex.def)             Requested size: 142.26378pt x 121.40495pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2554,17 +2620,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
+Package mdframed Info: Not enough space on this page on input line 82.
+Package mdframed Info: mdframed works in twoside mode on input line 84.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 84.
+Package mdframed Info: mdframed works in twoside mode on input line 87.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 87.
 
-LaTeX Warning: Reference `mdf@pagelabel-25' on page 12 undefined on input line 
-84.
-
-)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
+ [12 <./week1/f_1_3.png>])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14
+
+
+]
 No file main.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 139.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 139.
@@ -2578,48 +2664,45 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 47737 strings out of 492995
- 992231 string characters out of 6132703
- 1381217 words of memory out of 5000000
- 50070 multiletter control sequences out of 15000+600000
- 108693 words of font info for 328 fonts, out of 8000000 for 9000
+ 47836 strings out of 492995
+ 994078 string characters out of 6132703
+ 1381196 words of memory out of 5000000
+ 50141 multiletter control sequences out of 15000+600000
+ 109192 words of font info for 335 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,13n,98p,10504b,617s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
-/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/pa
-latino/uplbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino
-/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8
-a.pfb>
-Output written on main.pdf (22 pages, 313526 bytes).
+ 71i,13n,98p,10504b,712s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{exampleT.1.7} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
+usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
+/public/cm-super/sfsx2488.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
+rw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/pala
+tino/uplbi8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/u
+plr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/palatino/uplri8a.
+pfb>
+Output written on main.pdf (24 pages, 468037 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 309 compressed objects within 4 object streams
- 111 named destinations out of 1000 (max. 500000)
- 68730 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 409 PDF objects out of 1000 (max. 8388607)
+ 327 compressed objects within 4 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 68775 words of extra memory for PDF output out of 74296 (max. 10000000)
 
