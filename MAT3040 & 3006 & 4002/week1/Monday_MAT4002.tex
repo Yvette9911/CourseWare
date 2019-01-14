@@ -98,7 +98,7 @@ d(\bm x,\bm z)\le d(\bm x,\bm y)+d(\bm y,\bm z)<q+\frac{r-q}{2}<r,
 which implies $\bm z\in B_r(x)$.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}\label{Pro:1:6}
 Let $(X,\bm d)$ be a metric space, and $\mathcal{T}$ is the topology induced from $(X,d)$, then
 \begin{enumerate}
 \item
@@ -128,16 +128,6 @@ which implies $B_\epsilon(x)\subseteq\bigcap_{i=1}^nG_i$
 \begin{enumerate}
 \item
 let $\mathcal{T}_2,\mathcal{T}_\infty$ be topologies induced from the metrices $d_2,d_\infty$ in $\mathbb{R}^2$. Show that $J_2=J_\infty$, i.e., every open set in $(\mathbb{R}^2,d_2)$ is open in $(\mathbb{R}^2,d_\infty)$, and every open set in $(\mathbb{R}^2,d_\infty)$ is open in $(\mathbb{R}_2,d_2)$.
-\begin{proof}
-The key is to show the equivalence of metric $d_2$ and $d_\infty$.
-
-Take $\forall G\in\mathcal{T}_2$, and for each point $\bm x\in G$, there exists $\epsilon_{\bm x}$ such that with respect to $d_2$,
-\[
-B_{\epsilon_{\bm x}}(\bm x)\subseteq G\Longleftrightarrow
-d_2(\bm x,\bm y)<\epsilon_{\bm x}\mbox{ implies }\bm y\in G.
-\]
-Note that $d_\infty(\bm x,\bm y)<\sqrt{2}\epsilon_{\bm x}$ implies $d_2(\bm x,\bm y)<\epsilon_{\bm x}$, i.e., $\bm y\in G$. In other words, $G$ is open w.r.t. the metric $d_\infty$. The converse follows similarly.
-\end{proof}
 
 
 
@@ -146,13 +136,6 @@ Note that $d_\infty(\bm x,\bm y)<\sqrt{2}\epsilon_{\bm x}$ implies $d_2(\bm x,\b
 
 \item
 Let $\mathcal{T}$ be the topology induced from the discrete metric $(X,d_{\text{discrete}}).$ What is $\mathcal{T}$?
-\begin{proof}
-For any $\bm x\in X$, consider the open ball $B_r(\bm x)$. For $r\le 1$, the open ball is the singleton $\{\bm x\}$; for $r>1$, the open ball is the whole space. Note that any element $A$ in $\mathcal{T}$ is represented as:
-\[
-A=\bigcup_{\bm x\in A}\{\bm x\}.
-\]
-Therefore, the topology is generating set with generator signleton sets.
-\end{proof}
 
 \end{enumerate}
 

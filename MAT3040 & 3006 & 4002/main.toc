@@ -18,8 +18,19 @@
 \contentsline {subsection}{\numberline {1.3.1}Introduction to Topology}{10}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Metric Spaces}{11}{subsection.1.3.2}
 \contentsline {paragraph}{Exercise}{13}{Item.59}
-\contentsline {section}{\numberline {1.4}Wednesday for MAT3040}{15}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Review}{15}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Spanning Set}{15}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Linear Independence and Basis}{17}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.4}Wednesday for MAT3040}{14}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Review}{14}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Spanning Set}{14}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Linear Independence and Basis}{16}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.5}Wednesday for MAT3006}{20}{section.1.5}
+\contentsline {paragraph}{Reviewing}{20}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Convergence of Sequences}{20}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Continuity}{24}{subsection.1.5.2}
+\contentsline {subsection}{\numberline {1.5.3}Open and Closed Sets}{25}{subsection.1.5.3}
+\contentsline {section}{\numberline {1.6}Wednesday for MAT4002}{27}{section.1.6}
+\contentsline {paragraph}{Reviewing}{27}{section.1.6}
+\contentsline {paragraph}{Exercise}{27}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Forget about metric}{27}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Topological Spaces}{30}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Closed Subsets}{31}{subsection.1.6.3}
 \contentsfinish 

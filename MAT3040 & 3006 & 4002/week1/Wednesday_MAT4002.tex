@@ -1,160 +1,231 @@
-\section{Monday for MAT4002}\index{Monday_lecture}
-
-\subsection{Introduction to Topology}
-We will study global properties of a geometric object, i.e., \textit{the distrance between 2 points in an object is totally ignored}. For example, the objects shown below are essentially invariant under a certain kind of transformation:
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm]{week1/f_2_1}
-\includegraphics[width=5cm]{week1/f_2_2}
-\end{figure}
-Another example is that the coffee cup and the donut have the same topology:
- \begin{figure}[H]
-\centering
-\includegraphics[width=5cm]{week1/f_2_3}
-\includegraphics[width=5cm]{week1/f_2_4}
-\end{figure}
-However, the two objects below have the intrinsically different topologies:
- \begin{figure}[H]
-\centering
-\includegraphics[width=5cm]{week1/f_2_5}
-\includegraphics[width=5cm]{week1/f_2_6}
-\end{figure}
-In this course, we will study the phenomenon described above mathematically.
-
-\subsection{Metric Spaces}
-In order to ingnore about the distances, we need to learn about distances first.
-\begin{definition}[Metric Space]
-Metric space is a set $X$ where one can measure distance between any two objects in X.
-
-Specifically speaking, a metric space $X$ is a non-empty set endowed with a function (distance function) $d:X\times X\to\mathbb{R}$ such that
-\begin{enumerate}
+\section{Wednesday for MAT4002}\index{Monday_lecture}
+\paragraph{Reviewing}
+\begin{itemize}
 \item
-$d(\bm x,\bm y)\ge0$ for $\forall\bm x,\bm y\in X$ with equality iff $\bm x=\bm y$
+Metric Space $(X,d)$
 \item
-$d(\bm x,\bm y)=d(\bm y,\bm x)$
+Open balls and open sets (note that the emoty set $\emptyset$ is open)
 \item
-$d(\bm x,\bm z)\le d(\bm x,\bm y)+d(\bm y,\bm z)$ (triangular inequality)
-\end{enumerate}
-\end{definition}
-
-\begin{example}
-\begin{enumerate}
-\item
-Let $X=\mathbb{R}^n$, with 
-\[
-d_2(\bm x,\bm y)=\sqrt{\sum_{i=1}^n(x_i-y_i)^2}
-\]
-\[
-d_\infty(\bm x,\bm y)=\max_{i=1,\dots,n}|x_i-y_i|
-\]
-\item
-Let $X$ be any set, and define the discrete metric 
-\[
-d(\bm x,\bm y)=\left\{
-\begin{aligned}
-0,&\quad\mbox{if }x=y\\
-1,&\quad\mbox{if }x\ne y
-\end{aligned}
-\right.
-\]
-\end{enumerate}
-Homework: Show that (1) and (2) defines a metric.
-\end{example}
-\begin{definition}[Open Ball]
-An \emph{open ball} of radius $r$ centered at $\bm x\in X$ is the set
-\[
-B_r(\bm x)=\{\bm y\in X\mid d(\bm x,\bm y)<r\}
-\]
-\end{definition}
-\begin{example}
-\begin{enumerate}
-\item
-The set $B_1(0,0)$ defines an open ball under the metric $(X=\mathbb{R}^2,d_2)$, or the metric $(X=\mathbb{R}^2,d_\infty)$. The corresponding diagram is shown below:
- \begin{figure}[H]
-\centering
-\includegraphics[width=5cm]{week1/f_1_2}
-\includegraphics[width=5cm]{week1/f_1_3}
-\caption{Left: under the metric $(X=\mathbb{R}^2,d_2)$; Right: under the metric $(X=\mathbb{R}^2,d_\infty)$}
-\end{figure}
-\item
-Under the metric $(X=\mathbb{R}^2,\text{discrete metric})$, the set $B_1(0,0)$ is one single point, also defines an open ball.
-\end{enumerate}
-\end{example}
-
-\begin{definition}[Open Set]
-Let $X$ be a metric space, $U\subseteq X$ is an open set in $X$ if $\forall u\in U$, there exists $\epsilon_u>0$ such that $B_{\epsilon_u}(u)\subseteq U$.
-\end{definition}
-\begin{definition}
-The \emph{topology} induced from $(X,d)$ is the collection of all open sets in $(X,d)$, denoted as the symbol $\mathcal{T}$.
-\end{definition}
-\begin{proposition}
-All open balls $B_r(\bm x)$ are open in $(X,d)$.
-\end{proposition}
-\begin{proof}
-Consider the example $X=\mathbb{R}$ with metric $d_2$. Therefore $B_r(x)=(x-r,x+r)$. Take $\bm y\in B_r(\bm x)$ such that $d(\bm x,\bm y)=q<r$ and consider $B_{(r-q)/2}(\bm y)$: for all $z\in B_{(r-q)/2}(\bm y)$, we have
-\[
-d(\bm x,\bm z)\le d(\bm x,\bm y)+d(\bm y,\bm z)<q+\frac{r-q}{2}<r,
-\]
-which implies $\bm z\in B_r(x)$.
-\end{proof}
-
-\begin{proposition}
-Let $(X,\bm d)$ be a metric space, and $\mathcal{T}$ is the topology induced from $(X,d)$, then
-\begin{enumerate}
-\item
-let the set $\{G_\alpha\mid\alpha\in\mathcal{A}\}$ be a collection of (uncountable) open sets, i.e., $G_\alpha\in\mathcal{T}$, then $\bigcup_{\alpha\in\mathcal{A}}G_\alpha\in\mathcal{T}$.
-\item
-let $G_1,\dots,G_n\in\mathcal{T}$, then $\bigcap_{i=1}^nG_i\in\mathcal{T}$. The finite intersection of open sets is open.
-\end{enumerate}
-\end{proposition}
-\begin{proof}
-\begin{enumerate}
-\item
-Take $x\in\bigcup_{\alpha\in\mathcal{A}}G_\alpha$, 
-then $x\in G_\beta$ for some $\beta\in\mathcal{A}$. 
-Since $G_\beta$ is open, there exists $\epsilon_x>0$ s.t.
-\[
-B_{\epsilon_x}(x)\subseteq G_\beta\subseteq\bigcup_{\alpha\in\mathcal{A}}G_\alpha
-\]
-\item
-Take $x\in\bigcap_{i=1}^nG_i$, i.e., $x\in G_i$ for $i=1,\dots,n$, i.e., there exists $\epsilon_i>0$ such that $B_{\epsilon_i}(x)\subseteq G_i$ for $i=1,\dots,n$. Take $\epsilon=\min\{\epsilon_1,\dots,\epsilon_n\}$, which implies
-\[
-B_\epsilon(x)\subseteq B_{\epsilon_i}(x)\subseteq G_i,\forall i
-\]
-which implies $B_\epsilon(x)\subseteq\bigcap_{i=1}^nG_i$
-\end{enumerate}
-\end{proof}
+Define the collection of open sets in $X$, say $\mathcal{T}$ is the topology.
+\end{itemize}
 \paragraph{Exercise}
 \begin{enumerate}
 \item
-let $\mathcal{T}_2,\mathcal{T}_\infty$ be topologies induced from the metrices $d_2,d_\infty$ in $\mathbb{R}^2$. Show that $J_2=J_\infty$, i.e., every open set in $(\mathbb{R}^2,d_2)$ is open in $(\mathbb{R}^2,d_\infty)$, and every open set in $(\mathbb{R}^2,d_\infty)$ is open in $(\mathbb{R}_2,d_2)$.
-\begin{proof}
-The key is to show the equivalence of metric $d_2$ and $d_\infty$.
+Show that the $\mathcal{T}_2$ under $(X=\mathbb{R}^2,d_2)$ and $\mathcal{T}_\infty$ under $(X=\mathbb{R}^2,d_\infty)$ are the same.
+\begin{proof}[Ideas]
+Follow the procedure below:
 
-Take $\forall G\in\mathcal{T}_2$, and for each point $\bm x\in G$, there exists $\epsilon_{\bm x}$ such that with respect to $d_2$,
+An open ball in $d_2$-metric is open in $d_\infty$; 
+
+Any open set in $d_2$-metric is open in $d_\infty$;
+
+Switch $d_2$ and $d_\infty$.
+\end{proof}
+\item
+Describe the topology $\mathcal{T}_{\text{discrete}}$ under the metric space $(X=\mathbb{R}^2,d_{\text{discrete}})$.
+\begin{proof}[Outlines]
+Note that $\{x\}=B_{1/2}(x)$ is an open set.
+
+For any subset $W\subseteq\mathbb{R}^2$, $W=\bigcup_{w\in W}\{w\}$ is open.
+
+Therefore $\mathcal{T}_{\text{discrete}}$ is all subsets of $\mathbb{R}^2$.
+\end{proof}
+\end{enumerate}
+\subsection{Forget about metric}
+Next, we will try to define closedness, compactness, etc., without using the tool of metric:
+\begin{definition}[closed]
+A subset $V\subseteq X$ is \emph{closed} if $X\setminus V$ is \emph{open}.
+\end{definition}
+\begin{example}
+Under the metric space $(\mathbb{R},d_1)$, 
 \[
-B_{\epsilon_{\bm x}}(\bm x)\subseteq G\Longleftrightarrow
-d_2(\bm x,\bm y)<\epsilon_{\bm x}\mbox{ implies }\bm y\in G.
+\mathbb{R}\setminus [b,a]=(a,\infty)\bigcup(-\infty,b)
+\mbox{ is open}\implies
+[b,a]\mbox{ is closed}
 \]
-Note that $d_\infty(\bm x,\bm y)<\sqrt{2}\epsilon_{\bm x}$ implies $d_2(\bm x,\bm y)<\epsilon_{\bm x}$, i.e., $\bm y\in G$. In other words, $G$ is open w.r.t. the metric $d_\infty$. The converse follows similarly.
+\end{example}
+
+\begin{proposition}
+Let $X$ be a metric space.
+\begin{enumerate}
+\item
+$\emptyset,X$ is closed in $X$
+\item
+If $F_\alpha$ is closed in $X$, so is $\bigcap_{\alpha\in A}F_\alpha$.
+\item
+If $F_1,\dots,F_k$ is closed, so is $\bigcup_{i=1}^kF_i$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+\begin{enumerate}
+\item
+Note that $X$ is open in $X$, which implies $\emptyset=X\setminus X$ is closed in $X$;
+
+Similarly, $\emptyset$ is open in $X$, which implies $X=X\setminus \emptyset$ is closed in $X$;
+\item
+The set $F_\alpha$ is closed implies there exists open $U_\alpha\subseteq X$ such that $F_\alpha=X\setminus U_\alpha$. By De Morgan's Law,
+\[
+\bigcap_{\alpha\in A}F_\alpha=\bigcap_{\alpha\in A}(X\setminus U_\alpha)=X\setminus(\bigcup_{\alpha\in A}U_\alpha).
+\]
+By part (a) in proposition~(\ref{Pro:1:6}), the set $\bigcup_{\alpha\in A}U_\alpha$ is openm which implies $\bigcap_{\alpha\in A}F_\alpha$ is closed.
+\item
+The result follows from part (b) in proposition~(\ref{Pro:1:6}) by taking complements.
+\end{enumerate}
+
 \end{proof}
 
+We illustrate examples where open set is used to define convergence and continuity.
+\begin{enumerate}
+\item
+Convergence of sequences:
+\begin{definition}[Convergence]
+Let $(X,d)$ be a metric space, then $\{x_n\}\to x$ means
+\[
+\forall\varepsilon>0,\exists N\mbox{ such that }d(x_n,x)<\varepsilon,\forall n\ge N.
+\]
+\end{definition}
+We will study the convergence by using open sets instead of metric.
+\begin{proposition}
+Let $X$ be a metric space, then $\{x_n\}\to x$ if and only if for $\forall$ open set $U\ni x$, there exists $N$ such that $x_n\in U$ for $\forall n\ge N$.
+\end{proposition}
+\begin{proof}
+\textit{Necessity}:
+Since $U\ni x$ is open, there exists $\varepsilon>0$ such that $B_\varepsilon(x)\subseteq U.$
 
+Since $\{x_n\}\to x$, there exists $N$ such that $d(x_n,x)<\varepsilon$, i.e., $x_n\in B_\varepsilon(x)\subseteq U$ for $\forall n\ge N$.
 
+\textit{Sufficiency}:
+Let $\varepsilon>0$ be given. Take the open set $U=B_\varepsilon(x)\ni x$, then there exists $N$ such that $x_n\in U=B_\varepsilon(x)$ for $\forall n\ge N$, i.e., $d(x_n,x)<\varepsilon$, $\forall n\ge N$.
 
-
+\end{proof}
 
 \item
-Let $\mathcal{T}$ be the topology induced from the discrete metric $(X,d_{\text{discrete}}).$ What is $\mathcal{T}$?
-\begin{proof}
-For any $\bm x\in X$, consider the open ball $B_r(\bm x)$. For $r\le 1$, the open ball is the singleton $\{\bm x\}$; for $r>1$, the open ball is the whole space. Note that any element $A$ in $\mathcal{T}$ is represented as:
+Continuity:
+\begin{definition}[Continuity]
+Let $(X,d)$ and $(Y,\rho)$ be given metric spaces. Then $f:X\to Y$ is continuous at $x_0\in X$ if 
 \[
-A=\bigcup_{\bm x\in A}\{\bm x\}.
+\forall\varepsilon>0,\exists\delta>0\mbox{ such that }
+d(x,x_0)<\delta\implies
+\rho(f(x),f(x_0))<\varepsilon.
 \]
-Therefore, the topology is generating set with generator signleton sets.
-\end{proof}
-
+The function $f$ is continuous on $X$ if $f$ is continous for all $x_0\in X$.
+\end{definition}
+We can get rid of metrics to study continuity:
+\begin{proposition}
+\begin{enumerate}
+\item
+The function  $f$ is continuous at $x$ if and only if for all open $U\ni f(x)$, there exists $\delta>0$ such that the set $B(x,\delta)\subseteq f^{-1}(U)$.
+\item
+The function $f$ is continuous on $X$ if and only if $f^{-1}(U)$ is open in $X$ for each open set $U\subseteq Y$.
 \end{enumerate}
+\end{proposition}
+During the proof we will apply a small lemma:
+\begin{proposition}\label{Pro:1:15}
+$f$ is continuous at $x$ if and only if for all $\{x_n\}\to x$, we have $\{f(x_n)\}\to f(x)$.
+\end{proposition}
+\begin{proof}
+\begin{enumerate}
+\item
+\textit{Necessity}:
+
+Due to the openness of $U\ni f(x)$, there exists a ball $B(f(x),\varepsilon)\subseteq U$.
+
+Due to the continuity of $f$ at $x$, there exists $\delta>0$ such that $d(x,x')<\delta$ implies $d(f(x),f(x'))<\varepsilon$, which implies
+\[
+f(B(x,\delta))\subseteq B(f(x),\varepsilon)\subseteq U,
+\]
+which implies $B(x,\delta)\subseteq f^{-1}(U).$
+
+\textit{Sufficiency}:
+
+Let $\{x_n\}\to x$. It suffices to show $\{f(x_n)\}\to f(x)$. For each open $U\ni f(x)$, by hypothesis, there exists $\delta>0$ such that $B_\delta(x)\subseteq f^{-1}(U)$.
+
+Since $\{x_n\}\to x$, there exists $N$ such that
+\[
+x_n\in B_\delta(x)\subseteq f^{-1}(U),\forall n\ge N\implies f(x_n)\in U, \forall n\ge N
+\]
+
+Let $\varepsilon>0$ be given, and then construct the $U=B_{\varepsilon}(f(x))$. The argument above shows that $f(x_n)\in B_{\varepsilon}(f(x))$ for $\forall n\ge N$, which implies $\rho(f(x_n),f(x))<\varepsilon$, i.e., $\{f(x_n)\}\to f(x)$.
+\item
+For the forward direction, it suffices to show that each point $x$ of $f^{-1}(U)$ is an interior point of $f^{-1}(U)$, which is shown by part~$(a)$; the converse follows trivially by applying $(a)$.
+\end{enumerate}
+\end{proof}
+\end{enumerate}
+\begin{remark}
+As illustracted above, convergence, continuity, (and compactness) can be defined by using open sets $\mathcal{T}$ only.
+\end{remark}
+
+\subsection{Topological Spaces}
+\begin{definition}
+A \emph{topological space} $(X,\mathcal{T})$ consists of a (non-empty) set $X$, and a family of subsets of $X$ (``open sets'' $\mathcal{T}$) such that
+\begin{enumerate}
+\item
+$\emptyset,X\in\mathcal{T}$
+\item
+$U,V\in\mathcal{T}$ implies $U\bigcap V\in \mathcal{T}$
+\item
+If $U_\alpha\in\mathcal{T}$ for all $\alpha\in\mathcal{A}$, then $\bigcup_{\alpha\in\mathcal{A}}U_\alpha\in\mathcal{T}$.
+\end{enumerate}
+The elements in $\mathcal{T}$ are called \emph{open subsets} of $X$. The $\mathcal{T}$ is called a \emph{topology} on $X$.
+\end{definition}
+\begin{example}
+\begin{enumerate}
+\item
+Let $(X,d)$ be any metric space, and
+\[
+\mathcal{T}=\{\mbox{all open subsets of }X\}
+\]
+It's clear that $\mathcal{T}$ is a topology on $X$.
+\item
+Define the discrete topology
+\[
+\mathcal{T}_{\text{dis}}=\{\mbox{all subsets of }X\}
+\]
+It's clear that $\mathcal{T}_{\text{dis}}$ is a topology on $X$, (which also comes from the discrete metric $(X,d_{\text{discrete}})$).
+\begin{remark}
+We say $(X,\mathcal{T})$ is induced from a metric $(X,d)$ (or it is \emph{metrizable}) if $\mathcal{T}$ is the faimly of open subsets in  $(X,d)$.
+\end{remark}
+\item
+Consider the indiscrete topology $(X,\mathcal{T}_{\text{indis}})$, where $X$ contains more than one element:
+\[
+\mathcal{T}_{\text{indis}}=\{\emptyset,X\}.
+\]
+Question: is $(X,\mathcal{T}_{\text{indis}})$ metrizable? No. For any metric $d$ defined on $X$, let $x,y$ be distinct points in $X$, and then $\varepsilon:=d(x,y)>0$, hence $B_{\frac{1}{2}\varepsilon}(x)$ is a open set belonging to the corresponding induced topology. Since $x\in B_{\frac{1}{2}\varepsilon}(x)$ and $y\notin B_{\frac{1}{2}\varepsilon}(y)$, we conclude that $B_{\frac{1}{2}\varepsilon}(x)$ is neither $\emptyset$ nor $X$, i.e., the topology induced by any metric $d$ is not the indiscrete topology.
+\item
+Consider the cofinite topology $(X,\mathcal{T}_{\text{cofin}})$:
+\[
+\mathcal{T}_{\text{cofin}}=\{U\mid X\setminus U\mbox{ is a finite set}\}\bigcup\{\emptyset\}
+\]
+Question: is $(X,\mathcal{T}_{\text{cofin}})$ metrizable? 
+\end{enumerate}
+\end{example}
+
+\begin{definition}[Equivalence]
+Two metric spaces are \emph{topologically equivalent} if they give rise to the same topology.
+\end{definition}
+\begin{example}
+Metrics $d_1,d_2,d_\infty$ in $\mathbb{R}^n$ are topologically equivalent.
+\end{example}
+\subsection{Closed Subsets}
+\begin{definition}[Closed]
+Let $(X,\mathcal{T})$ be a topology space. Then $V\subseteq X$ is \emph{closed} if $X\setminus V\in J$
+\end{definition}
+\begin{example}
+Under the topology space $(\mathbb{R},\mathcal{T}_{\text{usual}})$, $(b,\infty)\bigcup(-\infty,a)\in\mathcal{T}$. Therefore,
+\[
+[a,b]=\mathbb{R}\setminus\left((b,\infty)\bigcup(-\infty,a)\right)
+\]
+is closed in $\mathbb{R}$ under usual topology.
+\end{example}
+
+\begin{remark}
+It is important to say that $V$ is \emph{closed in $X$.} You need to specify the underlying the space $X$.
+\end{remark}
+
+
+
+
+
 
 
 
