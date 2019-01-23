@@ -1,0 +1,195 @@
+\section{Monday for MAT4002}\index{Monday_lecture}
+
+\paragraph{Reviewing}
+\begin{enumerate}
+\item
+$A\subseteq A_S\subseteq\overline{A}$, where $A_S$ is sequential closure and $\overline{A}$ denotes closure.
+\item
+Subspace topology
+\item
+Homeomorphism
+\[
+f:(0,1)\to(0,1]
+\]
+whether it is continuos? think of $f^{-1}(1)$.
+\item
+Base of a topology $B\subseteq\mathcal{T}$
+\end{enumerate}
+
+Let $\mathbb{R}^n$ be equipped with usual topology, then
+\[
+B=\{B_q(x)\mid x\in\mathbb{Q}^n,q\in\mathbb{Q}^+\}
+\]
+is a basis of $\mathbb{R}^n$.
+
+It suffices to show $U\subseteq\mathbb{R}^n$ can be written as 
+\[
+U=U_{x\in\mathcal{A}}B_{q_x}(x)
+\]
+
+\begin{proposition}
+Let $X,Y$ be topological spaces, and $\mathcal{B}$ a basis for topology on $Y$. Then
+\[
+f:X\to Y\text{ is continuous}
+\Longleftrightarrow
+f^{-1}(B)\text{ is open in X, }\forall B\in\mathcal{B}
+\]
+Therefore there is no need to exam $f^{-1}(U)$ is open for all $U\in\mathcal{T}_Y$.
+\end{proposition}
+
+\begin{proof}
+Since $B\subseteq\mathcal{T}_Y$, the proof for necessity follows.
+
+Let $U\in\mathcal{T}_Y$, then $U=\bigcup_{i\in I}B_i$, where $B_i\in\mathcal{B}$, which implies
+\[
+f^{-1}(U)=f^{-1}\left(
+\bigcup_{i\in I}B_i
+\right)
+=
+\bigcup_{i\in I}f^{-1}(B_i)
+\]
+which is open in $X$ by our hypthesis.
+\end{proof}
+
+\begin{corollary}\label{cor:3:1}
+Let $f:X\to Y$ be a bijection. Suppose there is a basis $\mathcal{B}_X$ of $\mathcal{T}_X$ such that $\{f(B)\mid B\in\mathcal{B}_X\}$ forms a basis of $\mathcal{T}_Y$. Then $X\cong Y$.
+\end{corollary}
+\begin{proof}
+Suppose $W\in\mathcal{T}_Y$, then
+\[
+W=\bigcup_{i\in I}f(B_i),\qquad
+B_i\in\mathcal{B}_X\implies
+f^{-1}(W)=\bigcup_{i\in I}B_i,
+\]
+which implies $f$ is continuous due to $f^{-1}(W)\in\mathcal{T}_X$
+
+Suppose $U\in\mathcal{T}_X$, then
+\[
+U=\bigcup_{i\in I}B_i\implies
+f(U)=\bigcup_{i\in I}f(B_i)\in\mathcal{T}_Y\implies
+[f^{-1}]^{-1}(U)\in\mathcal{T}_Y,
+\]
+i.e., $f$ is continuous.
+\end{proof}
+
+Question: given a family of subsets $\mathcal{B}$, how can we guarantee it is a basis of a topology?
+
+\begin{proposition}\label{pro:3:4}
+Let $X$ be a set, $\mathcal{B}$ is a collection of subsets satisfying
+\begin{enumerate}
+\item
+Every $x\in X$ lies in some $B_x\in\mathcal{B}$
+\item
+For each $B_1,B_2\in\mathcal{B}$, and $x\in B_1\cap B_2$, then there exists $B_3\in\mathcal{B}$ such that $x\in B_3\subseteq B_1\cap B_2$
+\end{enumerate}
+Then $B$ defines a basis of a topology of $X$.
+\end{proposition}
+\begin{proof}
+Let $\mathcal{T}$ be the family of subsets obtained by taking union of elements (i.e., subsets) in $\mathcal{B}$. It suffices to show $\mathcal{T}$ is a topology in $X$.
+\begin{enumerate}
+\item
+$\emptyset\in\mathcal{T}$ (taking nothing from $\mathcal{B}$); for $x\in X,B_x\in\mathcal{B}$, by (1),
+\[
+X=\bigcup_{x\in X}B_x\in\mathcal{T}
+\]
+\item
+Suppose $T_1,T_2\in\mathcal{T}$. Let $x\in T_1\cap T_2 $, where $T_i$ is a union of subsets in $\mathcal{B}$. Therefore,
+\[
+\left\{
+\begin{aligned}
+x\in B_1\subseteq T_1,\qquad B_1\in\mathcal{B}\\
+x\in B_2\subseteq T_2,\qquad B_2\in\mathcal{B}
+\end{aligned}
+\right.
+\]
+which implies $x\in B_1\cap B_2$, i.e., $x\in B_x\subseteq B_1\cap B_2$ for some $B_x\in\mathcal{B}$.
+
+Therefore,
+\[
+\bigcup_{x\in B_1\cap B_2}\{x\}\subseteq
+\bigcup_{x\in B_1\cap B_2}B_x\subseteq B_1\cap B_2,
+\]
+i.e., $B_1\cap B_2=\bigcup_{x\in B_1\cap B_2}B_x$, i.e., $B_1\cap B_2\in\mathcal{T}$.
+\item
+The property (3) directly follows definition
+\end{enumerate}
+Therefore, $\mathcal{B}$ is a basis of the topology formed in the beginning.
+\end{proof}
+
+\subsection{Product Space}
+
+\begin{definition}
+Let $(X,\mathcal{T}_X),(Y,\mathcal{T}_Y)$ be topological spaces. Consider
+\[
+\mathcal{B}_{X\times Y}=\{U\times V\mid U\in\mathcal{T}_X,V\in\mathcal{T}_y\}
+\]
+It is a family of subsets in $X\times Y$. Then $\mathcal{B}_{X\times Y}$ forms a basis of a topology on $X\times Y$. This is called \emph{product topology}.
+\end{definition}
+
+e.g., for $X=\mathbb{R},Y=\mathbb{R}$, the elements in $\mathcal{B}_{X\times Y}$ are rectangles.
+
+So we can only hope $B_{X\times Y}$ forms a basis of a topology on $X\times Y$.
+
+In order to see $B_{X\times Y}$ forms a basis, we need proposition~(\ref{pro:3:4}):
+\begin{enumerate}
+\item
+for $\forall (x,y)\in X\times Y, X\in\mathcal{T}_X,Y\in\mathcal{T}_Y$, we imply $(x,y)\in X\times Y\in\mathcal{B}_{X\times Y}$
+\item
+Suppose $U_1\times V_1,U_2\times V_2\in\mathcal{B}_{X\times Y}$,
+\[
+(U_1\times V_1)\cap(U_2\times V_2)=(U_1\cap U_2)\times (V_1\cap V_2),
+\]
+where $U_1\cap U_2\in\mathcal{T}_X,V_1\cap V_2\in\mathcal{T}_Y$. Therefore, $(U_1\times V_1)\cap(U_2\times V_2)\in\mathcal{B}_{X\times Y}$
+\end{enumerate}
+Therefore, $B_{X\times Y}$ forms a basis of a topology $\mathcal{T}_{X\times Y}$, which is the product topology.
+
+\begin{example}
+$\mathbb{R}\times\mathbb{R}\cong\mathbb{R}^2$, where the left is the product topolgy, and the right is the usual topology.
+
+Obviously, $f:\mathbb{R}\times\mathbb{R}\to\mathbb{R}^2$ is a bijection.
+
+Take the basis of the topology on $\mathbb{R}$ as open intervals,
+\[
+B_X=\{(a,b)\mid a<b\text{ in $\mathbb{R}$}\}
+\]
+Therefore, 
+\[
+B_{X\times Y}=\{(a,b)\times(c,d)\mid a<b,c<d\}
+\]
+It forms a basis of the usual topology in $\mathbb{R}^2$.
+
+By Corollary~(\ref{cor:3:1}), we imply $\mathbb{R}\times\mathbb{R}\cong\mathbb{R}^2$.
+\end{example}
+\begin{example}
+Let $S^1=\{(\cos x,\sin x\mid x\in[0,2\pi])\}$ be a unit circle on $\mathbb{R}^2$.
+
+Consider $f: S^1\times(0,\infty)\to\mathbb{R}^2\setminus\{\bm0\}$ defined as
+\[
+f(\cos x,\sin x,r)\mapsto(r\cos x,r\sin x)
+\]
+It's clear that $f$ is a bijection, and $f$ is continuous. 
+
+Moreover, $g:=f^{-1}$ with
+\[
+g(a,b)=(\frac{a}{\sqrt{a^2+b^2}},\frac{b}{\sqrt{a^2+b^2}},\sqrt{a^2+b^2})
+\]
+is continuous.
+
+Therefore, the $f:\mathcal{S}^1\times(0,\infty)\to\mathbb{R}^2\setminus\{\bm0\}$ is a homomorphism.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

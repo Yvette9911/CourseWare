@@ -1,0 +1,305 @@
+
+\section{Wednesday for MAT3040}\index{Wednesday_lecture}
+\paragraph{Reviewing}
+\begin{itemize}
+\item
+$()_{\mathcal{A}}:V\to\mathbb{F}^n$ coordinate vector
+\item
+Change of Basis matrix: $\mathcal{C}_{\mathcal{A}',\mathcal{A}}$
+\item
+$T:V\to W$, $\mathcal{A}=\{\bm v_1,\dots,\bm v_n\}$ and $\bm B=\{\bm w_1,\dots,\bm w_m\}$.
+
+$\text{Hom}_{\mathbb{F}}(V,W)\to M_{m\times n}(\mathbb{F})$
+\end{itemize}
+
+\begin{example}
+Let $V=\mathbb{P}_3[x]$ and $\mathcal{A}=\{1,x,x^2,x^3\}$.
+
+Let $T:V\to V$ defined as $p(x)\mapsto p'(x)$.
+\[
+\begin{pmatrix}
+T(1)\\T(x)\\T(x^2)\\T(x^3)
+\end{pmatrix}
+=
+\begin{pmatrix}
+0&0&0&0\\1&0&0&0\\0&2&0&0\\0&0&3&0
+\end{pmatrix}\begin{pmatrix}
+1\\x\\x^2\\x^3
+\end{pmatrix}
+\]
+Therefore, the change of basis matrix is
+\[
+\mathcal{C}_{\mathcal{A},\mathcal{A}}=\begin{pmatrix}
+0&1&0&0\\0&0&2&0\\0&0&0&3\\0&0&0&0
+\end{pmatrix}
+\]
+
+Suppose $\mathcal{A}'=\{x^3,x^2,x,1\}$ and $T:V_\mathcal{A}\to V_{\mathcal{A}'}$:
+\[
+(T)_{\mathcal{A},\mathcal{A}'}
+=\begin{pmatrix}
+0&0&0&0\\0&0&0&3\\0&0&2&0\\0&1&0&0
+\end{pmatrix}
+\]
+
+Observation
+\[
+(2x^2+4x^3)\to^T(4x+12x^2)
+\]
+\[
+(2x^2+4x^3)_{\mathcal{A}}
+=
+\begin{pmatrix}
+0\\0\\2\\4
+\end{pmatrix}
+\qquad
+(4x+12x^2)_{\mathcal{A}}
+=
+\begin{pmatrix}
+0\\4\\12\\0
+\end{pmatrix}
+\]
+and
+\[
+\begin{pmatrix}
+0&1&0&0\\0&0&2&0\\0&0&0&3\\0&0&0&0
+\end{pmatrix}\begin{pmatrix}
+0\\0\\2\\4
+\end{pmatrix}=\begin{pmatrix}
+0\\4\\12\\0
+\end{pmatrix}
+\]
+\end{example}
+
+\begin{theorem}[Matrix Representation]
+Let $T:V\to W$be a linear transformation ($\dim(V),\dim(W)<\infty$), $\mathcal{A},\mathcal{B}$ the ordered basis of $V,W$, respectively.
+Then we have the commutative diagram:
+
+i.e., 
+\[
+(T)_{\mathcal{B},\mathcal{A}}(\bm v)_{\mathcal{A}}
+=
+(T\bm v)_{\mathcal{B}}
+\]
+Therefore, we can compute $T\bm v$ by matrix multiplication.
+\end{theorem}
+\begin{remark}
+\begin{enumerate}
+\item
+Vectors in $V$ corresponds to vectors in $\mathbb{F}^n$
+\item
+Linear transformation $T:V\to W$ corresponds to matrix $M\in M_{m\times n}(\mathbb{F})$
+\end{enumerate}
+\end{remark}
+
+\begin{proof}
+Prove for $\bm v=\bm v_j$ first.
+\[
+\text{LHS}:\qquad
+(T)_{\mathcal{B},\mathcal{A}}(\bm v_j)_{\mathcal{A}}=[\alpha_{ij}]\bm e_j=\begin{pmatrix}
+\alpha_{1j}\\\vdots\\\alpha_{nj}
+\end{pmatrix}
+\]
+\[
+\text{RHS}:\qquad
+(T\bm v_j)_{\mathcal{B}}
+=
+\left(
+\sum_{i=1}^m\alpha_{ij}\bm w_i
+\right)_{\mathcal{B}}
+=\begin{pmatrix}
+\alpha_{1j}\\\vdots\\\alpha_{nj}
+\end{pmatrix}
+\]
+For all $\bm v=\sum_{j=1}^nr_j\bm v_j$ in $V$,
+\begin{align*}
+(T)_{\mathcal{B}\mathcal{A}}(\bm v)_{\mathcal{A}}
+&=
+(T)_{\mathcal{B}\mathcal{A}}(\sum_{j=1}^nr_j\bm v_j)_{\mathcal{A}}\\
+&=
+(T)_{\mathcal{B}\mathcal{A}}(\sum_{j=1}^nr_j(\bm v_j)_{\mathcal{A}})\\
+&=
+\sum_{j=1}^nr_j(T)_{\mathcal{B}\mathcal{A}}(\bm v_j)_{\mathcal{A}}\\
+&=
+\sum_{j=1}^nr_j(T\bm v_j)_{\mathcal{B}}\\
+&=(\sum_{j=1}^nr_j(T\bm v_j))_{\mathcal{B}}\\
+&=(T(\sum_{j=1}^nr_j\bm v_j))_{\mathcal{B}}\\
+&=(T\bm v)_{\mathcal{B}}
+\end{align*}
+
+
+
+\end{proof}
+
+\begin{remark}
+Let $T:V\to V'$ be a linear transformation with 
+\[
+\begin{array}{ll}
+\mathcal{A}=\{\bm v_1,\dots,\bm v_n\},
+&
+\mathcal{A}'=\{\bm v_1',\dots,\bm v_n'\}
+\end{array}
+\]
+be two ordered basis of $V$.
+
+Consider $T=\text{id}$ and 
+\[
+(\text{id})_{\mathcal{A}'\mathcal{A}}=\mathcal{C}_{\mathcal{A}'\mathcal{A}}
+\]
+The matrix representation is a general case for the change of basis
+\end{remark}
+
+\begin{proposition}[Functoriality]
+Suppose$V,W,U$ are finite dimensional,
+$\mathcal{A},\mathcal{B},\mathcal{U}$ the ordered basis for $V,W,U$, respectively. Suppose that
+\[
+\begin{array}{ll}
+T:V\to W,
+&
+S:W\to U
+\end{array}
+\]
+are given two linear transformations, then
+\[
+(S\circ T)_{\mathcal{B},\mathcal{A}}
+=
+(S)_{\mathcal{A},\mathcal{B}}(T)_{\mathcal{B}\mathcal{A}}
+\]
+Composition of linear transformation results in the multiplication of matrices.
+\end{proposition}
+\begin{proof}
+Suppose that
+\begin{align*}
+T(\bm v_j)&=\sum_i(T_{\mathcal{B},\mathcal{A}})_{ij}\bm w_i\\
+S(\bm w_i)&=\sum_k(S_{\mathcal{C},\mathcal{B}})_{ki}\bm u_k\\
+\end{align*}
+where $\mathcal{A}=\{\bm v_1,\dots,\bm v_n\}$, $\mathcal{B}=\{\bm w_1,\dots,\bm w_m\}$, $\mathcal{C}=\{\bm u_1,\dots,\bm u_p\}$.
+
+Note that
+\begin{align*}
+(\mathcal{S}\circ T)_{\mathcal{B},\mathcal{A}}(\bm v_j)_{\mathcal{A}}
+&=
+(S\circ T(\bm v_j))_{\mathcal{C}}\\
+&=
+\left[S\circ\left(\sum_i(T_{\mathcal{B},\mathcal{A}})_{ij}\bm w_i\right)\right]\\
+&=
+\sum_i(T_{\mathcal{B},\mathcal{A}})_{ij}\left(
+\sum_k(\mathcal{S}_{\mathcal{C},\mathcal{B}})_{ki}\bm w_k
+\right)_{\mathcal{C}}\\
+&=\sum_k
+\left(
+\sum_i(S_{\mathcal{C},\mathcal{B}})(T_{\mathcal{B},\mathcal{A}})_{ij}\bm w_k
+\right)_{\mathcal{C}}\\
+&=
+\left[
+\sum_k
+(
+(S_{\mathcal{C},\mathcal{B}})\mathcal{T}_{\mathcal{B},\mathcal{A}}
+)_{ki}\bm v_k
+\right]_{\mathcal{C}}\\
+&=\text{$j$-th column of }[S_{\mathcal{C}\mathcal{B}}T_{\mathcal{B},\mathcal{A}}]
+\end{align*}
+
+Therefore,
+\[
+(S\circ T)_{\mathcal{C}\mathcal{A}}(\bm v_j)_{\mathcal{A}}
+=
+\text{$j$-th column of the matrix }(S_{\mathcal{C},\mathcal{B}})(T_{\mathcal{B},\mathcal{A}})
+\]
+
+Therefore, $(S\circ T)_{\mathcal{C}\mathcal{A}}$ and $(S_{\mathcal{C},\mathcal{B}})(T_{\mathcal{B},\mathcal{A}})$ has the same $j$-th column.
+\end{proof}
+
+\begin{corollary}
+Suppose that $S:V\to V$ is identity and $T:V\to V$.
+
+Consider $(S)_{\mathcal{A}'\mathcal{A}}$ and $(T)_{\mathcal{A},\mathcal{A}'}$, then
+\[
+(S\circ T)_{\mathcal{A},\mathcal{A}}
+=(S)_{\mathcal{A}'\mathcal{A}}
+(T)_{\mathcal{A},\mathcal{A}'}
+\]
+Therefore,
+\[
+\text{Identity matrix}
+=
+\mathcal{C}_{\mathcal{A}',\mathcal{A}}
+\mathcal{C}_{\mathcal{A},\mathcal{A}'}
+\]
+\end{corollary}
+
+\begin{proposition}
+Let $T:V\to W$ with $\dim(V)=n,\dim(W)=m$, and $V\in\mathbb{F}^{m\times n}$
+\begin{itemize}
+\item
+$\mathcal{A},\mathcal{A}'$ be ordered basis of $V$
+\item
+$\mathcal{B},\mathcal{B}'$ be ordered basis of $W$
+\end{itemize}
+\[
+(T)_{\mathcal{B}',\mathcal{A}'}
+=
+\mathcal{C}_{\mathcal{B}',\mathcal{B}}
+(T)_{\mathcal{B},\mathcal{A}}
+\mathcal{C}_{\mathcal{A}\mathcal{A}'}
+\]
+\end{proposition}
+
+\begin{proof}
+Let $\mathcal{A}=\{\bm v_1,\dots,\bm v_n\},\mathcal{A}'=\{\bm v_1',\dots,\bm v_n'\}$
+
+\begin{align*}
+\text{LHS}&=(T)_{\mathcal{B}',\mathcal{A}'}\bm e_j\\
+&=(T)_{\mathcal{B}',\mathcal{A}'}(\bm v_j')_{\mathcal{A}'}\\
+&=(T\bm v_j')_{\mathcal{B}'}
+\end{align*}
+
+\begin{align*}
+\text{RHS}&=\mathcal{C}_{\mathcal{B}',\mathcal{B}}
+(T)_{\mathcal{B},\mathcal{A}}
+\mathcal{C}_{\mathcal{A}\mathcal{A}'}\bm e_j\\
+&=\mathcal{C}_{\mathcal{B}',\mathcal{B}}
+(T)_{\mathcal{B},\mathcal{A}}
+\mathcal{C}_{\mathcal{A}\mathcal{A}'}(\bm v_j')_{\mathcal{A}'}\\
+&=\mathcal{C}_{\mathcal{B}',\mathcal{B}}
+(T)_{\mathcal{B},\mathcal{A}}
+(\bm v_j)_{\mathcal{A}}\\
+&=\mathcal{C}_{\mathcal{B}',\mathcal{B}}
+(T\bm v_j')_{\mathcal{B}}\\
+&=(T\bm v_j')_{\mathcal{B}'}
+\end{align*}
+\end{proof}
+
+\begin{remark}
+If $T:V\to V$ is a linear operator, and $\mathcal{A},\mathcal{A}'$ be two ordered basisof $V$, then
+\[
+(T)_{\mathcal{A}'\mathcal{A}'}
+=
+\mathcal{C}_{\mathcal{A}',\mathcal{A}}
+(T)_{\mathcal{A}\mathcal{A}}\mathcal{C}_{\mathcal{A},\mathcal{A}'}
+=
+(\mathcal{C}_{\mathcal{A},\mathcal{A}'})^{-1}
+(T)_{\mathcal{A}\mathcal{A}}\mathcal{C}_{\mathcal{A},\mathcal{A}'}
+\]
+$\bm A$ and $\bm B$ are similar means $\bm A,\bm B$ has the same eigenvalues, determinant, trace.
+\end{remark}
+
+Recall that two $n\times n$ matrices $\bm A,\bm B$ are similar (or conjugate) if there exists an inverible $\bm P$ such that
+\[
+\bm B=\bm P^{-1}\bm A\bm P
+\]
+Therefore, two similar matrices cooresponds to same linear transformation using different basis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

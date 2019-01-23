@@ -1,8 +1,8 @@
 \select@language {english}
 \vskip -8pt
-\contentsline {schapter}{Acknowledgments}{vii}{chapter*.2}
+\contentsline {schapter}{Acknowledgments}{ix}{chapter*.2}
 \vskip -8pt
-\contentsline {schapter}{Notations}{ix}{chapter*.3}
+\contentsline {schapter}{Notations}{xi}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Week1}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Monday for MAT3040}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Introduction to Advanced Linear Algebra}{1}{subsection.1.1.1}
@@ -33,4 +33,51 @@
 \contentsline {subsection}{\numberline {1.6.1}Forget about metric}{27}{subsection.1.6.1}
 \contentsline {subsection}{\numberline {1.6.2}Topological Spaces}{30}{subsection.1.6.2}
 \contentsline {subsection}{\numberline {1.6.3}Closed Subsets}{31}{subsection.1.6.3}
+\contentsline {chapter}{\numberline {2}Week2}{33}{chapter.2}
+\contentsline {section}{\numberline {2.1}Monday for MAT3040}{33}{section.2.1}
+\contentsline {paragraph}{Reviewing}{33}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Basis and Dimension}{33}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Operations on a vector space}{36}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Monday for MAT3006}{39}{section.2.2}
+\contentsline {paragraph}{Reviewing}{39}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Remark on Open and Closed Set}{39}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Boundary, Closure, and Interior}{43}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Monday for MAT4002}{46}{section.2.3}
+\contentsline {paragraph}{Reviewing}{46}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Convergence in topological space}{46}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Interior, Closure, Boundary}{48}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Wednesday for MAT3040}{52}{section.2.4}
+\contentsline {paragraph}{Reviewing}{52}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Remark on Direct Sum}{52}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Linear Transformation}{53}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Wednesday for MAT3006}{60}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Compactness}{60}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Completeness}{65}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Wednesday for MAT4002}{67}{section.2.6}
+\contentsline {paragraph}{Reviewing}{67}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Remark on Closure}{67}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Functions on Topological Space}{69}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Subspace Topology}{71}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Basis (Base) of a topology}{73}{subsection.2.6.4}
+\contentsline {chapter}{\numberline {3}Week3}{75}{chapter.3}
+\contentsline {section}{\numberline {3.1}Monday for MAT3040}{75}{section.3.1}
+\contentsline {paragraph}{Reviewing}{75}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Change of Basis and Matrix Representation}{76}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}Monday for MAT3006}{83}{section.3.2}
+\contentsline {paragraph}{Reviewing}{83}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Remarks on Completeness}{83}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Contraction Mapping Theorem}{84}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Picard Lindelof Theorem}{87}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Monday for MAT4002}{88}{section.3.3}
+\contentsline {paragraph}{Reviewing}{88}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Product Space}{90}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Wednesday for MAT3040}{92}{section.3.4}
+\contentsline {paragraph}{Reviewing}{92}{section.3.4}
+\contentsline {section}{\numberline {3.5}Wednesday for MAT3006}{98}{section.3.5}
+\contentsline {paragraph}{Reviewing}{98}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Picard-Lindelof Theorem}{98}{subsection.3.5.1}
+\contentsline {section}{\numberline {3.6}Wednesday for MAT4002}{104}{section.3.6}
+\contentsline {paragraph}{Reviewing}{104}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Properties of Topological Spaces}{107}{subsection.3.6.1}
+\contentsline {subsubsection}{\numberline {3.6.1.1}Hausdorff Property}{107}{subsubsection.3.6.1.1}
 \contentsfinish 

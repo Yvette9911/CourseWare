@@ -1,90 +1,112 @@
 
 \chapter{Week2}
-\section{Tuesday}\index{week2_Tuesday_lecture}
-\subsection{Optimal order quantity}
-The optimal $y^*$ is the smallest $y$ such that
+
+\section{Tuesday}\index{Tuesday_lecture}
+\begin{remark}
+One can generalize the ``independence'' of two events / $\sigma$-algebras / random variables to a countable collection.
+\end{remark}
+
+\begin{example}
+If two random variables $X,Y:\Omega\to\mathbb{R}$ are independent, provided that $X$ and $Y$ are integrable, i.e.,
 \[
-F(y)\ge\frac{c_p-c_v}{c_p-c_s}
+\begin{array}{ll}
+\mathbb{E}|X|<\infty,
+&
+\mathbb{E}|Y|<\infty,
+\end{array}
 \]
-\paragraph{Discrete Case Optimization} Given the expected profit function $h(y)$, we want to find the optimal $y$. Note that $y$ cannot be optimal if $h(y+1) - h(y)>0$.
-\[
-\begin{aligned}
-h(y+1) - h(y)&=\mathbb{E}\mbox{profit}(y+1,D) - \mbox{profit}(y,D)\\
-&=\mathbb{E}\mbox{revenue}(y+1,D) - \mbox{revenue}(y,D) - c_v
-\end{aligned}
-\]
-If $D\ge y+1$, there will be no leftover iterms in both systems:
-\[
-\mbox{revenue}(y+1,D) - \mbox{revenue}(y,D) = c_p
-\]
-If $D\le y$,
-\[
-\mbox{revenue}(y+1,D) - \mbox{revenue}(y,D) = c_s
-\]
-It follows that
-\[
-\begin{aligned}
-h(y+1) - h(y) &=c_p\mathbb{P}[D\ge y+1] + c_s\mathbb{P}[D\le y] - c_v\\
-&=c_p-c_v-(c_p-c_s)\mathbb{P}[D\le y]
-\end{aligned}
-\]
-Hence, $h(y+1)>h(y)$ iff
-\[
-\mathbb{P}[D\le y]<\frac{c_p - c_v}{c_p - c_s}
-\]
-In this case $y$ cannot be optimal. Hence, $y^*$ is the smallest $y$ s.t.
-\[
-\mathbb{P}[D\le y]\ge\frac{c_p - c_v}{c_p - c_s}
-\]
-\paragraph{Holding Cost for $h=.1$} If each leftover item cost $h$, we have
-\[
-\mathbb{E}\mbox{Profit}(q,D)
-=\mathbb{E}\min(q,D)c_p - c_vq - h\mathbb{E}(q-D)^+
-\]
-In addiction, if given a fixed cost of order $c_f$, we derive
-\[
-\mathbb{E}\mbox{Profit}(q,D)
-=\mathbb{E}\min(q,D)c_p - c_vq - h\mathbb{E}(q-D)^+ - c_f
-\]
-\paragraph{Confidence Interval}
-The expected profit in next three months is a summation of $90$ i.i.d. RVs:
-\[
-R(25) = P_1(25)+\cdots+P_{90}(25)
-\]
-Using central limit theorem, this RV is approximatly normal. It follows that
-\[
-R(25)\sim\mathcal{N}(11812,90\sigma^2)
-\]
-where $\sigma^2 = Var(R(25))$. Hence,
-\[
-\mathbb{P}
-\left(
-\left|\frac{R(25) - 11812}{\sqrt{90}\sigma}\right|<1.96
-\right)
-= 0.95
-\]
-With $95\%$ level of confidence, $R(25)$ is between $11812 + 1.96\cdot\sqrt{90}\sigma$ and $11812 - 1.96\cdot\sqrt{90}\sigma$
-\subsection{Non-perishable Products}
+then we have $\mathbb{E}[XY]=\mathbb{E}|X|\mathbb{E}|Y|$
+\end{example}
+\subsection{Stochastic Process}
+Stochastic processes are mathematical models that are used to describe random phenomena evolving in the time. 
+
+Therefore, we need to have a time set $T$ as parameters. $T$ can be \emph{non-negative} integers $\mathbb{Z}_+$ (i.e., discrete process), or be $[0,\infty)$ (i.e., continuous process). 
+
+\begin{definition}[Stochastic Process]
+A stochastic process $\{x_t\}_{t\in T}$ is a collection of parameterized random variables, which is defined on $(\Omega,\mathcal{F},\mathbb{P})$, and taking values in $\mathbb{R}^n$.
+\end{definition}
+\begin{remark}
+A stochastic process $\{X_t\}$ can be viewed as a function: $T\times\Omega\to\mathbb{R}^n$.
+\end{remark}
+
+\begin{definition}
 \begin{enumerate}
 \item
-For $X_n\ge s$, do not order anything
+For fixed $t\in T$, the function $\omega\to X_t(\omega)$ is a random variable.
 \item
-Otherwise, order enough to bring the inventory level to $S$ at the beginning of the next period.
+For fixed $\omega\in\Omega$, 
+\[
+t\mapsto X_t(\omega)
+\]
+is called a sample path.
+\item
+The stochastic process $\{X_t\}_{t\in T}$ is \emph{continuous} (resp. right-continuous, right-continuous with left limit) if the sample path $t\mapsto X_t(\omega)$ are continuous (resp. right-continuous, right-continuous with left limit), almost surely.
 \end{enumerate}
-For example, $(s,S) = (20,30)$, determine the probability $\mathbb{P}\{X_10=10\mid X_9=10\}$ and $\mathbb{P}\{X_10=10\mid X_9=20\}$:
+\end{definition}
+
+\begin{remark}
+A function $f:(a,b)\to\mathbb{R}$ is called \emph{right-continuous} at $t_0\in(a,b)$ if the right limit of $f$ exists at $t_0$ and equal to $f(t_0)$.
+
+The function $f$ is called \emph{right-continuous with left limit exists} at $t_0\in(a,b)$ if the limit of $f$ exists at $t_0$ , and the left limit of $f$ exists at $t_0$.
+\end{remark}
+
+\begin{example}[Possion Process]
+Let $\{\xi_j\}_{j\ge1}$ be i.i.d. random variables with possion distribution with intensity $\lambda$. Let $T_0=0$ and $T_n=\sum_{j=1}^n\xi_j$. For each $t\ge0$, define $x_t=n$ if $T_n\le t<T_{n+1}$.
+
+Then for fixed $\omega$, the function $t\to X_t(\omega)$ is a step function, with jump possibly at random time $T_n$, and is right-continuous with left-limit exists at $T_n$.
+\end{example}
+\begin{definition}
+If $\{X_t\}_{t\in T}$ is a stochastic process taking values in $\mathbb{R}^n$, the joint distribution of $x_{t_1},x_{t_2},\dots,x_{t_k}$ for given $t_1,t_2,\dots,t_k\in T$,
 \[
-\mathbb{P}\{X_{10}=10\mid X_9={10}\} = \mathbb{P}(D_{10}=20)=\frac{1}{8}
-\]
-\[
-\mathbb{P}\{X_{10}=10\mid X_9=20\}
+\mu_{t_1,t_2,\dots,t_k}(F_1\times\cdots\times F_k)
 =
-\mathbb{P}(D_{10} = 10) = \frac{1}{4}.
+\mathbb{P}(x_{t_1}\in F_1,\cdots,x_{t_k}\in F_k),
 \]
-Actually, we can create a matrix to describe these conditional probabilities:
+where $F_1,\dots,F_k$ are Borel sets in $\mathbb{R}^n$. This $\mu_{t_1,t_2,\dots,t_k}$ is also called \emph{finite-dimensional distribution}, which is a probability measure on $\mathbb{R}^n\times\cdots\times\mathbb{R}^n$
+\end{definition}
+
+\begin{example}[Brownian Motion]
+Given a probability space $(\Omega,\mathcal{F},\mathbb{P})$, for fixed $x\in\mathbb{R}$, define
 \[
-S_{ij} = \mathbb{P}\{X_{10} = j \mid X_9 = i\}
+\mathbb{P}(y;t,x)=\frac{1}{\sqrt{2\pi t}}\exp\left(
+-\frac{(y-x)^2}{2t},y\in\mathbb{R},t>0
+\right)
 \]
-Knowing current state, past states are irrelevant to predict future states. 
+The Brownian motion $\{B_t\}_{t\ge0}$ is a continuous stochastic process, and the distribution of $\{B_t\}$ with $t_0=0,B_0=x$ is given by:
+\[
+\begin{aligned}
+\mathbb{P}&(B_{t_1}\in F_1,\dots,B_{t_k}\in F_k)
+=\\
+&\int_{F_1\times\cdots\times F_k}p(t_1,x,x_1)p(t_2-t_1,x_1,x_2)\cdots p(t_k-t_{k-1},x_{k-1},x_k)\diff(x_1,\dots,x_k)
+\end{aligned}
+\]
+
+\end{example}
+\begin{remark}
+If $\{x_t\}_{t\ge0}$ is a continuous stochastic process and we need to deal with such kind of set below
+\[
+F=\{\omega\mid x_t(\omega)\in[0,1),\forall t\le1\}
+\]
+Such set $F$ may be not measurable, i.e., $F$ may not be an event. Then $\mathbb{P}(F)$ does not make sense. Therefore, we need the additional conditions.
+\end{remark}
+\paragraph{Exercise}
+Let $\{x_t\}_{t\ge0}$ be a stochastic process on $(\Omega,\mathcal{F},\mathbb{P})$ and take values in $\mathbb{R}^n$. Let $\bm B$ be a Borel subset. If $T$ is a countable set (or can be finite), then
+\[
+\{\omega\mid x_t(\omega)\in\bm B,\forall t\in T\}\text{ is measurable} = \bigcap_{t\in T}\{\omega:X_t(\omega)\in\bm B\}.
+\]
+We can also show that $\sup_{t\in T}|x_t(\omega)|$ is measurable.
+
+\begin{definition}
+Let $\{x_t\}_{t\ge0}$ and $\{Y_t\}_{t\ge0}$ be two stochastic process. We call $\{Y_t\}$ be a version of $\{x_t\}$ if for every $t\ge0$,
+\[
+\mathbb{P}\{w\mid x_t(\omega)=Y_t(\omega)\}=1,
+\]
+then $\{x_t\}$ and $\{Y_t\}$ are also called to be equivalent.
+\end{definition}
+\begin{remark}
+If $\{Y_t\}_{t\ge0}$ is a version of $\{x_t\}_{t\ge0}$, then they have the same joint distribution.
+\end{remark}
+
 
 
 

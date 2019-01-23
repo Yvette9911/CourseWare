@@ -1,0 +1,207 @@
+\section{Wednesday for MAT4002}\index{Monday_lecture}
+\paragraph{Reviewing}
+\begin{itemize}
+\item
+Product Topology:
+\[
+\mathcal{B}_{X\times Y}=\{U\times V\mid U\in\mathcal{T}_X,V\in\mathcal{T}_Y\}
+\]
+e.g., $X=Y=\mathbb{R}$.
+\[
+S^1\times S^1\cong T
+\]
+\end{itemize}
+\begin{proposition}
+If $f:[0,2\pi]\to X$ is continuous and $f(0)=f(2\pi)$, then
+\[
+f:S^1\to X
+\]
+is continuous. For example, $f(\theta)=(\cos\theta,\sin\theta)$ is continuous for $f:S^1\to\mathbb{R}^3$.
+\end{proposition}
+
+The mapping $f:[0,2\pi]\times[0,2\pi]\to T\subseteq\mathbb{R}^3$ is continuous,
+\[
+f(\theta,\phi)=\begin{pmatrix}
+(R+r\cos\theta)\cos\phi,
+&
+(R+r\cos\theta)\sin\phi,
+&
+r\sin\theta
+\end{pmatrix}
+\]
+Reason: define $i:T\to\mathbb{R}^3$, and
+\[
+i\circ f:[0,2\pi]\times[0,2\pi]\to\mathbb{R}^3
+\]
+Note that $i\circ f$ is continuous iff $f:[0,2\pi]\times[0,2\pi]\to T$ is continuous.
+\[
+\left\{
+\begin{aligned}
+f(0,y)&=f(2\pi,y)\\
+f(x,0)&=f(x,2\pi)
+\end{aligned}
+\right.
+\]
+Therefore, $f:S^1\times S^1\to T$ is continuous. We can also show it is bijective. We can also show $f^{-1}$ is continuous.
+
+\begin{proposition}
+\begin{enumerate}
+\item
+Let $X\times Y$ be endowed with product topology. The $p_X:X\times Y\to X$ and $p_Y:X\times Y\to Y$ with $(x,y)\mapsto x$ and $(x,y)\mapsto y$ are continuous
+\item
+The product topology is the \emph{coarest topology} on $X\times Y$ such that $p_X$ and $p_Y$ are both continuous.
+\item
+Let $Z$ be a topological space, then the product topology is the unique topology such that 
+\[
+F:Z\to X\times Y\text{ is continuous}
+\]
+if and only if both $P_X\circ F:Z\to X$ and $P_Y\circ F:Z\to Y$ are continuous.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+\begin{enumerate}
+\item
+For $\forall U\in\mathcal{T}_X$, we imply\[
+p_X^{-1}(U)=U\times Y\in\mathcal{B}_{X\times Y}\subseteq\mathcal{T}_{X\times Y}
+\]
+The same goes for $p_Y$
+\item
+For any topology $\mathcal{T}$ on $X\times Y$ such that  $p_X,p_Y$ are continuous, we imply
+\[
+\begin{array}{ll}
+p_X^{-1}(U)=U\times X\in\mathcal{T},
+&
+p_Y^{-1}(V)=X\times V\in\mathcal{T},
+\end{array}
+\]
+for $\forall U\in\mathcal{T}_X,V\in\mathcal{T}_Y$, which implies
+\[
+(U\times Y)\cap(X\times V)\in\mathcal{T},
+\]
+o.e., $U\times V\in\mathcal{T}$ for all $U\in\mathcal{T}_X,V\in\mathcal{T}_Y$, which implies
+\[
+\mathcal{B}_{X\times Y}\subseteq\mathcal{T},
+\]
+i.e., $\mathcal{T}_{\text{product topology}}\subseteq\mathcal{T}$.
+\item
+Exercise: If $\mathcal{T}=\mathcal{T}_{\text{product}}$, then $\mathcal{T}_{\text{product}}$ satisfies (*).
+
+Then we show the uniqueness. Suppose $\mathcal{T}$ is another topology $X\times Y$ satisfying (*).
+
+Take $Z=(X\times Y,\mathcal{T})$, then $F=\text{id}:Z\to Z$ is continuous.
+
+It implies that $p_X\circ\text{id}$ and $p_Y\circ\text{id}$ are continuous, i.e., $p_X$ and $p_Y$ are continuous, by (2) implies that $\mathcal{T}_{\text{product}}\subseteq\mathcal{T}$.
+
+
+Take $Z=(X\times Y,\mathcal{T}_{\text{product}})$ and $F=\text{id}$. Then
+\[
+p_X\circ F=p_X
+\]
+is continuous by (1). SImilarly, $p_Y\circ F$ is continuous. Therefore $F:Z\to(X\times Y,\mathcal{T})$ is continuous, i.e., the identity mapping
+\[
+(X\times Y,\mathcal{T}_{\text{product}})
+\times
+(X\times Y,\mathcal{T})\text{ is continuous}
+\]
+for $\forall U\in\mathcal{T}$, which implies
+$U=\text{id}^{-1}(U)\subseteq\mathcal{T}_{\text{product}}$. Therefore
+\[
+\mathcal{T}\subseteq\mathcal{T}_{\text{product}}
+\implies
+\mathcal{T}=\mathcal{T}_{\text{product}}
+\]
+\end{enumerate}
+\end{proof}
+
+\begin{definition}[Disjoint Union]
+Let $X\times Y$ be two topological spaces, then the \emph{disjoint union} is
+\[
+\displaystyle
+X\prod Y:=(X\times\{0\})\cup(Y\times\{1\})
+\]
+\end{definition}
+Then $U$ is open in $X\prod Y$ if
+\begin{enumerate}
+\item
+$U\cap(X\times\{0\})$ is open in $X\times\{0\}$; and
+\item
+$U\cap(Y\times\{1\})$ is open in $Y\times\{1\}$.
+\end{enumerate}
+
+$S$ is open in $X\perp Y$ iff 
+\[
+S=(U\times\{0\})\cup(V\times\{1\})
+\]
+where $U\subseteq X$ is open and $V\subseteq Y$ is open.
+
+\subsection{Properties of Topological Spaces}
+\subsubsection{Hausdorff Property}
+\begin{definition}
+A topological space $X$ satisfies the \emph{first separation axiom} if for any two distinct points $x\ne y\in X$, there exists open $U\ni x$ but not including $y$.
+\end{definition}
+
+\begin{proposition}
+A topological space $X$ has first separation property if and only if for $\forall x\in X$, $\{x\}$ is closed in $X$.
+\end{proposition}
+\begin{proof}
+Sufficiency.
+Suppose that $x\ne y$, then $x\in U\setminus\{y\}$ is open but not includes $y$.
+
+Necessity.
+Take any $x\in X$, then for $\forall y\ne x$, there exists $y\in U_y$ that is open and $x\notin U_y$. Thus 
+\[
+\{y\}\subseteq U_y\subseteq X\setminus\{x\}
+\]
+which implies
+\[
+\bigcup_{y\in X\setminus\{x\}}\{y\}\subseteq
+\bigcup_{y\in X\setminus\{x\}}U_y\subseteq
+X\setminus\{x\},
+\]
+i.e., $X\setminus\{x\}=\bigcup_{y\in X\setminus\{x\}}U_y$ is open in $X$, i.e., $\{x\}$ is closed in $X.$
+\end{proof}
+
+\begin{definition}[Second separation]
+A topological space satisfies the \emph{second separation axiom} (or $X$ is Hausdorff) if for all $x\ne y$ in $X$, there exists open sets $U,V$ such that
+\[
+\begin{array}{lll}
+x\in U,
+&
+y\in V,
+&
+U\cap V=\emptyset
+\end{array}
+\]
+\end{definition}
+
+\begin{example}
+All metrizable topological spaces are Hausdorff.
+
+Suppose $d(x,y)=r>0$, then take $B_{r/2}(x)$ and $B_{r/2}(y)$
+\end{example}
+
+\begin{example}
+Given the $\mathcal{T}_{\text{co-finite}}$, then $X$ is first separable but not Hausdorff.
+\[
+X\setminus(U\cap V)
+=
+(X\setminus U)\cup(X\setminus V)
+\]
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

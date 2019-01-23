@@ -1,0 +1,250 @@
+\section{Wednesday for MAT3006}\index{Monday_lecture}
+\paragraph{Reviewing}
+\begin{itemize}
+\item
+Suppose $E\subseteq X$ with $X$ being complete, then
+$E$ is closed in $X$ iff $E$ is complete
+\item
+Suppose $E\subseteq X$, then
+$E$ is closed in $X$ if $E$ is complete.
+\item
+Contraction Mapping Theorem
+\item
+Convergence of Newton's method: suffices to find the fixed point of $T$.
+\[
+\begin{array}{ll}
+T:\mathbb{R}\to\mathbb{R},
+&
+T(x)=x-\frac{f(x)}{f''(x)}
+\end{array}
+\]
+There $\exists$ $[r-\varepsilon,r+\varepsilon]$ such that $\sup_{[r-\varepsilon,r+\varepsilon]}|T'(x)|<1$.
+
+Then:
+\begin{itemize}
+\item
+$T: [r-\varepsilon,r+\varepsilon]\to[r-\varepsilon,r+\varepsilon]$, since
+\[
+|T(x)-r|=|T(x)-T(r)|=|T'(s)||x-r|\le\sup_{[r-\varepsilon,r+\varepsilon]}|T'(s)||x-r|<|x-r|
+\]
+Therefore, if $x\in [r-\varepsilon,r+\varepsilon]$, then $T(x)\in [r-\varepsilon,r+\varepsilon]$.
+\item
+$T$ is a contraction:
+\[
+|T(x)-T(y)|<\tau\cdot|x-y|
+\]
+\end{itemize}
+Therefore, applying contraction mapping theorem gives the desired result.
+\end{itemize}
+
+\subsection{Picard-Lindelof Theorem}
+Consider the initival value problem
+\begin{equation}\label{Eq:3:3}
+\left\{
+\begin{aligned}
+\frac{\diff y}{\diff x}&=f(x,y)\\
+y(\alpha)&=\beta
+\end{aligned}
+\right.
+\implies
+y(x)=\beta+\int_{\alpha}^xf(t,y(t))\diff t
+\end{equation}
+
+
+\begin{definition}
+Let $R=[\alpha-a,\alpha+a]\times[\beta-b,\beta+b]$. Then the function $f(x,y)$ satisfies the \emph{Lipschitz condition} on $R$ if there exists $L>0$ such that
+\begin{equation}\label{Eq:3:2}
+|f(x,y_1)-f(x,y_2)|<L\cdot |y_1-y_2|,\qquad
+\forall (x,y_i)\in R
+\end{equation}
+The smallest number $L^*=\inf\{L\mid (\ref{Eq:3:2})\text{ holds for $L$}\}$ is called the \emph{Lipschitz constant} for $L$.
+\end{definition}
+
+\begin{example}
+Consider $f(x,y)$ in $\mathcal{C}^1$, then
+\[
+f(x,y_1)-f(x,y_2)=\frac{\partial f}{\partial y}(x,\tilde y)(y_1-y_2)
+\]
+Therefore, on $R$, $\frac{\partial f}{\partial y}$ is bounded.
+
+Therefore $f(x,y)$ satisfies the Lipschitz condition.
+\end{example}
+
+\begin{theorem}[Picard-Lindelof]
+Suppose $f\in\mathcal{C}(R)$ be such that $f$ satisfies the Lipschitz condition, then there exists $a'\in(0,a)$ such that (\ref{Eq:3:3}) is solvable with $y(x)\in\mathcal{C}([\alpha-a',\alpha+a'])$. 
+\end{theorem}
+\begin{proof}
+Consider the complete metric space
+\[
+X=\{y(x)\in \mathcal{C}([\alpha-a,\alpha+a])
+\mid\beta-b\le y(x)\le\beta+b
+\}
+\]
+and $T:X\to X$ defined as
+\[
+(Ty)(x)=\beta
++
+\int_\alpha^xf(t,y(t))\diff t
+\]
+Here we restrict $a$ a smaller number as follows:
+\begin{enumerate}
+\item
+Well-defined: let $M=\sup\{f(x,y)\mid (x,y)\in R\}$. Take $a'=\min\{b/M,a\}$, and then take
+\[
+X=\{y(x)\in \mathcal{C}([\alpha-a',\alpha+a'])
+\mid\beta-b\le y(x)\le\beta+b
+\}
+\]
+which implies that 
+\[
+|(Ty)(x)-\beta|\le 
+\left|\int_\alpha^xf(t,y(t))\diff t\right|
+\le M|x-\alpha|\le Ma'\le b
+\]
+\item
+Contraction: Take $a''\in\min\{a',\frac{1}{2L^*}\}$ and consider
+\[
+X=\{y(x)\in \mathcal{C}([\alpha-a'',\alpha+a''])
+\mid\beta-b\le y(x)\le\beta+b
+\}
+\]
+Then by (1) $T:X\to X$, and $\forall x\in[\alpha-a'',\alpha+a'']$,
+\begin{align*}
+|[T(y_1)-T(y_2)](x)|&\le
+\left|
+\int_\alpha^x[f(t,y_2(t))-f(t,y_1(t))]\diff t
+\right|\\
+&\le\int_\alpha^x|f(t,y_2)-f(t,y_1)|\diff t\\
+&\le\int_\alpha^xL^*|y_2(t)-y_1(t)|\diff t\\
+&\le L^*|x-\alpha|\sup|y_2(t)-y_1(t)|
+\le L^*a''d_\infty(y_2,y_1)\\
+&\le\frac{1}{2}d_\infty(y_2,y_1)
+\end{align*}
+Therefore, $d_\infty(Ty_2,Ty_1)\le\frac{1}{2}d_\infty(y_2,y_1)$.
+
+By contraction mapping theorem, there exists $y(x)\in X$ such that $Ty=y$, i.e.,
+\[
+y=\beta+\int_\alpha^xf(t,y(t))\diff t
+\]
+Thus $y$ is a solution for the IVP
+\[
+\left\{
+\begin{aligned}
+\frac{\diff y}{\diff x}&=f(x,y)\\
+y(\alpha)&=\beta
+\end{aligned}
+\right.
+\]
+\end{enumerate}
+
+\end{proof}
+\begin{remark}
+On $[\alpha-a'',\alpha+a'']$, we can solve $y$ by repeatedly appling $T$:
+\[
+y_0(x)=\beta,\qquad
+\forall x\in[\alpha-a'',\alpha+a'']
+\]
+and thus
+\[
+y_1=T(y_0)=\beta+\int_\alpha^xf(t,\beta)\diff t
+\]
+and $y_2=Ty_1,\dots$
+\end{remark}
+
+By studying (\ref{Eq:3:3}) on different rectangles, we are able to extend our solution:
+
+\begin{proposition}
+Suppose $y_1,y_2$ are solutions of (\ref{Eq:3:3}), and $f$ satisfies the Lipschitz conditon, where $y_1$ is defined on $x\in I_1$, and $y_2$ is defined on $x\in I_2$, i.e.,
+
+$\alpha=I_1\cap I_2$ and $y_1(\alpha)=y_2(\alpha)=\beta$.
+
+Then $y_1(x)=y_2(x)$ on $I_1\cap I_2$.
+\end{proposition}
+\begin{proof}
+Suppose $I_1\cap I_2=[p,q]$ and let
+\[
+z:=\sup\{x'\mid y_1(x)=y_2(x)\text{ on }[\alpha,x']\}
+\]
+It suffices to show $z=q$.
+
+Sicne $y_1,y_2$ are solutions of (\ref{Eq:3:1}), then
+\begin{align*}
+y_1&=\beta+\int_\alpha^xf(t,y_1)\diff t\\
+y_2&=\beta+\int_\alpha^xf(t,y_2)\diff t
+\end{align*}
+which implies
+\[
+|y_1-y_2|=|\int_z^xf(t,y_1)-f(t,y_2)\diff t|
+\]
+Now suppose on the contrary that $z>q$
+\begin{itemize}
+\item
+Consider $I^*=[z-\frac{1}{2L^*},z+\frac{1}{2L^*}]\cap[p,q]$,
+\item
+Let $x_m$ be the maximum of $|y_1(x)-y_2(x)|$ on $I^*$, i.e., $|y_1(x)-y_2(x)|\le |y_1(x_m)-y_2(x_m)|$ for $\forall x\in I^*$.
+\item
+Then on $I^*$,
+\begin{align*}
+|y_1(x)-y_2(x)|&\le \int_z^x|f(t,y_1(t))-f(t,y_2(t))|\diff t\\&\le
+L^*\int_z^x|y_1-y_2|\diff t\le \frac{1}{2}|y_1(x_m)-y_2(x_m)|,\forall x\in I^*,
+\end{align*}
+taking $x=x^m$, we imply $y_1(x)=y_2$ for any $x\in I^*$, which contradicts the maximality of $z$.
+\end{itemize}
+\end{proof}
+\begin{remark}
+Lipschitz condition is important in shoing the uniqueness of solution of (\ref{Eq:3:3}). It guarantees that we have a constant $L^*$ in the proof.
+\end{remark}
+
+\begin{corollary}
+Let $U\subseteq\mathbb{R}^2$ be an open set such that $f(x,y)$ satisfies the Lipschitz condition for all $[a,b]\times[c,d]\subseteq U$, then (\ref{Eq:3:3}) has a solution $y(x)$ for $x\in(x_m,x_M)$ such that 
+if $y^*(x)$ is another solution of (\ref{Eq:3:3}) on some interval $I$, then $I\subseteq(x_m,x_M)$, and $y(x)=y^*(x)$ on $I$.
+
+Thus $y(x)$ is maximally defined; and $y(x)$ is unique.
+\end{corollary}
+
+\begin{example}
+Consider the IVP
+\[
+\left\{
+\begin{aligned}
+\frac{\diff y}{\diff x}&=x^2y^{1/5}\\
+y(0)&=C
+\end{aligned}
+\right.
+\]
+Note that $\frac{\partial f}{\partial y}=\frac{x^2}{5y^{4/5}}$. Thus take $U=$, which implies
+\[
+y(x)=\left(\frac{4x^3}{15}+c^{4/5}\right)^{5/4}
+\]
+is defined for $(\sqrt[3]{-15/4c^{4/5}},\infty)$.
+
+Here $U=\mathbb{R}\times(0,\infty)$.
+
+However, $f(x,y)$ does not satisfy the Lipschitz condition when $y=0$, ($\frac{\partial f}{\partial y}\to\infty$)
+In this case, both are solutions of (\ref{Eq:3:3}) when $c=0$.
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
