@@ -9,3 +9,100 @@ $G$ is Hamiltionian if for any vetices $v,w$ such that $(v,w)\notin E$,
 \mbox{deg}(v)+\mbox{deg}(w)\ge n
 \]
 \end{theorem}
+
+
+\paragraph{Knapsacle Problem}
+\[
+\begin{array}{ll}
+\max&\sum_{i=1}^nv_iu_i\\
+\mbox{such that}&\sum_{i=1}^nw_iu_i\le W\\
+&u_i\in\{0,1\},\ i=1,\dots,n
+\end{array}
+\]
+
+This is the binary integer programming problem, which is NP-complete. We cannot find exact solution to this problem. There are $2^n$ possible solutions, which requires exponential time.
+
+We can find some ``pseudo''-polynomial algorithm. Assumption:
+\begin{enumerate}
+\item
+$W$ is an integer. 
+
+\end{enumerate}
+
+State: remaining capacity, define as $X_k$.
+
+Stage: iterm $1,\dots,n$.
+\[
+J_N(x_N)=\left\{
+\begin{aligned}
+v_N &\quad\text{if }N\le X_N\\
+0,&\quad\text{if }w_N>X_N
+\end{aligned}
+\right.
+\]
+\[
+J_N(x_{N-1})
+=
+\left\{
+\begin{aligned}
+0+J_N(X_N),&\quad\text{if }w_{N-1}>X_{N-1}, \text{Here }X_N=X_{N-1}\\
+\max\{v_{N-1}+J_N(x_N), 0+J_N(x_N)\}&,\text{ if }w_{N-1}\le X_{N-1}
+\end{aligned}
+\right.
+\]
+
+Here why the DP has ``pesduo''-polynomial time, and the $w_i$ should be integer?
+
+Let's list states $\{x_1,\dots,x_N\}$. For each stage $k$, there would be $W+1$.
+
+Each iteration at most $2$ computation, and therefore we face $2(W+1)\cdot N$
+
+\subsection{Label Correcting Methods}
+Shortest Path. Back up some information.
+
+The label refers to the intermediate information.
+
+$A^*$-algorithm; Bellman-Ford Algorithm
+
+Benchmark: MILP, CPLEX, CVX.
+
+\subsection{DP problems with perfect state information}
+
+\paragraph{Linear Quadratic System}
+Let $x_k\in\mathbb{R}^1$ be the state; $u_k\in\mathbb{R}^n$ be the control; $\omega_k\in\mathbb{R}^n$ be the disturbance.
+
+System Dynamics.
+\[
+x_{k+1}=A_kx_k+B_ku_k+\omega_k
+\]
+Stage cost:
+\[
+x_k'Q_kx_k+u_k'R_ku_k
+\]
+Here $Q_k$ is required to be positive-semi-definite symmetric matrix; $R_k$ to be positive-definite symmetric matrix.
+\[
+J_{n-1}(x_{n-1})=\min_{u_{n-1}}\mathbb{E}_{\omega}
+\left\{
+x_{n-1}'Q_{n-1}x_{n-1}+u_{n-1}'R_{n-1}u_{n-1}
++
+J_n(x_n)
+\right\}
+\]
+where
+\[
+J_n(x_n)=(A_{n-1}x_{n-1}+Bu_{n-1}+\omega)'Q_n
+(A_{n-1}x_{n-1}+Bu_{n-1}+\omega)
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+

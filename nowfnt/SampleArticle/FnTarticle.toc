@@ -64,10 +64,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Wednesday}{12}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Acknowledgements}{13}{chapter*.7}
+\contentsline {paragraph}{Knapsacle Problem}{12}{paragraph*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Appendices}{14}{chapter*.7}
+\contentsline {subsection}{\numberline {4.4.1}Label Correcting Methods}{13}{subsection.4.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Journal Codes}{15}{appendix.A}
+\contentsline {subsection}{\numberline {4.4.2}DP problems with perfect state information}{13}{subsection.4.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Files Produced During Compilation}{17}{appendix.B}
+\contentsline {paragraph}{Linear Quadratic System}{13}{paragraph*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgements}{14}{chapter*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{Appendices}{15}{chapter*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Journal Codes}{16}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Files Produced During Compilation}{18}{appendix.B}

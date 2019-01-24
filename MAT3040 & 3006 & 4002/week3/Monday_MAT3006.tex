@@ -118,105 +118,101 @@ Consider an in-complete space $X=(0,1)$ and a contraction $f(x)=\frac{x+1}{2}$. 
 \end{example}
 
 \begin{proof}
-Pick any $x_0\in X$, and define $x_{n+1}=T(x_n)$ for $n=0,1,\dots$.
+Pick any $x_0\in X$, and define a sequence recursively by setting $x_{n+1}=T(x_n)$ for $n\ge0$.
+\begin{enumerate}
+\item
+Firstly show that the sequence $\{x_n\}$ is Cauchy.
 
-Therefore, $x_n=T^n(x_0)$. It suffices to show the sequence $\{x_n\}$ is Cauchy. For any $n\ge m$,
-\begin{align*}
-d(x_n,x_m)&=d(T^n(x_0),T^m(x_0))\\
-&=d(T(T^{n-1}(x_0)),T(T^{m-1}(x_0)))\\
-&\le \tau\cdot d(T^{n-1}(x_0),T^{m-1}(x_0))\\
-&\cdots\\
-&\le \tau^md(T^{n-m}(x_0),x)\\
-&\le\tau[d(T^{n-m}(x_0),T^{n-m-1}(x_0))+\cdots+d(T^2(x_0),T(x_0))+d(T(x_0),x_0)]\\
-&\le\tau^m
-\left[
-\tau^{n-m-1}d(T(x_0),x_0)
-+
-\tau^{n-m-2}d(T(x_0),x_0)
-+
-\cdots+
-d(T(x_0),x_0)
-\right]\\
-&<\tau^m
-\frac{1-\tau^{n-m}}{1-\tau}d(x_1,x_0)\\
-&\le\frac{\tau^m}{1-\tau}d(x_1,x_0)
-\end{align*}
-When $m$ is large, $d(x_n,x_m)\to0$.
+We can upper bound the term $d(T^n(x_0),T^{n-1}(x_0))$:
+\begin{equation}\label{Eq:3:4}
+d(T^n(x_0),T^{n-1}(x_0))\le \tau d(T^{n-1}(x_0),T^{n-2}(x_0))\le\cdots\le \tau^{n-1}d(T(x_0),x_0)
+\end{equation}
+Therefore for any $n\ge m$, where $m$ is going to be specified later,
+\begin{subequations}
+\begin{align}
+d(x_n,x_m)&=d(T^n(x_0),T^m(x_0))\label{Eq:3:5:a}\\
+&\le\tau d(T^{n-1}(x_0),T^{m-1}(x_0))\le\cdots\le\tau^md(T^{n-m}(x_0),x_0)\label{Eq:3:5:b}\\
+&\le\tau^m\sum_{j=1}^{n-m}\tau^{n-m-j}d(T(x_0),x_0)\label{Eq:3:5:c}\\
+&<\frac{\tau^{m}}{1-\tau}d(T(x_0),x_0)\label{Eq:3:5:d}\\
+&\le\varepsilon\label{Eq:3:5:e}
+\end{align}
+\end{subequations}
+where (\ref{Eq:3:5:b}) is by repeatedly applying contraction property of $d$; (\ref{Eq:3:5:c}) is by applying the triangle inequality and (\ref{Eq:3:4}); (\ref{Eq:3:5:e}) is by choosing sufficiently large $m$ such that $\frac{\tau^{m}}{1-\tau}d(T(x_0),x_0)<\varepsilon$.
 
-Therefore, $\{x_n\}$ is Cauchy. By the completeness of $X$, we imply $\{x_n\}\to x\in X$
-
-Now we imply
+Therefore, $\{x_n\}$ is Cauchy. By the completeness of $X$, we imply $\{x_n\}\to x\in X$.
+\item
+Therefore, we imply 
 \[
 x=\lim_{n\to\infty}x_{n+1}=\lim_{n\to\infty}T(x_n)=T(\lim_{n\to\infty}x_n)=T(x),
 \]
 i.e., $x$ is a fixed point of $T$.
 
-Suppose $T(x)=x$ and $T(y)=y$, we imply
+Now we show the uniqueness of the fixed point. Suppose that there is another fixed point $y\in X$, then
 \[
-d(T(x),T(y))<rd(x,y)\implies d(x,y)<rd(x,y)
+d(x,y)=d(T(x),T(y))<\tau\cdot d(x,y)\implies d(x,y)<\tau d(x,y),\quad\tau\in(0,1),
 \]
-Therefore $d(x,y)=0$, i.e., $x=y$.
-
+and we conclude that $d(x,y)=0$, i.e., $x=y$.
+\end{enumerate}
 \end{proof}
 
-\begin{example}[Newton's Method]
-Define
-\[
-\frac{y-f(x_n)}{x-x_n}=f'(x_n)
-\]
-and put $x=x_{n+1}$ into the intersect $y=0$, i.e.,
+\begin{example}[Convergence of Newton's Method]
+The Newton's method aims to find the root of $f(x)$ by applying the iteration
 \[
 x_{n+1}=x_n-\frac{f(x_n)}{f'(x)}
 \]
-Suppose$f(x)=0$ is not a root, then
+Suppose $r$ is a root for $f$, the pre-assumption for the convergence of Newton's method is:
 \begin{enumerate}
 \item
 $f'(r)\ne0$
 \item
 $f\in\mathcal{C}^2$ on some neighborhood of $r$
 \end{enumerate}
-Then there exists $[r-\varepsilon,r+\varepsilon]$ such that the mapping
+\begin{proof}
+\begin{enumerate}
+\item
+We first show that there exists $[r-\varepsilon,r+\varepsilon]$ such that the mapping
 \[
-T:\mathcal{C}[r-\varepsilon,r+\varepsilon]\to\mathbb{R}
+\begin{array}{ll}
+T:\mathcal{C}[r-\varepsilon,r+\varepsilon]\to\mathbb{R},
+&
+f(x)\mapsto x-\frac{f(x)}{f'(x)}
+\end{array}
 \]
-satisfying $|T'(x)|<1$ for all $x\in [r-\varepsilon,r+\varepsilon]
-$.
+satisfies $|T'(x)|<1$ for $\forall x\in[r-\varepsilon,r+\varepsilon]$:
 
+Note that $T'(x)=\frac{f(x)}{[f'(x)]^2}f''(x)$, and we define $h(x)=|T'(x)|$.
 
-Assume this is true for any $x,y\in [r-\varepsilon,r+\varepsilon]$,
+It's clear that $h(r)=0$ and $h(x)$ is continuous, which implies
 \[
-d(T(x),T(y))=|T(x)-T(y)|=|T'(z)||x-y|
+r\in h^{-1}((-1,1))\implies
+B_\rho(r)\subseteq h^{-1}((-1,1))\ \text{for some $\rho>0$}.
 \]
-Since $|T'(w)|<1$ for all $w\in[r-\varepsilon,r+\varepsilon]$, we claim that $\max_{w\in[r-\varepsilon,r+\varepsilon]}|T'(w)|=r<1$.
-
-Then, MVT implies $|T(x)-T(y)|<r|x-y|$ for $\forall x,y\in[r-\varepsilon,r+\varepsilon]$.
-
-Therefore, $T\in\mathcal{C}[r-\varepsilon,r+\varepsilon]$ is a contraction, and thereforewe have $T(x)=x$, which implies
+Or equivalently, $h((r-\rho,r+\rho))\subseteq(-1,1)$. Take $\varepsilon=\frac{\rho}{2}$, and the result is obvious.
+\item
+Therefore, any $x,y\in [r-\varepsilon,r+\varepsilon]$,
+\begin{subequations}
+\begin{align}
+d(T(x),T(y)):&=|T(x)-T(y)|\label{Eq:3:6:a}\\
+&=|T'(\xi)||x-y|\label{Eq:3:6:b}\\
+&\le\max_{\xi\in [r-\varepsilon,r+\varepsilon]}|T'(\xi)||x-y|\label{Eq:3:6:c}\\
+&<m\cdot|x-y|\label{Eq:3:6:d}
+\end{align}
+\end{subequations}
+where (\ref{Eq:3:6:b}) is by applying MVT, and $\xi$ is some point in $[r-\varepsilon,r+\varepsilon]$; we assume that $\max_{\xi\in [r-\varepsilon,r+\varepsilon]}|T'(\xi)|<m$ for some $m<1$ in (\ref{Eq:3:6:d}).
+\end{enumerate}
+Therefore, $T\in\mathcal{C}[r-\varepsilon,r+\varepsilon]$ is a contraction. By applying the contraction mapping theorem, there exists a unique fixed point near $[r-\varepsilon,r+\varepsilon]$:
 \[
 x-\frac{f(x)}{f'(x)}=x\implies\frac{f(x)}{f'(x)}=0\implies f(x)=0,
 \]
 i.e., we obtain a root $x=r$.
+\end{proof}
 
-Conclusion: if we use Newton's method on any point between $[r-\varepsilon,r+\varepsilon]$ where $f(r)=0$, then we will eventually get close to $r$.
-
-
-So we need to show that $|T'(x)<1|$ for $x\in[r-\varepsilon,r+\varepsilon]$.
-
-Indeed,
-\[
-T'(x)=\frac{f(x)}{[f'(x)]^2}f''(x)\implies
-|T'(x)|=h(x)
-\]
-Note that $h(r)=0$ and $h(x)$ is continuous, which implies
-\[
-r\in h^{-1}((-1,1))\implies B_\rho(r)\subseteq h^{-1}((-1,1))
-\]
-Therefore, $h((r-\rho,r+\rho))\subseteq(-1,1)$. Take $\varepsilon=\frac{\rho}{2}$, the proof is complete.
+Summary: if we use Newton's method on any point between $[r-\varepsilon,r+\varepsilon]$ where $f(r)=0$ and $\varepsilon$ is sufficiently small, then we will eventually get close to $r$.
 \end{example}
 
 \subsection{Picard Lindelof Theorem}
 We will use Banach fixed point theorem to show the existence and uniqueness of the solution of ODE
-\[
+\begin{equation}\label{Eq:3:7}
 \left\{
 \begin{aligned}
 \frac{\diff y}{\diff x}&=f(x,y(x))\\
@@ -224,9 +220,9 @@ y(x_0)&=y_0
 \end{aligned}
 \right.\qquad
 \textbf{Initial Value Problem, IVP}
-\]
-
-The separation of variables can be applied to solve
+\end{equation}
+\begin{example}
+Consider the IVP
 \[
 \left\{
 \begin{aligned}
@@ -239,18 +235,18 @@ y=\left(
 \frac{4x^3}{15}+c^{4/5}
 \right)^{5/4}
 \]
-This problem has a unique solution. However, when $c=0$, the ODE does not have a unique solution:
+which can be solved by the separation of variables:
+\[
+c>0\implies y=\left(
+\frac{4x^3}{15}+c^{4/5}
+\right)^{5/4}.
+\]
+However, when $c=0$, the ODE does not have a unique solution. One can verify that $y_1,y_2$ given below are both solutions of this ODE:
 \[
 y_1=(\frac{4x^3}{15})^{5/4},\qquad
 y_2=0
 \]
-
-
-
-
-
-
-
-
+This example shows that even when $f$ is very nice, the IVP may not have unique solution. The Picard-Lindelof theorem will give a clean condition on $f$ ensuring the unique solvability of the IVP~(\ref{Eq:3:7}).
+\end{example}
 
 

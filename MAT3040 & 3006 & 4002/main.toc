@@ -62,22 +62,27 @@
 \contentsline {chapter}{\numberline {3}Week3}{75}{chapter.3}
 \contentsline {section}{\numberline {3.1}Monday for MAT3040}{75}{section.3.1}
 \contentsline {paragraph}{Reviewing}{75}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Change of Basis and Matrix Representation}{76}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.1}Remarks on Isomorphism}{75}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Change of Basis and Matrix Representation}{76}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}Monday for MAT3006}{83}{section.3.2}
 \contentsline {paragraph}{Reviewing}{83}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Remarks on Completeness}{83}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Contraction Mapping Theorem}{84}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Picard Lindelof Theorem}{87}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Monday for MAT4002}{88}{section.3.3}
-\contentsline {paragraph}{Reviewing}{88}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Product Space}{90}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Wednesday for MAT3040}{92}{section.3.4}
-\contentsline {paragraph}{Reviewing}{92}{section.3.4}
-\contentsline {section}{\numberline {3.5}Wednesday for MAT3006}{98}{section.3.5}
-\contentsline {paragraph}{Reviewing}{98}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Picard-Lindelof Theorem}{98}{subsection.3.5.1}
-\contentsline {section}{\numberline {3.6}Wednesday for MAT4002}{104}{section.3.6}
-\contentsline {paragraph}{Reviewing}{104}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Properties of Topological Spaces}{107}{subsection.3.6.1}
-\contentsline {subsubsection}{\numberline {3.6.1.1}Hausdorff Property}{107}{subsubsection.3.6.1.1}
+\contentsline {section}{\numberline {3.3}Monday for MAT4002}{89}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Remarks on Basis and Homeomorphism}{89}{subsection.3.3.1}
+\contentsline {paragraph}{Reviewing}{89}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Product Space}{92}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Wednesday for MAT3040}{94}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Remarks for the Change of Basis}{94}{subsection.3.4.1}
+\contentsline {paragraph}{Reviewing}{94}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}Wednesday for MAT3006}{100}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Remarks on Contraction}{100}{subsection.3.5.1}
+\contentsline {paragraph}{Reviewing}{100}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Picard-Lindelof Theorem}{101}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Wednesday for MAT4002}{105}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Remarks on product space}{105}{subsection.3.6.1}
+\contentsline {paragraph}{Reviewing}{105}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Properties of Topological Spaces}{108}{subsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.2.1}Hausdorff Property}{108}{subsubsection.3.6.2.1}
 \contentsfinish 
