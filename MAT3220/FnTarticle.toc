@@ -1,0 +1,103 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\thispagestyle {empty}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction to Linear Programming}{2}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Preliminaries}{2}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Standard Form}{2}{paragraph*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Dictionaries of an LP}{3}{paragraph*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Simplex Method}{5}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Notations}{5}{paragraph*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Simplex Method Algorithm}{5}{paragraph*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Pivot Rules}{6}{paragraph*.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}The Distribution and Installation}{10}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Pre-requisites}{10}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}The Distribution}{10}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Folder \texttt {nowfnt}}{10}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{journaldata}{11}{paragraph*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{SampleArticle}{11}{paragraph*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Folder \texttt {nowfnttexmf}}{11}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Installation}{11}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Quick Start}{13}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}\textbackslash documentclass}{13}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}\textbackslash issuesetup}{14}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}\textbackslash maintitleauthorlist}{14}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}\textbackslash author and \textbackslash affil}{14}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\textbackslash author}{14}{paragraph*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\textbackslash affil}{14}{paragraph*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}\textbackslash addbibresource}{14}{section.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Style Guidelines and \LaTeX \ Conventions}{15}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Abstract}{15}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Acknowledgements}{15}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}References}{15}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Citations}{16}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}Example citations}{16}{subsection.4.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Preface and Other Special Chapters}{16}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Long Chapter and Section Names}{17}{section.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.7}Internet Addresses}{17}{section.4.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Compiling Your FnT Article}{18}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Compiling Your Article Prior to Submission}{18}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Preparing the Final Versions}{19}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{lastpage=}{19}{paragraph*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Compiling The Final Versions}{19}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Wednesday}{20}{section.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Knapsacle Problem}{20}{paragraph*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.1}Label Correcting Methods}{21}{subsection.5.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.2}DP problems with perfect state information}{21}{subsection.5.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Linear Quadratic System}{21}{paragraph*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.3}Linear Quadratic}{21}{subsection.5.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Riccati Equation}{23}{paragraph*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgements}{25}{chapter*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{Appendices}{26}{chapter*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Journal Codes}{27}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Files Produced During Compilation}{29}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{30}{appendix*.18}

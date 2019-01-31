@@ -72,10 +72,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Linear Quadratic System}{13}{paragraph*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Acknowledgements}{14}{chapter*.9}
+\contentsline {subsection}{\numberline {4.4.3}Linear Quadratic}{13}{subsection.4.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Appendices}{15}{chapter*.9}
+\contentsline {paragraph}{Riccati Equation}{15}{paragraph*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Journal Codes}{16}{appendix.A}
+\contentsline {chapter}{Acknowledgements}{17}{chapter*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Files Produced During Compilation}{18}{appendix.B}
+\contentsline {part}{Appendices}{18}{chapter*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Journal Codes}{19}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Files Produced During Compilation}{21}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{22}{appendix*.13}
