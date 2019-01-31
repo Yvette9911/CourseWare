@@ -22,7 +22,7 @@ Or more generally, the constraints with equalities:
 \end{equation*}
 
 It's often convenient to write the LP~(\ref{Eq:1:1}) into the compact matrix form:
-\begin{equation}
+\begin{equation}\label{Eq:1:2}
 \begin{array}{ll}
 \max&\bm c\trans\bm x\\
 \text{s.t.}&\bm{Ax}\le\bm b\\
@@ -174,14 +174,14 @@ The assumption for the working of simplex method is that we are given a primal f
 Primal feasible basic solution;
 \ENSURE ~~\\ %算法的输出：Output
 Improved feasible basic solution;
-\STATE Entering Basis Variable
+\STATE Find Entering Basis Variable $j$
 \begin{itemize}
 \item
 Search for $j\in N$ such that $\bar{c}_j>0$
 \item
 If none exists then the current basic solution is optimal; otherwise choose one of such $j$.
 \end{itemize}
-\STATE Leaving Basis Variable
+\STATE Find Leaving Basis Variable $i$
 \begin{itemize}
 \item
 Search for $i\in B$ such that $\bar{a}_{ij}>0$
@@ -313,13 +313,177 @@ Moreover, $\bm v-\bm u\in\mathcal{R}(\bm A\trans)$ and $\bm d^{(k)}\in\mathcal{N
 \]
 which is a contradiction.
 \end{proof}
+\begin{lemma}
+Given the condition that the LP~(\ref{Eq:1:2}) has one basic feasible solution, then the LP~(\ref{Eq:1:2}) with perturbations, i.e., 
+\begin{equation}\label{Eq:1:6}
+\begin{array}{ll}
+\max&\bm c\trans\bm x\\
+\text{s.t.}&\bm{Ax}\le\bm b+\begin{pmatrix}
+\varepsilon_1\\\vdots\\\varepsilon_m
+\end{pmatrix}\\
+&\bm x\ge\bm0
+\end{array}
+\end{equation}
+will face no degeneracy for $\forall \bm\varepsilon\in(\bm0,\bm\varepsilon_1)$ for some $\bm\varepsilon_1>0$.
 
+\end{lemma}
+\begin{proof}
+For any basis $B$, the feasible solution for LP~(\ref{Eq:1:6}) is $\bm A_B^{-1}(\bar{\bm b}+\bm\varepsilon)$. Suppose its $i$-th component is zero, i.e., $0+0\varepsilon_1+\cdots+0\varepsilon_m$.
 
+However, its $i$-th component is $\bm e_i\trans\bm A_B^{-1}(\bar{\bm b}+\bm\varepsilon)$, which implies $\bm e_i\trans\bm A_B^{-1}=\bm0$, which is a contradiction.
+\end{proof}
+Question: what's the conclusion for page 19 in slides 1?
 
+\paragraph{Two-Phase Simplex Method}
+Given a dictionary
+\[
+x_{n+i}=b_i-\sum_{j=1}^na_{ij}x_j,\quad i=1,\dots,m,
+\]
+with some $b_i<0$, the question is how to choose an initial basic feasible solution? The \emph{two-phase simplex method} proceeds as follows:
+\begin{enumerate}
+\item
+Introduce a new variable $x_0$
+\[
+x_{n+i}=b_i-\sum_{j=1}^na_{ij}x_j+x_0,\quad i=1,\dots,m,
+\]
+and an objective $-x_0$ to maximize
+\item
+Suppose that $b_i<0$ is the smallest valu. Perform a pivot on $x_0$ and thus $x_{n+i}$ will turn the dictionary into a feasible one.
+\item
+This \emph{non-cycling pivots} will lead to either (a) an optimal basis where $x_0$ is within the basis, and we conclude this problem is infeasible; (b) or we have $x_0$ out of the basis, and we just delete $x_0$ and plug back the original objective, and go from there.
+\end{enumerate}
+\begin{example}
+Given the dictionary 
+\begin{align*}
+x_4&=4-2x_1+x_2-2x_3\\
+x_5&=-5-2x_1+3x_2-x_3\\
+x_6&=-1+x_1-x_2+2x_3
+\end{align*}
+We first add the new variable $x_0$ and an objective $-x_0$:
+\begin{align*}
+x_4&=4-2x_1+x_2-2x_3+x_0\\
+\bm{x_5}&=-5-2x_1+3x_2-x_3+x_0\\
+x_6&=-1+x_1-x_2+2x_3+\bm{x_0}\\
+z&=-x_0
+\end{align*}
+Choosing $x_0$ entering the basis and $x_5$ leaving the basis, we obtain:
+\begin{align*}
+x_4&=9-x_2+x_3+x_5\\
+x_0&=5+2x_1-3x_2-x_3+x_5\\
+x_6&=4+3x_1-4x_2+3x_3+x_5\\
+w&=-5-2x_1+3x_2+x_3-x_5
+\end{align*}
+and our feasible solution is $(x_1,x_2,x_3,x_4,x_5,x_6)=(0,0,0,9,0,4)$.
+\end{example}
 
+\section{Duality Results}
+\begin{theorem}
+A linear programming problem can only be (i) \emph{feasible}; or (ii) \emph{infeasible}. In case (i), then \emph{there exists a basic feasible solution}, and further with two possibilities: (i.a) \emph{an optimal solution exists, in that case a basic optimal solution exists} (i.b) \emph{the problem is unbounded}.
+\end{theorem}
 
+\paragraph{Duality problem is the best possible upper bounding problem}
+Consider the primal problem
+\[
+(P)\qquad
+\begin{array}{ll}
+\max&\bm c\trans\bm x\\
+\text{s.t.}&\bm{Ax}\le\bm b\\
+&\bm x\ge0
+\end{array}
+\]
 
+Take any $\bm y\ge0$ such that $\bm y\trans\bm A\ge\bm c\trans$, and thus $\bm y\trans\bm b$ becomes an upper bound for the optimal value. Therefore the best possible upper bounding problem becomes:
+\[
+(D)\qquad
+\begin{array}{ll}
+\max&\bm b\trans\bm y\\
+\text{s.t.}&\bm A\trans\bm y\ge\bm c\\
+&\bm y\ge0
+\end{array}
+\]
+which is known as the \emph{dual} problem.
 
+The proceed above can be summarized as the weak duality theorem:
+\begin{theorem}[Weak Duality]
+Let $\bm x,\bm y$ be the primal feasible, and dual feasible solution to (P) and (D), respectively, then we always have $\bm b\trans\bm y\ge\bm c\trans\bm x$.
+\end{theorem}
+
+\begin{theorem}[Strong Duality]
+If (P) has an optimal solution, then (D) has an optimal solution. Moreover, the optimal values coincide.
+\end{theorem}
+\begin{proof}
+Let $B$ be an optimal basis for (P), then we have
+\[
+\begin{array}{ll}
+\bm A_B^{-1}\bm b\ge0,
+&
+\begin{bmatrix}
+\bm c\trans&\bm0_m\trans
+\end{bmatrix}-\bm c_B\trans\bm A_B^{-1}\begin{bmatrix}
+\bm A&\bm I
+\end{bmatrix}\le0
+\end{array}
+\]
+Therefore we construct the dual feasible solution $\bm y:=\bm A_B^{-1}\bm c_B$, which implies $\bm b\trans\bm y=\bm c_B\trans\bm A_B^{-1}\bm b$. Therefore $\bm b\trans\bm y$ should be the optimal solution for (D).
+\end{proof}
+
+\paragraph{Complentarity Slackness}
+\begin{theorem}[Complentarity Condition]
+Consider the primal and dual problem
+\[
+(P)\ \ \begin{array}{ll}
+\max&\bm c\trans\bm x\\
+\text{s.t.}&\bm A\bm x+\bm s=\bm b\\
+&\bm x\ge0,\bm s\ge0
+\end{array},\qquad
+(D)\ \ 
+\begin{array}{ll}
+\min&\bm b\trans\bm y\\
+\text{s.t.}&\bm A\trans\bm y-\bm w=\bm c\\
+&\bm y\ge0,\bm w\ge0
+\end{array}
+\]
+If $(P)$ has an optimal solution $(\bm x,\bm s)$ and $(D)$ has an optimal solution $(\bm y,\bm w)$, then
+\begin{align*}
+\bm s\circ\bm y&=\bm0\\
+\bm w\circ\bm x&=\bm0
+\end{align*}
+\end{theorem}
+
+\begin{remark}
+\begin{enumerate}
+\item
+If (P) is feasible and unbounded, then (D) must be infeasible.
+\item
+The dual of the dual problem is the primal problem
+\item
+There is possibility that both (P) and (D) are infeasible. Consider the self-dual problem for example:
+\[
+\begin{array}{ll}
+\max&x_1-x_2\\
+\text{s.t.}&\begin{pmatrix}
+0&1\\-1&0
+\end{pmatrix}\begin{pmatrix}
+x_1\\x_2
+\end{pmatrix}\le\begin{pmatrix}
+-1\\1
+\end{pmatrix}\\
+&x_1\ge0,x_2\ge0
+\end{array}
+\]
+\item
+Therefore, the relationship for primal and dual problems can be summarized in the table below:
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+&\text{Feasible}&\text{Unbounded}&\text{Infeasible}\\\hline
+\text{Feasible}&Y&N&N\\\hline
+\text{Unbounded}&N&N&Y\\\hline
+\text{Infeasible}&N&Y&Y\\\hline
+\end{array}
+\]
+\end{enumerate}
+\end{remark}
 
 
 

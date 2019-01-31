@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  31 JAN 2019 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  1 FEB 2019 02:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1495,7 +1495,15 @@ l.144 \end{equation}
                     ]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 170.
- [5] [6] [7] [8]) [9]
+ [5] [6] [7] [8] [9]
+Overfull \hbox (0.40724pt too wide) in paragraph at lines 333--334
+[]\T1/lmr/m/n/10.95 (-20) However, its $\OML/lmm/m/it/10.95 i$\T1/lmr/m/n/10.95
+ (-20) -th com-po-nent is $\OML/lmm/b/it/10.95 e[]A[]\OT1/lmr/m/n/10.95 (-20) (
+[] + \OML/lmm/b/it/10.95 "\OT1/lmr/m/n/10.95 (-20) )$\T1/lmr/m/n/10.95 (-20) , 
+which im-plies $\OML/lmm/b/it/10.95 e[]A[] \OT1/lmr/m/n/10.95 (-20) =
+ []
+
+[10] [11] [12]) [13]
 Chapter 2.
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 112.
 
@@ -1508,18 +1516,18 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 114.
- [10
+ [14
 
-] [11] [12]
+] [15] [16]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
-[13
+[17
 
-] [14]
+] [18]
 Chapter 4.
 LaTeX Font Info:    Calculating math sizes for size <15> on input line 258.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1528,7 +1536,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.49995> on input line 258.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7.5> on input line 258.
-[15
+[19
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 297--307
@@ -1540,24 +1548,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 297--307
 
  []
 
-[16] [17]
+[20] [21]
 Chapter 5.
-[18
+[22
 
-] [19] (./Wednesday_week3.tex
+] [23] (./Wednesday_week3.tex
 Overfull \hbox (83.95988pt too wide) detected at line 52
 \OML/lmm/m/it/10.95 J[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]\OT1/lmr/m/n/
 10.95 ) = []
  []
 
-[20] [21]
+[24] [25]
 Overfull \hbox (42.52786pt too wide) in paragraph at lines 131--131
 [] 
  []
 
-[22] [23]) [24] [25
+[26] [27]) [28] [29
 
-] [26
+] [30
 
 ]
 Appendix A.
@@ -1566,11 +1574,11 @@ Overfull \hbox (0.88123pt too wide) in paragraph at lines 436--477
 [][] 
  []
 
-[27
+[31
 
-] [28]
+] [32]
 Appendix B.
-[29
+[33
 
 ]
 Package microtype Info: Character `029' is missing
@@ -1578,7 +1586,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
  
 AED: lastpage setting LastPage
-[30
+[34
 
 
 ]
@@ -1596,11 +1604,11 @@ Package logreq Info: Writing requests to 'FnTarticle.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19731 strings out of 492995
- 321339 string characters out of 6132703
- 951316 words of memory out of 5000000
- 22644 multiletter control sequences out of 15000+600000
- 223234 words of font info for 246 fonts, out of 8000000 for 9000
+ 19772 strings out of 492995
+ 321746 string characters out of 6132703
+ 951396 words of memory out of 5000000
+ 22647 multiletter control sequences out of 15000+600000
+ 224010 words of font info for 254 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,14n,45p,796b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1634,10 +1642,10 @@ sy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/201
 7/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on FnTarticle.pdf (33 pages, 547410 bytes).
+Output written on FnTarticle.pdf (37 pages, 560237 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
- 459 compressed objects within 5 object streams
- 110 named destinations out of 1000 (max. 500000)
- 51971 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 585 PDF objects out of 1000 (max. 8388607)
+ 502 compressed objects within 6 object streams
+ 132 named destinations out of 1000 (max. 500000)
+ 51979 words of extra memory for PDF output out of 61914 (max. 10000000)
 
