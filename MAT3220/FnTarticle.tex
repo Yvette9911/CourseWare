@@ -12,6 +12,8 @@
 \usepackage{bm}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{mathtools}
+\usepackage{amssymb}
 \newcommand{\cupdot}{\mathbin{\mathaccent\cdot\cup}}
 \newcommand{\trans}{^{\mathrm T}}
 \newcommand{\Her}{^{\mathrm H}}
@@ -20,7 +22,23 @@
 \newcommand{\eg}{\emph{e.g.}}
 \newcommand{\etc}{\emph{etc}}
 \newcommand{\now}{\textsc{now}}
-
+\newcommand{\diff}{\,\mathrm{d}}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\row}{row}
+\DeclareMathOperator{\col}{col}
+\DeclareMathOperator{\Range}{Range}
+\DeclareMathOperator{\im}{Im}
+\DeclarePairedDelimiterX{\inp}[2]{\langle}{\rangle}{#1, #2}
+\DeclareMathOperator{\Proj}{Proj}
+\newcommand{\degree}{^\circ}
+\DeclareMathOperator{\diag}{diag}
+\newcommand*\conj[1]{\bar{#1}}
+\DeclareMathOperator{\eig}{eig}
+\DeclareMathOperator{\trace}{trace}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\tr}{tr}
 \renewcommand{\algorithmicrequire}{ \textbf{Input:}} %Use Input in the format of Algorithm
 \renewcommand{\algorithmicensure}{ \textbf{Output:}} %UseOutput in the format of Algorithm
 
@@ -82,9 +100,7 @@ mike.casey@nowpublishers.com
 \articledatabox{\nowfntstandardcitation}
 
 \begin{document}
-
 \makeabstracttitle
-
 \begin{abstract}
 This document describes how to prepare a Foundations and
 Trends\textsuperscript{\textregistered}  article in \LaTeX\ .
@@ -96,6 +112,8 @@ is an example of such a file.
 
 \input First_lecture/First.tex
 \input Second_lecture/First.tex
+\input Third_lecture/First.tex
+\input Fourth_lecture/First.tex
 \label{intro}
 \chapter{The Distribution and Installation}
 \label{c-intro} % a label for the chapter, to refer to it later

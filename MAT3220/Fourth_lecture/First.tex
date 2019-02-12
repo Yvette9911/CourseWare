@@ -1,0 +1,117 @@
+%\chapter{Introduction to Linear Programming}
+\chapter{The KKT Condition for Nonlinear Programming}
+
+\section{unconstrained Optimality Condition}
+Consider the unconstrained optimization
+\begin{equation}
+\begin{array}{ll}
+\min&f(x)
+\end{array}
+\end{equation}
+where $f:\mathbb{R}^n\to\mathbb{R}$ is an $m$-th order \emph{continuously differentiable} function. We aim to find the optimality condition for this problem.
+
+\begin{theorem}[First Order Necessary Condition]
+Given the condition that $f\in\mathcal{C}^1$, if $x^*$ is a local minimum point, then $\nabla f(x^*)=0$.
+\end{theorem}
+\begin{theorem}[Second Order Necessary Condition]
+Given the condition that $f\in\mathcal{C}^2$, if $x^*$ is a local minimum point, then $\nabla f(x^*)=0$ and $\nabla^2f(x^*)\succeq0$.
+\end{theorem}
+
+\begin{theorem}[Second Order Sufficient Condition]
+Given the condition that $f\in\mathcal{C}^2$, if $\nabla f(x^*)=0$ and $\nabla^2f(x^*)\succ0$, then $x^*$ is a local minimum point.
+\end{theorem}
+
+\begin{theorem}[First Order Necessary and Sufficient Condition]
+If $f$ is convex, then $x^*$ is a local minimum point if and only if $0\ni\partial f(x^*)$.
+\end{theorem}
+
+\begin{proof}
+All theorems above relies on the Taylor expansion and 
+\[
+f(x^*+\Delta x)\ge f(x^*),\forall\Delta x
+\Longleftrightarrow
+\text{the point $x^*$ is minimum}
+\]
+\end{proof}
+
+All the conditions above only involve the explicit quantities related to $x$. Now we turn into the constrained optimization case.
+
+\section{Constrained Optimality Condition}
+Consider the special constrained optimization
+\begin{equation}\label{Eq:4:2}
+\begin{array}{ll}
+\min&f(x)\\
+\mbox{such that}&x\in\mathcal{X}\\
+\end{array}
+\end{equation}
+where $\mathcal{X}\subseteq\mathbb{R}^n$ is usually pre-assumed to be a closed convex set.
+
+\begin{definition}[Tangent Cone]
+Let $\hat x\in\mathcal{X}$. The \emph{tangent cone} of $\mathcal{X}$ at point $\hat x$ is defined as
+\[
+\mathcal{T}(\hat x):=\left\{
+y\ne0\middle|\exists x^k\in\mathcal{X}:\
+x^k\to\hat x\
+\&\
+\frac{x^k-\hat x}{\|x^k-\hat x\|}\to\frac{y}{\|y\|}
+\right\}\cup\{0\}
+\]
+It's clear that $\mathcal{T}(\hat x)$ denotes all feasible directions from $\hat x$ within $\mathcal{X}$
+\end{definition}
+
+Therefore we obtain a necessary optimality condition for constrained optimization, which is beautiful in theory but not that useful in practice:
+\begin{theorem}[First Order Necessary Condition]
+If $x^*$ is a local minimum point for the constraint (neither necessarily convex nor closed) set $\mathcal{X}$, then
+\[
+\inp{\nabla f(x^*)}{y}\ge0,\ \forall y\in\mathcal{T}(x^*),
+\]
+i.e., $\nabla f(x^*)\in(\mathcal{T}(x^*))^*$.
+\end{theorem}
+\begin{theorem}
+The above condition becomes necessary and sufficient if $f$ is convex. In that case, we may weaken the condition into
+\[
+\partial f(x^*)\cap (\mathcal{T}(x^*))^* \ne\emptyset.
+\]
+\end{theorem}
+
+\begin{proof}
+The proof relies on the fact that $f$ is convex iff
+\[
+f(y)\ge f(x)+\inp{d}{(y-x)},\forall x,y\in\mathcal{X},
+\]
+where $d\in\partial f(x^*)$.
+\end{proof}
+
+\begin{theorem}
+Given further condition that $\mathcal{X}$ is a convex set, if $x^*$ is a local minimum point for the constraint set $\mathcal{X}$, then
+\[
+\inp{\nabla f(x^*)}{y-x^*}\ge0,\ \forall y\in\mathcal{X}.
+\]
+This condition becomes sufficient if $f$ is convex.
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
