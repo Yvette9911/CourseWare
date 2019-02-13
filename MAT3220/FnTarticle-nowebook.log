@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  14 FEB 2019 05:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  13 FEB 2019 02:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**FnTarticle.tex
-(./FnTarticle.tex
+**FnTarticle-nowebook.tex
+(./FnTarticle-nowebook.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
-(./nowfnt.cls
+(./FnTarticle.tex (./nowfnt.cls
 Document Class: nowfnt 2017/09/21 v0.95a NOW document class
 (/usr/local/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
@@ -1197,7 +1197,7 @@ File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 \@quotelevel=\count355
 \@quotereset=\count356
 
-(./FnTarticle.aux
+(./FnTarticle-nowebook.aux
 
 LaTeX Warning: Label `fig:2:2' multiply defined.
 
@@ -1205,7 +1205,7 @@ LaTeX Warning: Label `fig:2:2' multiply defined.
 LaTeX Warning: Label `fig:2:3' multiply defined.
 
 )
-\openout1 = `FnTarticle.aux'.
+\openout1 = `FnTarticle-nowebook.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
 LaTeX Font Info:    ... okay on input line 102.
@@ -1304,36 +1304,14 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <9> not available
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `FnTarticle.bcf'.
+\openout4 = `FnTarticle-nowebook.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'FnTarticle.bbl' found.
- (./FnTarticle.bbl
+Package biblatex Info: ... file 'FnTarticle-nowebook.bbl' not found.
 
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                arvolumenumber
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                inproceedings
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                beditorvolumenumber
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+No file FnTarticle-nowebook.bbl.
 Package biblatex Info: Reference section=0 on input line 102.
 Package biblatex Info: Reference segment=0 on input line 102.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1480,14 +1458,14 @@ Package pdftex.def Info: essence_logo.pdf used on input line 102.
 
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./now_l
-ogo.pdf> <./essence_logo.pdf>] (./FnTarticle.toc [2
+ogo.pdf> <./essence_logo.pdf>] (./FnTarticle-nowebook.toc [2
 
 
-] [3])
+])
 \tf@toc=\write6
-\openout6 = `FnTarticle.toc'.
+\openout6 = `FnTarticle-nowebook.toc'.
 
- [4]
+ [3]
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 102.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <8> not available
@@ -1539,7 +1517,7 @@ which im-plies $\OML/lmm/b/it/10.95 e[]A[] \OT1/lmr/m/n/10.95 (-20) =
 
 [10] [11] [12]) (./Second_lecture/First.tex [13]
 Chapter 2.
-<Second_lecture/p_1.png, id=260, 586.19pt x 462.72874pt>
+<Second_lecture/p_1.png, id=246, 586.19pt x 462.72874pt>
 File: Second_lecture/p_1.png Graphic file (type png)
 
 <use Second_lecture/p_1.png>
@@ -1548,35 +1526,35 @@ Package pdftex.def Info: Second_lecture/p_1.png used on input line 7.
  [14
 
  <./Second_lecture/p_1.png>]
-<Second_lecture/p_2.png, id=270, 420.57124pt x 310.15875pt>
+<Second_lecture/p_2.png, id=256, 420.57124pt x 310.15875pt>
 File: Second_lecture/p_2.png Graphic file (type png)
 
 <use Second_lecture/p_2.png>
 Package pdftex.def Info: Second_lecture/p_2.png used on input line 52.
 (pdftex.def)             Requested size: 161.15497pt x 118.84593pt.
 
-<Second_lecture/p_3.png, id=271, 400.49625pt x 294.09875pt>
+<Second_lecture/p_3.png, id=257, 400.49625pt x 294.09875pt>
 File: Second_lecture/p_3.png Graphic file (type png)
 
 <use Second_lecture/p_3.png>
 Package pdftex.def Info: Second_lecture/p_3.png used on input line 58.
 (pdftex.def)             Requested size: 161.15497pt x 118.34195pt.
  [15 <./Second_lecture/p_2.png> <./Second_lecture/p_3.png>] <Second_lecture/p_4
-.png, id=282, 358.33875pt x 335.2525pt>
+.png, id=267, 358.33875pt x 335.2525pt>
 File: Second_lecture/p_4.png Graphic file (type png)
 
 <use Second_lecture/p_4.png>
 Package pdftex.def Info: Second_lecture/p_4.png used on input line 74.
 (pdftex.def)             Requested size: 161.15497pt x 150.77525pt.
 
-<Second_lecture/p_5.png, id=283, 423.5825pt x 365.365pt>
+<Second_lecture/p_5.png, id=268, 423.5825pt x 365.365pt>
 File: Second_lecture/p_5.png Graphic file (type png)
 
 <use Second_lecture/p_5.png>
 Package pdftex.def Info: Second_lecture/p_5.png used on input line 80.
 (pdftex.def)             Requested size: 161.15497pt x 139.00182pt.
 
-<Second_lecture/p_6.png, id=285, 699.61375pt x 515.9275pt>
+<Second_lecture/p_6.png, id=270, 699.61375pt x 515.9275pt>
 File: Second_lecture/p_6.png Graphic file (type png)
 
 <use Second_lecture/p_6.png>
@@ -1584,7 +1562,7 @@ Package pdftex.def Info: Second_lecture/p_6.png used on input line 92.
 (pdftex.def)             Requested size: 161.15497pt x 118.84189pt.
  [16 <./Second_lecture/p_4.png> <./Second_lecture/p_5.png> <./Second_lecture/p_
 6.png>]
-<Second_lecture/p_7.png, id=298, 873.2625pt x 428.60126pt>
+<Second_lecture/p_7.png, id=284, 873.2625pt x 428.60126pt>
 File: Second_lecture/p_7.png Graphic file (type png)
 
 <use Second_lecture/p_7.png>
@@ -1596,7 +1574,7 @@ Overfull \hbox (11.20644pt too wide) in paragraph at lines 167--169
 -20) de-note col-lec-tions of poly-he-drons,polytopes,polyhedral
  []
 
-<Second_lecture/p_8.png, id=312, 717.68124pt x 603.25375pt>
+<Second_lecture/p_8.png, id=298, 717.68124pt x 603.25375pt>
 File: Second_lecture/p_8.png Graphic file (type png)
 
 <use Second_lecture/p_8.png>
@@ -1612,7 +1590,7 @@ tion, or $\OML/lmm/b/it/10.95 A[]y \OMS/lmsy/m/n/10.95 ^^U \OT1/lmr/m/n/10.95 (
 mm/b/it/10.95 y[] \OT1/lmr/m/n/10.95 (-20) =
  []
 
-[18] <Second_lecture/p_9.png, id=328, 838.13126pt x 519.9425pt>
+[18] <Second_lecture/p_9.png, id=313, 838.13126pt x 519.9425pt>
 File: Second_lecture/p_9.png Graphic file (type png)
 
 <use Second_lecture/p_9.png>
@@ -1684,7 +1662,7 @@ ion.3.3.1}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.212 \end{equation}
                     ] [30] [31]
-<Third_lecture/p_1.png, id=440, 899.36pt x 574.145pt>
+<Third_lecture/p_1.png, id=425, 899.36pt x 574.145pt>
 File: Third_lecture/p_1.png Graphic file (type png)
 
 <use Third_lecture/p_1.png>
@@ -1694,31 +1672,9 @@ Package pdftex.def Info: Third_lecture/p_1.png used on input line 295.
 Chapter 4.
 [33
 
-] [34] [35] [36] [37] [38] [39] [40]) (./Fifth_lecture/First.tex [41]
+] [34]) [35]
 Chapter 5.
-
-Overfull \hbox (6.18991pt too wide) in paragraph at lines 25--27
-[]\T1/lmr/m/n/10.95 (-20) Q-linear con-ver-gence: there ex-ists $\OML/lmm/m/it/
-10.95 a \OMS/lmsy/m/n/10.95 2 \OT1/lmr/m/n/10.95 (-20) (0\OML/lmm/m/it/10.95 ; 
-\OT1/lmr/m/n/10.95 (-20) 1)$ \T1/lmr/m/n/10.95 (-20) such that $[] \OMS/lmsy/m/
-n/10.95 ^^T
- []
-
-[42
-
-]
-Overfull \hbox (2.09142pt too wide) detected at line 63
-[] \OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x\OT1/lmr/m/n/1
-0.95 ) \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lm
-m/m/it/10.95 x[]\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^U O\OT1/lmr/m/n/10.9
-5 ([])\OML/lmm/m/it/10.95 ;  \OMS/lmsy/m/n/10.95 8\OML/lmm/m/it/10.95 k \OT1/lm
-r/m/n/10.95 = 1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 2\OML/lmm/m/it/10.95 ; 
-[] ; \OMS/lmsy/m/n/10.95 b[]c
- []
-
-[43] [44]) [45]
-Chapter 6.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 132.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 131.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1728,144 +1684,167 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 134.
- [46
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 133.
+ [36
 
-] [47] [48]
-Chapter 7.
+] [37] [38]
+Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
-[49
+[39
 
-] [50]
-Chapter 8.
-LaTeX Font Info:    Calculating math sizes for size <15> on input line 278.
+] [40]
+Chapter 7.
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 277.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <15> on input line 278.
+(Font)              <15> on input line 277.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.49995> on input line 278.
+(Font)              <10.49995> on input line 277.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.5> on input line 278.
-[51
+(Font)              <7.5> on input line 277.
+[41
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 317--327
+
+LaTeX Warning: Citation 'arvolumenumber' on page 42 undefined on input line 320
+.
+
+
+LaTeX Warning: Citation 'ber1995' on page 42 undefined on input line 321.
+
+
+LaTeX Warning: Citation 'beditorvolumenumber' on page 42 undefined on input lin
+e 324.
+
+
+LaTeX Warning: Citation 'inproceedings' on page 42 undefined on input line 325.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--327
+Underfull \hbox (badness 10000) in paragraph at lines 316--326
 
  []
 
-[52] [53]
-Chapter 9.
-[54
+[42] [43]
+Chapter 8.
+[44
 
-] [55] (./Wednesday_week3.tex
+]
+
+LaTeX Warning: Citation 'arvolumeonly' on page 45 undefined on input line 424.
+
+[45] (./Wednesday_week3.tex
 Overfull \hbox (83.95988pt too wide) detected at line 52
 \OML/lmm/m/it/10.95 J[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]\OT1/lmr/m/n/
 10.95 ) = []
  []
 
-[56] [57]
+[46] [47]
 Overfull \hbox (42.52786pt too wide) in paragraph at lines 131--131
 [] 
  []
 
-[58] [59]) [60] [61
+[48] [49]) [50] [51
 
-] [62
+] [52
 
 ]
 Appendix A.
 
-Overfull \hbox (0.88123pt too wide) in paragraph at lines 456--497
+Overfull \hbox (0.88123pt too wide) in paragraph at lines 455--496
 [][] 
  []
 
-[63
+[53
 
-] [64]
+] [54]
 Appendix B.
-[65
+[55
 
 ]
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
- 
+
+LaTeX Warning: Empty bibliography on input line 551.
+
+
 AED: lastpage setting LastPage
-[66
-
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 554.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 554.
- (./FnTarticle.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 554.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 554.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 553.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 553.
+(./FnTarticle-nowebook.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 553.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 553.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package logreq Info: Writing requests to 'FnTarticle.run.xml'.
-\openout1 = `FnTarticle.run.xml'.
 
- ) 
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                FnTarticle-nowebook
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'FnTarticle-nowebook.run.xml'.
+\openout1 = `FnTarticle-nowebook.run.xml'.
+
+ ) ) 
 Here is how much of TeX's memory you used:
- 20862 strings out of 492995
- 337362 string characters out of 6132703
- 964470 words of memory out of 5000000
- 23437 multiletter control sequences out of 15000+600000
- 240109 words of font info for 301 fonts, out of 8000000 for 9000
+ 20732 strings out of 492995
+ 335722 string characters out of 6132703
+ 963713 words of memory out of 5000000
+ 23389 multiletter control sequences out of 15000+600000
+ 236354 words of font info for 291 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,14n,45p,796b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/t
-exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/
-fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/
-dvips/lm/lm-mathex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/l
-mbsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
-blic/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmm
-i8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
-r9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/public/lm/lmss9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
-m/lmssbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsso1
-0.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
-/public/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
-/lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msbm10.pfb>
-Output written on FnTarticle.pdf (70 pages, 1010490 bytes).
+ 51i,14n,45p,825b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/loca
+l/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017
+/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dis
+t/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fonts/en
+c/dvips/lm/lm-mathex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
+/lmbsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.p
+fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
+blic/lm/lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmm
+i9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
+ublic/lm/lmr9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr
+i10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri9.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/lm/lmss9.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/lm/lmssbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
+c/lm/lmsso10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmss
+o8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
+msfonts/symbols/msbm10.pfb>
+Output written on FnTarticle-nowebook.pdf (58 pages, 952185 bytes).
 PDF statistics:
- 1027 PDF objects out of 1200 (max. 8388607)
- 884 compressed objects within 9 object streams
- 307 named destinations out of 1000 (max. 500000)
- 55221 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 870 PDF objects out of 1000 (max. 8388607)
+ 741 compressed objects within 8 object streams
+ 246 named destinations out of 1000 (max. 500000)
+ 53133 words of extra memory for PDF output out of 61914 (max. 10000000)
 

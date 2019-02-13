@@ -1,0 +1,161 @@
+%\chapter{Introduction to Linear Programming}
+\chapter{The Basic Algorithm for Nonlinear Programming}
+
+\section{Gradient Algorithms}
+\subsection{Preliminaries: convergence analysis}
+Consider an iterative algorithm for solving the optimization problem $\min f(x)$, producing iterates $\{x^0,x^1,\dots\}$.
+\begin{enumerate}
+\item
+The possible error measurements are as follows. The stopping criteria depends on these error measurements.
+\begin{itemize}
+\item
+$e(x^k):=\|x^k-x^*\|$;
+\item
+$e(x^k) = f(x^k) - f(x^*)$;
+\end{itemize}
+where $x^*$ denotes the underlying optimal solution.
+\item
+We say the algorithm converges if $\lim_{k\to\infty}e(x^k) = 0$
+\item
+There are different types of convergence rate:
+\begin{enumerate}
+\item
+R-linear convergence: there exists $a\in(0,1)$ such that $e(x^k)\le Ca^k$;
+\item
+Q-linear convergence: there exists $a\in(0,1)$ such that $\frac{e(x^{k+1})}{e(x^k)}\le a$;
+\item
+Sub-linear convergence: $e(x^k)\le C/k^p$ for some $p>0$.
+\end{enumerate}
+\end{enumerate}
+question: when say about convergence rate, do we need to specify which error measurements we use?
+\subsection{The (Sub)gradient algorithm for Unconstrained Optimization}
+Consider an unconstrained optimization problem $\min f(x)$, where $f$ may not necessarily be smooth. Let $\{t_k>0\mid k=0,1,\dots\}$ be a sequence of step-sizes. Let's study the simpleest first order optimization algorithm.
+\begin{algorithm}[htb] 
+\caption{The (Sub)gradient Algorithm} 
+\label{alg:GA} 
+\begin{algorithmic}[0] %show number in each rows
+\REQUIRE ~ %算法的输入参数：Input
+Initial guess $x^0\in\mathcal{X}$
+\ENSURE ~ %算法的输出：Output
+Optimal solution $\hat x$
+\STATE \textbf{For $k=0,1,\dots,$ do}
+\begin{itemize}
+\item
+Take $d^k\in\partial f(x^k)$;
+\item
+$x^{k+1} \leftarrow x^k - t_kd^k $
+\end{itemize}
+\textbf{end for.}
+\label{code:GA}
+\end{algorithmic}
+\end{algorithm}
+\paragraph{Worst Case Bounds}
+Consier a \emph{convex optimization model} where $f$ is a completely unknown function. 
+The first order type algorithm esentially produces a sequence of iterates $\{x^k\mid k=0,1,2,\dots\}$ in such a way that $x^k$ is in the \emph{affine space} spanned by
+\[
+x^0,g(x^0),\dots,g(x^{k-1}),\ \text{where }g(\cdot) = \partial f(\cdot).
+\]
+\begin{itemize}
+\item
+Suppose $f$ is \emph{Lipschitz continuous} and no other information is known, we can construct an example such that
+\[
+\min_{x\in\text{Span}\{x^0,g(x^0),\dots,g(x^{k-1})\}}f(x) - f(x^*)\ge \mathcal{O}(\frac{1}{\sqrt{k}}),\ \forall k=1,2,\dots,\lfloor\frac{n}{2}\rfloor
+\]
+Therefore, the first order type algorithm can never reach the convergence rate faster than $\mathcal{O}(\frac{1}{\sqrt{k}})$.
+\item
+Additionally, if we know $f$ is \emph{differentiable} and $\nabla f$ is \emph{Lipschitz continuous}, then we can construct an example such that
+\[
+\min_{x\in\text{Span}\{x^0,g(x^0),\dots,g(x^{k-1})\}}f(x) - f(x^*)\ge \mathcal{O}(\frac{1}{k^2}),\ \forall k=1,2,\dots,\lfloor\frac{n}{2}\rfloor
+\]
+Therefore, the first order type algorithm can never reach the convergence rate faster than $\mathcal{O}(\frac{1}{k^2})$ for optimizing this class of function.
+\end{itemize}
+
+\subsection{Gradient Algorithm with Exact Line-Search}
+First we discuss the optimization with a uniform convex function. A nice convergence result is obtained:
+\begin{theorem}
+Suppose there exists $0< m\le M$ such that
+$0\succ mI\succeq \nabla^2f(x)\succeq MI$ (i.e., $f$ is \emph{uniformly convex}), and an exact line search is performed per iteration:
+\[
+t_k:=\arg\min_tf(x^k - t\nabla f(x^k)),
+\]
+then
+\begin{equation}\label{Eq:5:1}
+f(x^{k+1}) - f(x^*)\le \left(1-\frac{m}{M}\right)[f(x^k) - f(x^*)]
+\end{equation}
+\end{theorem}
+\begin{proof}
+\begin{itemize}
+\item
+\textbf{(Uniform Convexity implies Strongly Convexity)}
+For $\forall \bm x_1,\bm x_2\in\text{dom}(f)$, by mean-value theorem,
+\[
+f(\bm x_2) = f(\bm x_1) + \inp{\nabla f(\bm x_1)}{\bm x_2-\bm x_1} + \frac{1}{2}(\bm x_2-\bm x_1)\trans\nabla^2f(\bm\xi)(\bm x_2-\bm x_1),
+\]
+where $\bm\xi$ is some number between $\bm x_2$ and $\bm x_1$. Applying the uniform convexity of $f$, we derive the strongly convexity property:
+\begin{equation}\label{Eq:5:2}
+\frac{m}{2}\|\bm x_1-\bm x_2\|_2^2\le f(\bm x_2)-f(\bm x_1) - \inp{\nabla f(\bm x_1)}{\bm x_2-\bm x_1}\le\frac{M}{2}\|\bm x_1-\bm x_2\|_2^2
+\end{equation}
+\item
+\textbf{(Applying Strongly Convexity Property)}
+On the one hand, by setting $\bm x_1 = \bm x^*$ and $\bm x_2 = \bm x$ in (\ref{Eq:5:2}), we obtain:
+\begin{equation}
+\frac{m}{2}\|\bm x-\bm x^*\|_2^2\le f(\bm x)-f(\bm x^*) \le\frac{M}{2}\|\bm x-\bm x^*\|_2^2
+\end{equation}
+On the other hand, by setting $\bm x_1 = \bm x$ and $\bm x_2 = \bm x^*$ in (\ref{Eq:5:2}), we obtain
+\begin{align*}
+\frac{m}{2}\|\bm x-\bm x^*\|_2^2&\le f(\bm x^*)-f(\bm x) - \inp{\nabla f(\bm x)}{\bm x^*-\bm x}\\
+&\le f(\bm x^*)-f(\bm x) + \|\nabla f(\bm x)\|\cdot\|\bm x^*-\bm x\|\\
+&\le \|\nabla f(\bm x)\|\cdot\|\bm x^*-\bm x\|
+\end{align*}
+which implies $m\|\bm x-\bm x^*\|\le\|\nabla f(\bm x)\|$. Similarly, we get
+\begin{equation}
+m\|\bm x-\bm x^*\|\le\|\nabla f(\bm x)\|\le M\|\bm x-\bm x^*\|
+\end{equation}
+\item
+\textbf{(Upper Bounding left and right side of (\ref{Eq:5:1}))}
+Moreover, we upper bounding the left side of (\ref{Eq:5:1}) by setting $\bm x_2 = \bm x^{k+1}$ and $\bm x_1 = \bm x^k$ in (\ref{Eq:5:2}):
+\begin{equation}\label{Eq:5:5}
+\begin{aligned}
+f(\bm x^{k+1}) - f(\bm x^k)&\le \inp{\nabla f(\bm x^k)}{\bm x^{k+1} - \bm x^k}+\frac{M}{2}\|\bm x^{k+1}-\bm x^k\|^2\\
+&\le-\frac{1}{2M}\|\nabla f(x^k)\|^2
+\end{aligned}
+\end{equation}
+On the other hand, by setting $\bm x_2 = \bm x^*$ and $\bm x_1 = \bm x^k$ in (\ref{Eq:5:2}), we obtain
+\begin{equation}\label{Eq:5:6}
+\begin{aligned}
+f(\bm x^k) - f(\bm x^*)&\le \inp{\nabla f(x^k)}{\bm x^k - \bm x^*}-\frac{m}{2}\|\bm x^k-\bm x^*\|_2^2\\
+&\le \|\nabla f(x^k)\|\|\bm x^k - \bm x^*\| - \frac{m}{2}\|\bm x^k-\bm x^*\|_2^2\\
+&\le \frac{1}{2m}\|\nabla f(\bm x^k)\|^2
+\end{aligned}
+\end{equation}
+Therefore, substituting (\ref{Eq:5:6}) into (\ref{Eq:5:5}), we obtain
+\[
+f(\bm x^{k+1}) - f(\bm x^k)\le -\frac{m}{M}[f(\bm x^k) - f(\bm x^*)]
+\]
+Or equivalently,
+\[
+f(\bm x^{k+1}) - f(\bm x^*)\le\left(1-\frac{m}{M}\right)[f(\bm x^k) - f(\bm x^*)]
+\]
+
+
+
+\end{itemize}
+
+
+
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
