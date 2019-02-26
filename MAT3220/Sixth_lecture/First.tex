@@ -1,0 +1,133 @@
+%\chapter{Introduction to Linear Programming}
+\chapter{Primal-Dual Interior Point Methods (PDIPM)}
+
+\section{PDIPM for Linear Programming}
+Consider a linear programming problem
+\begin{equation}
+\begin{array}{ll}
+\min&\bm c\trans\bm x\\
+\mbox{such that}&\bm{Ax}=\bm b\\
+&\bm x\ge0
+\end{array}\qquad
+(P)
+\end{equation}
+with its dual problem
+\begin{equation}
+\begin{array}{ll}
+\max&\bm b\trans\bm y\\
+\mbox{such that}&\bm{A}\trans\bm y+\bm s=\bm c\\
+&\bm s\ge0
+\end{array}\qquad
+(D)
+\end{equation}
+
+We assume that the \emph{primal-dual slater condition} (what is it?) holds. Consider solving the barriered problem of $(P)$ for $\mu>0$:
+\begin{equation}
+\begin{array}{ll}
+\min&\bm c\trans\bm x - \mu \sum_{i=1}^n\ln x_i\\
+\mbox{such that}&\bm{Ax}=\bm b\\
+\end{array}\qquad
+(P_\mu)
+\end{equation}
+
+\subsection{Duality Gap}
+Let $\bm x(\mu)$ be the optimal solution for $(P_\mu)$. By KKT condition, there exists $\bm y(\mu)\in\mathbb{R}^m$ such that
+\[
+\bm c - \mu\bm x(\mu)^{-1} - \bm A\trans\bm y(\mu) = \bm0.
+\]
+Define the slack variable $\bm s(\mu) : = \mu\bm x(\mu)^{-1} = \bm c -\bm A\trans\bm y(\mu)$. It's clear that:
+\begin{enumerate}
+\item
+$\bm x(\mu)$ is primal-feasible to $(P_\mu)$; while $(\bm y(\mu),\bm s(\mu))$ is dual-feasible to $(D_\mu)$
+\item
+The duality gap between $\bm x(\mu)$ and $(\bm y(\mu),\bm s(\mu))$ is
+\[
+\bm x(\mu)\trans \bm s(\mu) = n\mu.
+\]
+\end{enumerate}
+
+\subsection{Convergence of Barrier Problem $P_\mu$}
+
+The set $\{\bm x(\mu)\mid\mu>0\}$ is known as the \emph{primal analytic central path}; and the set
+$\{(\bm y(\mu),\bm s(\mu))\mid\mu>0\}$ is known as the \emph{dual analytic central path}.
+\begin{proposition}
+The set $\{\bm x(\mu)\mid 0<\mu\le 1\}$ and $\{(\bm y(\mu),\bm s(\mu))\mid 0<\mu\le 1\}$ are bounded.
+\end{proposition}
+\begin{proof}
+Let $\tilde{\bm x}$ be an interior for $(P)$ and $(\tilde{\bm y},\tilde{\bm s})$ be an interior for $(D)$. Then $\tilde{\bm x} - \bm x(\mu)\in\mathcal{N}(\bm A)$ and $\tilde{\bm s} - \bm s(\mu)\in\text{Range}(\bm A\trans)$, which implies
+\[
+0 = (\tilde{\bm x} - \bm x(\mu))\trans (\tilde{\bm s} - \bm s(\mu))
+=\tilde{\bm x}\trans\tilde{\bm s} - \tilde{\bm x}\trans\bm s(\mu) -\tilde{\bm s}\trans\bm x(\mu) + n\mu.
+\]
+Therefore, $\{\bm x(\mu)\mid 0<\mu\le 1\}$ and $\{(\bm y(\mu),\bm s(\mu))\mid 0<\mu\le 1\}$ must be bounded. (question: how to specify?)
+\end{proof}
+
+\begin{proposition}
+The set $\{(\bm x(\mu),\bm y(\mu),\bm s(\mu))\mid 0<\mu\le 1\}$ converges to $(\hat{\bm x},\hat{\bm y},\hat{\bm s})$ as $\mu\to0$. Moreover, the active sets $B:=\{i\mid\hat x_i>0\}$ and $N=\{j\mid \hat{s}_j>0\}$ form a partition of $\{1,\dots,n\}$.
+\end{proposition}
+
+\begin{proof}
+\begin{itemize}
+\item
+Due to the boundness of $\{(\bm x(\mu),\bm y(\mu),\bm s(\mu))\mid 0<\mu\le 1\}$, we imply there exists a subsequence $\mu_k$ such that
+\[
+\lim_{k\to\infty}(\bm x(\mu),\bm y(\mu),\bm s(\mu)) = (\hat{\bm x},\hat{\bm y},\hat{\bm s})
+\]
+It's clear that $\hat{\bm x}$ is primal optimal and $(\hat{\bm y},\hat{\bm s})$ is dual optimal. By complementarity condition, $B\cap N=\emptyset$.
+\item
+At the same time, consider the equality again that
+\[
+0 = (\hat{\bm x} - \bm x(\mu_k))\trans(\hat{\bm s} - \bm s(\mu_k)) = -\sum_{i\in B}\hat x_is_i(\mu_k)
+-
+\sum_{j\in N}\hat s_jx_j(\mu_k) + n\mu_k.
+\]
+Or equivalently,
+\[
+n = \sum_{i\in B}\frac{\hat x_i}{x_i(\mu_k)}+\sum_{j\in N}\frac{\hat s_j}{s_j(\mu_k)}.
+\]
+Taking $k\to\infty$, we imply $|B|+|N| = n$, i.e., $B$ and $N$ form a partition of $\{1,\dots,n\}$.
+\item
+Next we show that $\hat{\bm x}$ is unique. We shall show that $\hat{\bm x}_B$ is the optimal solution to 
+\[
+\begin{array}{ll}
+\max&\sum_{i\in B}\ln x_i\\
+\mbox{such that}&\bm A_B\bm x_B=\bm b
+\end{array}\qquad
+(O)
+\]
+and then the uniqueness of $\hat{\bm x}_B$ is proved due to the strict concavity of the objective function. (question: why the uniqueness of $\hat{\bm x}_B$ implies the uniqueness of $\hat{\bm x}$?)
+
+The KKT condition for $(O)$ gives
+\[
+\begin{array}{ll}
+\bm x_B^{-1}\in\text{Range}(\bm A_B\trans)
+&
+\bm A_B\bm x_B=\bm b
+\end{array}
+\]
+We may verify that $\hat{\bm x}_B$ satisfies the condition above.
+\end{itemize}
+\end{proof}
+\begin{remark}
+The particular optimal solution $\bm x$, denoted by $\bm x(0)$ is called the \emph{analytic center of the optimal face}. If taking $\mu\to\infty$, then $\bm x(\mu)$ converges to the optimal solution of
+\[
+\begin{array}{ll}
+\max&\sum_{i=1}^n\ln x_i\\
+\mbox{such that}&\bm A_B\bm x_B=\bm b
+\end{array}
+\]
+which is known as the \emph{analytic center of the feasible region}.
+
+Note that $\bm x(0)+\bm s(0)>0$, i.e., thery are \emph{strictly complementary}.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+

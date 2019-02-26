@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  14 FEB 2019 05:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  24 FEB 2019 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1204,6 +1204,9 @@ LaTeX Warning: Label `fig:2:2' multiply defined.
 
 LaTeX Warning: Label `fig:2:3' multiply defined.
 
+
+LaTeX Warning: Label `code:GA' multiply defined.
+
 )
 \openout1 = `FnTarticle.aux'.
 
@@ -1539,7 +1542,7 @@ which im-plies $\OML/lmm/b/it/10.95 e[]A[] \OT1/lmr/m/n/10.95 (-20) =
 
 [10] [11] [12]) (./Second_lecture/First.tex [13]
 Chapter 2.
-<Second_lecture/p_1.png, id=260, 586.19pt x 462.72874pt>
+<Second_lecture/p_1.png, id=268, 586.19pt x 462.72874pt>
 File: Second_lecture/p_1.png Graphic file (type png)
 
 <use Second_lecture/p_1.png>
@@ -1548,35 +1551,35 @@ Package pdftex.def Info: Second_lecture/p_1.png used on input line 7.
  [14
 
  <./Second_lecture/p_1.png>]
-<Second_lecture/p_2.png, id=270, 420.57124pt x 310.15875pt>
+<Second_lecture/p_2.png, id=278, 420.57124pt x 310.15875pt>
 File: Second_lecture/p_2.png Graphic file (type png)
 
 <use Second_lecture/p_2.png>
 Package pdftex.def Info: Second_lecture/p_2.png used on input line 52.
 (pdftex.def)             Requested size: 161.15497pt x 118.84593pt.
 
-<Second_lecture/p_3.png, id=271, 400.49625pt x 294.09875pt>
+<Second_lecture/p_3.png, id=279, 400.49625pt x 294.09875pt>
 File: Second_lecture/p_3.png Graphic file (type png)
 
 <use Second_lecture/p_3.png>
 Package pdftex.def Info: Second_lecture/p_3.png used on input line 58.
 (pdftex.def)             Requested size: 161.15497pt x 118.34195pt.
  [15 <./Second_lecture/p_2.png> <./Second_lecture/p_3.png>] <Second_lecture/p_4
-.png, id=282, 358.33875pt x 335.2525pt>
+.png, id=290, 358.33875pt x 335.2525pt>
 File: Second_lecture/p_4.png Graphic file (type png)
 
 <use Second_lecture/p_4.png>
 Package pdftex.def Info: Second_lecture/p_4.png used on input line 74.
 (pdftex.def)             Requested size: 161.15497pt x 150.77525pt.
 
-<Second_lecture/p_5.png, id=283, 423.5825pt x 365.365pt>
+<Second_lecture/p_5.png, id=291, 423.5825pt x 365.365pt>
 File: Second_lecture/p_5.png Graphic file (type png)
 
 <use Second_lecture/p_5.png>
 Package pdftex.def Info: Second_lecture/p_5.png used on input line 80.
 (pdftex.def)             Requested size: 161.15497pt x 139.00182pt.
 
-<Second_lecture/p_6.png, id=285, 699.61375pt x 515.9275pt>
+<Second_lecture/p_6.png, id=293, 699.61375pt x 515.9275pt>
 File: Second_lecture/p_6.png Graphic file (type png)
 
 <use Second_lecture/p_6.png>
@@ -1584,7 +1587,7 @@ Package pdftex.def Info: Second_lecture/p_6.png used on input line 92.
 (pdftex.def)             Requested size: 161.15497pt x 118.84189pt.
  [16 <./Second_lecture/p_4.png> <./Second_lecture/p_5.png> <./Second_lecture/p_
 6.png>]
-<Second_lecture/p_7.png, id=298, 873.2625pt x 428.60126pt>
+<Second_lecture/p_7.png, id=306, 873.2625pt x 428.60126pt>
 File: Second_lecture/p_7.png Graphic file (type png)
 
 <use Second_lecture/p_7.png>
@@ -1596,7 +1599,7 @@ Overfull \hbox (11.20644pt too wide) in paragraph at lines 167--169
 -20) de-note col-lec-tions of poly-he-drons,polytopes,polyhedral
  []
 
-<Second_lecture/p_8.png, id=312, 717.68124pt x 603.25375pt>
+<Second_lecture/p_8.png, id=320, 717.68124pt x 603.25375pt>
 File: Second_lecture/p_8.png Graphic file (type png)
 
 <use Second_lecture/p_8.png>
@@ -1612,22 +1615,25 @@ tion, or $\OML/lmm/b/it/10.95 A[]y \OMS/lmsy/m/n/10.95 ^^U \OT1/lmr/m/n/10.95 (
 mm/b/it/10.95 y[] \OT1/lmr/m/n/10.95 (-20) =
  []
 
-[18] <Second_lecture/p_9.png, id=328, 838.13126pt x 519.9425pt>
+[18] <Second_lecture/p_9.png, id=336, 838.13126pt x 519.9425pt>
 File: Second_lecture/p_9.png Graphic file (type png)
 
 <use Second_lecture/p_9.png>
 Package pdftex.def Info: Second_lecture/p_9.png used on input line 243.
 (pdftex.def)             Requested size: 302.1662pt x 187.4489pt.
  [19 <./Second_lecture/p_8.png>]
-Overfull \hbox (1.78368pt too wide) in paragraph at lines 261--262
+Overfull \hbox (1.78368pt too wide) in paragraph at lines 264--265
 []\T1/lmr/m/n/10.95 (-20) Consider a gen-eral poly-he-dron $\OML/lmm/m/it/10.95
  H$ \T1/lmr/m/n/10.95 (-20) with ver-tices $\OMS/lmsy/m/n/10.95 f\OML/lmm/b/it/
 10.95 p[] \OMS/lmsy/m/n/10.95 j \OML/lmm/m/it/10.95 i \OT1/lmr/m/n/10.95 (-20) 
 = 1\OML/lmm/m/it/10.95 ; [] ; m\OMS/lmsy/m/n/10.95 g$
  []
 
-[20 <./Second_lecture/p_9.png>]
-Overfull \hbox (12.65645pt too wide) in paragraph at lines 298--304
+
+Underfull \vbox (badness 2393) has occurred while \output is active []
+
+ [20 <./Second_lecture/p_9.png>]
+Overfull \hbox (12.65645pt too wide) in paragraph at lines 301--307
 [][]\T1/lmss/bx/n/10.95 Theorem 2.5 \T1/lmss/m/n/10.95 (-20) (Rephrased Form of
  Farkas Lemma)\T1/lmss/bx/n/10.95 . []\T1/lmr/m/n/10.95 (-20) Let $\OML/lmm/m/i
 t/10.95 P[]\OT1/lmr/m/n/10.95 (-20) (\OML/lmm/m/it/10.95 x\OT1/lmr/m/n/10.95 (-
@@ -1635,7 +1641,7 @@ t/10.95 P[]\OT1/lmr/m/n/10.95 (-20) (\OML/lmm/m/it/10.95 x\OT1/lmr/m/n/10.95 (-
  []
 
 [21]
-Overfull \hbox (23.11147pt too wide) in paragraph at lines 378--379
+Overfull \hbox (23.11147pt too wide) in paragraph at lines 381--382
 []\T1/lmr/m/n/10.95 (-20) Suppose the ex-treme points of $\OML/lmm/m/it/10.95 P
 []; P[]$ \T1/lmr/m/n/10.95 (-20) are $\OMS/lmsy/m/n/10.95 f\OML/lmm/b/it/10.95 
 p[]\OML/lmm/m/it/10.95 ; [] ; \OML/lmm/b/it/10.95 p[]\OMS/lmsy/m/n/10.95 g$ \T1
@@ -1684,7 +1690,7 @@ ion.3.3.1}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.212 \end{equation}
                     ] [30] [31]
-<Third_lecture/p_1.png, id=440, 899.36pt x 574.145pt>
+<Third_lecture/p_1.png, id=449, 899.36pt x 574.145pt>
 File: Third_lecture/p_1.png Graphic file (type png)
 
 <use Third_lecture/p_1.png>
@@ -1716,9 +1722,64 @@ r/m/n/10.95 = 1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 2\OML/lmm/m/it/10.95 ;
 [] ; \OMS/lmsy/m/n/10.95 b[]c
  []
 
-[43] [44]) [45]
+[43] [44] [45] [46]pdfTeX warning (ext4): destination with the same identifier 
+(name{equation.5.1.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.202 \end{align}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{equation.5.1.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.202 \end{align}
+                 
+Overfull \hbox (34.07802pt too wide) detected at line 210
+\OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/b/it/10.95 x[]\OT1/lmr/m/n/10
+.95 ) + \OML/lmm/m/it/10.95 ^^M[]=^^L \OMS/lmsy/m/n/10.95 ^^A r[]\OML/lmm/m/it
+/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/b/it/10.95 x[]\OT1/lmr/m/n/10.95 )\OML/lmm
+/b/it/10.95 d[] \OML/lmm/m/it/10.95 < f\OT1/lmr/m/n/10.95 (\OML/lmm/b/it/10.95 
+x[]\OT1/lmr/m/n/10.95 ) + \OML/lmm/m/it/10.95 []=^^L\OMS/lmsy/m/n/10.95 r[]\OM
+L/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/b/it/10.95 x[]\OT1/lmr/m/n/10.95
+ )\OML/lmm/b/it/10.95 d[] \OT1/lmr/m/n/10.95 + [](\OML/lmm/m/it/10.95 []=^^L\O
+T1/lmr/m/n/10.95 )[]\OMS/lmsy/m/n/10.95 k\OML/lmm/b/it/10.95 d[]\OMS/lmsy/m/n/1
+0.95 k[]
+ []
+
+[47] [48] [49] [50]
+Overfull \hbox (30.03287pt too wide) in paragraph at lines 354--354
+[] 
+ []
+
+
+Overfull \hbox (40.07143pt too wide) detected at line 366
+\OMS/lmsy/m/n/10.95 k\OML/lmm/b/it/10.95 x[] \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/b
+/it/10.95 x[]\OMS/lmsy/m/n/10.95 k ^^T k\OML/lmm/b/it/10.95 x[] \OMS/lmsy/m/n/1
+0.95 ^^@ \OML/lmm/b/it/10.95 x[]\OMS/lmsy/m/n/10.95 k ^^A k\OT1/lmr/m/n/10.95 [
+\OMS/lmsy/m/n/10.95 r[]\OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/b/it/1
+0.95 x[]\OT1/lmr/m/n/10.95 )][]\OMS/lmsy/m/n/10.95 k ^^A [][] kr[]\OML/lmm/m/it
+/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/b/it/10.95 x[]\OT1/lmr/m/n/10.95 ) \OMS/lm
+sy/m/n/10.95 ^^@ r[]\OML/lmm/m/it/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/b/it/10.9
+5 x[] \OT1/lmr/m/n/10.95 + \OML/lmm/m/it/10.95 t\OT1/lmr/m/n/10.95 (\OML/lmm/b/
+it/10.95 x[] \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/b/it/10.95 x[]\OT1/lmr/m/n/10.95 
+))]\OMS/lmsy/m/n/10.95 k \OT1/lmr/m/n/10.95 d\OML/lmm/m/it/10.95 t
+ []
+
+
+Overfull \hbox (14.6215pt too wide) in paragraph at lines 384--384
+[] 
+ []
+
+[51] [52] [53] [54]) (./Sixth_lecture/First.tex [55]
 Chapter 6.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 132.
+
+Underfull \vbox (badness 4713) has occurred while \output is active []
+
+ [56
+
+]
+[57]) [58]
+Chapter 7.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 133.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1728,70 +1789,70 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 134.
- [46
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 135.
+ [59
 
-] [47] [48]
-Chapter 7.
+] [60] [61]
+Chapter 8.
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
-[49
+[62
 
-] [50]
-Chapter 8.
-LaTeX Font Info:    Calculating math sizes for size <15> on input line 278.
+] [63]
+Chapter 9.
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 279.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <15> on input line 278.
+(Font)              <15> on input line 279.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.49995> on input line 278.
+(Font)              <10.49995> on input line 279.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.5> on input line 278.
-[51
+(Font)              <7.5> on input line 279.
+[64
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 317--327
+Underfull \hbox (badness 10000) in paragraph at lines 318--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--327
+Underfull \hbox (badness 10000) in paragraph at lines 318--328
 
  []
 
-[52] [53]
-Chapter 9.
-[54
+[65] [66]
+Chapter 10.
+[67
 
-] [55] (./Wednesday_week3.tex
+] [68] (./Wednesday_week3.tex
 Overfull \hbox (83.95988pt too wide) detected at line 52
 \OML/lmm/m/it/10.95 J[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]\OT1/lmr/m/n/
 10.95 ) = []
  []
 
-[56] [57]
+[69] [70]
 Overfull \hbox (42.52786pt too wide) in paragraph at lines 131--131
 [] 
  []
 
-[58] [59]) [60] [61
+[71] [72]) [73] [74
 
-] [62
+] [75
 
 ]
 Appendix A.
 
-Overfull \hbox (0.88123pt too wide) in paragraph at lines 456--497
+Overfull \hbox (0.88123pt too wide) in paragraph at lines 457--498
 [][] 
  []
 
-[63
+[76
 
-] [64]
+] [77]
 Appendix B.
-[65
+[78
 
 ]
 Package microtype Info: Character `029' is missing
@@ -1799,15 +1860,15 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
  
 AED: lastpage setting LastPage
-[66
+[79
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 554.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 554.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 555.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 555.
  (./FnTarticle.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 554.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 554.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 555.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 555.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1820,11 +1881,11 @@ Package logreq Info: Writing requests to 'FnTarticle.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20862 strings out of 492995
- 337362 string characters out of 6132703
- 964470 words of memory out of 5000000
- 23437 multiletter control sequences out of 15000+600000
- 240109 words of font info for 301 fonts, out of 8000000 for 9000
+ 20948 strings out of 492995
+ 338286 string characters out of 6132703
+ 964795 words of memory out of 5000000
+ 23446 multiletter control sequences out of 15000+600000
+ 240820 words of font info for 309 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,14n,45p,796b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1862,10 +1923,10 @@ fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 /public/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
 /lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb>
-Output written on FnTarticle.pdf (70 pages, 1010490 bytes).
+Output written on FnTarticle.pdf (83 pages, 1054806 bytes).
 PDF statistics:
- 1027 PDF objects out of 1200 (max. 8388607)
- 884 compressed objects within 9 object streams
- 307 named destinations out of 1000 (max. 500000)
- 55221 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1166 PDF objects out of 1200 (max. 8388607)
+ 1008 compressed objects within 11 object streams
+ 365 named destinations out of 1000 (max. 500000)
+ 55253 words of extra memory for PDF output out of 61914 (max. 10000000)
 

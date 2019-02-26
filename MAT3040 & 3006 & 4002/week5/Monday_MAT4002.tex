@@ -1,0 +1,127 @@
+\section{Monday for MAT4002}\index{Monday_lecture}
+\subsection{Continuous Functions on Compact Space}
+
+\begin{proposition}
+Let $f:X\to Y$ be continuous function on topological spaces, with $A\subseteq X$ compact. Then $f(A)$ is compact.
+\end{proposition}
+\begin{proof}
+Note that
+\[
+f(A)\subseteq\bigcup_{i\in I}U_i,\quad U_i\in\mathcal{T}_Y
+\]
+It follows that
+\[
+A\subseteq f^{-1}\left(\bigcup_{i\in I}U_i\right)=\bigcup_{i\in I}f^{-1}(U_i)
+\]
+By the compactness of $A$, there exists finite subcover
+\[
+A\subseteq\bigcup_{k=1}^nf^{-1}(U_{i_k}),
+\]
+i.e.,
+\begin{align*}
+f(A)&\subseteq f(\cup_{k=1}^nf^{-1}(U_k))\\
+&=\cup_{k=1}^nU_k
+\end{align*}
+i.e., there is a finite subcover of $f(A)$
+\end{proof}
+
+\begin{corollary}
+Given that $X$ is compact, $Y=\mathbb{R}$ and continuous $f:X\to\mathbb{R}$, we imply
+$f(X)$ is closed and bounded, i.e., there exists $m,M\in X$ such that $f(m)\le f(x)\le f(M),\ \forall x\in X$.
+
+In particular, if $X$ is connected, $f(X)$ is connected, i.e.,
+\[
+f(X)=[f(m),f(M)]
+\]
+\end{corollary}
+
+\begin{theorem}
+The space $X,Y$ are compact iff $X\times Y$ is compact under product topology.
+\end{theorem}
+\begin{proof}
+Given that $X\times Y$ is compact, we consider the projection mapping (continuous):
+\[
+\left\{
+\begin{aligned}
+P_X&:X\times Y\to X\\
+P_Y&:X\times Y\to Y
+\end{aligned}
+\right.
+\]
+which implies $P_X(X\times Y)=X,P_Y(X\times Y)=Y$, which are both compact.
+
+Suppose that $\{W_i\}_{i\in I}$ is an open cover of $X\times Y$. For each $i$, we imply
+\[
+W_i = \bigcup_{j\in\mathcal{J}_i}U_{ij}\times V_{ij},\quad
+U_{ij}\in\mathcal{T}_X,V_{ij}\in\mathcal{T}_Y
+\]
+Therefore,
+\[
+X\times Y = \bigcup_{(i,j)\in K}U_{ij}\times V_{ij},\quad
+K=\{(i,j)\mid i\in I, j\in\mathcal{J}_i\}
+\]
+For each $y\in Y$, the set $X\times\{y\}$ is compact. (All open sets in $X\times \{y\}$ is of the form $U\times\{y\}$, $U\in\mathcal{T}_X$)
+
+Note that 
+\[
+X\times\{y\}\subseteq\bigcup_{(i,j)\in K}U_{ij}\times V_{ij}
+\]
+By the compactness of $X\times\{y\}$, there is a finite set $S_y\subseteq K$ such that
+\[
+X\times\{y\}\subseteq\bigcup_{s\in S_y}U_s\times V_s
+\]
+
+By removing those $U_S\times V_S$ such that $y\notin V_S$, assume $y\in V_S,\forall s\in S_y$.
+
+Let $V_y := \bigcap_{s\in S_y}V_s$, so $y\in V_y$ and $V_y$ is open in $Y$. 
+
+Therefore, $\{V_y\}_{y\in Y}$ forms an open cover of $Y$. By compactness of $Y$, we imply
+\[
+\{V_{y_1},\dots,V_{y_m}\}
+\]
+forms a finite subcover of $Y$.
+
+For each $\ell=1,\dots,m$,
+\[
+X\times \{y_\ell\}\subseteq X\times V_{y_\ell}
+\subseteq
+\bigcup_{S\in V_{y_S}}U_S\times V_S
+\]
+Therefore,
+\[
+X\times Y = \bigcup_{\ell=1}^m\bigcup_{s\in V}U_{s_k}\times V_{s_\ell}
+\]
+
+Now pick
+\[
+I'=\{i\in I\mid (i,j)\in S_{y_1}\cup\cdots\cup S_{y_m}\}
+\]
+Therfore, $X\times Y = \bigcup_{i'\in I'}W_i$ and $I'$ is finite.
+\end{proof}
+\begin{theorem}
+Suppose that $X$ is compact, $Y$ is Hausdorff, $f:X\to Y$ is continuous, bijective, then $f$ is a \emph{homeomorphism}.
+\end{theorem}
+\begin{proof}
+Let $V\subseteq X$ be closed. Then $V$ is compact, which implies $f(V)$ is compact. 
+Since $f(V)\subseteq Y$ is Hausdorff, we imply $f(V)$ is compact, i.e., $f(V)$ is closed.
+
+Therefore, $V$ closed implies $f^{-1}(f^{-1}(V))$ is closed, i.e., $f^{-1}$ is continuous.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

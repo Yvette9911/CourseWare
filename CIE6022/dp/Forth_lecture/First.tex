@@ -1,0 +1,226 @@
+\chapter{Dynamic Programming with perfect information}
+
+\paragraph{Reviewing}
+
+The goal is to find the controller $u_k$, i.e., the optimal policy for a given feedback.
+\begin{itemize}
+\item
+For linear-quadratic control problem, the $u_k^*$ has the form $\bm L^*x_k$. Once we know the pattern of the policy, i.e., the form of $u_k^*$,
+we reduce the functional optimization into \emph{parametric optimization}.
+\end{itemize}
+
+\section{Inventory Control}
+Think about several elements:
+\begin{itemize}
+\item
+State: inventory level $x_k$
+\item
+Control: number of orders $u_k$
+\item
+Disturbence: demand $\omega_k$
+\item
+System dynamics: $x_{k+1} = x_k + u_k -\omega_k$
+\item
+Stage cost:
+\[
+c\cdot u_k + H(x_k + u_k)
+\]
+where 
+\[
+H(x_k + u_k):=
+\mathbb{E}_{\omega_k}
+\left[
+p(x_k+u_k-\omega_k)^- 
++
+h(x_k+u_k-\omega_k)^+
+\right]
+\]
+\end{itemize}
+
+The dynamic programming applies as follows:
+\[
+J_k(x_k)
+=
+\min_{u_k\ge0}
+\left[
+c\cdot u_k
++
+H(x_k+u_k)
++
+\mathbb{E}_{\omega_k}
+J_{k+1}(x_{k+1})
+\right]
+\]
+Regarding $y_k:=x_k+u_k$ as the decision variable, it suffices to solve
+\[
+\min_{y_k\ge x_k}
+G_k(y_k)
+=cy_k+H(y_k)+\mathbb{E}_{\omega_k}\left[J_{k+1}(y_k-\omega_k)\right]
+\]
+Suppose that the terminal cost $J_N(x_N)=0$, which is convex. It's clear that
+$J_{k+1}(\cdot)$ is convex implies $J_k(\cdot)$ is convex.
+
+If it is true, then $G_k(y_k)$ is convex, and therefore
+\[
+\arg\min_{y_k\ge x_k} G_k(y_k)
+=
+\max\left(
+\arg\min_{y_k\in\mathbb{R}}G_k(y_k),
+x_k
+\right)
+\]
+Therefore, we imply $u_k^* = \max(S_k^*-x_k,0)$, with $S_k^* = \arg\min_{y_k\in\mathbb{R}}G_k(y_k)$.
+
+Now we reduce the policy into the pattern of finding the baseline $S_k$, i.e., a traditional parametric optimization problem.
+\begin{proposition}
+If the disturbance $\omega_k$ is i.i.d., then we imply the stationary optimal policy, i.e., the policy baseline $S_k^*$ becomes constant.
+\end{proposition}
+
+Now suppose further that 
+\[
+c(u_k)
+=
+\left\{
+\begin{aligned}
+K+c\cdot u_k,&\quad u_k>0\\
+0,&\quad u_k=0
+\end{aligned}
+\right.
+\]
+Now the question is that do we obtain the pattern with baseline?
+\begin{align*}
+J_k(x_k)
+&=
+\min
+[
+\min_{u_k>0}
+[K+cu_k+H(x_k+u_k)]+\mathbb{E}_{\omega_k}J_{k+1}(x_{k+1})\\
+&,
+0+H(x_k)+\mathbb{E}J_{k+1}(x_k)]\\
+&=\min
+\left[
+\min_{y_k\ge x_j}(K+G_k(y_k)), G_k(x_k)
+\right] - cx_k
+\end{align*}
+where $f(x_k):=\min_{y_k\ge x_j}(K+G_k(y_k))$ has its shape. Then we need to compare the two curves $f(x_k)$ and $G_k(x_k)$:
+\[
+u_k^*
+=
+\left\{
+\begin{aligned}
+S_k-x_k,&\quad\text{if }x_k\le S_k\\
+0,&\quad\text{if }x_k>S_k
+\end{aligned}
+\right.
+\]
+\begin{itemize}
+\item
+If the inventory is very low (compare the baseline $s_k$), order $u_k^*=S_k-x_k$ to make the inventory into $S_k$
+\item
+If not that low, not order anything.
+\end{itemize}
+\begin{remark}
+Unfortunately, $J_{k+1}(x_k)$ is convex does not necessarily imply $J_k(x_k)$ is convex. There is a concept $K$-convexity in literature. Under this $K$-convexity setting, we can show that the control $u_k^*$ still obtain the similar pattern but with two baselines, i.e., the decision can be made by first computing the baseline $(s,S)$, and then obtaining the $(s,S)$ strategy.
+\end{remark}
+
+The key for reducing computational complexity is to find patterns for decision variable $u_k^*$.
+
+\section{Optimal Stopping Problem}
+\paragraph{Asset Selling}
+Suppose an industry wants to sell its iterms.
+Offer the price $\omega_k$ for $k=1,\dots,N$, assume to be i.i.d. with known distribution.
+Whether sell or wait.
+invest rate $r$.
+Time horizon $N$.
+
+State: $x_k=\omega_k$
+
+Decision variable: $u^1$ for sell and $u^2$ for wait.
+
+Stage cost (reward): 
+\[
+\begin{aligned}
+g(x_k,u_k,\omega_k) &= x_k(1+r)^{N-1},\quad u^1\\
+&=0,\quad u^2
+\end{aligned}
+\]
+\[
+J_k(x_k)
+=
+\max\left(
+\underbrace{x_k(1+r)^{N-k}+0}_{\text{sell}},
+\underbrace{
+0+\mathbb{E}_{\omega_k}[J_{k+1}(\omega_k)]
+}_{\text{wait}}
+\right)
+\]
+If $x_k(1+r)^{N-k}+0\ge 0+\mathbb{E}_{\omega_k}[J_{k+1}(\omega_k)]$, decide to sell; otherwise decide to wait.
+
+Define the variable (baseline)
+\[
+\alpha_k=\frac{\mathbb{E}J_{k+1}(\omega)}{(1+r)^{N-k}},
+\]
+then decide to sell if $x_k\ge\alpha_k$, otherwise decide to wait.
+
+The high baseline corresponds to the high standard. Now we show that $\{\alpha_k\}$ is monotonically decreasing.
+
+Define 
+\[
+V_k(x_k) = \frac{J_k(x_k)}{(1+r)^{N-k}}
+\implies
+V_k(x_k) = \max\left(x_k,\frac{\mathbb{E}V_{k+1}(\omega)}{1+r}\right)
+\]
+and $V_N(x_N) = x_N$.
+
+Note that we show $V_{k+1}(x)\le V_k(x)$ first:
+\begin{align*}
+V_N(x)&=x\\
+V_{N-1}(x)&=\max(x,\mathbb{E}V_N(\omega))
+\end{align*}
+It's clear that $V_N(x)\le V_{N-1}(x)$.
+\begin{align*}
+V_K(x)&=\max(x,\frac{\mathbb{E}V_{k+1}(\omega)}{1+r})\\
+V_{k-1}(x)&=\max(x,\frac{\mathbb{E}V_{k}(\omega)}{1+r})
+\end{align*}
+It's clear that $V_k(x)\le V_{k-1}(x)$ for any $k$. Therefore,  $\{\alpha_k\}$ is monotonically decreasing.
+
+Note that the key for this proof is the i.i.d. of $\omega_k$.
+
+\begin{itemize}
+\item
+Pattern
+\item
+Trends
+\item
+Convergence: If there are inifinte horizons, what is the bottleneck for the policy.
+\end{itemize}
+
+In this case,
+\begin{equation}\label{Eq:3:1}
+\begin{aligned}
+\alpha_k &= \frac{\mathbb{E}V_{k+1}(\omega)}{1+r}
+=
+\frac{1}{1+r}
+\left[\int_0^{\alpha_{k+1}}\alpha_{k+1}d P(\omega)
++
+\int_{\alpha_{k+1}}^\infty \omega d P(\omega)
+\right]\\
+&=\frac{P(\alpha_{k+1})}{1+r}\alpha_{k=1}
++
+\frac{1}{1+r}\int_{\alpha_{k+1}}^\infty\omega d P(\omega)
+\end{aligned}
+\end{equation}
+where the $P(\alpha_{k+1})$ is the cdf, and $\alpha_k$ is bounded.
+
+
+Start from $\alpha_N=0$, derive $\alpha_{N-1},\dots,\alpha_0$ sequentially.
+
+When $N\to\infty$, note that computing the equation above is based on the derivation of $\alpha_{N+1}$. We can imply the convergence of $\alpha$, and we can compute $\alpha_{N+1}$ based on (\ref{Eq:3:1}).
+
+
+
+
+
+
+
+
