@@ -62,94 +62,110 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Dynamic Programming with perfect information}{21}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Reviewing}{21}{paragraph*.19}
+\contentsline {section}{\numberline {3.1}Linear-Quadratic Problems}{21}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Inventory Control}{21}{section.3.1}
+\contentsline {paragraph}{Asymptotic Behavior}{22}{paragraph*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Optimal Stopping Problem}{23}{section.3.2}
+\contentsline {paragraph}{Random System Matrices}{24}{paragraph*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Asset Selling}{23}{paragraph*.20}
+\contentsline {section}{\numberline {3.2}Inventory Control}{25}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}The Distribution and Installation}{25}{chapter.4}
+\contentsline {paragraph}{Optimal Policy}{26}{paragraph*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Pre-requisites}{25}{section.4.1}
+\contentsline {section}{\numberline {3.3}Optimal Stopping Problem}{28}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}The Distribution}{25}{section.4.2}
+\contentsline {paragraph}{Asset Selling}{29}{paragraph*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Folder \texttt {nowfnt}}{25}{subsection.4.2.1}
+\contentsline {paragraph}{Future Analysis}{30}{paragraph*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{journaldata}{26}{paragraph*.21}
+\contentsline {chapter}{\numberline {4}Dynamic Programming with imperfect information}{32}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{SampleArticle}{26}{paragraph*.22}
+\contentsline {section}{\numberline {4.1}Problem Setting}{32}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Folder \texttt {nowfnttexmf}}{26}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.2}Reformulation as a perfect state information system}{33}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Installation}{26}{section.4.3}
+\contentsline {section}{\numberline {4.3}Machine Repair Example}{34}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Quick Start}{28}{chapter.5}
+\contentsline {chapter}{\numberline {5}The Distribution and Installation}{36}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}\textbackslash documentclass}{28}{section.5.1}
+\contentsline {section}{\numberline {5.1}Pre-requisites}{36}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}\textbackslash issuesetup}{29}{section.5.2}
+\contentsline {section}{\numberline {5.2}The Distribution}{36}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}\textbackslash maintitleauthorlist}{29}{section.5.3}
+\contentsline {subsection}{\numberline {5.2.1}Folder \texttt {nowfnt}}{36}{subsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}\textbackslash author and \textbackslash affil}{29}{section.5.4}
+\contentsline {paragraph}{journaldata}{37}{paragraph*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textbackslash author}{29}{paragraph*.23}
+\contentsline {paragraph}{SampleArticle}{37}{paragraph*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textbackslash affil}{29}{paragraph*.24}
+\contentsline {subsection}{\numberline {5.2.2}Folder \texttt {nowfnttexmf}}{37}{subsection.5.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}\textbackslash addbibresource}{29}{section.5.5}
+\contentsline {section}{\numberline {5.3}Installation}{37}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Style Guidelines and \LaTeX \ Conventions}{30}{chapter.6}
+\contentsline {chapter}{\numberline {6}Quick Start}{39}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Abstract}{30}{section.6.1}
+\contentsline {section}{\numberline {6.1}\textbackslash documentclass}{39}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Acknowledgements}{30}{section.6.2}
+\contentsline {section}{\numberline {6.2}\textbackslash issuesetup}{40}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}References}{30}{section.6.3}
+\contentsline {section}{\numberline {6.3}\textbackslash maintitleauthorlist}{40}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Citations}{31}{section.6.4}
+\contentsline {section}{\numberline {6.4}\textbackslash author and \textbackslash affil}{40}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.1}Example citations}{31}{subsection.6.4.1}
+\contentsline {paragraph}{\textbackslash author}{40}{paragraph*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.5}Preface and Other Special Chapters}{31}{section.6.5}
+\contentsline {paragraph}{\textbackslash affil}{40}{paragraph*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.6}Long Chapter and Section Names}{32}{section.6.6}
+\contentsline {section}{\numberline {6.5}\textbackslash addbibresource}{40}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.7}Internet Addresses}{32}{section.6.7}
+\contentsline {chapter}{\numberline {7}Style Guidelines and \LaTeX \ Conventions}{41}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Compiling Your FnT Article}{33}{chapter.7}
+\contentsline {section}{\numberline {7.1}Abstract}{41}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Compiling Your Article Prior to Submission}{33}{section.7.1}
+\contentsline {section}{\numberline {7.2}Acknowledgements}{41}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Preparing the Final Versions}{34}{section.7.2}
+\contentsline {section}{\numberline {7.3}References}{41}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{lastpage=}{34}{paragraph*.25}
+\contentsline {section}{\numberline {7.4}Citations}{42}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Compiling The Final Versions}{34}{section.7.3}
+\contentsline {subsection}{\numberline {7.4.1}Example citations}{42}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Wednesday}{35}{section.7.4}
+\contentsline {section}{\numberline {7.5}Preface and Other Special Chapters}{42}{section.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Knapsacle Problem}{35}{paragraph*.26}
+\contentsline {section}{\numberline {7.6}Long Chapter and Section Names}{43}{section.7.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Label Correcting Methods}{36}{subsection.7.4.1}
+\contentsline {section}{\numberline {7.7}Internet Addresses}{43}{section.7.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}DP problems with perfect state information}{36}{subsection.7.4.2}
+\contentsline {chapter}{\numberline {8}Compiling Your FnT Article}{44}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Linear Quadratic System}{36}{paragraph*.27}
+\contentsline {section}{\numberline {8.1}Compiling Your Article Prior to Submission}{44}{section.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.3}Linear Quadratic}{36}{subsection.7.4.3}
+\contentsline {section}{\numberline {8.2}Preparing the Final Versions}{45}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Riccati Equation}{38}{paragraph*.28}
+\contentsline {paragraph}{lastpage=}{45}{paragraph*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Acknowledgements}{40}{chapter*.29}
+\contentsline {section}{\numberline {8.3}Compiling The Final Versions}{45}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Appendices}{41}{chapter*.29}
+\contentsline {section}{\numberline {8.4}Wednesday}{46}{section.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Journal Codes}{42}{appendix.A}
+\contentsline {paragraph}{Knapsacle Problem}{46}{paragraph*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Files Produced During Compilation}{44}{appendix.B}
+\contentsline {subsection}{\numberline {8.4.1}Label Correcting Methods}{47}{subsection.8.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{45}{appendix*.32}
+\contentsline {subsection}{\numberline {8.4.2}DP problems with perfect state information}{47}{subsection.8.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Linear Quadratic System}{47}{paragraph*.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4.3}Linear Quadratic}{47}{subsection.8.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Riccati Equation}{49}{paragraph*.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgements}{51}{chapter*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{Appendices}{52}{chapter*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Journal Codes}{53}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Files Produced During Compilation}{55}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{56}{appendix*.38}

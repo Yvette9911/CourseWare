@@ -1,8 +1,8 @@
 \select@language {english}
 \vskip -8pt
-\contentsline {schapter}{Acknowledgments}{ix}{chapter*.2}
+\contentsline {schapter}{Acknowledgments}{xi}{chapter*.2}
 \vskip -8pt
-\contentsline {schapter}{Notations}{xi}{chapter*.3}
+\contentsline {schapter}{Notations}{xiii}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Week1}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Monday for MAT3040}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Introduction to Advanced Linear Algebra}{1}{subsection.1.1.1}
@@ -123,4 +123,41 @@
 \contentsline {paragraph}{Motivation}{157}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Monday for MAT4002}{159}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Continuous Functions on Compact Space}{159}{subsection.5.3.1}
+\contentsline {section}{\numberline {5.4}Wednesday for MAT3040}{162}{section.5.4}
+\contentsline {paragraph}{Reviewing}{162}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Adjoint Map}{163}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Relationship between Annihilator and dual of quotient spaces}{166}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Wednesday for MAT3006}{167}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Remarks on Baire Category Theorem}{167}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Compact subsets of $\mathcal {C}[a,b]$}{169}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}Wednesday for MAT4002}{171}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Remarks on Compactness}{171}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Quotient Spaces}{172}{subsection.5.6.2}
+\contentsline {paragraph}{Motivation}{172}{subsection.5.6.2}
+\contentsline {paragraph}{Idea}{172}{subsection.5.6.2}
+\contentsline {subsubsection}{\numberline {5.6.2.1}Equivalence Relations and partitions}{172}{subsubsection.5.6.2.1}
+\contentsline {chapter}{\numberline {6}Week6}{177}{chapter.6}
+\contentsline {section}{\numberline {6.1}Monday for MAT3040}{177}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Polynomials}{177}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Monday for MAT3006}{180}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Arzela-Ascoli Theorem}{180}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Baire Category Theorem}{181}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.2}Wednesday for MAT3040}{180}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Eigenvalues $\&$ Eigenvectors}{183}{subsection.6.2.1}
+\contentsline {paragraph}{Assumption}{184}{exampleT.6.5}
+\contentsline {chapter}{\numberline {7}Week7}{187}{chapter.7}
+\contentsline {section}{\numberline {7.1}Monday for MAT3040}{187}{section.7.1}
+\contentsline {paragraph}{Reviewing}{187}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Minimal Polynomial}{187}{subsection.7.1.1}
+\contentsline {section}{\numberline {7.2}Monday for MAT3006}{193}{section.7.2}
+\contentsline {paragraph}{Reviewing}{193}{section.7.2}
+\contentsline {section}{\numberline {7.3}Monday for MAT4002}{197}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Quotient Map}{197}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Simplicial Complex}{198}{subsection.7.3.2}
+\contentsline {section}{\numberline {7.4}Wednesday for MAT3040}{201}{section.7.4}
+\contentsline {paragraph}{Recall}{201}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Cayley-Hamiton Theorem}{202}{subsection.7.4.1}
+\contentsline {section}{\numberline {7.5}Wednesday for MAT4002}{206}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Simplicial Sub-complex}{206}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Some properties of simplicial complex}{208}{subsection.7.5.2}
 \contentsfinish 

@@ -1,0 +1,166 @@
+\chapter{Dynamic Programming with imperfect information}
+\section{Problem Setting}
+\begin{itemize}
+\item
+State: $x_k$
+\item
+Control: $u_k\in\mu_k(x_k)$
+\item
+Disturbance: $\omega_k$
+\item
+Dynamics: $x_{k+1} = f_k(x_k,u_k,\omega_k)$
+\item
+stage cost: $g_N(x_N),g_k(x_k,u_k,\omega_k)$
+\end{itemize}
+Imperfect Information Setting
+\begin{itemize}
+\item
+Observation: $Z_k$
+\item
+measurment: $z_k = h_k(x_k,u_{k-1},v_k)$, where $v_k$ denotes the measurment noise, and $v_k$ is dependent on $x_0,\dots,x_{k-1},u_0,\dots,u_{k-1},v_0,\dots,v_{k-1}$
+\item
+Information vector: $I_k = (z_0,\dots,z_k,u_0,\dots,u_{N-1})$
+\item
+The goal is to derive the optimal policy
+\[
+\pi = (\mu_0(I_{0}),\dots,\mu_{N-1}(I_{N-1}))
+\]
+where $u_k^* = \mu_k(I_k)$ to minimize the cost function
+\[
+J_\pi = \mathbb{E}_{\omega_0,\dots,\omega_{N-1},v_0,\dots,v_{N-1},x_0}\left\{\sum_{k=0}^{N-1}g_k(x_k,\mu_k(I_k),\omega_k)+g_N(x_N)\right\}
+\]
+Therefore, we need the distribution of $x_0$.
+\end{itemize}
+
+\section{Reformulation as a perfect state information system}
+\begin{itemize}
+\item
+State: $I_k=(z_0,\dots,z_k,u_0,\dots,u_{k-1})$
+\item
+Control: $u_k\in U_k$
+\item
+Disturbance: $z_{k+1}$
+\item
+System dynamics:
+\[
+I_{k+1} = (I_k,u_{k+1},z_{k+1})
+\]
+where $z_{k+1}$ is the unknown term, considered as the noise
+\item
+Stage cost:
+\[
+\mathbb{E}_{x_k,\omega_k}\left(g_k(x_k,u_k,\omega_k)\mid I_k,u_k\right)
+=
+\sum_{x_k}\mathbb{E}_{\omega_k}g_k(x_k,u_k,\omega_k)\cdot P(x_k\mid I_k)
+\]
+Therefore, this stage cost is a function w.r.t. $I_k,u_k$.
+\end{itemize}
+Dynamic algorithm applies as follows:
+\begin{align*}
+J_{N-1}(I_{N-1}) &= \min_{u_{N-1}\in \mu_{N-1}}
+\mathbb{E}_{x_{N-1},\omega_{N-1}}\left[
+g_{N-1}(x_N,u_{N-1},\omega_{N-1})\mid I_{N-1},\omega_{N-1}
+\right]\\&
++\mathbb{E}_{\omega_{N-1},x_{N-1}}[g_N(x_N)\mid I_{N-1},u_{N-1}]
+\end{align*}
+For $k=N-1,N-2,\dots,1$,
+\begin{align*}
+J_{k}(I_k)&=\min_{u_k\in U_k}\mathbb{E}_{x_k,\omega_k}[g_k(x_k,u_k,\omega_k)\mid I_k,u_k]\\
+&+\mathbb{E}_{z_{k+1}}\left[J_{k+1}(I_k,u_{k+1},z_{k+1})\mid I_k,u_k\right]
+\end{align*}
+We need the conditional distribution $P(x_k\mid I_k)$ and $P(z_{k+1}\mid I_k)$.
+
+
+\section{Machine Repair 
+Example}
+\begin{itemize}
+\item
+State: $x_k$ is $P$ or $\overline{P}$
+\item
+Observation: $Z_k = \{G,B\}$
+\item
+Control: $u_k = \{C,S\}$, where $C$ denotes continue, $S$ denotes stop to check.
+\item
+Disturbance:
+
+System Dynamics:
+\[
+P(x_{k+1}=(P,\overline{P})\mid x_k=P)=(2/3,1/3)
+\]
+\[
+P(x_{k+1} = (P,\overline{P})\mid x_k=\overline{P})=(0,1)
+\]
+\item
+Stage cost:
+\[
+g(x_k,u_k) = \left\{
+\begin{aligned}
+0,&\quad(x_k,u_k)=(P,C)\\
+2,&\quad(x_k,u_k)=(\overline{P},C)\\
+1,&\quad(x_k,u_k) = (P,S)\\
+1,&\quad(x_k,u_k)=(\overline{P},S)
+\end{aligned}
+\right.
+\]
+\item
+Measurement:
+\[
+P(Z_k=G\mid x_k=P)=3/4,\quad
+P(Z_k=B\mid x_k=\overline{P})=3/4
+\]
+\item
+Cost-to-go Function:
+\[
+N=2,\quad
+J_N(I_N)=0
+\]
+\begin{align*}
+J_1(I_1) &= \min_{u_1\in\{C,S\}}\mathbb{E}_{x_1}[g(x_1,u_1)\mid I_1,u_1]+\underbrace{\mathbb{E}J_2}_{0}\\
+&=
+\min_{u_1}\left\{
+\mathbb{E}_{x_1}[g(x_1,c)\mid I_1,c]
+,
+\mathbb{E}_{x_1}[g(x,s)\mid I_1,s]
+\right\}
+\end{align*}
+We need the conditional distribution $P(x_k\mid I_k)$, and the initial distribution $P(x_0=P)=2/3,P(x_0=\overline{P})=1/3$.
+\end{itemize}
+Prior: $P(x_0)$; conditional distribution: $P(z_0\mid x_0)$; posterior distribution: $P(x_0\mid z_0)$. Marginal: $P(z_0)$
+
+Bayes's Theorem:
+\[
+P(x_0\mid z_0) = \frac{P(x_0,z_0)}{P(z_0)}
+=
+\frac{P(z_0\mid x_0)P(x_0)}{\sum_{x_0}P(z_0\mid x_0)P(x_0)}
+\]
+
+Therefore,
+\[
+P(x_0=P\mid z_0=G) = \frac{P(x_0=P,z_0=G)}{p(z_0=G)}
+=
+\frac{2/3\times 3/4}{2/3\times 3/4+1/3\times1/4}=6/7
+\]
+
+\[
+P(x_1\mid I_1)
+=P(x_1\mid z_0,z_1,u_1)
+=
+\frac{P(z_1\mid x_1,z_0,u_1)\cdot P(x_1\mid z_0,u_0)}{P(z_1\mid z_0,u_1)}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

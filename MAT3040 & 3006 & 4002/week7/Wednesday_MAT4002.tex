@@ -1,0 +1,165 @@
+\section{Wednesday for MAT4002}\index{Monday_lecture}
+Triangulation of topological space $X$
+\[
+V=\{1,2,3,4,\dots,9\},\quad
+\Sigma=\left\{
+\begin{aligned}
+\text{$9$ subsets with $1$ element}\\
+\text{$27$ subsets with $2$ elements}\\
+\text{$18$ subsets with $3$ elements}
+\end{aligned}
+\right.
+\]
+
+Figures
+
+Question: can we go from a figure into $(V,\Sigma)?$
+e.g.,
+the figure is not a triangulation.
+
+Now we can do the following:
+\[
+\text{study of $X$}\mapsto\{\text{study of $(V,\Sigma)$ with $|(V,\Sigma)|\cong X$}\}
+\]
+e.g., can we distinguish $X=S^1\times S^1$ and $Y=S^2$, .e.g., can we distinguish $|(V_1,\Sigma_1)|$ and $|(V_2,\Sigma_2)|$?
+
+\begin{theorem}
+Suppose that $|(V_1,\Sigma_1)|\cong|(V_2,\Sigma_2)|$, then 
+\begin{align*}
+&\sum_{i=1}^\infty(-1)^i\left(\text{number of subsets in $\Sigma_1$ with $(i+1)$-element}\right)\\
+&=
+\sum_{i=1}^\infty(-1)^i\left(\text{number of subsets in $\Sigma_2$ with $(i+1)$-element}\right)
+\end{align*}
+This goes back to Euler: $V-E+F = 2$.
+\end{theorem}
+Since $\mathcal{X}(S^2) = 5-9+6=2$ and $\mathcal{X}(S^1\times S^1) = 9-27+18=0$, we conclude that
+\[
+S^2\not\cong S^1\times S^1,
+\]
+
+\subsection{Simplicial Sub-complex}
+
+\begin{definition}
+A subcomplex of a simplicial complex $K=(V,\Sigma)$ is a simplicial complex $K'=(V',\Sigma')$ with 
+\[
+V'\subseteq V,\quad
+\Sigma'\subseteq\Sigma
+\]
+\end{definition}
+\begin{proposition}
+Suppose $K'$ is subcomplex of $K$, then $|K'|$ is closed in $|K|$.
+\end{proposition}
+\begin{proof}
+Suppose that $D$ is the disjoint union of all the simplicial complex forming $|K|$. (number of component in $D$ is $|\Sigma|$)
+and
+$p:D\to|K|$ be the projection mapping.
+
+Note that $p^{-1}(|K'|)$ are precisely the (disjoint union of) $\Delta_{\sigma'}$, where $\sigma'\in\Sigma'$, which is closed in $D$.
+By definition of quotient topologu, $|K'|$ is also closed. 
+\end{proof}
+
+\begin{definition}[sub-complex]
+Let $K=(V,\Sigma)$ be simplicial complex and $V'\subseteq V$.
+Then the subcomplex spanned by $V'$ has
+\begin{itemize}
+\item
+vertex $V'$
+\item
+simplices $\Sigma'$ given by
+\[
+\{\sigma\in\Sigma\mid\sigma\subseteq V'\}
+\]
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Link and Star]
+Let $(V,\Sigma)=K$ be simplicial complex
+\begin{itemize}
+\item
+The \emph{link} of $\bm v\in V$, denoted as $\text{lk}(\bm v)$ is the sub-complex with
+\begin{itemize}
+\item
+verex set
+\[
+\{\bm w\in V\setminus\{\bm v\}\mid \{\bm v,\bm w\}\in\Sigma\}
+\]
+\item
+simplicies
+\[
+\{\sigma\in\Sigma\mid\bm v\notin\sigma\text{ and }\sigma\cup\{\bm v\}\in\Sigma\}
+\]
+\end{itemize}
+\item
+The star of $\bm v$~($\text{st}(\bm v)$) is
+\[
+\bigcup\{\text{inside}(\sigma)\mid \sigma\in\Sigma,\bm v\in\sigma\}
+\]
+\end{itemize}
+\end{definition}
+
+\begin{proposition}
+$\text{st}(\bm v)$ is open and $\bm v\in\text{st}(\bm v)$.
+\end{proposition}
+\begin{proof}
+Omitted.
+\end{proof}
+In fact, $|K|\setminus\text{st}(\bm v)$ is the simplicial subcomplex spanned by $V$.
+
+\subsection{Some properties of simplicial complex}
+
+\begin{proposition}
+Suppose that $K=(V,\Sigma)$, where $V$ is finite.
+Then $|K|$ is compact.
+\end{proposition}
+\begin{proof}
+The mapping $p:D\to|K|$ is a projection mapping; and 
+$D$ (as a finite disjoint union of $\Delta_\sigma$'s) is compact.
+
+Therefore, $p(D)=|K|$ is compact.
+\end{proof}
+
+\begin{proposition}
+For each $K=(V,\Sigma)$, where $V$ is finite, there is a continuous injection
+\[
+f:|K|\to\mathbb{R}^n\ \text{ for some $n$}
+\]
+\end{proposition}
+\begin{proof}
+Let $K'=(V,\Sigma')$, where $\Sigma'=\text{power set of $V$}$. Then
+\[
+|K'| = \Delta^{|V|-1}\subseteq \mathbb{R}^{|V|}
+\]
+Consider
+\[
+i:|K|\to|K'|
+\]
+which comes from the following
+\[
+(V,\Sigma)\to D=\sqcup_{\sigma\in \Sigma}\Delta_{\sigma}
+\]
+\[
+(V,\Sigma')\to D'=\sqcup_{\sigma'\in \Sigma'}\Delta_{\sigma'}
+\]
+$\tilde{i}:D\to D'\to_{p'}|K|$, which descends to the continuous injective
+\[
+i:D/n\to|K'|
+\]
+\[
+|K|\to^i|K'|=\Delta^{|V|-1}\to\mathbb{R}^{|V|}
+\]
+i.e.., $|K|\to\mathbb{R}^{|V|}$.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,248 @@
+
+\section{Wednesday for MAT3040}\index{Wednesday_lecture}
+\paragraph{Recall}
+Let $f(x)\in\mathbb{F}[x]$ with $f(T):V\to V$.
+$m_T(x)$ is defined to be the polynomial of smallest degree such that
+\[
+m_T(T)=\bm0_{V\to V}\Longleftrightarrow
+m_T(T)\bm v=0_{\bm V}, \ \forall\bm v\in V
+\]
+If $f(T) = 0_{V\to V}$, then we imply $m_T(x)\mid f(x)$.
+
+If $g(T)_{\bm w}=0_V$, then we imply $m_{T,\bm w}(x)\mid g(x)$.
+
+In particular, $m_T(T)\bm w=\bm0$, which implies $m_{T,\bm w}(x)\mid m_T(x)$.
+
+\begin{example}
+Let $A=\begin{pmatrix}
+1&0\\0&2
+\end{pmatrix}:\mathbb{R}^2\to\mathbb{R}^2$, if $m_A(x) = x-k$, then
+\[
+m_A(A) = A - kI=\begin{pmatrix}
+1-k&0\\0&2-k
+\end{pmatrix}\ne\begin{pmatrix}
+0&0\\0&0
+\end{pmatrix},\ \forall k,
+\]
+which is a contradiction.
+
+Consider $(A-I)(A-2I)=\begin{pmatrix}
+0&0\\0&1
+\end{pmatrix}\begin{pmatrix}
+-1&0\\0&0
+\end{pmatrix}=\begin{pmatrix}
+0&0\\0&0
+\end{pmatrix}$, and therefore
+\[
+f(x)= (x-1)(x-2)\implies
+m_A(x) = (x-1)(x-2)
+\]
+Let $\bm w = \bm e_2 = [0,1]\trans$, and 
+\[
+(A-2I)\bm w=\bm0\implies
+m_{A,\bm w}(x) = x-2
+\]
+\end{example}
+More generally, if $\lambda$ is an eigenvalue of $T:V\to V$ with eigenvector $\bm v$, then
+\[
+m_{T,\bm v}(x) =  (x-\lambda)\implies
+(x-\lambda)\mid m_T(x)
+\]
+
+
+\subsection{Cayley-Hamiton Theorem}
+
+The goal is to relate $m_T(x)$ with $\mathcal{X}_T(x)$.
+Suppose that
+\[
+\mathcal{X}_T(x) = (x-\lambda_1)^{e_1}\cdots(x-\lambda_k)^{e_k}\in\mathbb{F}[x]
+\]
+Then we imply
+\begin{itemize}
+\item
+$\lambda_i$ is an eigenvalue of $T$.
+\item
+$(x-\lambda_i)\mid m_T(x)$
+\end{itemize}
+Therefore, $(x-\lambda_1)\cdots(x-\lambda_k)\mid m_T(x)$.
+
+Question: Does $m_T(x)$ possess other factors?
+Does $(x-\lambda_i)^{f_i}\mid m_T(x)$ when $f_i>e_i$?
+
+Answer: No.
+
+\begin{theorem}[Cayley-Hamiton]
+$m_T(x)\mid\mathcal{X}_T(x)$. In particular, $\mathcal{X}_T(T)=\bm0$.
+\end{theorem}
+Whtat if $\mathcal{X}_{T}(x)$ cannot be factorized into linear factors in $\mathbb{F}[x]$? e.g., $A=\begin{pmatrix}
+0&-1\\1&0
+\end{pmatrix}$ in $\mathbb{R}$.
+
+Fact: for every $f(x)\in\mathbb{F}[x]$, we can extend $\mathbb{F}$ into $\overline{F}\supseteq\mathbb{F}$ such that
+\[
+f(x) = (x-\lambda_1)^{e_1}\cdots(x-\lambda_k)^{e_k}
+\]
+where $\lambda_i\in\overline{\mathbb{F}}$.
+
+e.g., suppose $\mathbb{F}=\mathbb{R}$, $f(x) = x^2+1$, then
+\[
+f(x) = (x+i)(x-i).
+\]
+If $\mathbb{F}= \mathbb{R}$, one can always pick $\overline{\mathbb{F}}=\mathbb{C}$, since $\overline{\mathbb{F}}$ is algebraically closed.
+
+To study $m_T(x)$ and $\mathcal{X}_T(x)$ in $\mathbb{F}[x]$, we will
+\begin{itemize}
+\item
+study $m_T(x),\mathcal{X}_T(x)$ in $\overline{F}[x]$
+\item
+show $m_T(x)\mid\mathcal{X}_T(x)$ in $\overline{F}[x]$
+\item
+show that $m_T(x)\mid\mathcal{X}_T(x)$ in $\overline{F}[x]$.
+\end{itemize}
+
+Recall that for linear transformation $T:V\to V$, $U\le V$ is $T$-invariant if $T(U)\le U$
+\begin{example}
+\begin{enumerate}
+\item
+$U=\ker(T-\lambda I)$ ($\lambda$-eigenspace) is $T$-invariant.
+\item
+More generally, $U=\ker(g(T))$ is $T$-invariant for polynomial $g$:
+if $\bm v\in\ker(g(T))$, i.e., $g(T)\bm v=\bm0$, it suffices to show $T(\bm v)\in\ker(g(T))$
+\begin{align*}
+g(T)T(\bm v) &= (a_mT^m+\cdots+a_0I)T(\bm v)\\
+&=
+(a_mT\circ T^m+\cdots+a_1T\circ T+a_0T\circ I)(\bm v)\\
+&=
+T(g(T)\bm v)=T(\bm 0)=\bm0
+\end{align*}
+\item
+For $\bm v\in\ker(T-\lambda I)$, $U=\Span\{\bm v\}$ is $T$-invariant.
+\end{enumerate}
+
+\end{example}
+
+\begin{proposition}
+Suppose that $T:V\to V$ is a linear transformation and $W\le V$ is $T$-invariant, then
+\[
+T\mid_U:U\to U
+\]
+and
+\[
+\mathcal{X}_T(x) = \mathcal{X}_{T\mid u}(x)\circ\mathcal{X}_{\tilde{T}}(x)
+\]
+where $\tilde{T}:V/U\to V/U$ is given in Hw2, Q4 ($\tilde{T}(\bm v+U) = T(\bm v)+U$).  
+\end{proposition}
+\begin{proof}
+Let $\mathcal{C} = \{\bm v_1,\dots,\bm v_k\}$ be a basis of $U$, and extend it into a basis of $V$, say
+\[
+\mathcal{B}=\{\bm v_1,\dots,\bm v_k,\bm v_{k+1},\dots,\bm v_n\}
+\]
+Therefore, $\overline{\mathcal{B}} = \{\bm v_{k+1}+U,\dots,\bm v_n+U\}$ is a basis of $V/U$.
+
+By Hw2, Q5,
+\[
+(T)_{\mathcal{B},\mathcal{B}} = \begin{pmatrix}
+(T|_{U})_{\mathcal{C},\mathcal{C}}&*\\
+\bm0&(\tilde{T})_{\overline{\mathcal{B}},\overline{\mathcal{B}}}
+\end{pmatrix}
+\]
+Therefore,
+\[
+\det((T)_{\mathcal{B},\mathcal{B}} - xI) = \det((T|_{U})_{\mathcal{C},\mathcal{C}} - xI)\cdot\det((\tilde{T})_{\overline{\mathcal{B}},\overline{\mathcal{B}}} - xI)
+\]
+\end{proof}
+
+\begin{proposition}
+Suppose that 
+\[
+\mathcal{X}_T(x) = (x-\lambda_1)\cdots(x-\lambda_n)
+\]
+where $\lambda_i$'s are not necessarily distinct.
+Then there exists a basis of $V$, say $\mathcal{A}$, such that
+\[
+(T)_{\mathcal{A},\mathcal{A}}=\diag(\lambda_1,\dots,\lambda_n)
+\]
+\end{proposition}
+\begin{proof}
+Use induction on $n$.
+By 2040, there exists $\bm y\in\mathbb{R}^n$ such that
+\[
+(T)_{\mathcal{B},\mathcal{B}}\bm y = \lambda_1\bm y
+\]
+Recall that $(\cdot)_{\mathcal{B}}:V\to\mathbb{R}^n$ is an isomorphism, there exists $\bm v\in V\setminus\{\bm0\}$ such that $(\bm v)_{\mathcal{B}} = \bm y$.
+
+Therefore, we imply
+\[
+(T)_{\mathcal{B},\mathcal{B}}(\bm v)_{\mathcal{B}} = \lambda_1(\bm v)_{\mathcal{B}}
+\]
+which implies $(T\bm v)_{\mathcal{B}} = (\lambda_1\bm v)_{\mathcal{B}}$, i.e., $T\bm v = \lambda_1\bm v$.
+
+Let $U=\Span\{\bm v\}$.
+Since $U$ is $T$-invariant, the proof of proposition implies that there exists $\mathcal{B}$, a basis of $V$ such that
+\[
+(T)_{\mathcal{B},\mathcal{B}}=\begin{pmatrix}
+T|_U&*\\\bm0&(\tilde{T})_{\mathcal{B},\mathcal{B}}
+\end{pmatrix}_{[1+(n-1)]\times[1+(n-1)]}
+\]
+$T|_U:\Span\{\bm v\}\to\Span\{\bm v\}$ with $\bm v\mapsto T\bm v=\lambda_1\bm v$. Therefore
+\[
+(T)_{\mathcal{B},\mathcal{B}}=\begin{pmatrix}
+\lambda_1&*\\\bm0&(\tilde{T})_{\overline{\mathcal{B}},\overline{\mathcal{B}}}
+\end{pmatrix}
+\]
+By proposition, $\tilde{T}:V/U\to V/U$ has 
+\[
+\mathcal{X}_{\tilde{T}}(x) = (x-\lambda_2)\cdots(x-\lambda_n)
+\]
+By inducition, there exists basis $\overline{\mathcal{C}}$ of $V/U$, i.e.,
+\[
+\overline{\mathcal{C}} = \{\bm w_2+U,\dots,\bm w_n+U\}
+\]
+such that
+\[
+(\tilde{T})_{\overline{\mathcal{C}},\overline{\mathcal{C}}}
+=
+\diag(\lambda_2,\dots,\lambda_n)
+\]
+
+Consider
+\[
+\mathcal{A}:=
+\{\bm v,\bm w_2,\dots,\bm w_n\},\ \text{where $\bm v\in U$}
+\]
+We claim that 
+\begin{itemize}
+\item
+$\mathcal{A}$ is a basis of $V$
+\item
+\[
+(T)_{\mathcal{A},\mathcal{A}}=\begin{pmatrix}
+\lambda_1&*\\*&(\tilde{T})_{\overline{\mathcal{C}},\overline{\mathcal{C}}}
+\end{pmatrix}=\diag(\lambda_1,\dots,\lambda_n)
+\]
+\end{itemize}
+\end{proof}
+
+\begin{proposition}
+Suppose that $\mathcal{X}_T(x) = (x-\lambda_1)\cdots(x-\lambda_n)$, then $\mathcal{X}_T(T)=\bm0$.
+\end{proposition}
+If $\bm A = \diag(\lambda_1,\dots,\lambda_n)$, then
+\[
+(A-\lambda_1\bm I)\cdots(A-\lambda_n\bm I)\text{ is a zero matrix}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

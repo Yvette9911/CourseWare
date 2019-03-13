@@ -1,0 +1,193 @@
+\section{Monday for MAT3006}\index{Monday_lecture}
+Our first mid-term will be held on this Wednesday.
+\paragraph{Reviewing}
+\begin{itemize}
+\item
+Outer Measure: For $E\subseteq\mathbb{R}$,
+\[
+m^*(E)=\inf\left\{
+\sum_{n=1}^\infty m(I_n)\middle|
+E\subseteq\bigcup_{n=1}^\infty I_n,\ \text{$I_n$ are open intervals}
+\right\}
+\]
+\end{itemize}
+\begin{proposition}
+\begin{enumerate}
+\item
+$m^*(\phi)\cap m^*(\{x\})=0$
+\item
+$m^*(E+x) = m^*(E)$
+\item
+$m^*(\{a,b\}) = b-a$, where the brackets can be replaced by $($ or $]$.
+\item
+If $A\subseteq B$, then $m^*(A)\le m^*(B)$
+\item
+$m^*(kE) = |k|m^*(E)$
+\item
+$m^*(\cup_{m=1}^\infty E_n)\le \sum_{n=1}^\infty m^*(E_n)$
+\end{enumerate}
+\end{proposition}
+The trick to show $x\le y$ is by argument $x\le y+\varepsilon,\forall \varepsilon>0$.
+\begin{proof}
+(1),(2),(5) is clear.
+
+(4) is a one-line argument: suppose $B\subseteq\cup_{n=1}^\infty I_n$, then
+\[
+A\subseteq\cup_{n=1}^\infty I_n
+\]
+(3): Consider $m^*([a,b])$ first:
+\[
+[a,b]\subseteq(a-\frac{\varepsilon}{2},b+\frac{\varepsilon}{2})\cup(a,a)\cup\cdots
+\]
+which implies 
+\[
+m^*([a,b])\le m((a-\frac{\varepsilon}{2},b+\frac{\varepsilon}{2}))+0+\cdots+0=(b-a)+\varepsilon,\ \forall\varepsilon>0
+\]
+In particular, $m^*([a,b])\le b-a$.
+
+Conversely, to show $b-a\le m^*([a,b])$, for all $\varepsilon>0$, there exists $I_n, \ n\in\mathbb{N}$ such that
+\[
+[a,b]\subseteq \cup_{n=1}^\infty I_n,\qquad
+\sum_{n=1}^\infty m(I_n)\le m^*([a,b])+\varepsilon
+\]
+By Heine-Borel Theorem, there exists finite subcover $[a,b]\subseteq \cup_{n=1}^k I_n$.
+Let $I_n = (\alpha_n,\beta_n)$, consider $\alpha:=\min\{\alpha_n\mid a\in I_n\}$ and $\beta:=\max\{\beta_n\mid b\in I_n\}$.
+Then we imply 
+\[
+[a,b]\subseteq(\alpha,\beta)\subseteq \cup_{n=1}^kI_n.
+\]
+We claim that
+\[
+\beta - \alpha\le \sum_{n=1}^km(I_n)
+\]
+Therefore, $b-a\le \beta-\alpha\le \sum_{n=1}^km(I_n)\le\sum_{n=1}^\infty m(I_n)\le m^*([a,b])+\varepsilon$.
+The proof is complete.
+
+For $m^*((a,b))$, 
+\[
+a-b = m^*([a+\frac{\varepsilon}{2},b-\frac{\varepsilon}{2}]) + \frac{\varepsilon}{2}+\frac{\varepsilon}{2}
+\le
+m^*((a,b))+\varepsilon
+\]
+The proof is complete.
+\end{proof}
+\begin{proof}[Proof for (6)]
+When there exists $m^*(E_n)=\infty$, check both sides equal to infinite.
+
+Consider the case where $m^*(E_n)<\infty$ only.
+Then $E_n\subseteq\cup_{k=1}^\infty I_{n,k}$, with $\sum_{k=1}^\infty m(I_{n,k})\le m^*(E_n) + \frac{\varepsilon}{2^n}$.
+
+Note that 
+\begin{itemize}
+\item
+$\cup_{n=1}^\infty\cup_{k=1}^\infty I_{n,k}$ is a countable open cover of $\cup_{n=1}^\infty E_n$
+\item
+$\sum_{n,k}m(I_{n,k})\le \sum_{n=1}^\infty m^*(E_n)+\varepsilon$
+\end{itemize}
+Therefore,
+\[
+m^*(\cup_{n=1}^\infty E_n)\le \sum_{n,k}m(I_{n,k})\le\sum_{n=1}^\infty m^*(E_n)+\varepsilon
+\]
+
+
+\end{proof}
+
+
+\begin{definition}[Null Set]
+The set $E\subseteq\mathbb{R}$ is a \emph{null set} if
+$m^*(E)=0$.
+
+These are the points we can ignore.
+\end{definition}
+\begin{corollary}
+\begin{enumerate}
+\item
+If $E$ is null, so is any subset $E'\subseteq E$
+\item
+If $E_n$ is null for all $n\in\mathbb{E}$, so is $\cup_{n=1}^\infty E_n$
+\item
+All countable subsets of $\mathbb{R}$ are null.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+(1) is clear; (2) follows the same trick as in (6);
+(3) follows from (2) and part (1) of previous proposition
+\end{proof}
+
+\begin{remark}
+\begin{enumerate}
+\item
+Are there any uncountable null sets?
+\item
+We have another notion of ``meagre''. Is null = meagre?
+\end{enumerate}
+\end{remark}
+\begin{example}[Cantor Set]
+$C_0=[0,1]$;
+$C_1=[0,1/3]\cup[2/3,1]$;
+$C=\cap_{n=1}^\infty C_n$.
+
+Note that $C$ is null, since $C\subseteq C_n\forall n$,
+\[
+m^*(C_n) = (2/3)^n\implies
+m^*(C)\le m^*(C_n) = (2/3)^n\implies
+m^*(C)=0.
+\]
+$C$ is uncountable:
+every element in $C$ can be expressed uniquely in ternary expression, i.e., only use 0,1,2 as digits.
+
+Suppose on the contrary that $C$ is countable, i.e., $C=\{c_n\}_{n\in\mathbb{N}}.$
+Then construct a new number such that $c\notin \{c_n\}_{n\in\mathbb{N}}$ (diagonal argument).
+\end{example}
+For question 2, if $E$ is countable set, then $E$ is null and $E$ is meagre (by Baire Category Theorem).
+
+Define $E = C$ (cantor set), then $E$ is null. Is $E$ meagre?
+\begin{proposition}
+$C$ is nowhere dense, i.e., $C$ is meagre.
+\end{proposition}
+\begin{proof}
+Firstly, $C$ is closed, since intersection of closed sets is closed.
+
+Suppose on the contrary that $(\alpha,\beta)\subseteq C$, then $(\alpha,\beta)\subseteq C_n = \sqcup_{k=1}^{2^n}[a_{n,k},b_{n,k}]$ for all $n$
+
+Therefore, $(\alpha,\beta)\subseteq[a_{n,k},b_{n,k}]$ for some $k$
+\[
+\beta-\alpha<b_{n,k} - a_{n,k}=\frac{1}{3^n},\ \forall n\in\mathbb{N}
+\]
+Therefore, $\beta-\alpha=0$, which is a contradiction.
+\end{proof}
+
+There exists a mergre set $S$ with $m^*(S)=\infty$; a null set that is co-meagre.
+
+\begin{definition}[Measure]
+A meaasure of length for all subsets in $\mathbb{R}$ is a function $m$ satisfying
+\begin{enumerate}
+\item
+$m(\emptyset) = m(\{x\})=0$
+\item
+$m(\{a,b\}) = b-a$
+\item
+$m(A+x) = m(A),\forall x\in\mathbb{R}$
+\item
+If $A\subseteq B$, then $m(A)\le m(B)$
+\item
+$m(kA) = |k|m(A)$
+\item
+If $E_i\cap E_j = \emptyset,\forall i\ne j$, then 
+\[
+\sum_{i=1}^\infty m(E_i) = m(\cup_{i=1}^\infty E_i)
+\]
+\end{enumerate}
+\end{definition}
+Question: $m^*$ satisfies (1) to (5), does all subsets satisfying $(6)$?
+
+Answer: no.
+
+
+
+
+
+
+
+
+
