@@ -147,6 +147,102 @@ P(x_1\mid I_1)
 =
 \frac{P(z_1\mid x_1,z_0,u_1)\cdot P(x_1\mid z_0,u_0)}{P(z_1\mid z_0,u_1)}
 \]
+\paragraph{Notations}
+We denote $P(x_k\mid I_k)$ as $P_{x_k\mid I_k}$.
+We call $P_{x_k\mid I_k}$ as the \emph{sufficient statistics}, which can be used for decision:
+\[
+\tilde{\mu}_k(I_k)=\tilde{\mu}(P_{x_k\mid I_k})
+\]
+
+For $G(P_{x_k\mid I_k}) = S(I_k)$ and $P_{x_k\mid I_k} = G'(S'(I_k))$, if $P_{x_k\mid I_k}$ is sufficient, then $S'(I_k)$ is sufficient.
+
+\begin{enumerate}
+\item
+Estimator: the goal is to estimate $x_k$
+\item
+Actuator
+\end{enumerate}
+
+$p_k = P(x_k = \text{present}\mid I_k)$, where $P(x_k\mid I_k)$ is a vector, if $x_k$ can only take finite discrete values, e.g., if $x_k=\{1,\dots,n\}$, what's the dimension for the belief state $P_{x_k\mid I_k}$?
+It's $n-1$, independent of the stage $k$.
+
+Realize the data reduction.
+
+When $x_k$ is a continuous rv given $I_k$,
+dimension of $P_{x_k\mid I_k}$?
+In such case, $P_{x_k\mid I_k}$ follows some probability distributions.
+\paragraph{Finite State System}
+MDP
+\begin{enumerate}
+\item
+System dynamics is based on Markov Chain
+\[
+p_k^i = p(x_k = i\mid I_k),
+\bm p_k  = (p_k^1,\dots,p_k^n)\trans
+\]
+\item
+If no control, then for homogeneous markove chain, $p_{ij} = P(x_{k+1} = j\mid x_k=i)$
+\item
+Otherwise,
+\[
+p_{ij}(u) = P(x_{k+1} = j\mid x_k = i, u_k = u)
+\]
+\end{enumerate}
+Dynamic programming:
+suppose $g(i)$ denotes cost for $x_N=i$.
+\begin{align*}
+J_N(\bm p_N)=\sum_{i=1}^np_N^ig(i)
+\end{align*}
+Stage cost:
+\[
+g(x_k,u_k) = \mathbb{E}_{\omega_k}[g(x_k,u,\omega_k)]
+\]
+Moreover,
+\[
+J_{N-1}(p_{N-1}) = \min_{u_{N-1}}\mathbb{E}
+\left[
+g(x_{N-1},u_{N-1})\mid I_{N-1}
+\right]
++
+\mathbb{E}
+g(\phi(x_{N-1},u_{N-1}))\mid I_{N-1},u_{N-1})
+\]
+Moreover,
+\[
+J_k(\bm p_k)
+=
+\min_{u_k}\left\{
+\mathbb{E}_{x_k}(g_k(x_k,u_k)\mid I_k)
++
+\mathbb{E}_{z_{k+1}}
+(J_{k+1}(\phi(p_k,u_k,z_{k+1}))\mid I_k,u_k
+\right\}
+\]
+
+\paragraph{Instruction Problem (Optimal Stopping)}
+Given a student.
+\begin{enumerate}
+\item
+State: $x_k = \{L,\overline{L}\}$.
+\item
+Control: $\{T,\overline{T}\}$
+\item
+Observation: $Z_k=\{R,\overline{R}\}$
+\end{enumerate}
+Each time if choose $T$, pay for $I$; otherwise face certain cost:
+\[
+\text{terminal cost}=\left\{
+\begin{aligned}
+0,&\quad\text{if $x_k = L$}\\
+C,&\quad\text{if $x_k = \overline{L}$}
+\end{aligned}
+\right.
+\]
+
+
+
+
+
 
 
 

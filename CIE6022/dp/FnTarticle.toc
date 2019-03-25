@@ -86,86 +86,92 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Machine Repair Example}{34}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}The Distribution and Installation}{36}{chapter.5}
+\contentsline {paragraph}{Notations}{35}{paragraph*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Pre-requisites}{36}{section.5.1}
+\contentsline {paragraph}{Finite State System}{35}{paragraph*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}The Distribution}{36}{section.5.2}
+\contentsline {paragraph}{Instruction Problem (Optimal Stopping)}{36}{paragraph*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Folder \texttt {nowfnt}}{36}{subsection.5.2.1}
+\contentsline {chapter}{\numberline {5}The Distribution and Installation}{37}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{journaldata}{37}{paragraph*.27}
+\contentsline {section}{\numberline {5.1}Pre-requisites}{37}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{SampleArticle}{37}{paragraph*.28}
+\contentsline {section}{\numberline {5.2}The Distribution}{37}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Folder \texttt {nowfnttexmf}}{37}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.1}Folder \texttt {nowfnt}}{37}{subsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Installation}{37}{section.5.3}
+\contentsline {paragraph}{journaldata}{38}{paragraph*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Quick Start}{39}{chapter.6}
+\contentsline {paragraph}{SampleArticle}{38}{paragraph*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}\textbackslash documentclass}{39}{section.6.1}
+\contentsline {subsection}{\numberline {5.2.2}Folder \texttt {nowfnttexmf}}{38}{subsection.5.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}\textbackslash issuesetup}{40}{section.6.2}
+\contentsline {section}{\numberline {5.3}Installation}{38}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}\textbackslash maintitleauthorlist}{40}{section.6.3}
+\contentsline {chapter}{\numberline {6}Quick Start}{40}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}\textbackslash author and \textbackslash affil}{40}{section.6.4}
+\contentsline {section}{\numberline {6.1}\textbackslash documentclass}{40}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textbackslash author}{40}{paragraph*.29}
+\contentsline {section}{\numberline {6.2}\textbackslash issuesetup}{41}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textbackslash affil}{40}{paragraph*.30}
+\contentsline {section}{\numberline {6.3}\textbackslash maintitleauthorlist}{41}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.5}\textbackslash addbibresource}{40}{section.6.5}
+\contentsline {section}{\numberline {6.4}\textbackslash author and \textbackslash affil}{41}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Style Guidelines and \LaTeX \ Conventions}{41}{chapter.7}
+\contentsline {paragraph}{\textbackslash author}{41}{paragraph*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Abstract}{41}{section.7.1}
+\contentsline {paragraph}{\textbackslash affil}{41}{paragraph*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Acknowledgements}{41}{section.7.2}
+\contentsline {section}{\numberline {6.5}\textbackslash addbibresource}{41}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}References}{41}{section.7.3}
+\contentsline {chapter}{\numberline {7}Style Guidelines and \LaTeX \ Conventions}{42}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Citations}{42}{section.7.4}
+\contentsline {section}{\numberline {7.1}Abstract}{42}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Example citations}{42}{subsection.7.4.1}
+\contentsline {section}{\numberline {7.2}Acknowledgements}{42}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Preface and Other Special Chapters}{42}{section.7.5}
+\contentsline {section}{\numberline {7.3}References}{42}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.6}Long Chapter and Section Names}{43}{section.7.6}
+\contentsline {section}{\numberline {7.4}Citations}{43}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.7}Internet Addresses}{43}{section.7.7}
+\contentsline {subsection}{\numberline {7.4.1}Example citations}{43}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Compiling Your FnT Article}{44}{chapter.8}
+\contentsline {section}{\numberline {7.5}Preface and Other Special Chapters}{43}{section.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Compiling Your Article Prior to Submission}{44}{section.8.1}
+\contentsline {section}{\numberline {7.6}Long Chapter and Section Names}{44}{section.7.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Preparing the Final Versions}{45}{section.8.2}
+\contentsline {section}{\numberline {7.7}Internet Addresses}{44}{section.7.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{lastpage=}{45}{paragraph*.31}
+\contentsline {chapter}{\numberline {8}Compiling Your FnT Article}{45}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Compiling The Final Versions}{45}{section.8.3}
+\contentsline {section}{\numberline {8.1}Compiling Your Article Prior to Submission}{45}{section.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4}Wednesday}{46}{section.8.4}
+\contentsline {section}{\numberline {8.2}Preparing the Final Versions}{46}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Knapsacle Problem}{46}{paragraph*.32}
+\contentsline {paragraph}{lastpage=}{46}{paragraph*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.1}Label Correcting Methods}{47}{subsection.8.4.1}
+\contentsline {section}{\numberline {8.3}Compiling The Final Versions}{46}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.2}DP problems with perfect state information}{47}{subsection.8.4.2}
+\contentsline {section}{\numberline {8.4}Wednesday}{47}{section.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Linear Quadratic System}{47}{paragraph*.33}
+\contentsline {paragraph}{Knapsacle Problem}{47}{paragraph*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.3}Linear Quadratic}{47}{subsection.8.4.3}
+\contentsline {subsection}{\numberline {8.4.1}Label Correcting Methods}{48}{subsection.8.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Riccati Equation}{49}{paragraph*.34}
+\contentsline {subsection}{\numberline {8.4.2}DP problems with perfect state information}{48}{subsection.8.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Acknowledgements}{51}{chapter*.35}
+\contentsline {paragraph}{Linear Quadratic System}{48}{paragraph*.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{Appendices}{52}{chapter*.35}
+\contentsline {subsection}{\numberline {8.4.3}Linear Quadratic}{48}{subsection.8.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Journal Codes}{53}{appendix.A}
+\contentsline {paragraph}{Riccati Equation}{50}{paragraph*.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Files Produced During Compilation}{55}{appendix.B}
+\contentsline {chapter}{Acknowledgements}{52}{chapter*.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{56}{appendix*.38}
+\contentsline {part}{Appendices}{53}{chapter*.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Journal Codes}{54}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Files Produced During Compilation}{56}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{57}{appendix*.41}

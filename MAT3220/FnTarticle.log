@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  5 MAR 2019 09:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  21 MAR 2019 10:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1210,27 +1210,27 @@ LaTeX Warning: Label `code:GA' multiply defined.
 )
 \openout1 = `FnTarticle.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 103.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 104.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 103.
+(lastpage)             ! on input line 104.
 \AtBeginShipoutBox=\box61
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1271,7 +1271,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Info: Redefining \microtypecontext on input line 103.
+LaTeX Info: Redefining \microtypecontext on input line 104.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1290,20 +1290,20 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 103.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 104.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 103
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 104
 .
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 103.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 104.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1334,8 +1334,8 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 103.
-Package biblatex Info: Reference segment=0 on input line 103.
+Package biblatex Info: Reference section=0 on input line 104.
+Package biblatex Info: Reference segment=0 on input line 104.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1373,7 +1373,7 @@ Package biblatex Info: Reference segment=0 on input line 103.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 103.
+Package hyperref Info: Link coloring ON on input line 104.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1382,10 +1382,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count363
 )
-LaTeX Info: Redefining \ref on input line 103.
-LaTeX Info: Redefining \pageref on input line 103.
-LaTeX Info: Redefining \nameref on input line 103.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 103.
+LaTeX Info: Redefining \ref on input line 104.
+LaTeX Info: Redefining \pageref on input line 104.
+LaTeX Info: Redefining \nameref on input line 104.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 104.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmss.fd
@@ -1395,31 +1395,31 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 103.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 104.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 103.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 104.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 103
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 104
 .
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 103.
+(Font)              <10.95> on input line 104.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 103.
+(Font)              <8> on input line 104.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 103.
-LaTeX Font Info:    Try loading font information for U+msa on input line 103.
+(Font)              <6> on input line 104.
+LaTeX Font Info:    Try loading font information for U+msa on input line 104.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1427,7 +1427,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 103.
+LaTeX Font Info:    Try loading font information for U+msb on input line 104.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1435,49 +1435,24 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for OMS+lmss on input line 103
-.
-LaTeX Font Info:    No file OMSlmss.fd. on input line 103.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 104.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <13> on input line 104.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9.09996> on input line 104.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6.5> on input line 104.
 
-
-LaTeX Font Warning: Font shape `OMS/lmss/bx/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead on input line 103.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 103.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 103.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 103.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 103.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 103.
-
-LaTeX Font Warning: Font shape `OMS/lmss/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead on input line 103.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 103.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 103.
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 103.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <13> on input line 103.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9.09996> on input line 103.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6.5> on input line 103.
 <now_logo.pdf, id=4, 105.39375pt x 33.12375pt>
 File: now_logo.pdf Graphic file (type pdf)
  <use now_logo.pdf>
-Package pdftex.def Info: now_logo.pdf used on input line 103.
+Package pdftex.def Info: now_logo.pdf used on input line 104.
 (pdftex.def)             Requested size: 53.19875pt x 16.72002pt.
 
 <essence_logo.pdf, id=5, 162.6075pt x 16.06pt>
 File: essence_logo.pdf Graphic file (type pdf)
  <use essence_logo.pdf>
-Package pdftex.def Info: essence_logo.pdf used on input line 103.
+Package pdftex.def Info: essence_logo.pdf used on input line 104.
 (pdftex.def)             Requested size: 81.30374pt x 8.03021pt.
  [1
 
@@ -1491,11 +1466,6 @@ ogo.pdf> <./essence_logo.pdf>] (./FnTarticle.toc [2
 \openout6 = `FnTarticle.toc'.
 
  [4]
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 103.
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 107.
-
 (./First_lecture/First.tex [1
 
 ]
@@ -1542,7 +1512,7 @@ which im-plies $\OML/lmm/b/it/10.95 e[]A[] \OT1/lmr/m/n/10.95 (-20) =
 
 [10] [11] [12]) (./Second_lecture/First.tex [13]
 Chapter 2.
-<Second_lecture/p_1.png, id=268, 586.19pt x 462.72874pt>
+<Second_lecture/p_1.png, id=262, 586.19pt x 462.72874pt>
 File: Second_lecture/p_1.png Graphic file (type png)
 
 <use Second_lecture/p_1.png>
@@ -1551,35 +1521,35 @@ Package pdftex.def Info: Second_lecture/p_1.png used on input line 7.
  [14
 
  <./Second_lecture/p_1.png>]
-<Second_lecture/p_2.png, id=278, 420.57124pt x 310.15875pt>
+<Second_lecture/p_2.png, id=272, 420.57124pt x 310.15875pt>
 File: Second_lecture/p_2.png Graphic file (type png)
 
 <use Second_lecture/p_2.png>
 Package pdftex.def Info: Second_lecture/p_2.png used on input line 52.
 (pdftex.def)             Requested size: 161.15497pt x 118.84593pt.
 
-<Second_lecture/p_3.png, id=279, 400.49625pt x 294.09875pt>
+<Second_lecture/p_3.png, id=273, 400.49625pt x 294.09875pt>
 File: Second_lecture/p_3.png Graphic file (type png)
 
 <use Second_lecture/p_3.png>
 Package pdftex.def Info: Second_lecture/p_3.png used on input line 58.
 (pdftex.def)             Requested size: 161.15497pt x 118.34195pt.
  [15 <./Second_lecture/p_2.png> <./Second_lecture/p_3.png>] <Second_lecture/p_4
-.png, id=290, 358.33875pt x 335.2525pt>
+.png, id=284, 358.33875pt x 335.2525pt>
 File: Second_lecture/p_4.png Graphic file (type png)
 
 <use Second_lecture/p_4.png>
 Package pdftex.def Info: Second_lecture/p_4.png used on input line 74.
 (pdftex.def)             Requested size: 161.15497pt x 150.77525pt.
 
-<Second_lecture/p_5.png, id=291, 423.5825pt x 365.365pt>
+<Second_lecture/p_5.png, id=285, 423.5825pt x 365.365pt>
 File: Second_lecture/p_5.png Graphic file (type png)
 
 <use Second_lecture/p_5.png>
 Package pdftex.def Info: Second_lecture/p_5.png used on input line 80.
 (pdftex.def)             Requested size: 161.15497pt x 139.00182pt.
 
-<Second_lecture/p_6.png, id=293, 699.61375pt x 515.9275pt>
+<Second_lecture/p_6.png, id=287, 699.61375pt x 515.9275pt>
 File: Second_lecture/p_6.png Graphic file (type png)
 
 <use Second_lecture/p_6.png>
@@ -1587,7 +1557,7 @@ Package pdftex.def Info: Second_lecture/p_6.png used on input line 92.
 (pdftex.def)             Requested size: 161.15497pt x 118.84189pt.
  [16 <./Second_lecture/p_4.png> <./Second_lecture/p_5.png> <./Second_lecture/p_
 6.png>]
-<Second_lecture/p_7.png, id=306, 873.2625pt x 428.60126pt>
+<Second_lecture/p_7.png, id=300, 873.2625pt x 428.60126pt>
 File: Second_lecture/p_7.png Graphic file (type png)
 
 <use Second_lecture/p_7.png>
@@ -1599,7 +1569,7 @@ Overfull \hbox (11.20644pt too wide) in paragraph at lines 167--169
 -20) de-note col-lec-tions of poly-he-drons,polytopes,polyhedral
  []
 
-<Second_lecture/p_8.png, id=320, 717.68124pt x 603.25375pt>
+<Second_lecture/p_8.png, id=314, 717.68124pt x 603.25375pt>
 File: Second_lecture/p_8.png Graphic file (type png)
 
 <use Second_lecture/p_8.png>
@@ -1615,12 +1585,14 @@ tion, or $\OML/lmm/b/it/10.95 A[]y \OMS/lmsy/m/n/10.95 ^^U \OT1/lmr/m/n/10.95 (
 mm/b/it/10.95 y[] \OT1/lmr/m/n/10.95 (-20) =
  []
 
-[18] <Second_lecture/p_9.png, id=336, 838.13126pt x 519.9425pt>
+[18] <Second_lecture/p_9.png, id=330, 838.13126pt x 519.9425pt>
 File: Second_lecture/p_9.png Graphic file (type png)
 
 <use Second_lecture/p_9.png>
 Package pdftex.def Info: Second_lecture/p_9.png used on input line 243.
 (pdftex.def)             Requested size: 302.1662pt x 187.4489pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 244.
  [19 <./Second_lecture/p_8.png>]
 Overfull \hbox (1.78368pt too wide) in paragraph at lines 264--265
 []\T1/lmr/m/n/10.95 (-20) Consider a gen-eral poly-he-dron $\OML/lmm/m/it/10.95
@@ -1690,7 +1662,7 @@ ion.3.3.1}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.212 \end{equation}
                     ] [30] [31]
-<Third_lecture/p_1.png, id=449, 899.36pt x 574.145pt>
+<Third_lecture/p_1.png, id=444, 899.36pt x 574.145pt>
 File: Third_lecture/p_1.png Graphic file (type png)
 
 <use Third_lecture/p_1.png>
@@ -1779,7 +1751,7 @@ Underfull \vbox (badness 4713) has occurred while \output is active []
 ]
 [57]) [58]
 Chapter 7.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 134.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 132.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1789,13 +1761,13 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 136.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 134.
  [59
 
 ] [60] [61]
 Chapter 8.
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
@@ -1803,22 +1775,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
 ] [63]
 Chapter 9.
-LaTeX Font Info:    Calculating math sizes for size <15> on input line 280.
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 278.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <15> on input line 280.
+(Font)              <15> on input line 278.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.49995> on input line 280.
+(Font)              <10.49995> on input line 278.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.5> on input line 280.
+(Font)              <7.5> on input line 278.
 [64
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 319--329
+Underfull \hbox (badness 10000) in paragraph at lines 317--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--329
+Underfull \hbox (badness 10000) in paragraph at lines 317--327
 
  []
 
@@ -1844,7 +1816,7 @@ Overfull \hbox (42.52786pt too wide) in paragraph at lines 131--131
 ]
 Appendix A.
 
-Overfull \hbox (0.88123pt too wide) in paragraph at lines 458--499
+Overfull \hbox (0.88123pt too wide) in paragraph at lines 456--497
 [][] 
  []
 
@@ -1864,14 +1836,11 @@ AED: lastpage setting LastPage
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 556.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 556.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 554.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 554.
  (./FnTarticle.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 556.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 556.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 554.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 554.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1881,52 +1850,48 @@ Package logreq Info: Writing requests to 'FnTarticle.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20948 strings out of 492995
- 338286 string characters out of 6132703
- 964795 words of memory out of 5000000
- 23446 multiletter control sequences out of 15000+600000
- 240820 words of font info for 309 fonts, out of 8000000 for 9000
+ 20819 strings out of 492995
+ 335944 string characters out of 6132703
+ 964539 words of memory out of 5000000
+ 23330 multiletter control sequences out of 15000+600000
+ 187773 words of font info for 258 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,14n,45p,796b,1250s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/t
 exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/
 fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/
-dvips/lm/lm-mathex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/l
-mbsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/font
-s/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
-blic/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmm
-i8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
-r9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/public/lm/lmss9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
-m/lmssbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsso1
-0.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
-/public/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
-/lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msbm10.pfb>
-Output written on FnTarticle.pdf (83 pages, 1054806 bytes).
+dvips/lm/lm-mathex.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/l
+m/lmbsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
+/public/lm/lmmi6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/
+lmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/lm/lmr9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm
+/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri9.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/lm/lmss9.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/lm/lmsso10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
+public/lm/lmsso8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/
+lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy6.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on FnTarticle.pdf (83 pages, 1003793 bytes).
 PDF statistics:
- 1166 PDF objects out of 1200 (max. 8388607)
- 1008 compressed objects within 11 object streams
+ 1147 PDF objects out of 1200 (max. 8388607)
+ 994 compressed objects within 10 object streams
  365 named destinations out of 1000 (max. 500000)
- 55253 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 44501 words of extra memory for PDF output out of 51595 (max. 10000000)
 

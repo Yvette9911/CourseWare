@@ -1,0 +1,227 @@
+
+\section{Monday for MAT3006}\index{Monday_lecture}
+
+\paragraph{Reviewing}
+\begin{itemize}
+\item
+$\mathcal{M}$~(all Lebesgue measurable subsets) is a $\sigma$-algebra
+\item
+Borel $\sigma$-algebra: smallest $\sigma$-algebra containing all the intervals of $\mathbb{R}$:
+
+Let $\mathcal{S}=\{\text{all $\sigma$-algebras containing all the inervals of $\mathbb{R}$}\}$,
+e.g., $\mathbb{P}(R)\in\mathcal{S}$.
+For $\forall f_i\in\mathcal{S}$, $\cap_{i\in I}\mathcal{A}_i\in\mathcal{S}$.
+Then define $\mathcal{B}=\cap_{\mathcal{A}\in\mathcal{S}}\mathcal{A}$, which is the smallest $\sigma$-algebra containing all intervals.
+
+Furthermore, $\mathcal{M}\in\mathcal{S}$. Therefore, $\mathcal{B}\subseteq\mathcal{M}$ but they are not equal.
+(Check Royden P50-53, there exists $A\subseteq\mathcal{C}$ (cantor set) such that $A\in\mathcal{M}$ but $A\notin\mathcal{B}$)
+
+An important component of the construction involves the Devil's Staircase function.
+\item
+The set $\mathcal{M}$ has a good property: If $N\in\mathcal{M}$ is null, then all $E\subseteq N$ are null sets, and therefore
+$E\in\mathcal{M}$.
+
+The probelm is that if there exists $N'\subseteq\mathcal{B}$ such that $m\mid_{\mathcal{B}}(N')=0$?
+It's not necessarily the case that $E'\in\mathcal{B},\forall E'\subseteq N'$.
+
+(back to the Roydon's example: $\mathcal{C}\in\mathcal{B}$ but $A\subseteq\mathcal{C}$ is not in $\mathcal{B}$)
+\item
+Therefore, we need to \emph{complete} $\mathcal{B}$ to get $\mathcal{M}$.
+\end{itemize}
+
+\subsection{Measurable Functions}
+\paragraph{Motivation}
+Riemann integration
+
+\begin{definition}[Measurable]
+Let $f:(\mathbb{R},\mu,m)\to\mathbb{R}$ be a function.
+We say $f$ is \emph{(Lebesgue) measurable} if $f^{-1}(I)\in\mathcal{M}$ for all intervals $I\subseteq\mathbb{R}$.
+\end{definition}
+
+\begin{proposition}
+If $f:\mathbb{R}\to\mathbb{R}$ is continuous, then $f$ is measurable.
+\end{proposition}
+\begin{proof}
+The trick: rather than checking all intervals $I$, we only check intervals of the form $(a,\infty)$.
+
+By continuity of $f$, $f^{-1}((a,\infty))$ is open in $\mathbb{R}$.
+
+By Hw3, $f^{-1}((a,\infty))$ is a countable union of open intervals.
+Therefore,
+\[
+f^{-1}((a,\infty))=\cup_{i=1}^\infty U_i\in\mathcal{M}
+\]
+
+For $[a,\infty)$, consider
+\[
+\bigcap_{n=1}^\infty(a-\frac{1}{n},\infty)=[a,\infty),
+\]
+which implies
+\[
+f^{-1}([a,\infty)) = f^{-1}(\bigcap_{n=1}^\infty(a-\frac{1}{n},\infty))
+=
+\cap_{n=1}^\infty f^{-1}((a-\frac{1}{n},\infty))\in\mathcal{M}
+\]
+
+Similarly, 
+\[
+f^{-1}((-\infty,a))=f^{-1}(\mathbb{R}\setminus[a,\infty))
+=
+\mathbb{R}\setminus f^{-1}([a,\infty))\in\mathcal{M}
+\]
+and
+\[
+f^{-1}((b,a))=f^{-1}((-\infty,a))\cap f^{-1}((b,\infty))\in\mathcal{M}
+\]
+
+\end{proof}
+\begin{remark}
+$f$ is measurable if and only if $f^{-1}((a,\infty))\in\mathcal{M}$, for $\forall a\in\mathbb{R}$.
+
+Homework: $f$ is measurable if and only if $f^{-1}(B)\in\mathcal{M}$ for $\forall B\in\mathcal{B}$.
+\end{remark}
+
+\begin{proposition}
+\begin{enumerate}
+\item
+Constant functions, monotone functions are measurable
+\item
+If $A\subseteq\mathbb{R}$ is measurable, then the characterstic function
+\[
+\mathcal{X}_A(x):=\left\{
+\begin{aligned}
+1,&\quad\text{if $x\in A$}\\
+0,&\quad\text{if $x\notin A$}
+\end{aligned}
+\right.
+\]
+is measurable.
+\item
+If $f$ is measurable, $h$ is continuous, then $h\circ f$ is continuous.
+\item
+If $f,g$ are measurable, then so is 
+\[
+\begin{array}{llll}
+f+g,&fg,&\max/\min(f,g),&|f|
+\end{array}
+\]
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(a) and (b) is easy.
+
+Note that
+\[
+(h\circ f)^{-1}((a,\infty)) = f^{-1}(h^{-1}(a,\infty)),
+\]
+where $h^{-1}(a,\infty)$ is a countable union of open intervals.
+
+\begin{align*}
+(f+g)^{-1}(a,\infty) &= \{x\mid f+g\in(a,\infty)\}\\
+&=
+\cup_{q\in\mathbb{Z}}(\{x\mid f\in (q,\infty)\}\cap\{x\mid g\in(a-q,\infty)\})\\
+&=\cup_{q\in\mathbb{Z}}(f^{-1}(q,\infty)\cap f^{-1}(a-q,\infty))\in\mathcal{M}
+\end{align*}
+
+\[
+fg = \frac{1}{4}[(f+g)^2+(f-g)^2]
+\]
+It suffices to show $f$ is measurable implies $f^2$ is measurable. By results in (3), the proof is trivial.
+
+
+Since $|f| = h\circ f$, $h(x)=|x|$, $|f|$ is measurable
+
+$\max(f,g)=\frac{1}{2}(f+g+|f-g|)$ is measurable.
+\end{proof}
+
+
+\begin{remark}
+If both $f,g$ are measurable, then $g\circ f$ is not necessarily measurable.
+\end{remark}
+
+
+\begin{definition}[almost everywhere]
+Let $f,g:(\mathbb{R},\mu,m)\to\mathbb{R}$.
+We say $f=g$ almost everywhere (a.e.)
+if $E:=\{x\mid f(x)\ne g(x)\}$ is a null set.
+
+More generally, we say $f(x) $satisfies a condition on $(R,\mu,m)$ a.e. if the set
+\[
+\{x\mid\text{$f(x)$ does not satisfy the condition}\}
+\]
+is a null set.
+\end{definition}
+For example, the function
+\[
+\mathcal{X}_{\mathbb{Q}}(x)=
+\left\{
+\begin{aligned}
+1,&\quad\text{if $x\in\mathbb{Q}$}\\
+0,&\quad\text{if $x\notin\mathbb{Q}$}
+\end{aligned}
+\right.
+\]
+is equal to zero function a.e.
+
+\begin{proposition}
+Suppose that $f$ is measurable, and $g=f$ a.e., then $g$ is measurable.
+\end{proposition}
+\begin{proof}
+Note that 
+\[
+g^{-1}((a,\infty)) = \{x\mid g(x)\in(a,\infty), g(x)=f(x)\}\cup
+\{x\mid g(x)\in(a,\infty), g(x)\ne f(x)\}
+\]
+where $\{x\mid g(x)\in(a,\infty), g(x)\ne f(x)\}\subseteq E$, i.e., in $\mathcal{M}$;
+and
+\[
+ \{x\mid g(x)\in(a,\infty), g(x)=f(x)\} = f^{-1}((a,\infty))\cap E^c\in\mathcal{M}
+\]
+
+\end{proof}
+
+\begin{remark}
+Here we have used the fact that $N\subseteq E$ is measurable for all null set $E$.
+\end{remark}
+
+\begin{definition}
+A function $f:\mathbb{R}\to[-\infty,\infty]$ is measurable if 
+\[
+f^{-1}((a,\infty])\in\mathcal{M},
+\]
+for $\forall a\in\mathbb{R}$.
+
+Equivalently, $f^{-1}(B)\in\mathcal{M},\forall B\in\mathcal{B}$, and $f^{-1}(\{-\infty\}),f^{-1}(\{\infty\})\in\mathcal{M}$
+\end{definition}
+Example:
+\[
+f(x)=\left\{
+\begin{aligned}
+\tan x&\quad x\ne\frac{2n+1}{2}\pi, n\in\mathbb{Z}\\
+\infty,&\quad x=\frac{2n+1}{2}\pi, n\in\mathbb{Z}
+\end{aligned}
+\right.
+\]
+is measurable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

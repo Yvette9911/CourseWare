@@ -1,8 +1,8 @@
 \select@language {english}
 \vskip -8pt
-\contentsline {schapter}{Acknowledgments}{xi}{chapter*.2}
+\contentsline {schapter}{Acknowledgments}{xiii}{chapter*.2}
 \vskip -8pt
-\contentsline {schapter}{Notations}{xiii}{chapter*.3}
+\contentsline {schapter}{Notations}{xv}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Week1}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Monday for MAT3040}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Introduction to Advanced Linear Algebra}{1}{subsection.1.1.1}
@@ -140,24 +140,86 @@
 \contentsline {section}{\numberline {6.1}Monday for MAT3040}{177}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Polynomials}{177}{subsection.6.1.1}
 \contentsline {section}{\numberline {6.2}Monday for MAT3006}{180}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Arzela-Ascoli Theorem}{180}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Baire Category Theorem}{181}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.1}Compactness in Functional Space}{180}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}An Application of Ascoli-Arzela Theorem}{181}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Monday for MAT4002}{182}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Quotient Topology}{182}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Properties in quotient spaces}{184}{subsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.2.1}Closedness on $X/\sim $}{184}{subsubsection.6.3.2.1}
+\contentsline {subsubsection}{\numberline {6.3.2.2}Isomorphism on $X/\sim $}{184}{subsubsection.6.3.2.2}
+\contentsline {paragraph}{Torus}{187}{proposition.6.5}
 \contentsline {section}{\numberline {6.2}Wednesday for MAT3040}{180}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Eigenvalues $\&$ Eigenvectors}{183}{subsection.6.2.1}
 \contentsline {paragraph}{Assumption}{184}{exampleT.6.5}
+\contentsline {section}{\numberline {6.3}Wednesday for MAT4002}{186}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Remarks on Compactness}{186}{subsection.6.3.1}
 \contentsline {chapter}{\numberline {7}Week7}{187}{chapter.7}
 \contentsline {section}{\numberline {7.1}Monday for MAT3040}{187}{section.7.1}
 \contentsline {paragraph}{Reviewing}{187}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Minimal Polynomial}{187}{subsection.7.1.1}
+\contentsline {paragraph}{Assumption}{191}{proposition.7.4}
+\contentsline {paragraph}{Notation}{191}{proposition.7.4}
+\contentsline {subsection}{\numberline {7.1.2}Minimal Polynomial of a vector}{191}{subsection.7.1.2}
 \contentsline {section}{\numberline {7.2}Monday for MAT3006}{193}{section.7.2}
 \contentsline {paragraph}{Reviewing}{193}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Remarks on the outer measure}{193}{subsection.7.2.1}
 \contentsline {section}{\numberline {7.3}Monday for MAT4002}{197}{section.7.3}
 \contentsline {subsection}{\numberline {7.3.1}Quotient Map}{197}{subsection.7.3.1}
 \contentsline {subsection}{\numberline {7.3.2}Simplicial Complex}{198}{subsection.7.3.2}
 \contentsline {section}{\numberline {7.4}Wednesday for MAT3040}{201}{section.7.4}
-\contentsline {paragraph}{Recall}{201}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Cayley-Hamiton Theorem}{202}{subsection.7.4.1}
+\contentsline {paragraph}{Reviewing}{201}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Cayley-Hamiton Theorem}{201}{subsection.7.4.1}
+\contentsline {paragraph}{Assumption}{203}{theoremeT.7.1}
 \contentsline {section}{\numberline {7.5}Wednesday for MAT4002}{206}{section.7.5}
 \contentsline {subsection}{\numberline {7.5.1}Simplicial Sub-complex}{206}{subsection.7.5.1}
 \contentsline {subsection}{\numberline {7.5.2}Some properties of simplicial complex}{208}{subsection.7.5.2}
+\contentsline {chapter}{\numberline {8}Week8}{211}{chapter.8}
+\contentsline {section}{\numberline {8.1}Monday for MAT3040}{211}{section.8.1}
+\contentsline {paragraph}{Reviewing}{211}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Cayley-Hamiton Theorem}{213}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Primary Decomposition Theorem}{216}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}Monday for MAT3006}{218}{section.8.2}
+\contentsline {paragraph}{Reviewing}{218}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Remarks for Outer Measure}{218}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Lebesgue Measurable}{219}{subsection.8.2.2}
+\contentsline {paragraph}{Notations}{223}{proposition.8.4}
+\contentsline {section}{\numberline {7.3}Monday for MAT4002}{197}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Quotient Map}{197}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Simplicial Complex}{198}{subsection.7.3.2}
+\contentsline {section}{\numberline {8.3}Wednesday for MAT3040}{216}{section.8.3}
+\contentsline {paragraph}{Reviewing}{216}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Cayley-Hamiton Theorem}{216}{subsection.8.3.1}
+\contentsline {paragraph}{Assumption}{218}{theoremeT.8.2}
+\contentsline {section}{\numberline {8.4}Wednesday for MAT3006}{223}{section.8.4}
+\contentsline {paragraph}{Reviewing}{223}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Remarks on Lebesgue Measurability}{223}{subsection.8.4.1}
+\contentsline {paragraph}{Notations}{224}{equation.8.4.5f}
+\contentsline {subsection}{\numberline {8.4.2}Measures In Probability Theory}{224}{subsection.8.4.2}
+\contentsline {section}{\numberline {8.5}Wednesday for MAT4002}{228}{section.8.5}
+\contentsline {paragraph}{Reviewing}{228}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}Homotopy}{230}{subsection.8.5.1}
+\contentsline {paragraph}{Yoneda's ``philosophy''}{230}{subsection.8.5.1}
+\contentsline {chapter}{\numberline {9}Week9}{221}{chapter.9}
+\contentsline {section}{\numberline {9.1}Monday for MAT3040}{221}{section.9.1}
+\contentsline {paragraph}{Reviewing}{221}{section.9.1}
+\contentsline {paragraph}{Organization of future two weeks}{225}{corollaryT.9.2}
+\contentsline {section}{\numberline {9.2}Monday for MAT3006}{226}{section.9.2}
+\contentsline {paragraph}{Reviewing}{226}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Measurable Functions}{226}{subsection.9.2.1}
+\contentsline {paragraph}{Motivation}{226}{subsection.9.2.1}
+\contentsline {section}{\numberline {7.3}Monday for MAT4002}{197}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Quotient Map}{197}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Simplicial Complex}{198}{subsection.7.3.2}
+\contentsline {section}{\numberline {8.3}Wednesday for MAT3040}{216}{section.8.3}
+\contentsline {paragraph}{Reviewing}{216}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Cayley-Hamiton Theorem}{216}{subsection.8.3.1}
+\contentsline {paragraph}{Assumption}{218}{theoremeT.8.2}
+\contentsline {section}{\numberline {8.4}Wednesday for MAT3006}{223}{section.8.4}
+\contentsline {paragraph}{Reviewing}{223}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Remarks on Lebesgue Measurability}{223}{subsection.8.4.1}
+\contentsline {paragraph}{Notations}{224}{equation.8.4.5f}
+\contentsline {subsection}{\numberline {8.4.2}Measures In Probability Theory}{224}{subsection.8.4.2}
+\contentsline {section}{\numberline {8.3}Wednesday for MAT4002}{216}{section.8.3}
+\contentsline {paragraph}{Reviewing}{216}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Homotopy}{218}{subsection.8.3.1}
 \contentsfinish 

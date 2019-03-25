@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  7 MAR 2019 15:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.25)  16 MAR 2019 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1652,7 +1652,29 @@ Overfull \hbox (16.4653pt too wide) detected at line 142
 m/m/it/10.95 =\OT1/lmr/m/n/10.95 7
  []
 
-[34]) [35]
+[34]
+Overfull \hbox (1.22998pt too wide) in paragraph at lines 184--186
+[]\T1/lmr/m/n/10.95 (-20) If no con-trol, then for ho-mo-ge-neous markove chain
+, $\OML/lmm/m/it/10.95 p[] \OT1/lmr/m/n/10.95 (-20) = \OML/lmm/m/it/10.95 P\OT1
+/lmr/m/n/10.95 (-20) (\OML/lmm/m/it/10.95 x[] \OT1/lmr/m/n/10.95 (-20) =
+ []
+
+[35]
+Overfull \hbox (45.17848pt too wide) detected at line 209
+\OML/lmm/m/it/10.95 J[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 p[]\OT1/lmr/m/n/
+10.95 ) = [] \U/msb/m/n/10.95 E [] \OT1/lmr/m/n/10.95 + \U/msb/m/n/10.95 E\OML/
+lmm/m/it/10.95 g\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 ^^^\OT1/lmr/m/n/10.95 (
+\OML/lmm/m/it/10.95 x[]; u[]\OT1/lmr/m/n/10.95 )) \OMS/lmsy/m/n/10.95 j \OML/lm
+m/m/it/10.95 I[]; u[]\OT1/lmr/m/n/10.95 )
+ []
+
+
+Overfull \hbox (10.56964pt too wide) detected at line 220
+\OML/lmm/m/it/10.95 J[]\OT1/lmr/m/n/10.95 (\OML/lmm/b/it/10.95 p[]\OT1/lmr/m/n/
+10.95 ) = [] []
+ []
+
+) [36]
 Chapter 5.
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 112.
 
@@ -1665,18 +1687,18 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 114.
- [36
+ [37
 
-] [37] [38]
+] [38] [39]
 Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
-[39
+[40
 
-] [40]
+] [41]
 Chapter 7.
 LaTeX Font Info:    Calculating math sizes for size <15> on input line 258.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1685,7 +1707,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.49995> on input line 258.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7.5> on input line 258.
-[41
+[42
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 297--307
@@ -1697,24 +1719,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 297--307
 
  []
 
-[42] [43]
+[43] [44]
 Chapter 8.
-[44
+[45
 
-] [45] (./Wednesday_week3.tex
+] [46] (./Wednesday_week3.tex
 Overfull \hbox (83.95988pt too wide) detected at line 52
 \OML/lmm/m/it/10.95 J[]\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 x[]\OT1/lmr/m/n/
 10.95 ) = []
  []
 
-[46] [47]
+[47] [48]
 Overfull \hbox (42.52786pt too wide) in paragraph at lines 131--131
 [] 
  []
 
-[48] [49]) [50] [51
+[49] [50]) [51] [52
 
-] [52
+] [53
 
 ]
 Appendix A.
@@ -1723,11 +1745,11 @@ Overfull \hbox (0.88123pt too wide) in paragraph at lines 436--477
 [][] 
  []
 
-[53
+[54
 
-] [54]
+] [55]
 Appendix B.
-[55
+[56
 
 ]
 Package microtype Info: Character `029' is missing
@@ -1735,7 +1757,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             Ignoring protrusion settings for this character.
  
 AED: lastpage setting LastPage
-[56
+[57
 
 
 ]
@@ -1753,9 +1775,9 @@ Package logreq Info: Writing requests to 'FnTarticle.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19953 strings out of 492995
- 324538 string characters out of 6132703
- 949103 words of memory out of 5000000
+ 19965 strings out of 492995
+ 324640 string characters out of 6132703
+ 948115 words of memory out of 5000000
  22720 multiletter control sequences out of 15000+600000
  232036 words of font info for 262 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1793,10 +1815,10 @@ c/lm/lmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.
 pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on FnTarticle.pdf (59 pages, 1304311 bytes).
+Output written on FnTarticle.pdf (60 pages, 1309746 bytes).
 PDF statistics:
- 812 PDF objects out of 1000 (max. 8388607)
- 683 compressed objects within 7 object streams
- 205 named destinations out of 1000 (max. 500000)
+ 833 PDF objects out of 1000 (max. 8388607)
+ 702 compressed objects within 8 object streams
+ 217 named destinations out of 1000 (max. 500000)
  53151 words of extra memory for PDF output out of 61914 (max. 10000000)
 
