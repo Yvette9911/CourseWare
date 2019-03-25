@@ -143,29 +143,33 @@ Homotopy is an equivalent relation.
 \begin{enumerate}
 \item
 Let $f:X\to Y$ be any continuous map. Then $f\cong f$:
-we can define a homotopy $$
-\end{enumerate}
-\end{proof}
-
-
-
-
-
-
-\begin{enumerate}
+we can define a homotopy $H(x,t) = f(x),\forall 0\le t\le 1$.
 \item
-$f\cong f$ is obvious: let $H(x,t) = f(x)$, for $\forall 0\le t\le1$
-\item
-If $f\cong g$, then $g\cong f$:
-For homotopic from $f$ to $g$, say $H(x,t)$, construct
+Suppose $f\cong g$, i.e., $H$ is a homotopy between $f$ and $g$, then $g\cong f$:
+
+We define the mapping $H'(x,t) = H(x,1-t)$, 
+then 
 \[
-H'(x,t):=H(x,1-t)
+\begin{array}{ll}
+H'(x,0)=g(x),
+&
+H'(x,1)=f(x)
+\end{array}
 \]
-Therefore, $H'(x,0)=g(x)$ and $H'(x,1)=f(x)$.
 \item
-If $f\cong g$ and $g\cong h$, then $f\cong h$:
-suppose $H:f\cong g$, and $K:g\cong h$.
-Consider
+Let $f,g,h:X\to Y$ be three continuous maps.
+If $f$ and $g$ are homotopic and $g$ and $h$ are homotopic, then $f$ and $h$ are homotopic:
+
+Let $H:X\times[0,1]\to Y$ be a continuous map such that 
+\[
+H(x,0)=f(x),H(x,1)=g(x);
+\]
+$K:X\times[0,1]\to Y$ be a continuous map such that 
+\[
+K(x,0)=g(x),K(x,1)=h(x).
+\]
+
+Define a function $J:X\times[0,1]\to Y$ by
 \[
 J(x,t)=\left\{
 \begin{aligned}
@@ -174,15 +178,53 @@ K(x,2t-1),&\quad 1/2\le t\le 1
 \end{aligned}
 \right.
 \]
-Note that $J(x,1/2)$ are well-defined.
-Then $J$ is continuous, since for all closed $V\subseteq Y$,
+This is continuous, since for all closed $V\subseteq Y$,
 \[
 J^{-1}(V)=(J^{-1}(V)\cap(X\times[0,1/2]))\cup(J^{-1}(V)\cap(X\times[1/2,1]))
 =
 H^{-1}(V)\cup K^{-1}(V)
 \]
 Since $H^{-1}(V)$ and $K^{-1}(V)$ are both closed, we imply $J^{-1}(V)$ is closed.
+
+Moreover, $J$ has the property that $J(x,0)=H(x,0)=f(x)$, while $J(x,1)=K(x,1)=h(x)$.
 \end{enumerate}
+\end{proof}
+
+
+
+
+%
+%
+%\begin{enumerate}
+%
+%\item
+%If $f\cong g$, then $g\cong f$:
+%For homotopic from $f$ to $g$, say $H(x,t)$, construct
+%\[
+%H'(x,t):=H(x,1-t)
+%\]
+%Therefore, $H'(x,0)=g(x)$ and $H'(x,1)=f(x)$.
+%\item
+%If $f\cong g$ and $g\cong h$, then $f\cong h$:
+%suppose $H:f\cong g$, and $K:g\cong h$.
+%Consider
+%\[
+%J(x,t)=\left\{
+%\begin{aligned}
+%H(x,2t),&\quad 0\le t\le1/2\\
+%K(x,2t-1),&\quad 1/2\le t\le 1
+%\end{aligned}
+%\right.
+%\]
+%Note that $J(x,1/2)$ are well-defined.
+%Then $J$ is continuous, since for all closed $V\subseteq Y$,
+%\[
+%J^{-1}(V)=(J^{-1}(V)\cap(X\times[0,1/2]))\cup(J^{-1}(V)\cap(X\times[1/2,1]))
+%=
+%H^{-1}(V)\cup K^{-1}(V)
+%\]
+%Since $H^{-1}(V)$ and $K^{-1}(V)$ are both closed, we imply $J^{-1}(V)$ is closed.
+%\end{enumerate}
 
 Therefore, there is only one equivalence class in example~(1).
 This reflects the fact that $Y\subseteq\mathbb{R}^2$ is a ``simple'' object.

@@ -1,170 +1,181 @@
 \section{Monday for MAT4002}\index{Monday_lecture}
-\subsection{Quotient Map}
-\begin{definition}[Quotient Map]
-A map $q:X\to Y$ between topological spaces is a \emph{quotient map} if 
+\paragraph{Reviewing}
 \begin{enumerate}
 \item
-$q$ is surjective
+Homotopy: $f\cong g$
 \item
-For any $U\subseteq Y$, $U$ is open iff $q^{-1}(U)$ is open.
+If $Y\subseteq\mathbb{R}$ is convex, then the set of continuous functions $f:X\to Y$ form a single equivalence class, i.e., $\{\text{continuous functions $f:X\to Y$}\}/\sim$ has only one element
 \end{enumerate}
-\end{definition}
-For example, 
-\begin{enumerate}
-\item
-the mapping $p:X\to X/\sim$ is a quotient map
-\item
-For $f$ is continuous and maps open sets to open sets. Then $f$ satisfies (2).
-\end{enumerate}
-
+\subsection{Remarks on Homotopy}
 \begin{proposition}
-Suppose $q:X\to Y$ is a quotient map, and $\sim$ is an equivalence relation given by the partition $\{q^{-1}(y)\mid y\in Y\}$ of $X$.
-Then $X$ and $Y$ are \emph{homeomorphic}.
+Consider
+\[
+W\to_fX,\quad
+X\to_gY,\quad
+X\to_hY,\quad
+Y\to_k Z
+\]
+where $f,g,h,k$ are all continuous. If $g\cong h$, then
+\[
+g\circ f\cong h\circ f,\quad
+k\circ g\cong k\circ h
+\]
 \end{proposition}
 \begin{proof}
-Let $h:X/\sim\to Y$ defined as $h([x]) = q(x)$.
-\begin{enumerate}
-\item
-The mapping $h$ is well-defined and injective.
-\item
-Surjective is easy to shown
-\item
-$q = h\circ p$, by (2), is continuous. Therefore, $h$ is continuous.
-\end{enumerate}
-It suffices to show $h^{-1}$ is continuous:
-For any open $\tilde{U}\subseteq X/\sim$, it suffices to show $h(\tilde{U})$ is open in $Y$. Note that 
-\[
-q^{-1}[h(\tilde{U})] = p^{-1}h^{-1}(h(\tilde{U}))=p^{-1}(\tilde{U}),
-\]
-which is open by definition of quotient topology.
-By (2), $h(\tilde{U})$ is open
+Suppose $H:g\cong h$, then $k\circ H:X\times I\to Z$ givs the momotopy between $k\circ g$ and $k\circ h$.
+
+Simiarly, $H\circ(f\times\text{id}_I):W\times I\to Y$ gives homotopy $g\circ f\simeq h\circ f$.
+
 \end{proof}
 
+\begin{definition}[Homotopy Equivalent]
+Two topological spaces $X$ and $Y$ are \emph{homotopy equivalent} if there are continuous maps $f:X\to Y$, and $g:Y\to X$ such that
+\begin{align*}
+g\circ f&\simeq \text{id}_{X\to X}\\
+f\circ g&\simeq\text{id}_{Y\to Y}
+\end{align*}
+denoted as $X\simeq Y$.
+\end{definition}
+\begin{remark}
+\begin{enumerate}
+\item
+If $X\cong Y$ are homeomorphic, then they are homotopic equivalent.
+\item
+$X\simeq Y$ gives a bijection between $\{\phi:\text{continuous }W\to X\}/\sim$ and $\{\phi:\text{continuous }W\to Y\}/\sim$
+\item
+exercise: $X\simeq Y$ forms an equivalence relation between topological spaces
+\end{enumerate}
+\end{remark}
+Some properties are lost when we only study spaces up to homotopy equivalence.
+
+\begin{definition}[Contractible]
+$X$ is \emph{contractible} if it is homotopy equivalent to a point $\{*\}$.
+
+Equivalently, we need $f,g$ such that
+\begin{align*}
+\{*\}\to_fX\to_g\{*\},\ g\circ f\simeq\text{id}_{\{*\}}\\
+X\to_g\{*\}\to_fX,\ f\circ g\simeq\text{id}_{X}
+\end{align*}
+\end{definition}
+Note that $f\circ g=c_y$ for some $y\in X$, where $c_y:X\to X$ is $c_y(x)=y,\forall x\in X$.
+Therefore, to check $X$ is contractible, we only need to check $c_y\simeq\text{id}_{X},\forall y\in X$
+
 \begin{example}
-Define the mapping
+\begin{enumerate}
+\item
+$X=\mathbb{R}^2$ is contractible.
+
+WTS $f(\bm x)=\bm x$ (i.e., $f=\text{id}$) is homotopic to the constant function $g(x)=(0,0),\forall x\in\mathbb{R}^2$, i.e., $g=c_{(0,0)}$
+
+Consider $H(\bm x,t) = tf(\bm x)$, which implies
+\[
+H(\bm x,0)=c_{(0,0)},\qquad
+H(\bm x,1)=\text{id}
+\]
+Therefore, $\text{id}\simeq c_{(0,0)}$, and $c_{(0,0)}\simeq c_y,\forall y\in\mathbb{R}^2$
+
+Therefore, $X$ is contractible.
+
+More ggenerally, any convex $X\subseteq\mathbb{R}^n$ is contractible.
+\end{enumerate}
+\end{example}
+
+\begin{remark}
+$S^1$ is not contractible, and we will see it in 3 weeks' time.
+
+We are not able to construct 
+\[
+H:S^1\to[0,1]\to S^1
+\]
+such that $H(e^{2\pi ix},0)=e^{2\pi i x}$ and $H(e^{2\pi i x},1)=e^{2\pi i(0)} = 1$ ($c_1$)
+
+But how about $H(e^{2\pi ix},t)=e^{2\pi ixt}$?
+What's wrong with $H$?
+Such a funciton is not well-defined:
+\[
+H(e^{2\pi i(1)},t)=e^{2\pi i(1-t)}=H(e^{2\pi i(0)},t)=1
+\]
+Therefore, $H$ is not well-defined for $t\ne0,1$.
+\end{remark}
+
+
+\begin{definition}
+Let $A\subseteq X$ and $i:\hookrightarrow X$ be an inclusion.
+We say $A$ is a homotopy retract of $X$ if there exists continuous mapping $r:X\to A$ such that 
+\[
+A\hookrightarrow X\to^r A\implies 
+r\circ i=\text{id}_{A\to A}
+\]
+\[
+X\to^rA\hookrightarrow^iX\implies i\circ r\simeq\text{id}_X
+\]
+In particualr, $A\simeq X$.
+\end{definition}
+
+\begin{example}
+$S^1$ is a homotopy retract of $M=\text{Mobius Band}$
+
+Here $M=[0,1]^2/\sim$ and $S^1=[0,1]/\sim$.
+Define
+\[
+i:S^1\hookrightarrow M,\quad
+[x]\mapsto [(x,\frac{1}{2})]
+\]
 \[
 \begin{array}{ll}
-q:&\mathbb{R}\to S^1\\
-&x\mapsto e^{2\pi i x}
+r:&M\to S^1\\
+&[(x,y)]\mapsto[x]
 \end{array}
 \]
-Note that $q$ open balls to open balls. (Check what $q(a,b)$ is)
+Then $r\circ i = \text{id}_{S^1}$; $i\circ r([(x,y)]) = [(x,1/2)]$; $\text{id}_M([(x,y)]) = [(x,y)]$.
 
-$q^{-1}(e^{2\pi i x}) = \{x+z\mid z\in\mathbb{Z}\}$. Therefore, 
+Define $H:M\times I\to M$ by
 \[
-\mathbb{R}/\sim\cong S^1,
+H([(x,y)],t):=[(x,(1-t)y+t/2)]
 \]
-where $x\sim y$ iff $x-y\in\mathbb{Z}$, i.e..,
+We really need to check
 \[
-\mathbb{R}/\mathbb{Z}\cong S^1
+H([(0,y)],t)=H([(1,1-y)],t),\quad \forall y\in[0,1]
 \]
+Therefore, $H$ gives a homotopy between $i\circ r$ and $\text{id}_{M}$, i.e., $i\circ r\simeq\text{id}_M$
 \end{example}
 
+$S^{n-1}$ is a homotopy retract of $\mathbb{R}^n\setminus\{\bm0\}$.
 
-\subsection{Simplicial Complex}
-The idea is to build some new spaces from some fundamental objects.
-Then we can use the combinatorics of these fundamental objects to study topology.
+We have $i:\text{id}=S^{n-1}\to\mathbb{R}^n\setminus\{0\}$
+and
+\[
+\begin{array}{ll}
+r:&\mathbb{R}^n\setminus\{0\}\to \mathbb{S}^{n-1}\\
+&x\mapsto\frac{x}{\|x\|}
+\end{array}
+\]
+Therefore, $r\circ i =\text{id}_{S^{n-1}}$ and $i\circ r(x)=x/\|x\|$.
 
-\begin{definition}[$n$-simplex]
-The standard $n$-simplex is the set
+WTS $i\circ r\simeq\text{id}_{\mathbb{R}^n\setminus\{0\}}$
+Consider $H(x,t)=t\bm x+(1-t)\bm x/\|\bm x\|$:
 \[
-\Delta^n = \{(x_1,\dots,x_{n+1})\in\mathbb{R}^{n+1}\mid x_i\ge0, \sum_{i}x_i=1\}
+H(\bm x,0)=i\circ r(\bm x),\quad
+H(\bm x,1)=\bm x=\text{id}(\bm x)
 \]
-\begin{enumerate}
-\item
-vertices of $\Delta^n$ are the points on $\Delta^n$ with
-$x_i=1$ for some $i$.
-\item
-face of $\Delta^n:$ For $\mathcal{A}\subseteq\{1,\dots,n+1\}$, a face is given by
+However, we need to check that $H(x,t)\in\mathbb{R}^n\setminus\{\bm0\}$ for all $\bm x\in\mathbb{R}^n\setminus\{\bm0\}$ and $t\in[0,1]$.
+
+\begin{definition}[Homotopic Relative]
+Let $A\subseteq X$ be topological spaces.
+We say $f,g:X\times I\to Y$ are homotopic relative to $A$ if there eixsts $H:X\times I\to Y$ such that
 \[
-\{(x_1,\dots,x_{n+1})\in\Delta^n\mid x_i=0,\ \forall i\notin\mathcal{A}\}
+\left\{
+\begin{aligned}
+H(x,0)&=f(x)\\
+H(x,1)&=g(x)
+\end{aligned}
+\right.
 \]
-\item
-inside of $\Delta^n$ is 
+and
 \[
-\{(x_1,\dots,x_{n+1})\in\Delta^n\mid x_i>0,\forall i\}
+H(a,t)=f(a)=g(a),\forall a\in A
 \]
-(Inside of $\Delta^0$ is $\Delta^0$)
-\end{enumerate}
 \end{definition}
-
-\begin{definition}[face inclusion]
-A face inclusion of $\Delta^m$ into $\Delta^n$ ($m<n$) is a function $\Delta^m\to\Delta^n$ which comes from the restriction of an \emph{injective linear} map
-\[
-f:\mathbb{R}^{n+1}\to\mathbb{R}^{n+1},
-\]
-which maps vertices into vertices.
-\end{definition}
-\[
-\begin{pmatrix}
-1\\0
-\end{pmatrix}\mapsto\begin{pmatrix}
-0\\1\\0
-\end{pmatrix}\quad
-\begin{pmatrix}
-0\\1
-\end{pmatrix}\mapsto\begin{pmatrix}
-0\\0\\1
-\end{pmatrix}
-\]
-Any injection from $\{1,\dots,m+1\}\to\{1,\dots,n+1\}$ gives a face inclusion $\Delta^m\to\Delta^n$, and vice versa.
-
-\begin{definition}[Simplicial Complex]
-An (abstract) \emph{simplicial complex} is a pair $(V,\Sigma)$,
-where $V$ is a set of vertices and $\Sigma$ is a collection of non-empty finite subsets of $V$ (simplices) such that
-\begin{enumerate}
-\item
-$\forall \bm v\in V$, $\{\bm v\}\in\Sigma$
-\item
-If $\sigma\in\Sigma$, then any non-empty subset of $\sigma$ must lie in $\Sigma$.
-
-e.g., $V=\{1,2,3,4\}$, then 
-\[
-\Sigma=\{\{1\},\{2\},\{3\},\{4\},\{1,3,4\},\{2,4\},\{1,3\},\{3,4\},\{1,4\}\}
-\]
-\end{enumerate}
-\end{definition}
-
-\begin{definition}[Topological Realization]
-The \emph{topological realization} of $K=(V,\Sigma)$ is 
-a topological space $|K|$ (or denoted as $|(V,\Sigma)|$), where
-\begin{enumerate}
-\item
-For each $\sigma\in\Sigma$ with $|\sigma|=n+1$, 
-take a copy of $n$-simplex and denote it as $\Delta_\sigma$
-\item
-Whenever $\sigma\subset\tau\in\Sigma$, identify $\Delta_{\sigma}$ with a face of $\Delta_{\tau}$ through face inclusion.
-\end{enumerate}
-\end{definition}
-\begin{example}
-Take 
-
-\end{example}
-
-\begin{example}
-Take $V=\{1,2,3,4\}$ and 
-\[
-\Sigma=\{\text{all subsets of $V$ except $V$}\}
-\]
-\end{example}
-\begin{example}
-Take $V=\{1,\dots,n+1\}$ and
-\[
-\Sigma=\{\text{All subsets of $V$}\}
-\]
-Then $|(V,\Sigma)| = \Delta^n$.
-\end{example}
-
-\begin{definition}[Triangulation]
-A \emph{triangulation} of a topological spcae $X$ is a simplicial complex $(V,\Sigma)=K$ with a choice of homeomorphism $|(V,\Sigma)|\to X$.
-\end{definition}
-
-
-
-
-
-
-
 
 
 

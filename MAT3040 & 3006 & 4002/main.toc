@@ -207,9 +207,9 @@
 \contentsline {paragraph}{Reviewing}{226}{section.9.2}
 \contentsline {subsection}{\numberline {9.2.1}Measurable Functions}{226}{subsection.9.2.1}
 \contentsline {paragraph}{Motivation}{226}{subsection.9.2.1}
-\contentsline {section}{\numberline {7.3}Monday for MAT4002}{197}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Quotient Map}{197}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Simplicial Complex}{198}{subsection.7.3.2}
+\contentsline {section}{\numberline {9.3}Monday for MAT4002}{230}{section.9.3}
+\contentsline {paragraph}{Reviewing}{230}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Remarks on Homotopy}{230}{subsection.9.3.1}
 \contentsline {section}{\numberline {8.3}Wednesday for MAT3040}{216}{section.8.3}
 \contentsline {paragraph}{Reviewing}{216}{section.8.3}
 \contentsline {subsection}{\numberline {8.3.1}Cayley-Hamiton Theorem}{216}{subsection.8.3.1}
